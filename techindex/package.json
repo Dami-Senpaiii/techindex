@@ -1,6 +1,7 @@
 {
   "name": "techindex",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "eleventy",
     "dev": "eleventy --serve --quiet"
