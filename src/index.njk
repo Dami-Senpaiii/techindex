@@ -1,0 +1,41 @@
+---
+layout: base.njk
+permalink: /
+---
+<header class="hero">
+  <div class="container hero-inner">
+    <h1 class="h1">Das Schweizer Tech‑Magazin für Builder</h1>
+    <p class="lead">Fundierte Artikel zu <strong>Hardware</strong>, <strong>Software</strong> & <strong>Fotografie</strong> – plus transparente <strong>Preisvergleiche</strong>.</p>
+    <div class="hero-actions">
+      <a class="btn" href="/beitraege/">Jetzt lesen</a>
+      <a class="btn outline" href="#newsletter">Newsletter abonnieren</a>
+    </div>
+  </div>
+</header>
+
+<section id="featured">
+  <div class="container">
+    <div class="section-head">
+      <h2>Empfehlungen der Redaktion</h2>
+      <a class="small" href="/beitraege/" style="color:var(--accent)">Alle Beiträge →</a>
+    </div>
+    <div class="grid grid-3">
+      {% set featured = collections.posts | slice(0,3) %}
+      {% if featured.length == 0 %}
+        <div class="muted">Noch keine Beiträge.</div>
+      {% endif %}
+      {% for post in featured %}
+        <article class="card">
+          {% if post.data.image %}
+            <div class="thumb"><img src="{{ post.data.image }}" alt=""></div>
+          {% endif %}
+          <div class="body">
+            <span class="tag">{{ post.data.tag }}</span>
+            <h3 class="title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+            <p class="muted">{{ post.data.excerpt or "" }}</p>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

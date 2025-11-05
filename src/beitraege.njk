@@ -1,0 +1,35 @@
+---
+layout: base.njk
+permalink: /beitraege/index.html
+pagination:
+  data: collections.posts
+  size: 12
+  alias: posts
+---
+<section id="neu">
+  <div class="container">
+    <div class="section-head">
+      <h2>Neueste Beiträge</h2>
+      <div class="search"><input disabled placeholder="(Filter folgt)" /></div>
+    </div>
+
+    <div class="grid grid-3">
+      {% for post in posts %}
+        <article class="card">
+          {% if post.data.image %}
+            <div class="thumb"><img src="{{ post.data.image }}" alt=""></div>
+          {% endif %}
+          <div class="body">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#cfcfcf">
+              <span>{{ post.data.tag }}</span>
+              <time datetime="{{ post.date }}">{{ post.date | dateCH }}</time>
+            </div>
+            <h3 class="title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+            <p class="muted">{{ post.data.excerpt or "" }}</p>
+            <a href="{{ post.url }}" style="color:var(--accent);font-weight:600">Weiterlesen →</a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
