@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechIndex – Schweizer Tech‑Blog für Hardware, Software, Fotografie & Preisvergleiche</title>
+  <meta name="description" content="TechIndex ist ein unabhängiger Schweizer Tech‑Blog. Deep Dives zu Hardware & Software, Kamera‑Guides und transparente Preisvergleiche.">
+  <meta name="theme-color" content="#0a0a0a">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TechIndex – Schweizer Tech‑Blog">
+  <meta property="og:description" content="Hardware, Software, Fotografie, Preisvergleiche – kompakt & fundiert.">
+  <meta property="og:url" content="https://techindex.ch/">
+  <style>
+    :root{
+      --bg:#0a0a0a;          /* dunkles Layout wie NVIDIA Dev Blog */
+      --panel:#121212;
+      --muted:#a1a1a1;
+      --text:#fff;
+      --border:#1f1f1f;
+      --accent:#76B900;      /* NVIDIA‑grün als Akzent */
+      --accent-weak:#5e9400;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,"Helvetica Neue",Arial}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max);padding:0 20px;margin:0 auto}
+    /* Nav */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:700}
+    .brand-badge{width:28px;height:28px;border:2px solid var(--accent);border-radius:8px;display:grid;place-items:center}
+    .brand-badge svg{stroke:var(--accent)}
+    .menu{display:flex;gap:18px;align-items:center}
+    .menu a{color:#eaeaea;font-size:.95rem;opacity:.85}
+    .menu a:hover{opacity:1}
+    .cta{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);padding:8px 12px;border-radius:12px}
+    .cta:hover{background:#101010}
+
+    /* Hero */
+    .hero{position:relative;isolation:isolate}
+    .hero::before{content:"";position:absolute;inset:-20% -20% auto -20%;height:420px;background:radial-gradient(900px 380px at 50% -10%, rgba(118,185,0,.28), transparent)}
+    .hero-inner{padding:56px 0}
+    .h1{font-size:clamp(28px,3.4vw,48px);line-height:1.15;margin:0 0 10px;font-weight:850;letter-spacing:-.01em}
+    .lead{color:#d6ffd6;max-width:760px}
+    .hero-actions{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
+    .btn{border:none;background:var(--accent);color:#000;font-weight:700;padding:12px 16px;border-radius:12px;box-shadow:var(--shadow);cursor:pointer}
+    .btn.outline{background:transparent;color:#fff;border:1px solid var(--border);box-shadow:none}
+    .btn:hover{filter:brightness(1.05)}
+
+    /* Featured */
+    .grid{display:grid;gap:16px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+    .card .thumb{aspect-ratio:16/9;background:#0f0f0f;overflow:hidden}
+    .card .body{padding:16px}
+    .tag{display:inline-block;padding:4px 8px;border:1px solid var(--border);border-radius:999px;color:#eee;font-size:12px;opacity:.85}
+    .title{margin:6px 0 6px;font-weight:750;font-size:1.15rem}
+    .muted{color:var(--muted)}
+
+    /* Sections */
+    section{padding:28px 0}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:8px}
+    h2{margin:0;font-size:clamp(20px,2.4vw,28px)}
+
+    /* Latest + filter */
+    .filters{display:flex;gap:10px;flex-wrap:wrap}
+    .pill{border:1px solid var(--border);padding:6px 10px;border-radius:999px;background:#0b0b0b;color:#eee;cursor:pointer;font-size:.92rem}
+    .pill.active, .pill:hover{border-color:var(--accent);color:#fff}
+    .search{flex:1;min-width:240px}
+    .search input{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:#0b0b0b;color:#fff}
+
+    /* Price index teaser */
+    .price-table{width:100%;border-collapse:collapse;font-size:.95rem}
+    .price-table th,.price-table td{border-bottom:1px solid var(--border);padding:10px 8px;text-align:left}
+    .price-table tr:hover{background:#101010}
+
+    /* Newsletter */
+    .newsletter{background:linear-gradient(120deg, rgba(118,185,0,.18), transparent);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+    .newsletter form{display:flex;gap:10px;flex-wrap:wrap}
+    .newsletter input{flex:1;min-width:220px;padding:12px;border-radius:12px;border:1px solid var(--border);background:#0b0b0b;color:#fff}
+
+    /* Footer */
+    footer{border-top:1px solid var(--border)}
+    .cols{display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}
+    .small{font-size:.9rem}
+
+    /* Responsive */
+    @media (max-width: 960px){
+      .grid-3{grid-template-columns:1fr 1fr}
+      .cols{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 640px){
+      .menu{display:none}
+      .grid-3{grid-template-columns:1fr}
+      .cols{grid-template-columns:1fr}
+      .hero-inner{padding:40px 0}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="brand" aria-label="TechIndex Startseite">
+        <span class="brand-badge" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="4" ry="4"/>
+            <path d="M7 16l5-8 5 8" fill="none"/>
+          </svg>
+        </span>
+        <span>TechIndex</span>
+      </a>
+      <div class="menu" role="navigation" aria-label="Hauptmenü">
+        <a href="#neu">Neu</a>
+        <a href="#hardware">Hardware</a>
+        <a href="#software">Software</a>
+        <a href="#fotografie">Fotografie</a>
+        <a href="#preisindex">Preisindex</a>
+        <a href="#newsletter">Newsletter</a>
+        <a href="#about">Über uns</a>
+      </div>
+      <a class="cta small" href="#einsenden" title="Beitrag einreichen">Beitrag einreichen</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-inner">
+      <h1 class="h1">Das Schweizer Tech‑Magazin für Builder</h1>
+      <p class="lead">Fundierte Artikel zu <strong>Hardware</strong>, <strong>Software</strong> & <strong>Fotografie</strong> – plus transparente <strong>Preisvergleiche</strong> für smarte Kaufentscheide. Kein Fluff, nur Signal.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#neu">Jetzt lesen</a>
+        <a class="btn outline" href="#newsletter">Newsletter abonnieren</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURED -->
+  <section id="featured">
+    <div class="container">
+      <div class="section-head">
+        <h2>Empfehlungen der Redaktion</h2>
+        <a class="small" href="#neu" style="color:var(--accent)">Alle Beiträge →</a>
+      </div>
+      <div class="grid grid-3">
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop" alt="Mainboard und GPU Nahaufnahme"></div>
+          <div class="body">
+            <span class="tag">Hardware</span>
+            <h3 class="title"><a href="#">GPU‑Leitfaden 2025: Leistung, Effizienz & Preis</a></h3>
+            <p class="muted">Benchmarks unter realen Workloads – von Gaming bis AI‑Inference.</p>
+          </div>
+        </article>
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=1600&auto=format&fit=crop" alt="Terminal und Code"></div>
+          <div class="body">
+            <span class="tag">Software</span>
+            <h3 class="title"><a href="#">Self‑Hosting mit Docker: Von 0 auf Prod</a></h3>
+            <p class="muted">Best Practices für Updates, Backups und Zero‑Downtime‑Deployments.</p>
+          </div>
+        </article>
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=1600&auto=format&fit=crop" alt="Spiegellose Kamera auf Tisch"></div>
+          <div class="body">
+            <span class="tag">Fotografie</span>
+            <h3 class="title"><a href="#">Kamera‑Kauf 2025: APS‑C vs. Vollformat</a></h3>
+            <p class="muted">Bildqualität, Objektive, Autofokus – was zählt wirklich?</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST / FILTERS -->
+  <section id="neu">
+    <div class="container">
+      <div class="section-head">
+        <h2>Neueste Beiträge</h2>
+        <div class="search"><label class="visually-hidden" for="q">Suche</label><input id="q" type="search" placeholder="Suche nach Themen oder Titeln…"></div>
+      </div>
+      <div class="filters" id="tagbar" aria-label="Themenfilter">
+        <button class="pill active" data-tag="">Alle</button>
+        <button class="pill" data-tag="Hardware">Hardware</button>
+        <button class="pill" data-tag="Software">Software</button>
+        <button class="pill" data-tag="Fotografie">Fotografie</button>
+        <button class="pill" data-tag="Preisvergleich">Preisvergleich</button>
+      </div>
+
+      <div class="grid grid-3" id="posts" style="margin-top:16px"></div>
+      <div class="section-head" style="margin-top:10px">
+        <small class="muted" id="count">Seite 1</small>
+        <div>
+          <button class="pill" id="prev">Zurück</button>
+          <button class="pill" id="next">Weiter</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICE INDEX TEASER -->
+  <section id="preisindex">
+    <div class="container">
+      <div class="section-head">
+        <h2>Preisindex (Preview)</h2>
+        <a class="small" href="#" style="color:var(--accent)">Zu allen Vergleichen →</a>
+      </div>
+      <div class="card" style="padding:12px">
+        <table class="price-table" aria-describedby="preisindex">
+          <thead>
+            <tr><th>Produkt</th><th>Beste Preise ab</th><th>Tendenz</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>NVMe SSD 2TB (PCIe 4.0)</td><td>CHF 89.–</td><td><span style="color:var(--accent)">↘︎ fallend</span></td></tr>
+            <tr><td>Spiegellose Kamera (APS‑C)</td><td>CHF 699.–</td><td>→ stabil</td></tr>
+            <tr><td>Wi‑Fi 6E Router</td><td>CHF 149.–</td><td>→ stabil</td></tr>
+            <tr><td>32" 4K Monitor (IPS)</td><td>CHF 279.–</td><td><span style="color:var(--accent)">↘︎ fallend</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter">
+    <div class="container newsletter">
+      <div class="section-head">
+        <h2>TechIndex Weekly</h2>
+        <small class="muted">Einmal pro Woche. Keine Werbung, nur Mehrwert.</small>
+      </div>
+      <form action="#" method="post" onsubmit="alert('Danke! (Demo)');return false;">
+        <label for="email" class="visually-hidden">E‑Mail</label>
+        <input id="email" type="email" placeholder="dein@email.ch" required>
+        <button class="btn" type="submit">Abonnieren</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="about">
+    <div class="container" style="padding:20px 0 28px">
+      <div class="cols">
+        <div>
+          <div class="brand" style="margin-bottom:8px">
+            <span class="brand-badge" aria-hidden="true"></span>
+            <strong>TechIndex</strong>
+          </div>
+          <p class="muted small">TechIndex ist ein unabhängiger Blog aus der Schweiz. Fokus: Tech, Tools & Taktiken zum Bauen – plus nüchterne Preisvergleiche.</p>
+        </div>
+        <div>
+          <strong>Ressourcen</strong>
+          <ul class="small" style="list-style:none;padding:0;margin:8px 0 0">
+            <li><a href="#">RSS</a></li>
+            <li><a href="#">Styleguide</a></li>
+            <li><a href="#">Advertise</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong>Themen</strong>
+          <ul class="small" style="list-style:none;padding:0;margin:8px 0 0">
+            <li><a href="#hardware">Hardware</a></li>
+            <li><a href="#software">Software</a></li>
+            <li><a href="#fotografie">Fotografie</a></li>
+            <li><a href="#preisindex">Preisvergleiche</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong>Rechtliches</strong>
+          <ul class="small" style="list-style:none;padding:0;margin:8px 0 0">
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+            <li><a href="#">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="muted small" style="margin-top:14px">© <span id="y"></span> TechIndex.ch — Hosted on Cloudflare.</div>
+    </div>
+  </footer>
+
+  <script>
+    // ----- Demo‑Daten (würden später aus CMS/API kommen)
+    const POSTS = Array.from({length:18}).map((_,i)=>({
+      id: i+1,
+      title: [
+        'Langzeit‑Test: NVMe SSDs 2025',
+        'Cloud‑Backup: 3‑2‑1‑Strategie einfach erklärt',
+        'Street‑Photography: 7 Praxis‑Tipps',
+        'Linux auf dem Mini‑PC: Setup & Tuning',
+        'RAW‑Workflow mit Capture One vs. Lightroom',
+        'Günstige 4K‑Monitore im Vergleich',
+        'Self‑Hosted Preis‑Tracker mit Docker',
+        'Noise‑Reduction: Topaz vs. DxO',
+        'Windows 11: Privacy Hardening',
+      ][i%9],
+      tag: ['Hardware','Software','Fotografie','Preisvergleich'][i%4],
+      date: new Date(2025,10,(i%28)+1),
+      excerpt: 'Kurz & bündig: Architektur, Settings und Benchmarks für schnelle Entscheidungen.'
+    }));
+
+    const perPage = 9; let page=1; let activeTag=''; let q='';
+    const postsEl = document.getElementById('posts');
+    const countEl = document.getElementById('count');
+
+    function render(){
+      const filtered = POSTS.filter(p=>(!activeTag||p.tag===activeTag)&&(!q||p.title.toLowerCase().includes(q)));
+      const totalPages = Math.max(1, Math.ceil(filtered.length/perPage));
+      page = Math.min(page, totalPages);
+      const slice = filtered.slice((page-1)*perPage, page*perPage);
+      postsEl.innerHTML = slice.map(p=>`
+        <article class="card">
+          <div class="thumb"><img src="https://picsum.photos/seed/${p.id}/800/450" alt="Vorschaubild"></div>
+          <div class="body">
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#cfcfcf"><span>${p.tag}</span><time datetime="${p.date.toISOString()}">${p.date.toLocaleDateString('de-CH',{day:'2-digit',month:'short',year:'numeric'})}</time></div>
+            <h3 class="title"><a href="#">${p.title}</a></h3>
+            <p class="muted">${p.excerpt}</p>
+            <a href="#" style="color:var(--accent);font-weight:600">Weiterlesen →</a>
+          </div>
+        </article>`).join('');
+      countEl.textContent = `Seite ${page} von ${totalPages}`;
+      document.getElementById('prev').disabled = page===1;
+      document.getElementById('next').disabled = page===totalPages;
+    }
+
+    // Filter‑Pills
+    document.getElementById('tagbar').addEventListener('click', (e)=>{
+      const t = e.target.closest('button.pill'); if(!t) return;
+      [...document.querySelectorAll('#tagbar .pill')].forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      activeTag = t.dataset.tag||''; page=1; render();
+    });
+
+    // Suche
+    document.getElementById('q').addEventListener('input', (e)=>{q=e.target.value.toLowerCase(); page=1; render();});
+
+    // Pagination
+    document.getElementById('prev').addEventListener('click', ()=>{page=Math.max(1,page-1); render();});
+    document.getElementById('next').addEventListener('click', ()=>{page=page+1; render();});
+
+    // Jahr im Footer
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    render();
+  </script>
+
+  <!-- Optional: einfache Accessibility Helferklasse -->
+  <style>.visually-hidden{position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}</style>
+</body>
+</html>
