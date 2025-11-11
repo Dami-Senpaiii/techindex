@@ -38,8 +38,20 @@
     .menu{display:flex;gap:18px;align-items:center}
     .menu a{color:#eaeaea;font-size:.95rem;opacity:.85}
     .menu a:hover{opacity:1}
+    .menu .cta{margin-left:12px;opacity:1;color:#000;background:var(--accent);border:none}
+    .menu .cta:hover{background:var(--accent);filter:brightness(1.05)}
     .cta{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);padding:8px 12px;border-radius:12px}
     .cta:hover{background:#101010}
+    .mobile-nav-toggle{display:none;border:1px solid var(--border);background:#0d0d0d;color:#fff;padding:8px 10px;border-radius:12px;align-items:center;gap:8px;font-weight:600;cursor:pointer}
+    .mobile-nav-toggle .icon-bars{display:block;width:18px;height:2px;background:var(--accent);position:relative;border-radius:999px}
+    .mobile-nav-toggle .icon-bars::before,.mobile-nav-toggle .icon-bars::after{content:"";position:absolute;left:0;width:100%;height:100%;background:var(--accent);border-radius:999px;transition:transform .2s ease}
+    .mobile-nav-toggle .icon-bars::before{top:-6px}
+    .mobile-nav-toggle .icon-bars::after{top:6px}
+    .mobile-nav-toggle[aria-expanded="true"] .icon-bars{background:transparent}
+    .mobile-nav-toggle[aria-expanded="true"] .icon-bars::before{transform:translateY(6px) rotate(45deg)}
+    .mobile-nav-toggle[aria-expanded="true"] .icon-bars::after{transform:translateY(-6px) rotate(-45deg)}
+    body.nav-open{overflow:hidden}
+    body.nav-open::after{content:"";position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:40}
 
     /* Hero */
     .hero{position:relative;isolation:isolate}
@@ -95,7 +107,11 @@
       .cols{grid-template-columns:1fr 1fr}
     }
     @media (max-width: 640px){
-      .menu{display:none}
+      .mobile-nav-toggle{display:inline-flex}
+      .menu{display:none;position:fixed;top:68px;right:20px;left:20px;background:#101010;border:1px solid var(--border);border-radius:var(--radius);padding:20px;flex-direction:column;gap:12px;box-shadow:var(--shadow);z-index:70}
+      .menu.open{display:flex}
+      .menu a{font-size:1rem;opacity:1;padding:4px 0}
+      .menu .cta{justify-content:center;margin-left:0}
       .grid-3{grid-template-columns:1fr}
       .cols{grid-template-columns:1fr}
       .hero-inner{padding:40px 0}
@@ -115,7 +131,11 @@
         </span>
         <span>TechIndex</span>
       </a>
-      <div class="menu" role="navigation" aria-label="Hauptmenü">
+      <button class="mobile-nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menü öffnen">
+        <span class="icon-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menü</span>
+      </button>
+      <div class="menu" role="navigation" aria-label="Hauptmenü" id="menu">
         <a href="#neu">Neu</a>
         <a href="#hardware">Hardware</a>
         <a href="#software">Software</a>
@@ -123,8 +143,8 @@
         <a href="#preisindex">Preisindex</a>
         <a href="#newsletter">Newsletter</a>
         <a href="about.html">Über uns</a>
+        <a class="cta small" href="#einsenden" title="Beitrag einreichen">Beitrag einreichen</a>
       </div>
-      <a class="cta small" href="#einsenden" title="Beitrag einreichen">Beitrag einreichen</a>
     </div>
   </nav>
 
@@ -304,9 +324,32 @@
       excerpt: 'Kurz & bündig: Architektur, Settings und Benchmarks für schnelle Entscheidungen.'
     }));
 
-    const perPage = 9; let page=1; let activeTag=''; let q='';
+    const mobileQuery = window.matchMedia('(max-width: 640px)');
+    let perPage = mobileQuery.matches ? 6 : 9; let page=1; let activeTag=''; let q='';
     const postsEl = document.getElementById('posts');
     const countEl = document.getElementById('count');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const navToggle = document.getElementById('nav-toggle');
+    const menuEl = document.getElementById('menu');
+
+    function setNav(open){
+      if(!navToggle || !menuEl) return;
+      navToggle.setAttribute('aria-expanded', open);
+      navToggle.setAttribute('aria-label', open ? 'Menü schliessen' : 'Menü öffnen');
+      menuEl.classList.toggle('open', open);
+      document.body.classList.toggle('nav-open', open);
+    }
+
+    if(navToggle && menuEl){
+      navToggle.addEventListener('click', ()=>{
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        setNav(!expanded);
+      });
+      menuEl.addEventListener('click', (e)=>{
+        if(e.target.closest('a')) setNav(false);
+      });
+    }
 
     function render(){
       const filtered = POSTS.filter(p=>(!activeTag||p.tag===activeTag)&&(!q||p.title.toLowerCase().includes(q)));
@@ -315,7 +358,7 @@
       const slice = filtered.slice((page-1)*perPage, page*perPage);
       postsEl.innerHTML = slice.map(p=>`
         <article class="card">
-          <div class="thumb"><img src="https://picsum.photos/seed/${p.id}/800/450" alt="Vorschaubild"></div>
+          <div class="thumb"><img src="https://picsum.photos/seed/${p.id}/800/450" alt="Vorschaubild" loading="lazy"></div>
           <div class="body">
             <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#cfcfcf"><span>${p.tag}</span><time datetime="${p.date.toISOString()}">${p.date.toLocaleDateString('de-CH',{day:'2-digit',month:'short',year:'numeric'})}</time></div>
             <h3 class="title"><a href="#">${p.title}</a></h3>
@@ -324,9 +367,33 @@
           </div>
         </article>`).join('');
       countEl.textContent = `Seite ${page} von ${totalPages}`;
-      document.getElementById('prev').disabled = page===1;
-      document.getElementById('next').disabled = page===totalPages;
+      prevBtn.disabled = page===1;
+      nextBtn.disabled = page===totalPages;
     }
+
+    const handleMobileChange = (event)=>{
+      const nextPerPage = event.matches ? 6 : 9;
+      if(nextPerPage !== perPage){
+        perPage = nextPerPage;
+        page = 1;
+        render();
+      }
+      if(!event.matches) setNav(false);
+    };
+
+    if(mobileQuery.addEventListener){
+      mobileQuery.addEventListener('change', handleMobileChange);
+    }else if(mobileQuery.addListener){
+      mobileQuery.addListener(handleMobileChange);
+    }
+
+    document.addEventListener('click', (e)=>{
+      if(!menuEl || !navToggle || !menuEl.classList.contains('open')) return;
+      if(e.target === navToggle || navToggle.contains(e.target) || menuEl.contains(e.target)) return;
+      setNav(false);
+    });
+
+    window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') setNav(false); });
 
     // Filter‑Pills
     document.getElementById('tagbar').addEventListener('click', (e)=>{
@@ -340,12 +407,14 @@
     document.getElementById('q').addEventListener('input', (e)=>{q=e.target.value.toLowerCase(); page=1; render();});
 
     // Pagination
-    document.getElementById('prev').addEventListener('click', ()=>{page=Math.max(1,page-1); render();});
-    document.getElementById('next').addEventListener('click', ()=>{page=page+1; render();});
+    prevBtn.addEventListener('click', ()=>{page=Math.max(1,page-1); render();});
+    nextBtn.addEventListener('click', ()=>{page=page+1; render();});
 
     // Jahr im Footer
     document.getElementById('y').textContent = new Date().getFullYear();
 
+    setNav(false);
+    handleMobileChange(mobileQuery);
     render();
   </script>
 
