@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Street-Photography: 7 Praxis-Tipps – TechIndex</title>
+  <meta name="description" content="Sieben praxiserprobte Tipps für lebendige Street-Fotografie: Timing, Light Shaping und rechtliche Basics." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <style>
+    :root{
+      --bg:#0a0a0a;
+      --panel:#121212;
+      --muted:#a1a1a1;
+      --text:#fff;
+      --border:#1f1f1f;
+      --accent:#76B900;
+      --accent-weak:#5e9400;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --max:880px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 "Inter",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    a:hover{color:var(--accent)}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max);padding:0 24px;margin:0 auto}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center;font-weight:720;letter-spacing:-.01em}
+    .brand-badge{width:30px;height:30px;border:2px solid var(--accent);border-radius:10px;display:grid;place-items:center}
+    .brand-badge svg{stroke:var(--accent)}
+    .menu{display:flex;gap:18px;font-size:.95rem}
+    .menu a{color:#eaeaea;opacity:.85}
+    .menu a:hover{opacity:1}
+    main{padding:56px 0 80px}
+    .post{display:block}
+    .post-header{margin-bottom:32px}
+    .post-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid var(--border);border-radius:999px;font-size:.85rem;background:rgba(118,185,0,.08);color:#d7ffd7}
+    .post h1{margin:18px 0 10px;font-size:clamp(30px,5vw,44px);line-height:1.15;letter-spacing:-.015em}
+    .post-meta{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+    .lead{color:#d6ffd6;font-size:1.1rem;max-width:720px}
+    figure.hero{margin:0 0 36px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01))}
+    figure.hero img{width:100%;height:auto}
+    figure.hero figcaption{padding:12px 16px;color:var(--muted);font-size:.9rem}
+    .post section{margin-bottom:42px}
+    .post section h2{font-size:clamp(22px,3vw,30px);margin:0 0 14px;letter-spacing:-.01em}
+    .post section p{margin:0 0 16px}
+    .post section ul{padding-left:20px;margin:0 0 18px}
+    .post section li{margin-bottom:10px}
+    .callout{border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;background:rgba(118,185,0,.05);margin:24px 0;color:#e4ffe4}
+    .callout h3{margin:0 0 12px;font-size:1.05rem}
+    blockquote{margin:0;padding:18px 24px;border-left:4px solid var(--accent);background:rgba(255,255,255,.05);border-radius:0 14px 14px 0}
+    blockquote p{margin:0;color:#e2e2e2}
+    .post-footer{border-top:1px solid var(--border);padding-top:24px;margin-top:32px;display:flex;flex-direction:column;gap:12px}
+    .back-link{display:inline-flex;align-items:center;gap:10px;font-weight:600;color:var(--accent)}
+    .taglist{color:var(--muted);font-size:.9rem}
+    footer{border-top:1px solid var(--border);padding:32px 0;background:#090909}
+    footer .muted{color:var(--muted);font-size:.9rem}
+    @media (max-width:720px){
+      main{padding:44px 0 64px}
+      .nav-inner{flex-direction:column;gap:14px}
+      .menu{flex-wrap:wrap;justify-content:center}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html">
+        <span class="brand-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <path d="M4 4h16v4H4z" stroke="currentColor" />
+            <path d="M4 10h10v4H4z" stroke="currentColor" />
+            <path d="M4 16h16v4H4z" stroke="currentColor" />
+          </svg>
+        </span>
+        TechIndex
+      </a>
+      <nav class="menu" aria-label="Hauptnavigation">
+        <a href="../index.html">Magazin</a>
+        <a href="../about.html">Über uns</a>
+        <a href="#kommentare">Kommentare</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="post container">
+      <header class="post-header">
+        <span class="post-tag">Fotografie</span>
+        <h1>Street-Photography: 7 Praxis-Tipps</h1>
+        <p class="post-meta">Aktualisiert: 10. November 2025 · Lesezeit: 7 Minuten</p>
+        <p class="lead">Street-Fotografie lebt vom spontanen Moment – doch hinter jedem guten Bild steckt eine Menge Vorbereitung. Unsere sieben Tipps helfen dir, Timing, Technik und Menschenkenntnis perfekt auszubalancieren.</p>
+      </header>
+
+      <figure class="hero">
+        <img src="https://picsum.photos/seed/street-photography-7-praxis-tipps/1200/630" alt="Menschen im Gegenlicht einer Stadtstrasse">
+        <figcaption>Street-Fotografie in Zürich-West: goldene Stunde, dichter Verkehr, klare Linien.</figcaption>
+      </figure>
+
+      <section>
+        <h2>Arbeite mit Zonofokus und vorvisualisierten Frames</h2>
+        <p>Autofokus ist schnell, aber nicht unfehlbar. Wer mit 28 oder 35 mm unterwegs ist, profitiert vom Zonofokus: Blende 8, Hyperfokaldistanz einstellen, Kamera auf Brusthöhe halten. Vorvisualisiere dein Frame, bevor die Szene passiert, und löse aus, sobald deine Protagonist:innen in die Zone treten.</p>
+        <div class="callout">
+          <h3>Gear-Basics für den Strasseneinsatz</h3>
+          <ul>
+            <li>Leichte Prime-Lenses zwischen 24 und 50 mm</li>
+            <li>Geräuschlose Auslösung oder Leaf-Shutter-Kamera</li>
+            <li>Neutrales Outfit und bequeme Schuhe (du wirst viel laufen!)</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Licht und Layering bewusst einsetzen</h2>
+        <p>Layering – also mehrere Ebenen im Bild – sorgt für Tiefe. Stell dich so, dass du Vordergrund, Hauptmotiv und Hintergrund klar trennen kannst. Gegenlicht funktioniert hervorragend, wenn du Silhouetten freistellst und mit Reflektionen in Schaufenstern arbeitest. Achte auf rollende Linien, damit das Auge geführt wird.</p>
+        <blockquote>
+          <p>„Wenn du die Szene nicht vorher siehst, wirst du sie später nicht im Bild finden.“</p>
+        </blockquote>
+        <p>Nutze auch künstliches Licht: Neonröhren oder Busanzeigen geben Farbakzente. Ein leichter Nebel (z. B. nach Regen) verteilt das Licht und betont Strukturen.</p>
+      </section>
+
+      <section>
+        <h2>Respekt, Recht und Veröffentlichung</h2>
+        <p>In der Schweiz gilt das Recht am eigenen Bild. Für künstlerische Projekte ohne kommerzielle Absicht bist du relativ frei, trotzdem solltest du Menschen ansprechen, wenn sie deutlich erkennbar sind. Ein kurzes Lächeln oder ein hochgehaltenes Display schafft Vertrauen.</p>
+        <p>Wenn du Serien veröffentlichen willst, arbeite mit Model-Releases oder nimm Motive, die nicht identifizierbar sind. Für Social Media lohnt sich ein Redaktionsplan, der Kontext liefert und respektvoll mit den Abgebildeten umgeht.</p>
+      </section>
+
+      <footer class="post-footer">
+        <a class="back-link" href="../index.html">← Zurück zur Übersicht</a>
+        <p class="taglist">Schlagworte: Street-Fotografie, Zonofokus, Layering</p>
+      </footer>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="muted">© 2025 TechIndex.ch — Schweizer Tech-Blog für Hardware, Software & Fotografie.</div>
+    </div>
+  </footer>
+</body>
+</html>
