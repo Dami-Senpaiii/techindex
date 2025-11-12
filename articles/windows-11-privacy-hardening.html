@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Windows 11: Privacy Hardening – TechIndex</title>
+  <meta name="description" content="Windows 11 datensparsam konfigurieren: Setup-Assistent, Telemetrie und Automatisierung im Griff." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <style>
+    :root{
+      --bg:#0a0a0a;
+      --panel:#121212;
+      --muted:#a1a1a1;
+      --text:#fff;
+      --border:#1f1f1f;
+      --accent:#76B900;
+      --accent-weak:#5e9400;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --max:880px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 "Inter",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    a:hover{color:var(--accent)}
+    img{max-width:100%;display:block}
+    code{font-family:"JetBrains Mono","Fira Code",monospace;background:rgba(255,255,255,.08);padding:0 4px;border-radius:6px;font-size:.9rem}
+    .container{max-width:var(--max);padding:0 24px;margin:0 auto}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center;font-weight:720;letter-spacing:-.01em}
+    .brand-badge{width:30px;height:30px;border:2px solid var(--accent);border-radius:10px;display:grid;place-items:center}
+    .brand-badge svg{stroke:var(--accent)}
+    .menu{display:flex;gap:18px;font-size:.95rem}
+    .menu a{color:#eaeaea;opacity:.85}
+    .menu a:hover{opacity:1}
+    main{padding:56px 0 80px}
+    .post{display:block}
+    .post-header{margin-bottom:32px}
+    .post-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid var(--border);border-radius:999px;font-size:.85rem;background:rgba(118,185,0,.08);color:#d7ffd7}
+    .post h1{margin:18px 0 10px;font-size:clamp(30px,5vw,44px);line-height:1.15;letter-spacing:-.015em}
+    .post-meta{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+    .lead{color:#d6ffd6;font-size:1.1rem;max-width:720px}
+    figure.hero{margin:0 0 36px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01))}
+    figure.hero img{width:100%;height:auto}
+    figure.hero figcaption{padding:12px 16px;color:var(--muted);font-size:.9rem}
+    .post section{margin-bottom:42px}
+    .post section h2{font-size:clamp(22px,3vw,30px);margin:0 0 14px;letter-spacing:-.01em}
+    .post section p{margin:0 0 16px}
+    .post section ul{padding-left:20px;margin:0 0 18px}
+    .post section li{margin-bottom:10px}
+    .callout{border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;background:rgba(118,185,0,.05);margin:24px 0;color:#e4ffe4}
+    .callout h3{margin:0 0 12px;font-size:1.05rem}
+    blockquote{margin:0;padding:18px 24px;border-left:4px solid var(--accent);background:rgba(255,255,255,.05);border-radius:0 14px 14px 0}
+    blockquote p{margin:0;color:#e2e2e2}
+    .post-footer{border-top:1px solid var(--border);padding-top:24px;margin-top:32px;display:flex;flex-direction:column;gap:12px}
+    .back-link{display:inline-flex;align-items:center;gap:10px;font-weight:600;color:var(--accent)}
+    .taglist{color:var(--muted);font-size:.9rem}
+    footer{border-top:1px solid var(--border);padding:32px 0;background:#090909}
+    footer .muted{color:var(--muted);font-size:.9rem}
+    @media (max-width:720px){
+      main{padding:44px 0 64px}
+      .nav-inner{flex-direction:column;gap:14px}
+      .menu{flex-wrap:wrap;justify-content:center}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html">
+        <span class="brand-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <path d="M4 4h16v4H4z" stroke="currentColor" />
+            <path d="M4 10h10v4H4z" stroke="currentColor" />
+            <path d="M4 16h16v4H4z" stroke="currentColor" />
+          </svg>
+        </span>
+        TechIndex
+      </a>
+      <nav class="menu" aria-label="Hauptnavigation">
+        <a href="../index.html">Magazin</a>
+        <a href="../about.html">Über uns</a>
+        <a href="#kommentare">Kommentare</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="post container">
+      <header class="post-header">
+        <span class="post-tag">Software</span>
+        <h1>Windows 11: Privacy Hardening</h1>
+        <p class="post-meta">Aktualisiert: 15. Oktober 2025 · Lesezeit: 6 Minuten</p>
+        <p class="lead">Out-of-the-box telefoniert Windows 11 gern nach Hause. Mit ein paar gezielten Einstellungen und Automatisierungsskripten minimierst du Telemetrie, Werbung und Datentransfers – ohne Produktivität zu verlieren.</p>
+      </header>
+
+      <figure class="hero">
+        <img src="https://picsum.photos/seed/windows-11-privacy-hardening/1200/630" alt="Laptop mit Windows 11 Datenschutz-Einstellungen">
+        <figcaption>Neue Geräte sollten bereits beim OOBE-Setup datensparsam konfiguriert werden.</figcaption>
+      </figure>
+
+      <section>
+        <h2>Setup-Assistent &amp; lokale Accounts</h2>
+        <p>Beim Out-of-Box-Experience (OOBE) kannst du seit Herbst-Update 2025 auch ohne Microsoft-Konto starten – wenn du während der WLAN-Abfrage <code>Shift</code>+<code>F10</code> drückst und <code>OOBE\BYPASSNRO</code> eingibst. Danach stehen lokale Konten wieder offen.</p>
+        <p>Deaktiviere direkt im Assistenten Standort, Inking &amp; Typing, Diagnosedaten und personalisierte Werbung. Das spart dir nachträgliche Klickorgien.</p>
+      </section>
+
+      <section>
+        <h2>Telemetrie &amp; Dienste reduzieren</h2>
+        <p>Nach dem ersten Login lohnt sich das Tool <strong>O&amp;O ShutUp 11</strong> – nutze das Profil „Empfohlen &amp; etwas eingeschränkt“. Zusätzlich kannst du via PowerShell wichtige Dienste anpassen:</p>
+        <div class="callout">
+          <h3>PowerShell-Snippet</h3>
+          <ul>
+            <li><code>Set-Service DiagTrack -StartupType Disabled</code></li>
+            <li><code>Set-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo" Enabled 0</code></li>
+            <li><code>schtasks /Change /TN "Microsoft\Windows\Customer Experience Improvement Program\Consolidator" /DISABLE</code></li>
+          </ul>
+        </div>
+        <p>Im Gruppenrichtlinien-Editor (<code>gpedit.msc</code>) stellst du Diagnose-Daten auf „Sicherheit“ und deaktivierst die Übermittlung optionaler Diagnosedaten. Vergiss nicht, die Bing-Integration im Startmenü abzuschalten (<code>Computer\HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\Explorer</code>).</p>
+      </section>
+
+      <section>
+        <h2>Automation &amp; Updates im Griff</h2>
+        <p>Mit Winget lässt sich ein Skript erstellen, das alle Privacy-Tools installiert und Einstellungen setzt. Kombiniere es mit einer Aufgabenplanung, die monatlich O&amp;O-Profil und Registry-Settings erneut ausrollt. Für Teams lohnt ein zentraler Intune- oder Endpoint-Manager-Workflow.</p>
+        <blockquote>
+          <p>„Privacy ist kein einmaliges Projekt, sondern ein wiederkehrender Prozess – besonders bei Feature-Updates.“</p>
+        </blockquote>
+        <p>Halte Windows dennoch aktuell: Nutze <code>windows update for business</code> Policies, um Funktionsupdates um 30 Tage zu verzögern, Sicherheitsupdates aber sofort zuzulassen.</p>
+      </section>
+
+      <footer class="post-footer">
+        <a class="back-link" href="../index.html">← Zurück zur Übersicht</a>
+        <p class="taglist">Schlagworte: Windows 11, Datenschutz, Automatisierung, PowerShell</p>
+      </footer>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="muted">© 2025 TechIndex.ch — Schweizer Tech-Blog für Hardware, Software & Fotografie.</div>
+    </div>
+  </footer>
+</body>
+</html>

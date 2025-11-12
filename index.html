@@ -67,7 +67,9 @@
     /* Featured */
     .grid{display:grid;gap:16px}
     .grid-3{grid-template-columns:repeat(3,1fr)}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:block;transition:border-color .18s ease,transform .18s ease}
+    .card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+    .card:hover{border-color:var(--accent);transform:translateY(-3px)}
     .card .thumb{aspect-ratio:16/9;background:#0f0f0f;overflow:hidden}
     .card .body{padding:16px}
     .tag{display:inline-block;padding:4px 8px;border:1px solid var(--border);border-radius:999px;color:#eee;font-size:12px;opacity:.85}
@@ -306,23 +308,71 @@
 
   <script>
     // ----- Demo‑Daten (würden später aus CMS/API kommen)
-    const POSTS = Array.from({length:18}).map((_,i)=>({
-      id: i+1,
-      title: [
-        'Langzeit‑Test: NVMe SSDs 2025',
-        'Cloud‑Backup: 3‑2‑1‑Strategie einfach erklärt',
-        'Street‑Photography: 7 Praxis‑Tipps',
-        'Linux auf dem Mini‑PC: Setup & Tuning',
-        'RAW‑Workflow mit Capture One vs. Lightroom',
-        'Günstige 4K‑Monitore im Vergleich',
-        'Self‑Hosted Preis‑Tracker mit Docker',
-        'Noise‑Reduction: Topaz vs. DxO',
-        'Windows 11: Privacy Hardening',
-      ][i%9],
-      tag: ['Hardware','Software','Fotografie','Preisvergleich'][i%4],
-      date: new Date(2025,10,(i%28)+1),
-      excerpt: 'Kurz & bündig: Architektur, Settings und Benchmarks für schnelle Entscheidungen.'
-    }));
+    const BASE_POSTS = [
+      {
+        slug: 'langzeit-test-nvme-ssds-2025',
+        title: 'Langzeit‑Test: NVMe SSDs 2025',
+        tag: 'Hardware',
+        excerpt: '12 Monate Belastungstest: Performance-Drift, Temperaturlimits und Firmware-Fallen im Überblick.'
+      },
+      {
+        slug: 'cloud-backup-3-2-1-strategie-einfach-erklaert',
+        title: 'Cloud‑Backup: 3‑2‑1‑Strategie einfach erklärt',
+        tag: 'Software',
+        excerpt: 'So kombinierst du lokale Platten, NAS und verschlüsselte Cloud-Speicher ohne Bauchweh.'
+      },
+      {
+        slug: 'street-photography-7-praxis-tipps',
+        title: 'Street‑Photography: 7 Praxis‑Tipps',
+        tag: 'Fotografie',
+        excerpt: 'Von Zonensystem bis Zonofokus – so gelingen authentische Strassenszenen in jeder Lichtsituation.'
+      },
+      {
+        slug: 'linux-auf-dem-mini-pc-setup-und-tuning',
+        title: 'Linux auf dem Mini‑PC: Setup & Tuning',
+        tag: 'Hardware',
+        excerpt: 'Treiber, Kernel-Parameter und Undervolting: Hol das Maximum aus deinem SFF-System heraus.'
+      },
+      {
+        slug: 'raw-workflow-mit-capture-one-vs-lightroom',
+        title: 'RAW‑Workflow mit Capture One vs. Lightroom',
+        tag: 'Fotografie',
+        excerpt: 'Farb-Engines, Tethering und KI-Masken im direkten Vergleich für Studio und Reportage.'
+      },
+      {
+        slug: 'guenstige-4k-monitore-im-vergleich',
+        title: 'Günstige 4K‑Monitore im Vergleich',
+        tag: 'Preisvergleich',
+        excerpt: 'IPS, VA oder OLED? Wir testen Farbraumabdeckung, Uniformity und Ergonomie unter 500 Franken.'
+      },
+      {
+        slug: 'self-hosted-preis-tracker-mit-docker',
+        title: 'Self‑Hosted Preis‑Tracker mit Docker',
+        tag: 'Software',
+        excerpt: 'Watchtower, Prometheus & Alerts – so automatisierst du Preisalarme komplett in deinem Homelab.'
+      },
+      {
+        slug: 'noise-reduction-topaz-vs-dxo',
+        title: 'Noise‑Reduction: Topaz vs. DxO',
+        tag: 'Fotografie',
+        excerpt: 'KI-Modelle im Direktvergleich: Detailerhalt, Batch-Fähigkeit und GPU-Performance.'
+      },
+      {
+        slug: 'windows-11-privacy-hardening',
+        title: 'Windows 11: Privacy Hardening',
+        tag: 'Software',
+        excerpt: 'Von O&O ShutUp bis Winget-Automation: So reduzierst du Telemetrie auf einem frischen System.'
+      }
+    ];
+
+    const POSTS = Array.from({length:18}).map((_,i)=>{
+      const base = BASE_POSTS[i % BASE_POSTS.length];
+      return {
+        ...base,
+        id: i+1,
+        date: new Date(2025,10,(i%28)+1)
+      };
+    });
 
     const mobileQuery = window.matchMedia('(max-width: 640px)');
     let perPage = mobileQuery.matches ? 6 : 9; let page=1; let activeTag=''; let q='';
@@ -357,15 +407,15 @@
       page = Math.min(page, totalPages);
       const slice = filtered.slice((page-1)*perPage, page*perPage);
       postsEl.innerHTML = slice.map(p=>`
-        <article class="card">
-          <div class="thumb"><img src="https://picsum.photos/seed/${p.id}/800/450" alt="Vorschaubild" loading="lazy"></div>
+        <a class="card" href="articles/${p.slug}.html">
+          <div class="thumb"><img src="https://picsum.photos/seed/${p.slug}/800/450" alt="Vorschaubild" loading="lazy"></div>
           <div class="body">
             <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#cfcfcf"><span>${p.tag}</span><time datetime="${p.date.toISOString()}">${p.date.toLocaleDateString('de-CH',{day:'2-digit',month:'short',year:'numeric'})}</time></div>
-            <h3 class="title"><a href="#">${p.title}</a></h3>
+            <h3 class="title">${p.title}</h3>
             <p class="muted">${p.excerpt}</p>
-            <a href="#" style="color:var(--accent);font-weight:600">Weiterlesen →</a>
+            <span style="display:inline-block;margin-top:8px;color:var(--accent);font-weight:600">Weiterlesen →</span>
           </div>
-        </article>`).join('');
+        </a>`).join('');
       countEl.textContent = `Seite ${page} von ${totalPages}`;
       prevBtn.disabled = page===1;
       nextBtn.disabled = page===totalPages;

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Linux auf dem Mini-PC: Setup &amp; Tuning – TechIndex</title>
+  <meta name="description" content="Von BIOS-Updates bis Kernel-Tweaks: So bringst du deinen Mini-PC mit Linux auf Höchstleistung." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <style>
+    :root{
+      --bg:#0a0a0a;
+      --panel:#121212;
+      --muted:#a1a1a1;
+      --text:#fff;
+      --border:#1f1f1f;
+      --accent:#76B900;
+      --accent-weak:#5e9400;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --max:880px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 "Inter",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    a:hover{color:var(--accent)}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max);padding:0 24px;margin:0 auto}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center;font-weight:720;letter-spacing:-.01em}
+    .brand-badge{width:30px;height:30px;border:2px solid var(--accent);border-radius:10px;display:grid;place-items:center}
+    .brand-badge svg{stroke:var(--accent)}
+    .menu{display:flex;gap:18px;font-size:.95rem}
+    .menu a{color:#eaeaea;opacity:.85}
+    .menu a:hover{opacity:1}
+    main{padding:56px 0 80px}
+    .post{display:block}
+    .post-header{margin-bottom:32px}
+    .post-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid var(--border);border-radius:999px;font-size:.85rem;background:rgba(118,185,0,.08);color:#d7ffd7}
+    .post h1{margin:18px 0 10px;font-size:clamp(30px,5vw,44px);line-height:1.15;letter-spacing:-.015em}
+    .post-meta{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+    .lead{color:#d6ffd6;font-size:1.1rem;max-width:720px}
+    figure.hero{margin:0 0 36px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01))}
+    figure.hero img{width:100%;height:auto}
+    figure.hero figcaption{padding:12px 16px;color:var(--muted);font-size:.9rem}
+    .post section{margin-bottom:42px}
+    .post section h2{font-size:clamp(22px,3vw,30px);margin:0 0 14px;letter-spacing:-.01em}
+    .post section p{margin:0 0 16px}
+    .post section ul{padding-left:20px;margin:0 0 18px}
+    .post section li{margin-bottom:10px}
+    .callout{border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;background:rgba(118,185,0,.05);margin:24px 0;color:#e4ffe4}
+    .callout h3{margin:0 0 12px;font-size:1.05rem}
+    blockquote{margin:0;padding:18px 24px;border-left:4px solid var(--accent);background:rgba(255,255,255,.05);border-radius:0 14px 14px 0}
+    blockquote p{margin:0;color:#e2e2e2}
+    .post-footer{border-top:1px solid var(--border);padding-top:24px;margin-top:32px;display:flex;flex-direction:column;gap:12px}
+    .back-link{display:inline-flex;align-items:center;gap:10px;font-weight:600;color:var(--accent)}
+    .taglist{color:var(--muted);font-size:.9rem}
+    footer{border-top:1px solid var(--border);padding:32px 0;background:#090909}
+    footer .muted{color:var(--muted);font-size:.9rem}
+    @media (max-width:720px){
+      main{padding:44px 0 64px}
+      .nav-inner{flex-direction:column;gap:14px}
+      .menu{flex-wrap:wrap;justify-content:center}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html">
+        <span class="brand-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <path d="M4 4h16v4H4z" stroke="currentColor" />
+            <path d="M4 10h10v4H4z" stroke="currentColor" />
+            <path d="M4 16h16v4H4z" stroke="currentColor" />
+          </svg>
+        </span>
+        TechIndex
+      </a>
+      <nav class="menu" aria-label="Hauptnavigation">
+        <a href="../index.html">Magazin</a>
+        <a href="../about.html">Über uns</a>
+        <a href="#kommentare">Kommentare</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="post container">
+      <header class="post-header">
+        <span class="post-tag">Hardware</span>
+        <h1>Linux auf dem Mini-PC: Setup &amp; Tuning</h1>
+        <p class="post-meta">Aktualisiert: 6. November 2025 · Lesezeit: 8 Minuten</p>
+        <p class="lead">Ob Wohnzimmer-Server oder Edge-Device: Mini-PCs mit AMD Ryzen 8000 oder Intel Meteor Lake werden erst mit Linux richtig spannend. Wir zeigen die wichtigsten Tweaks für Performance, Stabilität und Lautstärke.</p>
+      </header>
+
+      <figure class="hero">
+        <img src="https://picsum.photos/seed/linux-auf-dem-mini-pc-setup-und-tuning/1200/630" alt="Mini-PC auf einem Schreibtisch mit Linux-Terminal">
+        <figcaption>Vom BIOS-Update bis zum systemd-service: Mini-PCs werden mit Linux zum Allrounder.</figcaption>
+      </figure>
+
+      <section>
+        <h2>BIOS-Setup und Komponenten-Check</h2>
+        <p>Bevor du den Installer startest, lohnt ein BIOS-Update. Viele Hersteller liefern überarbeitete AGESA-Versionen aus, die USB-Wake-Fixes und bessere iGPU-Leistung bringen. Schalte im BIOS C-States nicht komplett ab – sie sind für niedrigen Idle-Verbrauch entscheidend.</p>
+        <div class="callout">
+          <h3>Empfohlene Mini-PCs</h3>
+          <ul>
+            <li>Minisforum UM890 Pro (Ryzen 9 8945HS, 2x USB4)</li>
+            <li>Intel NUC 14 Pro (Meteor Lake, Thunderbolt 4)</li>
+            <li>Asus PN65 (Ryzen 7 8845HS, Dual-LAN)</li>
+          </ul>
+        </div>
+        <p>Prüfe ausserdem die NVMe-Kühlpads: Viele Geräte liefern nur dünne Pads mit. Ein 1,5-mm-Pad senkt die Temperatur im Dauerbetrieb um bis zu 8 Kelvin.</p>
+      </section>
+
+      <section>
+        <h2>Kernel-Tuning und Treiber</h2>
+        <p>Ubuntu 24.04 LTS bringt Kernel 6.8 – gut, aber nicht perfekt. Für Ryzen-iGPUs lohnt ein Umstieg auf Kernel 6.9 oder höher, um den neuen Power-Management-Stack zu nutzen. Setze <code>amd_pstate=guided</code> als Boot-Parameter, um feinere Frequenzsprünge zu erhalten.</p>
+        <p>Für Intel Meteor Lake benötigst du noch das Paket <code>intel-media-va-driver-non-free</code>, damit QuickSync in ffmpeg funktioniert. Vergiss nicht, deine Docker-Container mit <code>--device /dev/dri</code> zu starten, falls du Hardware-Encoding nutzt.</p>
+      </section>
+
+      <section>
+        <h2>Thermik, Geräuschprofil und Energieverbrauch</h2>
+        <p>Viele Mini-PCs laufen mit 45-Watt-PL1 – mehr als nötig. Mit <code>ryzenadj</code> oder <code>intel-undervolt</code> setzt du Limits auf 28 Watt, ohne Leistungseinbrüche bei Alltagsaufgaben. In Tests mit Plex-Transcoding sank der Verbrauch um 22 %, die Lüfterdrehzahl sogar um 600 rpm.</p>
+        <blockquote>
+          <p>„Leise Mini-PCs sind möglich – aber nur, wenn du Leistung und Thermik gezielt in Balance hältst.“</p>
+        </blockquote>
+        <p>Für 24/7-Betrieb empfehlen wir, die Lüfterkurven mit <code>nbfc</code> oder dem BIOS-Tool anzupassen. Ein zusätzlicher 80-mm-Lüfter auf dem Gehäuseboden wirkt Wunder.</p>
+      </section>
+
+      <footer class="post-footer">
+        <a class="back-link" href="../index.html">← Zurück zur Übersicht</a>
+        <p class="taglist">Schlagworte: Linux, Mini-PC, Tuning, Energieeffizienz</p>
+      </footer>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="muted">© 2025 TechIndex.ch — Schweizer Tech-Blog für Hardware, Software & Fotografie.</div>
+    </div>
+  </footer>
+</body>
+</html>
