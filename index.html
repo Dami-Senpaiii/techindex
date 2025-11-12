@@ -58,7 +58,7 @@
     .hero::before{content:"";position:absolute;inset:-20% -20% auto -20%;height:420px;background:radial-gradient(900px 380px at 50% -10%, rgba(118,185,0,.28), transparent)}
     .hero-inner{padding:56px 0}
     .h1{font-size:clamp(28px,3.4vw,48px);line-height:1.15;margin:0 0 10px;font-weight:850;letter-spacing:-.01em}
-    .lead{color:#d6ffd6;max-width:760px}
+    .lead{color:#d6ffd6;max-width:860px}
     .hero-actions{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
     .btn{border:none;background:var(--accent);color:#000;font-weight:700;padding:12px 16px;border-radius:12px;box-shadow:var(--shadow);cursor:pointer}
     .btn.outline{background:transparent;color:#fff;border:1px solid var(--border);box-shadow:none}
@@ -155,10 +155,10 @@
   <header class="hero">
     <div class="container hero-inner">
       <h1 class="h1">Das Schweizer Tech‑Magazin für Builder</h1>
-      <p class="lead">Fundierte Artikel zu <strong>Hardware</strong>, <strong>Software</strong> & <strong>Fotografie</strong> – plus transparente <strong>Preisvergleiche</strong> für smarte Kaufentscheide. Kein Fluff, nur Signal.</p>
+      <p class="lead">Fundierte Artikel zu <strong>Hardware</strong>, <strong>Software</strong> & <strong>Fotografie</strong> – transparente <strong>Preisvergleiche</strong> für smarte Kaufentscheide.</p>
       <div class="hero-actions">
         <a class="btn" href="#neuste">Jetzt lesen</a>
-        <a class="btn outline" href="#techindex-weekly">Newsletter abonnieren</a>
+        <a class="btn outline" href="#newsletter">Newsletter abonnieren</a>
       </div>
     </div>
   </header>
@@ -264,10 +264,11 @@
         <h2>TechIndex Weekly</h2>
         <small class="muted">Einmal pro Woche. Keine Werbung, nur Mehrwert.</small>
       </div>
-      <form id="newsletter-form" novalidate data-endpoint="">
+      <form id="newsletter-form" novalidate>
         <label for="email" class="visually-hidden">E‑Mail</label>
         <input id="email" name="email" type="email" placeholder="dein@email.ch" autocomplete="email" required>
         <button class="btn" type="submit">Abonnieren</button>
+        <button class="btn outline" type="button" id="newsletter-export" disabled>CSV exportieren</button>
       </form>
       <p class="small" id="newsletter-status" role="status" aria-live="polite" style="margin-top:10px;color:var(--muted)"></p>
     </div>
@@ -393,9 +394,9 @@
     const newsletterForm = document.getElementById('newsletter-form');
     const emailInput = document.getElementById('email');
     const newsletterStatus = document.getElementById('newsletter-status');
+    const exportBtn = document.getElementById('newsletter-export');
     const NEWSLETTER_KEY = 'techindex.newsletter-subscribers';
     let subscribersCache = [];
-    let workerEndpoint = '';
 
     const hasLocalStorage = (()=>{
       try{
@@ -443,32 +444,41 @@
       newsletterStatus.style.color = color;
     }
 
+    function updateExportAvailability(){
+      if(!exportBtn) return;
+      const hasEntries = subscribersCache.length > 0;
+      exportBtn.disabled = !hasEntries;
+      exportBtn.setAttribute('aria-disabled', hasEntries ? 'false' : 'true');
+    }
+
     function sortSubscribers(){
       subscribersCache.sort((a,b)=>{
         return new Date(b.subscribedAt).getTime() - new Date(a.subscribedAt).getTime();
       });
     }
 
-    async function syncWithEndpoint(email, subscribedAt, successMessage){
-      if(!workerEndpoint){
+    function buildCsv(entries){
+      const header = 'email,subscribed_at\n';
+      const rows = entries.map(entry=>`${entry.email},${entry.subscribedAt}`).join('\n');
+      return `${header}${rows}`;
+    }
+
+    function triggerCsvDownload(){
+      if(!subscribersCache.length){
+        setNewsletterStatus('Noch keine Anmeldungen vorhanden.', 'info');
         return;
       }
-      try{
-        const response = await fetch(workerEndpoint, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ email, subscribedAt })
-        });
-        if(!response.ok){
-          throw new Error(`Request failed with status ${response.status}`);
-        }
-        setNewsletterStatus(successMessage || 'Eintrag in Cloudflare gespeichert.', 'success');
-      }catch(error){
-        console.warn('Cloudflare Sync fehlgeschlagen', error);
-        setNewsletterStatus('Lokal gespeichert, Cloudflare-Sync fehlgeschlagen. Bitte später erneut versuchen.', 'error');
-      }
+      const csv = buildCsv(subscribersCache);
+      const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `newsletter-subscribers-${new Date().toISOString().slice(0,10)}.csv`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setTimeout(()=>URL.revokeObjectURL(url), 1000);
+      setNewsletterStatus('CSV-Export gestartet. Datei im Download-Ordner prüfen.', 'success');
     }
 
     function initNewsletter(){
@@ -476,13 +486,17 @@
         return;
       }
       if(!hasLocalStorage){
-        setNewsletterStatus('Lokaler Speicher ist deaktiviert – Einträge werden nicht gespeichert.', 'error');
+        setNewsletterStatus('Lokaler Speicher ist deaktiviert – CSV-Speicherung nicht möglich.', 'error');
+        if(exportBtn){
+          exportBtn.disabled = true;
+          exportBtn.setAttribute('aria-disabled', 'true');
+        }
         return;
       }
 
       subscribersCache = loadSubscribers();
       sortSubscribers();
-      workerEndpoint = (newsletterForm.dataset.endpoint || '').trim();
+      updateExportAvailability();
 
       newsletterForm.addEventListener('submit', (event)=>{
         event.preventDefault();
@@ -497,29 +511,28 @@
         const normalizedEmail = emailRaw.toLowerCase();
         const timestamp = new Date().toISOString();
         const existingIndex = subscribersCache.findIndex(entry=>entry.email === normalizedEmail);
-        let successMessage;
         if(existingIndex >= 0){
           subscribersCache[existingIndex] = {
             ...subscribersCache[existingIndex],
             subscribedAt: timestamp
           };
-          successMessage = 'E-Mail war bereits eingetragen – Zeitstempel aktualisiert.';
+          setNewsletterStatus('E-Mail war bereits eingetragen – Zeitstempel aktualisiert.', 'success');
         }else{
           subscribersCache.push({ email: normalizedEmail, subscribedAt: timestamp });
-          successMessage = 'Danke fürs Abonnieren! Eintrag gespeichert.';
+          setNewsletterStatus('Danke fürs Abonnieren! Eintrag gespeichert.', 'success');
         }
         sortSubscribers();
         persistSubscribers(subscribersCache);
+        updateExportAvailability();
         newsletterForm.reset();
         emailInput.focus();
-
-        if(workerEndpoint){
-          setNewsletterStatus('Eintrag lokal gespeichert. Sync mit Cloudflare läuft…', 'info');
-          syncWithEndpoint(normalizedEmail, timestamp, successMessage);
-        }else{
-          setNewsletterStatus(successMessage, 'success');
-        }
       });
+
+      if(exportBtn){
+        exportBtn.addEventListener('click', ()=>{
+          triggerCsvDownload();
+        });
+      }
     }
 
     function setNav(open){

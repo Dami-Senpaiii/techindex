@@ -10,7 +10,7 @@ This repository contains a single-page static site for TechIndex. The markup is 
 ## Local Preview
 Double-click `index.html` or open it via `python -m http.server` to review the page in a browser.
 
-## Newsletter Storage & Cloudflare Sync
+## Newsletter-CSV & Export
 - Newsletter subscriptions are stored client-side in `localStorage` under the key `techindex.newsletter-subscribers` so they persist between visits on the same device.
-- To mirror the list in Cloudflare, provide a Worker endpoint that accepts a JSON payload `{ "email": "user@example.com", "subscribedAt": "2025-11-12T00:00:00.000Z" }` and set the endpoint URL via the `data-endpoint` attribute on the `<form id="newsletter-form">` element in `index.html`.
-- When an endpoint is configured, the client keeps the local copy and sends a POST request to Cloudflare after each successful sign-up. If the request fails, the visitor sees an error message but their address remains in the local list so you can retry later.
+- The **CSV exportieren** button in the newsletter section creates a `newsletter-subscribers-YYYY-MM-DD.csv` download with the columns `email` and `subscribed_at` (ISO 8601 timestamp).
+- To consolidate sign-ups in Cloudflare, upload the downloaded CSV to the service you prefer (e.g. Cloudflare Email Routing, Workers KV/R2, or an external CRM). For automation you can swap out the localStorage logic with a Cloudflare Worker endpoint that accepts the POST request and appends to R2 or D1.
