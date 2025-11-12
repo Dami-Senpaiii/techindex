@@ -63,12 +63,14 @@
     .btn{border:none;background:var(--accent);color:#000;font-weight:700;padding:12px 16px;border-radius:12px;box-shadow:var(--shadow);cursor:pointer}
     .btn.outline{background:transparent;color:#fff;border:1px solid var(--border);box-shadow:none}
     .btn:hover{filter:brightness(1.05)}
+    .btn:disabled,.btn[disabled]{opacity:.55;cursor:not-allowed;box-shadow:none;filter:none}
 
     /* Featured */
     .grid{display:grid;gap:16px}
     .grid-3{grid-template-columns:repeat(3,1fr)}
     .card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:block;transition:border-color .18s ease,transform .18s ease}
-    .card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+    .card a{display:block;color:inherit;height:100%}
+    .card a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
     .card:hover{border-color:var(--accent);transform:translateY(-3px)}
     .card .thumb{aspect-ratio:16/9;background:#0f0f0f;overflow:hidden}
     .card .body{padding:16px}
@@ -138,14 +140,13 @@
         <span class="visually-hidden">Menü</span>
       </button>
       <div class="menu" role="navigation" aria-label="Hauptmenü" id="menu">
-        <a href="#neu">Neu</a>
+        <a href="#neuste">Neuste Beiträge</a>
         <a href="#hardware">Hardware</a>
         <a href="#software">Software</a>
         <a href="#fotografie">Fotografie</a>
         <a href="#preisindex">Preisindex</a>
-        <a href="#newsletter">Newsletter</a>
+        <a href="#techindex-weekly">TechIndex Weekly</a>
         <a href="about.html">Über uns</a>
-        <a class="cta small" href="#einsenden" title="Beitrag einreichen">Beitrag einreichen</a>
       </div>
     </div>
   </nav>
@@ -156,8 +157,8 @@
       <h1 class="h1">Das Schweizer Tech‑Magazin für Builder</h1>
       <p class="lead">Fundierte Artikel zu <strong>Hardware</strong>, <strong>Software</strong> & <strong>Fotografie</strong> – plus transparente <strong>Preisvergleiche</strong> für smarte Kaufentscheide. Kein Fluff, nur Signal.</p>
       <div class="hero-actions">
-        <a class="btn" href="#neu">Jetzt lesen</a>
-        <a class="btn outline" href="#newsletter">Newsletter abonnieren</a>
+        <a class="btn" href="#neuste">Jetzt lesen</a>
+        <a class="btn outline" href="#techindex-weekly">Newsletter abonnieren</a>
       </div>
     </div>
   </header>
@@ -167,45 +168,51 @@
     <div class="container">
       <div class="section-head">
         <h2>Empfehlungen der Redaktion</h2>
-        <a class="small" href="#neu" style="color:var(--accent)">Alle Beiträge →</a>
+        <a class="small" href="#neuste" style="color:var(--accent)">Alle Beiträge →</a>
       </div>
       <div class="grid grid-3">
         <!-- Card 1 -->
         <article class="card">
-          <div class="thumb"><img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop" alt="Mainboard und GPU Nahaufnahme"></div>
-          <div class="body">
-            <span class="tag">Hardware</span>
-            <h3 class="title"><a href="#">GPU‑Leitfaden 2025: Leistung, Effizienz & Preis</a></h3>
-            <p class="muted">Benchmarks unter realen Workloads – von Gaming bis AI‑Inference.</p>
-          </div>
+          <a href="articles/linux-auf-dem-mini-pc-setup-und-tuning.html">
+            <div class="thumb"><img src="https://picsum.photos/seed/linux-auf-dem-mini-pc-setup-und-tuning/480/270" alt="Mini-PC mit geöffnetem Gehäuse und Linux-Terminal"></div>
+            <div class="body">
+              <span class="tag">Hardware</span>
+              <h3 class="title">Linux auf dem Mini‑PC: Setup &amp; Tuning</h3>
+              <p class="muted">BIOS, Kernel-Tweaks und Undervolting – so wird dein SFF-System leiser und effizienter.</p>
+            </div>
+          </a>
         </article>
         <!-- Card 2 -->
         <article class="card">
-          <div class="thumb"><img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?q=80&w=1600&auto=format&fit=crop" alt="Terminal und Code"></div>
-          <div class="body">
-            <span class="tag">Software</span>
-            <h3 class="title"><a href="#">Self‑Hosting mit Docker: Von 0 auf Prod</a></h3>
-            <p class="muted">Best Practices für Updates, Backups und Zero‑Downtime‑Deployments.</p>
-          </div>
+          <a href="articles/self-hosted-preis-tracker-mit-docker.html">
+            <div class="thumb"><img src="https://picsum.photos/seed/self-hosted-preis-tracker-mit-docker/480/270" alt="Server-Rack mit Docker-Logos und Preisdiagramm"></div>
+            <div class="body">
+              <span class="tag">Software</span>
+              <h3 class="title">Self‑Hosted Preis‑Tracker mit Docker</h3>
+              <p class="muted">Scrapy, PostgreSQL und Prometheus bauen dir Preisalarme ohne externe APIs.</p>
+            </div>
+          </a>
         </article>
         <!-- Card 3 -->
         <article class="card">
-          <div class="thumb"><img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=1600&auto=format&fit=crop" alt="Spiegellose Kamera auf Tisch"></div>
-          <div class="body">
-            <span class="tag">Fotografie</span>
-            <h3 class="title"><a href="#">Kamera‑Kauf 2025: APS‑C vs. Vollformat</a></h3>
-            <p class="muted">Bildqualität, Objektive, Autofokus – was zählt wirklich?</p>
-          </div>
+          <a href="articles/street-photography-7-praxis-tipps.html">
+            <div class="thumb"><img src="https://picsum.photos/seed/street-photography-7-praxis-tipps/480/270" alt="Menschen im Gegenlicht einer Stadtstrasse"></div>
+            <div class="body">
+              <span class="tag">Fotografie</span>
+              <h3 class="title">Street‑Photography: 7 Praxis‑Tipps</h3>
+              <p class="muted">Timing, Zonofokus und Layering – unsere Feldnotizen für bessere Strassenszenen.</p>
+            </div>
+          </a>
         </article>
       </div>
     </div>
   </section>
 
   <!-- LATEST / FILTERS -->
-  <section id="neu">
+  <section id="neuste">
     <div class="container">
       <div class="section-head">
-        <h2>Neueste Beiträge</h2>
+        <h2>Neuste Beiträge</h2>
         <div class="search"><label class="visually-hidden" for="q">Suche</label><input id="q" type="search" placeholder="Suche nach Themen oder Titeln…"></div>
       </div>
       <div class="filters" id="tagbar" aria-label="Themenfilter">
@@ -251,17 +258,18 @@
   </section>
 
   <!-- NEWSLETTER -->
-  <section id="newsletter">
+  <section id="techindex-weekly">
     <div class="container newsletter">
       <div class="section-head">
         <h2>TechIndex Weekly</h2>
         <small class="muted">Einmal pro Woche. Keine Werbung, nur Mehrwert.</small>
       </div>
-      <form action="#" method="post" onsubmit="alert('Danke! (Demo)');return false;">
+      <form id="newsletter-form" novalidate data-endpoint="">
         <label for="email" class="visually-hidden">E‑Mail</label>
-        <input id="email" type="email" placeholder="dein@email.ch" required>
+        <input id="email" name="email" type="email" placeholder="dein@email.ch" autocomplete="email" required>
         <button class="btn" type="submit">Abonnieren</button>
       </form>
+      <p class="small" id="newsletter-status" role="status" aria-live="polite" style="margin-top:10px;color:var(--muted)"></p>
     </div>
   </section>
 
@@ -382,6 +390,137 @@
     const nextBtn = document.getElementById('next');
     const navToggle = document.getElementById('nav-toggle');
     const menuEl = document.getElementById('menu');
+    const newsletterForm = document.getElementById('newsletter-form');
+    const emailInput = document.getElementById('email');
+    const newsletterStatus = document.getElementById('newsletter-status');
+    const NEWSLETTER_KEY = 'techindex.newsletter-subscribers';
+    let subscribersCache = [];
+    let workerEndpoint = '';
+
+    const hasLocalStorage = (()=>{
+      try{
+        const t='__ti_newsletter__';
+        localStorage.setItem(t,'1');
+        localStorage.removeItem(t);
+        return true;
+      }catch(_){
+        return false;
+      }
+    })();
+
+    function loadSubscribers(){
+      if(!hasLocalStorage) return [];
+      try{
+        const raw = localStorage.getItem(NEWSLETTER_KEY);
+        if(!raw) return [];
+        const parsed = JSON.parse(raw);
+        if(!Array.isArray(parsed)) return [];
+        return parsed.filter(entry=>entry && typeof entry.email === 'string' && entry.email.trim()).map(entry=>({
+          email: entry.email.trim(),
+          subscribedAt: entry.subscribedAt || new Date().toISOString()
+        }));
+      }catch(err){
+        console.warn('Newsletter data konnte nicht geladen werden.', err);
+        return [];
+      }
+    }
+
+    function persistSubscribers(entries){
+      if(!hasLocalStorage) return;
+      try{
+        localStorage.setItem(NEWSLETTER_KEY, JSON.stringify(entries));
+      }catch(err){
+        console.warn('Newsletter data konnte nicht gespeichert werden.', err);
+      }
+    }
+
+    function setNewsletterStatus(message, tone='info'){
+      if(!newsletterStatus) return;
+      newsletterStatus.textContent = message;
+      let color = 'var(--muted)';
+      if(tone === 'error') color = '#ffb4b4';
+      if(tone === 'success') color = '#d6ffd6';
+      newsletterStatus.style.color = color;
+    }
+
+    function sortSubscribers(){
+      subscribersCache.sort((a,b)=>{
+        return new Date(b.subscribedAt).getTime() - new Date(a.subscribedAt).getTime();
+      });
+    }
+
+    async function syncWithEndpoint(email, subscribedAt, successMessage){
+      if(!workerEndpoint){
+        return;
+      }
+      try{
+        const response = await fetch(workerEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email, subscribedAt })
+        });
+        if(!response.ok){
+          throw new Error(`Request failed with status ${response.status}`);
+        }
+        setNewsletterStatus(successMessage || 'Eintrag in Cloudflare gespeichert.', 'success');
+      }catch(error){
+        console.warn('Cloudflare Sync fehlgeschlagen', error);
+        setNewsletterStatus('Lokal gespeichert, Cloudflare-Sync fehlgeschlagen. Bitte später erneut versuchen.', 'error');
+      }
+    }
+
+    function initNewsletter(){
+      if(!newsletterForm || !emailInput){
+        return;
+      }
+      if(!hasLocalStorage){
+        setNewsletterStatus('Lokaler Speicher ist deaktiviert – Einträge werden nicht gespeichert.', 'error');
+        return;
+      }
+
+      subscribersCache = loadSubscribers();
+      sortSubscribers();
+      workerEndpoint = (newsletterForm.dataset.endpoint || '').trim();
+
+      newsletterForm.addEventListener('submit', (event)=>{
+        event.preventDefault();
+        const emailRaw = (emailInput.value || '').trim();
+        emailInput.value = emailRaw;
+        if(!emailRaw){
+          setNewsletterStatus('Bitte eine E-Mail-Adresse eingeben.', 'error');
+          emailInput.focus();
+          return;
+        }
+        if(!emailInput.checkValidity()){ emailInput.reportValidity(); return; }
+        const normalizedEmail = emailRaw.toLowerCase();
+        const timestamp = new Date().toISOString();
+        const existingIndex = subscribersCache.findIndex(entry=>entry.email === normalizedEmail);
+        let successMessage;
+        if(existingIndex >= 0){
+          subscribersCache[existingIndex] = {
+            ...subscribersCache[existingIndex],
+            subscribedAt: timestamp
+          };
+          successMessage = 'E-Mail war bereits eingetragen – Zeitstempel aktualisiert.';
+        }else{
+          subscribersCache.push({ email: normalizedEmail, subscribedAt: timestamp });
+          successMessage = 'Danke fürs Abonnieren! Eintrag gespeichert.';
+        }
+        sortSubscribers();
+        persistSubscribers(subscribersCache);
+        newsletterForm.reset();
+        emailInput.focus();
+
+        if(workerEndpoint){
+          setNewsletterStatus('Eintrag lokal gespeichert. Sync mit Cloudflare läuft…', 'info');
+          syncWithEndpoint(normalizedEmail, timestamp, successMessage);
+        }else{
+          setNewsletterStatus(successMessage, 'success');
+        }
+      });
+    }
 
     function setNav(open){
       if(!navToggle || !menuEl) return;
@@ -463,6 +602,7 @@
     // Jahr im Footer
     document.getElementById('y').textContent = new Date().getFullYear();
 
+    initNewsletter();
     setNav(false);
     handleMobileChange(mobileQuery);
     render();
