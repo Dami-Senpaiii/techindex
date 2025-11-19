@@ -54,6 +54,17 @@
     .post table th,.post table td{border:1px solid var(--border);padding:10px 12px;text-align:left}
     .post table thead{background:rgba(255,255,255,.03)}
     .post small{color:var(--muted)}
+    .chart-card{margin:26px 0;padding:24px;border:1px solid var(--border);border-radius:var(--radius);background:rgba(255,255,255,.02);box-shadow:var(--shadow)}
+    .chart-card h3{margin:0;font-size:1.35rem}
+    .chart-meta{margin:6px 0 18px;color:var(--muted);font-size:.95rem}
+    .chart-canvas{position:relative;height:420px}
+    .chart-legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.9rem;color:var(--muted);margin-top:18px}
+    .chart-legend span{display:inline-flex;align-items:center;gap:6px}
+    .legend-dot{width:12px;height:12px;border-radius:999px}
+    .legend-dot.nvidia{background:#38bdf8}
+    .legend-dot.amd{background:#fb7185}
+    .chart-note{font-size:.85rem;color:var(--muted);margin-top:16px}
+    .chart-note strong{color:var(--text)}
     blockquote{margin:0 0 18px;padding:18px 24px;border-left:4px solid var(--accent);background:rgba(255,255,255,.05);border-radius:0 14px 14px 0}
     blockquote p{margin:0;color:#e2e2e2}
     .post-footer{border-top:1px solid var(--border);padding-top:24px;margin-top:32px;display:flex;flex-direction:column;gap:12px}
@@ -118,130 +129,22 @@
       <section>
         <h2>Preis-Leistungs-Quickcheck: zentrale GPUs im Vergleich</h2>
         <p>Die folgende kompakte Tabelle fasst einige zentrale Modelle zusammen. FPS-Werte sind grobe Durchschnittswerte über aktuelle AAA-Games bei hohen Details (meist 4K Ultra, teils 1440p, wie angegeben). Preise sind typische Strassenpreise in der Schweiz (Stand November 2025).</p>
+        <div class="chart-card" aria-live="polite">
+          <h3>Preis-Leistungs-Scatterplot</h3>
+          <p class="chart-meta">Preis (CHF) auf der X-Achse, Ø FPS (4K Raster) auf der Y-Achse.</p>
+          <div class="chart-canvas">
+            <canvas id="gpuScatter" aria-label="Scatterplot mit Preisen und FPS pro GPU"></canvas>
+          </div>
+          <div class="chart-legend" role="list">
+            <span role="listitem"><span class="legend-dot nvidia"></span> Nvidia</span>
+            <span role="listitem"><span class="legend-dot amd"></span> AMD</span>
+            <span role="listitem">Sweetspot: 1440p / leichtes 4K</span>
+            <span role="listitem">High-End bis Midrange</span>
+          </div>
+          <p class="chart-note"><strong>Hinweise:</strong> Für alle Karten wird die 4K-Raster-Performance dargestellt. Bei der <strong>RX 7800 XT</strong> wurde für den Vergleich die 4K-Basis verwendet (~40 FPS, ~7,3 FPS pro 100 CHF).</p>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #0b1120;
-      color: #e5e7eb;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-    }
-
-    .wrapper {
-      max-width: 1000px;
-      width: 100%;
-      margin: 32px 16px;
-      padding: 24px;
-      border-radius: 16px;
-      background: radial-gradient(circle at top left, #1d283a, #020617 60%);
-      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.8);
-      border: 1px solid rgba(148, 163, 184, 0.3);
-    }
-
-    h1 {
-      font-size: 1.6rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .subtitle {
-      font-size: 0.95rem;
-      color: #9ca3af;
-      margin-bottom: 1.5rem;
-    }
-
-    .chart-container {
-      position: relative;
-      height: 450px;
-      width: 100%;
-      margin-bottom: 1.75rem;
-    }
-
-    .legend {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 16px;
-      font-size: 0.85rem;
-      color: #9ca3af;
-    }
-
-    .legend-group {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .legend-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-    }
-
-    .legend-dot.nvidia {
-      background: #38bdf8;
-      box-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
-    }
-
-    .legend-dot.amd {
-      background: #fb7185;
-      box-shadow: 0 0 8px rgba(248, 113, 113, 0.8);
-    }
-
-    .legend-badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 2px 8px;
-      border-radius: 999px;
-      border: 1px dashed rgba(148, 163, 184, 0.4);
-      font-size: 0.8rem;
-    }
-
-    .note {
-      font-size: 0.8rem;
-      color: #6b7280;
-      margin-top: 0.75rem;
-      line-height: 1.4;
-    }
-
-    .note strong {
-      color: #e5e7eb;
-      font-weight: 500;
-    }
-  </style>
-</head>
-<body>
-  <div class="wrapper">
-    <h1>Preis-Leistungs-Quickcheck: zentrale GPUs im Vergleich</h1>
-    <div class="subtitle">
-      Scatter-Plot: <strong>Preis (CHF)</strong> auf der X-Achse, <strong>Ø FPS (4K Raster)</strong> auf der Y-Achse.
-    </div>
-
-    <div class="chart-container">
-      <canvas id="gpuScatter"></canvas>
-    </div>
-
-    <div class="legend">
-      <span class="legend-group">
-        <span class="legend-dot nvidia"></span> Nvidia
-      </span>
-      <span class="legend-group">
-        <span class="legend-dot amd"></span> AMD
-      </span>
-      <span class="legend-badge">Sweetspot: 1440p / leichtes 4K</span>
-      <span class="legend-badge">High-End bis Midrange</span>
-    </div>
-
-    <p class="note">
-      <strong>Hinweise:</strong> Für alle Karten wird die 4K-Raster-Performance dargestellt.  
-      Bei der <strong>RX 7800 XT</strong> wurde für den Vergleich die 4K-Basis verwendet (~40 FPS, ~7,3 FPS pro 100 CHF).
-    </p>
-  </div>
-
-  <script>
+        <script>
     // Datenbasis: Preis (CHF) vs. Ø FPS (4K Raster)
     const nvidiaData = [
       {
