@@ -137,10 +137,30 @@
         <h2>Preis-Leistungs-Quickcheck: zentrale Desktop-CPUs im Vergleich</h2>
 
         <p>
-          Die folgende kompakte Tabelle zeigt, wie sich typische Modelle im Bereich 
+          Die folgende kompakte Tabelle zeigt, wie sich typische Modelle im Bereich
           Mittelklasse bis High-End einordnen. Preise sind grobe Strassenpreise bei Schweizer Händlern
           (Digitec, Brack, Microspot, Toppreise-Vergleich, Stand Q4/2025).
         </p>
+
+        <section class="ti-chart-block">
+          <h3>Preis-Leistungs-Scatterplot (CPUs)</h3>
+          <p class="ti-chart-intro">
+            Preis (CHF) auf der X-Achse, relativer Gaming-Performance-Index auf der Y-Achse.<br />
+            Höher = mehr Gaming-Leistung pro investiertem Franken. Punkte repräsentieren typische Strassenpreise
+            in der Schweiz und eine zusammengefasste Gaming-Performance. Neu dabei: Ryzen-9000-Punkte in Pink.
+          </p>
+
+          <div class="ti-chart-wrapper">
+            <canvas id="cpuPricePerfScatter" aria-label="CPU Preis-Leistungs-Scatterplot" role="img"></canvas>
+          </div>
+
+          <p class="ti-chart-hint">
+            * Performance-Index basierend auf relativen Gaming-Benchmarks (1080p/1440p, hoher Detailgrad).<br />
+            ** Preise sind typische Strassenpreise aus dem Schweizer Handel (Digitec, Brack, Microspot usw.) inkl. der ersten Ryzen-9000-Listings.
+          </p>
+        </section>
+
+        <p>Die Detailwerte aus dem Plot sind in der nachfolgenden Tabelle aufgeschlüsselt.</p>
 
         <table>
           <thead>
@@ -244,24 +264,6 @@
             </tr>
           </tbody>
         </table>
-
-        <section class="ti-chart-block">
-          <h3>Preis-Leistungs-Scatterplot (CPUs)</h3>
-          <p class="ti-chart-intro">
-            Preis (CHF) auf der X-Achse, relativer Gaming-Performance-Index auf der Y-Achse.<br />
-            Höher = mehr Gaming-Leistung pro investiertem Franken. Punkte repräsentieren typische Strassenpreise
-            in der Schweiz und eine zusammengefasste Gaming-Performance. Neu dabei: Ryzen-9000-Punkte in Pink.
-          </p>
-
-          <div class="ti-chart-wrapper">
-            <canvas id="cpuPricePerfScatter" aria-label="CPU Preis-Leistungs-Scatterplot" role="img"></canvas>
-          </div>
-
-          <p class="ti-chart-hint">
-            * Performance-Index basierend auf relativen Gaming-Benchmarks (1080p/1440p, hoher Detailgrad).<br />
-            ** Preise sind typische Strassenpreise aus dem Schweizer Handel (Digitec, Brack, Microspot usw.) inkl. der ersten Ryzen-9000-Listings.
-          </p>
-        </section>
 
         <!-- Chart.js – ggf. nur einbinden, wenn nicht schon global geladen -->
         <script>
