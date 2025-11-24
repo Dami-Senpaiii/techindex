@@ -321,55 +321,73 @@
         slug: 'langzeit-test-nvme-ssds-2025',
         title: 'Langzeit‑Test: NVMe SSDs 2025',
         tag: 'Hardware',
-        excerpt: '12 Monate Belastungstest: Performance-Drift, Temperaturlimits und Firmware-Fallen im Überblick.'
+        excerpt: '12 Monate Belastungstest: Performance-Drift, Temperaturlimits und Firmware-Fallen im Überblick.',
+        image: 'https://picsum.photos/seed/langzeit-test-nvme-ssds-2025/800/450',
+        imageAlt: 'NVMe SSDs auf einem Testbench'
       },
       {
         slug: 'cloud-backup-3-2-1-strategie-einfach-erklaert',
         title: 'Cloud‑Backup: 3‑2‑1‑Strategie einfach erklärt',
         tag: 'Software',
-        excerpt: 'So kombinierst du lokale Platten, NAS und verschlüsselte Cloud-Speicher ohne Bauchweh.'
+        excerpt: 'So kombinierst du lokale Platten, NAS und verschlüsselte Cloud-Speicher ohne Bauchweh.',
+        image: 'https://picsum.photos/seed/cloud-backup-3-2-1-strategie-einfach-erklaert/800/450',
+        imageAlt: 'Symbolbild aus Wolken-Icons und NAS-System'
       },
       {
         slug: 'street-photography-7-praxis-tipps',
         title: 'Street‑Photography: 7 Praxis‑Tipps',
         tag: 'Fotografie',
-        excerpt: 'Von Zonensystem bis Zonofokus – so gelingen authentische Strassenszenen in jeder Lichtsituation.'
+        excerpt: 'Von Zonensystem bis Zonofokus – so gelingen authentische Strassenszenen in jeder Lichtsituation.',
+        image: 'https://picsum.photos/seed/street-photography-7-praxis-tipps/800/450',
+        imageAlt: 'Menschen im Gegenlicht einer Stadtstrasse'
       },
       {
         slug: 'grafikkarten-analyse-2025',
         title: 'Grafikkarten-Analyse 2025',
         tag: 'Hardware',
-        excerpt: 'RTX 50 vs. RX 9000: Unser FPS-pro-100-CHF-Index für den Schweizer Markt 2025.'
+        excerpt: 'RTX 50 vs. RX 9000: Unser FPS-pro-100-CHF-Index für den Schweizer Markt 2025.',
+        image: 'articles/pictures/grafikkarten-analyse-2025.jpg',
+        imageAlt: 'RTX 50 und RX 9000 Grafikkarten nebeneinander'
       },
       {
         slug: 'raw-workflow-mit-capture-one-vs-lightroom',
         title: 'RAW‑Workflow mit Capture One vs. Lightroom',
         tag: 'Fotografie',
-        excerpt: 'Farb-Engines, Tethering und KI-Masken im direkten Vergleich für Studio und Reportage.'
+        excerpt: 'Farb-Engines, Tethering und KI-Masken im direkten Vergleich für Studio und Reportage.',
+        image: 'https://picsum.photos/seed/raw-workflow-mit-capture-one-vs-lightroom/800/450',
+        imageAlt: 'Laptop mit Capture One und Lightroom nebeneinander'
       },
       {
         slug: 'guenstige-4k-monitore-im-vergleich',
         title: 'Günstige 4K‑Monitore im Vergleich',
         tag: 'Preisvergleich',
-        excerpt: 'IPS, VA oder OLED? Wir testen Farbraumabdeckung, Uniformity und Ergonomie unter 500 Franken.'
+        excerpt: 'IPS, VA oder OLED? Wir testen Farbraumabdeckung, Uniformity und Ergonomie unter 500 Franken.',
+        image: 'https://picsum.photos/seed/guenstige-4k-monitore-im-vergleich/800/450',
+        imageAlt: 'Drei 4K-Monitore nebeneinander auf einem Schreibtisch'
       },
       {
         slug: 'cpu-analyse-2025',
         title: 'CPU‑Analyse 2025',
         tag: 'Hardware',
-        excerpt: 'Ryzen 7000/9000 vs. Intel 12.–14. Gen: Preis-Leistungs-Check für Gaming, Editing & Rendering.'
+        excerpt: 'Ryzen 7000/9000 vs. Intel 12.–14. Gen: Preis-Leistungs-Check für Gaming, Editing & Rendering.',
+        image: 'articles/pictures/CPU-Analyse-2025.jpg',
+        imageAlt: 'AMD- und Intel-Desktop-CPUs nebeneinander auf einem Mainboard'
       },
       {
         slug: 'noise-reduction-topaz-vs-dxo',
         title: 'Noise‑Reduction: Topaz vs. DxO',
         tag: 'Fotografie',
-        excerpt: 'KI-Modelle im Direktvergleich: Detailerhalt, Batch-Fähigkeit und GPU-Performance.'
+        excerpt: 'KI-Modelle im Direktvergleich: Detailerhalt, Batch-Fähigkeit und GPU-Performance.',
+        image: 'https://picsum.photos/seed/noise-reduction-topaz-vs-dxo/800/450',
+        imageAlt: 'Vergleich von entrauschten Nachtaufnahmen'
       },
       {
         slug: 'windows-11-privacy-hardening',
         title: 'Windows 11: Privacy Hardening',
         tag: 'Software',
-        excerpt: 'Von O&O ShutUp bis Winget-Automation: So reduzierst du Telemetrie auf einem frischen System.'
+        excerpt: 'Von O&O ShutUp bis Winget-Automation: So reduzierst du Telemetrie auf einem frischen System.',
+        image: 'https://picsum.photos/seed/windows-11-privacy-hardening/800/450',
+        imageAlt: 'Laptop mit Windows 11 Datenschutz-Einstellungen'
       }
     ];
 
@@ -524,7 +542,7 @@
       const slice = filtered.slice((page-1)*perPage, page*perPage);
       postsEl.innerHTML = slice.map(p=>`
         <a class="card" href="articles/${p.slug}.html">
-          <div class="thumb"><img src="https://picsum.photos/seed/${p.slug}/800/450" alt="Vorschaubild" loading="lazy"></div>
+          <div class="thumb"><img src="${p.image||`https://picsum.photos/seed/${p.slug}/800/450`}" alt="${p.imageAlt||'Vorschaubild'}" loading="lazy"></div>
           <div class="body">
             <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#cfcfcf"><span>${p.tag}</span><time datetime="${p.date.toISOString()}">${p.date.toLocaleDateString('de-CH',{day:'2-digit',month:'short',year:'numeric'})}</time></div>
             <h3 class="title">${p.title}</h3>
