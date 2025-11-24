@@ -53,11 +53,6 @@
     .post section p{margin:0 0 16px}
     .post section ul{padding-left:20px;margin:0 0 18px}
     .post section li{margin-bottom:10px}
-    .toc{border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;margin:0 0 32px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01))}
-    .toc h2{margin:0 0 10px;font-size:1.05rem;letter-spacing:-.01em}
-    .toc ol{margin:0;padding-left:20px;color:var(--muted);display:grid;gap:6px}
-    .toc a{color:#eaeaea}
-    .toc a:hover{color:var(--accent)}
     .post table{width:100%;border-collapse:collapse;font-size:.95rem}
     .post table th,.post table td{border:1px solid var(--border);padding:10px 12px;text-align:left}
     .post table thead{background:rgba(255,255,255,.03)}
@@ -69,10 +64,6 @@
     .taglist{color:var(--muted);font-size:.9rem}
     footer{border-top:1px solid var(--border);padding:32px 0;background:#090909}
     footer .muted{color:var(--muted);font-size:.9rem}
-    #cpuPricePerfChart{max-width:900px;margin:2rem auto;min-height:320px}
-    @media (max-width:768px){
-      #cpuPricePerfChart{min-height:260px}
-    }
     @media (max-width:720px){
       main{padding:44px 0 64px}
       .nav-inner{flex-direction:column;gap:14px}
@@ -121,23 +112,7 @@
         </figcaption>
       </figure>
 
-      <nav class="toc" aria-label="Inhaltsverzeichnis">
-        <h2>Inhaltsverzeichnis</h2>
-        <ol>
-          <li><a href="#marktueberblick">Marktüberblick 2025: Zen 4/5 trifft auf Alder/Raptor Lake</a></li>
-          <li><a href="#preis-leistungs-quickcheck">Preis-Leistungs-Quickcheck: zentrale Desktop-CPUs im Vergleich</a></li>
-          <li><a href="#gaming-performance-pro-chf">Preis-Leistung: Gaming-Performance pro CHF</a></li>
-          <li><a href="#amd-gegen-amd">Neue AMD-CPUs vs. ältere AMD-CPUs</a></li>
-          <li><a href="#amd-gegen-intel-aktuell">Neue AMD-CPUs vs. neue Intel-CPUs</a></li>
-          <li><a href="#amd-gegen-intel-aelter">Neue AMD-CPUs vs. ältere Intel-CPUs</a></li>
-          <li><a href="#intel-gegen-amd-aelter">Neue Intel-CPUs vs. ältere AMD-CPUs</a></li>
-          <li><a href="#intel-generationen">Neue Intel-CPUs vs. ältere Intel-CPUs</a></li>
-          <li><a href="#wichtige-eigenschaften">Welche CPU-Eigenschaften zählen?</a></li>
-          <li><a href="#fazit">Fazit</a></li>
-        </ol>
-      </nav>
-
-      <section id="marktueberblick">
+      <section>
         <h2>Marktüberblick 2025: Zen 4/5 trifft auf Alder/Raptor Lake</h2>
 
         <p>
@@ -169,7 +144,7 @@
         </p>
       </section>
 
-      <section id="preis-leistungs-quickcheck">
+      <section>
         <h2>Preis-Leistungs-Quickcheck: zentrale Desktop-CPUs im Vergleich</h2>
 
         <p>
@@ -256,18 +231,7 @@
         </p>
       </section>
 
-      <section id="gaming-performance-pro-chf">
-        <h2>Preis-Leistung: Gaming-Performance pro CHF</h2>
-        <p>
-          Die folgende Grafik zeigt einen relativen Gaming-Score je 100&nbsp;CHF CPU-Preis
-          (höher = bessere Preis-Leistung). Werte sind beispielhaft und können
-          bei neuen Benchmarks angepasst werden.
-        </p>
-
-        <canvas id="cpuPricePerfChart" aria-label="CPU Preis-Leistung Diagramm" role="img"></canvas>
-      </section>
-
-      <section id="amd-gegen-amd">
+      <section>
         <h2>Neue AMD-CPUs vs. ältere AMD-CPUs: Zen 4/5 gegen Zen 3</h2>
 
         <p>
@@ -322,7 +286,7 @@
         </p>
       </section>
 
-      <section id="amd-gegen-intel-aktuell">
+      <section>
         <h2>Neue AMD-CPUs vs. neue Intel-CPUs: X3D dominiert Gaming, Intel punktet bei Spezialfällen</h2>
 
         <p>
@@ -375,7 +339,7 @@
         </p>
       </section>
 
-      <section id="amd-gegen-intel-aelter">
+      <section>
         <h2>Neue AMD-CPUs vs. ältere Intel-CPUs: Upgrade statt Festhalten</h2>
 
         <p>
@@ -406,7 +370,7 @@
         </p>
       </section>
 
-      <section id="intel-gegen-amd-aelter">
+      <section>
         <h2>Neue Intel-CPUs vs. ältere AMD-CPUs: wenn Intel aufholt – oder überholt</h2>
 
         <p>
@@ -438,7 +402,7 @@
         </p>
       </section>
 
-      <section id="intel-generationen">
+      <section>
         <h2>Neue Intel-CPUs vs. ältere Intel-CPUs: 12. Gen als echter Wendepunkt</h2>
 
         <p>
@@ -481,7 +445,7 @@
         </p>
       </section>
 
-      <section id="wichtige-eigenschaften">
+      <section>
         <h2>Welche CPU-Eigenschaften zählen für welchen Einsatz?</h2>
 
         <p>
@@ -624,7 +588,7 @@
         </ul>
       </section>
 
-      <section id="fazit">
+      <section>
         <h2>Fazit: Wie du 2025 die richtige CPU für Gaming, Editing &amp; Rendering wählst</h2>
 
         <p>
@@ -708,103 +672,6 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    // Beispiel-Daten: relative Gaming-Performance (Index) und typische Strassenpreise in CHF
-    const cpuData = [
-      { name: 'Ryzen 7 7800X3D', performance: 195, priceChf: 410 },
-      { name: 'Ryzen 5 7600',    performance: 155, priceChf: 215 },
-      { name: 'Ryzen 7 5800X3D', performance: 185, priceChf: 290 },
-      { name: 'Core i5-12400F',  performance: 135, priceChf: 125 },
-      { name: 'Core i5-13600K',  performance: 170, priceChf: 305 },
-      { name: 'Core i9-13900K',  performance: 190, priceChf: 580 },
-      { name: 'Ryzen 9 7950X',   performance: 180, priceChf: 550 }
-    ];
-
-    const labels = cpuData.map(cpu => cpu.name);
-    const perfPerChf = cpuData.map(cpu => (cpu.performance / cpu.priceChf) * 100);
-    const perfAbsolute = cpuData.map(cpu => cpu.performance);
-
-    const ctx = document.getElementById('cpuPricePerfChart')?.getContext('2d');
-
-    if (ctx) {
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels,
-          datasets: [
-            {
-              label: 'Performance pro 100 CHF (Gaming-Index)',
-              data: perfPerChf,
-              yAxisID: 'yPerfPerChf'
-            },
-            {
-              label: 'Relativer Gaming-Score (Index)',
-              data: perfAbsolute,
-              type: 'line',
-              yAxisID: 'yPerformance',
-              tension: 0.25,
-              borderWidth: 2,
-              pointRadius: 3
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          aspectRatio: 2,
-          plugins: {
-            legend: {
-              position: 'bottom'
-            },
-            tooltip: {
-              callbacks: {
-                label: function(context) {
-                  if (context.dataset.yAxisID === 'yPerfPerChf') {
-                    const value = context.parsed.y.toFixed(2);
-                    const cpu = cpuData[context.dataIndex];
-                    return `${context.dataset.label}: ${value} (Score/100 CHF) – Preis: ~${cpu.priceChf} CHF`;
-                  } else {
-                    const cpu = cpuData[context.dataIndex];
-                    return `${context.dataset.label}: ${context.parsed.y} (Index) – Preis: ~${cpu.priceChf} CHF`;
-                  }
-                }
-              }
-            }
-          },
-          scales: {
-            yPerfPerChf: {
-              type: 'linear',
-              position: 'left',
-              title: {
-                display: true,
-                text: 'Performance pro 100 CHF (höher = besser)'
-              },
-              beginAtZero: true
-            },
-            yPerformance: {
-              type: 'linear',
-              position: 'right',
-              title: {
-                display: true,
-                text: 'Relativer Gaming-Score (Index)'
-              },
-              beginAtZero: true,
-              grid: {
-                drawOnChartArea: false
-              }
-            },
-            x: {
-              ticks: {
-                maxRotation: 45,
-                minRotation: 0
-              }
-            }
-          }
-        }
-      });
-    }
-  </script>
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
