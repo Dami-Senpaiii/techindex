@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+
+  <title>CPU-Analyse 2025: Beste Preis-Leistung in der Schweiz – TechIndex</title>
+  <meta name="description" content="Ryzen 7000/9000, Intel 12.–14. Gen, X3D & Quick Sync: Welche Desktop-CPUs liefern 2025 in der Schweiz die beste Preis-Leistung für Gaming, Video-Editing und Rendering?" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <style>
+    :root{
+      --bg:#0a0a0a;
+      --panel:#121212;
+      --muted:#a1a1a1;
+      --text:#fff;
+      --border:#1f1f1f;
+      --accent:#76B900;
+      --accent-weak:#5e9400;
+      --radius:18px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --max:880px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 "Inter",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif}
+    a{color:inherit;text-decoration:none}
+    a:hover{color:var(--accent)}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max);padding:0 24px;margin:0 auto}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center;font-weight:720;letter-spacing:-.01em}
+    .brand-badge{width:30px;height:30px;border:2px solid var(--accent);border-radius:10px;display:grid;place-items:center}
+    .brand-badge svg{stroke:var(--accent)}
+    .menu{display:flex;gap:18px;font-size:.95rem}
+    .menu a{color:#eaeaea;opacity:.85}
+    .menu a:hover{opacity:1}
+    main{padding:56px 0 80px}
+    .post{display:block}
+    .post-header{margin-bottom:32px}
+    .post-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid var(--border);border-radius:999px;font-size:.85rem;background:rgba(118,185,0,.08);color:#d7ffd7}
+    .post h1{margin:18px 0 10px;font-size:clamp(30px,5vw,44px);line-height:1.15;letter-spacing:-.015em}
+    .post-meta{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+    .lead{color:#d6ffd6;font-size:1.1rem;max-width:720px}
+    figure.hero{margin:0 0 36px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01))}
+    figure.hero img{width:100%;height:auto}
+    figure.hero figcaption{padding:12px 16px;color:var(--muted);font-size:.9rem}
+    .post section{margin-bottom:42px}
+    .post section h2{font-size:clamp(22px,3vw,30px);margin:0 0 14px;letter-spacing:-.01em}
+    .post section p{margin:0 0 16px}
+    .post section ul{padding-left:20px;margin:0 0 18px}
+    .post section li{margin-bottom:10px}
+    .toc{border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;margin:0 0 32px;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01))}
+    .toc h2{margin:0 0 10px;font-size:1.05rem;letter-spacing:-.01em}
+    .toc ol{margin:0;padding-left:20px;color:var(--muted);display:grid;gap:6px}
+    .toc a{color:#eaeaea}
+    .toc a:hover{color:var(--accent)}
+    .post table{width:100%;border-collapse:collapse;font-size:.95rem}
+    .post table th,.post table td{border:1px solid var(--border);padding:10px 12px;text-align:left}
+    .post table thead{background:rgba(255,255,255,.03)}
+    .post small{color:var(--muted)}
+    blockquote{margin:0 0 18px;padding:18px 24px;border-left:4px solid var(--accent);background:rgba(255,255,255,.05);border-radius:0 14px 14px 0}
+    blockquote p{margin:0;color:#e2e2e2}
+    .post-footer{border-top:1px solid var(--border);padding-top:24px;margin-top:32px;display:flex;flex-direction:column;gap:12px}
+    .back-link{display:inline-flex;align-items:center;gap:10px;font-weight:600;color:var(--accent)}
+    .taglist{color:var(--muted);font-size:.9rem}
+    footer{border-top:1px solid var(--border);padding:32px 0;background:#090909}
+    footer .muted{color:var(--muted);font-size:.9rem}
+    #cpuPricePerfChart{max-width:900px;margin:2rem auto;min-height:320px}
+    @media (max-width:768px){
+      #cpuPricePerfChart{min-height:260px}
+    }
+    @media (max-width:720px){
+      main{padding:44px 0 64px}
+      .nav-inner{flex-direction:column;gap:14px}
+      .menu{flex-wrap:wrap;justify-content:center}
+      .post table{font-size:.85rem}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="../index.html">
+      <span class="brand-badge" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="4" ry="4"/>
+            <path d="M7 16l5-8 5 8" fill="none"/>
+          </svg>
+        </span>
+        <span>TechIndex</span>
+      </a>
+      <nav class="menu" aria-label="Hauptnavigation">
+        <a href="../index.html">Magazin</a>
+        <a href="../about.html">Über uns</a>
+        <a href="#kommentare">Kommentare</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="post container">
+      <header class="post-header">
+        <span class="post-tag">Hardware</span>
+        <h1>CPU-Analyse 2025: Welche Prozessoren liefern in der Schweiz die beste Preis-Leistung?</h1>
+        <p class="post-meta">Aktualisiert: 19. November 2025 · Lesezeit: ca. 11 Minuten</p>
+        <p class="lead">
+          Ryzen 7000/9000, Intel 12.–14. Gen, X3D-Modelle, Quick Sync &amp; Co.: 
+          Wir analysieren, welche Desktop-CPUs 2025 in der Schweiz das beste FPS-pro-100-CHF 
+          bzw. Renderminuten-pro-100-CHF Verhältnis liefern – für Gaming, Video-Editing und Rendering.
+        </p>
+      </header>
+
+      <figure class="hero">
+        <img src="https://picsum.photos/seed/cpu-analyse-2025/1200/630" alt="AMD- und Intel-Desktop-CPUs nebeneinander auf einem Mainboard" loading="lazy">
+        <figcaption>
+          Preis, Performance und Plattform: So positionieren sich neue und ältere AMD- und Intel-CPUs im Schweizer Markt 2025.
+        </figcaption>
+      </figure>
+
+      <nav class="toc" aria-label="Inhaltsverzeichnis">
+        <h2>Inhaltsverzeichnis</h2>
+        <ol>
+          <li><a href="#marktueberblick">Marktüberblick 2025: Zen 4/5 trifft auf Alder/Raptor Lake</a></li>
+          <li><a href="#preis-leistungs-quickcheck">Preis-Leistungs-Quickcheck: zentrale Desktop-CPUs im Vergleich</a></li>
+          <li><a href="#gaming-performance-pro-chf">Preis-Leistung: Gaming-Performance pro CHF</a></li>
+          <li><a href="#amd-gegen-amd">Neue AMD-CPUs vs. ältere AMD-CPUs</a></li>
+          <li><a href="#amd-gegen-intel-aktuell">Neue AMD-CPUs vs. neue Intel-CPUs</a></li>
+          <li><a href="#amd-gegen-intel-aelter">Neue AMD-CPUs vs. ältere Intel-CPUs</a></li>
+          <li><a href="#intel-gegen-amd-aelter">Neue Intel-CPUs vs. ältere AMD-CPUs</a></li>
+          <li><a href="#intel-generationen">Neue Intel-CPUs vs. ältere Intel-CPUs</a></li>
+          <li><a href="#wichtige-eigenschaften">Welche CPU-Eigenschaften zählen?</a></li>
+          <li><a href="#fazit">Fazit</a></li>
+        </ol>
+      </nav>
+
+      <section id="marktueberblick">
+        <h2>Marktüberblick 2025: Zen 4/5 trifft auf Alder/Raptor Lake</h2>
+
+        <p>
+          Der CPU-Markt ist 2025 so spannend wie seit Jahren nicht mehr. 
+          AMD setzt mit Ryzen 7000 (Zen 4) und den ersten Zen-5-Modellen auf hohe Effizienz, 
+          viel Cache (X3D) und eine lang laufende AM5-Plattform. 
+          Intel kontert mit 12., 13. und 14. Core-Generation (Alder/Raptor Lake) 
+          und sehr hohen Taktraten sowie Quick-Sync-Beschleunigung für Video.
+        </p>
+
+        <p>
+          Für Schweizer Käufer ist vor allem die Frage entscheidend: 
+          <strong>Welche Kombination aus CPU + Plattform bringt mir im Alltag 
+          die beste Leistung pro Schweizer Franken?</strong> 
+          In diesem Artikel schauen wir uns deshalb an:
+        </p>
+
+        <ul>
+          <li>Neue AMD-CPUs vs. ältere AMD-CPUs</li>
+          <li>Neue AMD-CPUs vs. neue Intel-CPUs</li>
+          <li>Neue AMD-CPUs vs. ältere Intel-CPUs</li>
+          <li>Neue Intel-CPUs vs. ältere AMD-CPUs</li>
+          <li>Neue Intel-CPUs vs. ältere Intel-CPUs</li>
+        </ul>
+
+        <p>
+          Dazu klären wir, <strong>welche CPU-Eigenschaften (GHz, Kerne, Cache, iGPU, Features wie Smart Access Memory oder Quick Sync)</strong> 
+          für Gaming, Video-Editing und Rendering wirklich zählen – und wo Marketingzahlen eher zweitrangig sind.
+        </p>
+      </section>
+
+      <section id="preis-leistungs-quickcheck">
+        <h2>Preis-Leistungs-Quickcheck: zentrale Desktop-CPUs im Vergleich</h2>
+
+        <p>
+          Die folgende kompakte Tabelle zeigt, wie sich typische Modelle im Bereich 
+          Mittelklasse bis High-End einordnen. Preise sind grobe Strassenpreise bei Schweizer Händlern
+          (Digitec, Brack, Microspot, Toppreise-Vergleich, Stand Q4/2025).
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>CPU</th>
+              <th>Plattform</th>
+              <th>Kerntyp</th>
+              <th>Typischer Einsatz</th>
+              <th>Preis ca. (CHF)</th>
+              <th>Kurzfazit Preis-Leistung</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ryzen 7 7800X3D</td>
+              <td>AM5, DDR5</td>
+              <td>8C / 16T + 3D-V-Cache</td>
+              <td>High-End Gaming, solides Editing</td>
+              <td>~380–430</td>
+              <td>Aktuell einer der besten Gaming-CPUs (FPS pro CHF), sehr effizient.</td>
+            </tr>
+            <tr>
+              <td>Ryzen 5 7600</td>
+              <td>AM5, DDR5</td>
+              <td>6C / 12T</td>
+              <td>1080p/1440p Gaming, Einstieg Editing</td>
+              <td>~200–230</td>
+              <td>„Budget-King“ für neue Builds mit gutem Upgradepfad.</td>
+            </tr>
+            <tr>
+              <td>Ryzen 7 5800X3D</td>
+              <td>AM4, DDR4</td>
+              <td>8C / 16T + 3D-V-Cache</td>
+              <td>Gaming-Upgrade für bestehende AM4-Systeme</td>
+              <td>~260–320 (Restposten)</td>
+              <td>Top-FPS auf alter Plattform – ideal als Drop-in-Upgrade, weniger sinnvoll für neue Builds.</td>
+            </tr>
+            <tr>
+              <td>Core i5-12400F</td>
+              <td>LGA1700, DDR4/DDR5</td>
+              <td>6P / 12T</td>
+              <td>Preiswertes 1080p/1440p-Gaming</td>
+              <td>~110–140</td>
+              <td>Extrem gutes Preis-FPS-Verhältnis, aber Plattform kurz vor dem Ende.</td>
+            </tr>
+            <tr>
+              <td>Core i5-13600K</td>
+              <td>LGA1700, DDR4/DDR5</td>
+              <td>6P + 8E (20T)</td>
+              <td>Gaming + starkes Rendering/Editing</td>
+              <td>~280–330</td>
+              <td>Sehr schnelles Allround-Paket, aber relativ hoher Stromverbrauch.</td>
+            </tr>
+            <tr>
+              <td>Core i9-13900K / 14900K</td>
+              <td>LGA1700, DDR5</td>
+              <td>8P + 16E (32T)</td>
+              <td>High-End Workstation, Enthusiast-Gaming</td>
+              <td>~520–650</td>
+              <td>Maximale Rohleistung, aber teuer und stromhungrig – nur sinnvoll, wenn Zeit = Geld.</td>
+            </tr>
+            <tr>
+              <td>Ryzen 9 7950X</td>
+              <td>AM5, DDR5</td>
+              <td>16C / 32T</td>
+              <td>CPU-Rendering, schweres Editing</td>
+              <td>~520–580</td>
+              <td>Enorme Multicore-Leistung bei guter Effizienz, attraktiver als viele High-End-Intels.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          Klar wird schon hier: <strong>Die spannendsten CPUs sitzen im Bereich Ryzen 5 / Ryzen 7 / Core i5 / Core i7</strong>. 
+          Ganz oben explodiert der Preis pro Prozent Mehrleistung, ganz unten fehlt Reserven 
+          für Multitasking und moderne Games.
+        </p>
+      </section>
+
+      <section id="gaming-performance-pro-chf">
+        <h2>Preis-Leistung: Gaming-Performance pro CHF</h2>
+        <p>
+          Die folgende Grafik zeigt einen relativen Gaming-Score je 100&nbsp;CHF CPU-Preis
+          (höher = bessere Preis-Leistung). Werte sind beispielhaft und können
+          bei neuen Benchmarks angepasst werden.
+        </p>
+
+        <canvas id="cpuPricePerfChart" aria-label="CPU Preis-Leistung Diagramm" role="img"></canvas>
+      </section>
+
+      <section id="amd-gegen-amd">
+        <h2>Neue AMD-CPUs vs. ältere AMD-CPUs: Zen 4/5 gegen Zen 3</h2>
+
+        <p>
+          AMDs Schritt von Zen 3 (Ryzen 5000, AM4) zu Zen 4/5 (Ryzen 7000/9000, AM5) ist 
+          einer der grössten Generationssprünge der letzten Jahre:
+        </p>
+
+        <ul>
+          <li><strong>Single-Core-Leistung:</strong> +20–30&nbsp;% je nach Workload.</li>
+          <li><strong>Multi-Core-Leistung:</strong> +40–70&nbsp;% durch bessere IPC und höhere Taktraten.</li>
+          <li><strong>Taktraten:</strong> meist ~1&nbsp;GHz höhere Base-Clocks und deutlich höhere Boost-Clocks.</li>
+          <li><strong>Plattform:</strong> AM5 bringt DDR5 und PCIe&nbsp;5.0 sowie voraussichtlich mehrere CPU-Generationen Support.</li>
+        </ul>
+
+        <p>
+          Gleichzeitig sind die <strong>Ryzen-5000-Preise massiv gefallen</strong>. 
+          Ein Ryzen 7 5800X oder 5900X kostet heute deutlich weniger als zum Launch, 
+          teilweise unter 250–300&nbsp;CHF. Das ergibt zwei sehr unterschiedliche Szenarien:
+        </p>
+
+        <h3>Du hast bereits ein AM4-System</h3>
+        <ul>
+          <li>
+            <strong>Drop-in-Upgrade (z. B. Ryzen 7 5800X3D oder 5900X):</strong> 
+            Für Gaming ist der 5800X3D ein Monster – oft auf Augenhöhe mit Zen-4-CPUs, 
+            ohne Mainboard/RAM tauschen zu müssen. 
+            Für Rendering bringt ein 5900X/5950X enorm mehr Threads.
+          </li>
+          <li>
+            <strong>Preis-Leistung:</strong> Für 250–350&nbsp;CHF bekommst du deutlich mehr FPS und Renderleistung,
+            ohne den Rest des Systems anzufassen – <em>ideal, wenn Budget begrenzt ist</em>.
+          </li>
+        </ul>
+
+        <h3>Du baust ein komplett neues System</h3>
+        <ul>
+          <li>
+            <strong>AM4 (alt) lohnt sich nur im absoluten Sparmodus.</strong><br>
+            Eine günstige Kombi aus B550-Board + Ryzen 5 5600 ist zwar billig, 
+            aber die Plattform ist tot – kein Upgrade mehr nach oben.
+          </li>
+          <li>
+            <strong>AM5 (neu) kostet mehr, bietet aber klar bessere Langzeit-Preis-Leistung.</strong><br>
+            DDR5 ist 2025 deutlich günstiger geworden, und AMD hat langen Support für AM5 angekündigt. 
+            Ryzen 5 7600 / Ryzen 7 7700 sind als Basis deutlich nachhaltiger als jeder neue AM4-Build.
+          </li>
+        </ul>
+
+        <p>
+          Kurz gesagt: <strong>Als Upgrade ist Zen 3 auf AM4 weiterhin attraktiv – 
+          als Neubau solltest du direkt auf Zen 4/5 und AM5 setzen.</strong>
+        </p>
+      </section>
+
+      <section id="amd-gegen-intel-aktuell">
+        <h2>Neue AMD-CPUs vs. neue Intel-CPUs: X3D dominiert Gaming, Intel punktet bei Spezialfällen</h2>
+
+        <p>
+          Stellt man aktuelle Ryzen-7000/9000-CPUs den Intel-Generationen 12–14 gegenüber, 
+          ergibt sich ein klares Bild:
+        </p>
+
+        <h3>Gaming</h3>
+        <ul>
+          <li>
+            <strong>Ryzen X3D (z. B. 7800X3D) sind die schnellsten Gaming-CPUs am Markt.</strong><br>
+            Durch riesige L3-Caches liegen sie in vielen Titeln vor selbst teuren Intel Core i9 
+            – bei deutlich niedrigerem Stromverbrauch.
+          </li>
+          <li>
+            <strong>Normale Ryzen-7000-Modelle</strong> (7600, 7700, 7900) liegen meist in etwa auf Niveau 
+            von aktuellen Core i5/i7, oft mit etwas besserer Effizienz.
+          </li>
+          <li>
+            <strong>Intel</strong> kontert mit sehr hohen Taktraten (bis nahe 6&nbsp;GHz), 
+            ist in einzelnen, stark singlethreaded Games minimal vorne,
+            verliert aber häufig beim FPS-pro-CHF-Verhältnis.
+          </li>
+        </ul>
+
+        <h3>Produktivität (Video-Editing, Rendering)</h3>
+        <ul>
+          <li>
+            <strong>AMD Ryzen 9 (z. B. 7900X, 7950X)</strong> liefern hervorragende Multicore-Leistung bei guter Effizienz.
+            Für CPU-Rendering sind sie oft die bessere Wahl pro Watt.
+          </li>
+          <li>
+            <strong>Intel Core i7/i9 (13./14. Gen)</strong> setzen auf viele E-Cores und sehr hohe Taktraten.
+            In manchen Adobe-Workflows (besonders H.264/H.265) gewinnen sie dank <strong>Quick Sync</strong> 
+            bei Export und Playback klar – hier sind sie extrem stark.
+          </li>
+          <li>
+            Preislich liegen vergleichbare AMD- und Intel-CPUs oft ähnlich; 
+            AMD-Boards sind allerdings häufig etwas günstiger, 
+            Intel braucht für OC teure Z-Boards.
+          </li>
+        </ul>
+
+        <p>
+          Für die meisten Gamer und Allround-User gilt daher:
+          <strong>Neue AMD-CPUs bieten aktuell etwas bessere Preis-Leistung und Effizienz, 
+          besonders mit X3D-Modellen.</strong> 
+          Wer allerdings stark von Quick Sync profitiert (YouTuber, Livestreamer mit H.264-Workflows), 
+          kann mit einem modernen Core i5/i7 die Nase vorn haben.
+        </p>
+      </section>
+
+      <section id="amd-gegen-intel-aelter">
+        <h2>Neue AMD-CPUs vs. ältere Intel-CPUs: Upgrade statt Festhalten</h2>
+
+        <p>
+          Viele PCs in der Schweiz laufen noch mit Intel 8.–10. Generation 
+          (z. B. i7-8700K, i7-9700K, i9-10900K). 
+          Im Vergleich zu modernen Ryzen-7000-CPUs sieht es so aus:
+        </p>
+
+        <ul>
+          <li>
+            <strong>Single-Core:</strong> Moderne Ryzen haben deutlich mehr IPC und höhere Taktraten.
+            Selbst ein Ryzen 5 7600 hängt einen ehemals „grossen“ i7-9700K in Games klar ab.
+          </li>
+          <li>
+            <strong>Multi-Core:</strong> Ein 6-Kern-Ryzen der neuen Generation kommt an die Leistung 
+            vieler älterer 8–10-Kern-Intels heran – bei deutlich weniger Stromverbrauch.
+          </li>
+          <li>
+            <strong>Plattform:</strong> AM5 bringt DDR5, PCIe 5.0, USB-C u. a. Features, 
+            alte Intel-Plattformen sitzen auf DDR4 und PCIe 3/4 und sind sicherheits- wie effizienzmässig deutlich im Hintertreffen.
+          </li>
+        </ul>
+
+        <p>
+          Wenn du heute von einem 8.-, 9.- oder 10.-Gen-Intel auf einen Ryzen 5/7 umsteigst,
+          bekommst du <strong>mehr FPS, schnellere Exporte und niedrigere Stromrechnungen</strong> – 
+          meist für weniger Geld, als damals die Intel-CPU allein gekostet hat.
+        </p>
+      </section>
+
+      <section id="intel-gegen-amd-aelter">
+        <h2>Neue Intel-CPUs vs. ältere AMD-CPUs: wenn Intel aufholt – oder überholt</h2>
+
+        <p>
+          Umgekehrt gibt es viele Systeme mit Ryzen 2000/3000 oder frühen 5000ern. 
+          Hier haben Intels neue Hybrid-CPUs (12.–14. Gen) einen deutlichen Sprung gemacht:
+        </p>
+
+        <ul>
+          <li>
+            <strong>Core i5-13600K vs. Ryzen 9 5900X:</strong><br>
+            Ähnliches oder besseres Gaming-Niveau, ähnliche Multicore-Leistung, 
+            aber neu teils günstiger als der alte 12-Kerner – und mit modernerem Plattform-Unterbau.
+          </li>
+          <li>
+            <strong>Core i5-12400F vs. Ryzen 5 3600/5600:</strong><br>
+            Deutlich bessere FPS und Anwendungsperformance bei ähnlichem oder niedrigerem Preis.
+          </li>
+          <li>
+            <strong>Ausnahme: Ryzen 7 5800X3D.</strong><br>
+            Als Gaming-Upgrade für bestehende AM4-Systeme schlägt er viele neue Intel-CPUs.
+            Für einen kompletten neuen Build ist aber ein moderner Intel- oder AM5-Ryzen sinnvoller.
+          </li>
+        </ul>
+
+        <p>
+          Wenn du von einem älteren Ryzen-System kommst und ohnehin <em>alles</em> (Board, RAM, CPU) 
+          ersetzen willst, sind moderne Core-i5/i7-CPUs eine sehr starke Option – 
+          vor allem dann, wenn du Premiere Pro, OBS mit Quick Sync oder ähnliche Workflows nutzt.
+        </p>
+      </section>
+
+      <section id="intel-generationen">
+        <h2>Neue Intel-CPUs vs. ältere Intel-CPUs: 12. Gen als echter Wendepunkt</h2>
+
+        <p>
+          Bei Intel selbst lohnt sich ein Blick auf die Generationen:
+        </p>
+
+        <ul>
+          <li>
+            <strong>10. Gen (Comet Lake):</strong><br>
+            Guter Allround-Level, aber ineffizient und ohne PCIe 4.0. 
+            Gegenüber 12./13. Gen klar im Hintertreffen.
+          </li>
+          <li>
+            <strong>11. Gen (Rocket Lake):</strong><br>
+            Hohe Taktraten, aber wenig Kerne und hoher Stromverbrauch. 
+            Preis-Leistung aus heutiger Sicht schlicht schlecht.
+          </li>
+          <li>
+            <strong>12. Gen (Alder Lake):</strong><br>
+            Hybrid-Design (P+E-Cores), DDR5-Support, grosser Sprung bei FPS und Multicore. 
+            Ein 12600K/12400F lässt 10./11. Gen locker hinter sich.
+          </li>
+          <li>
+            <strong>13. Gen (Raptor Lake):</strong><br>
+            Feinschliff mit mehr E-Cores und etwas höheren Takten – 
+            5–15&nbsp;% schneller als 12. Gen, je nach Anwendung.
+          </li>
+          <li>
+            <strong>14. Gen (Refresh):</strong><br>
+            Im Prinzip ein leicht überarbeiteter 13er – mehr Takt, kaum neue Features. 
+            Interessant vor allem, wenn der Preis stimmt.
+          </li>
+        </ul>
+
+        <p>
+          Für Besitzer von 8.–11. Gen gilt: <strong>Ein Umstieg auf 12./13. Gen 
+          (oder direkt auf AM5) bringt massive Preis-Leistungs-Gewinne.</strong> 
+          Wer bereits einen 12./13.-Gen-Core besitzt, gewinnt durch 14. Gen kaum mehr als ein paar Prozent – 
+          das lohnt sich meist nicht.
+        </p>
+      </section>
+
+      <section id="wichtige-eigenschaften">
+        <h2>Welche CPU-Eigenschaften zählen für welchen Einsatz?</h2>
+
+        <p>
+          Datenblätter sind voll mit Zahlen – aber nicht jede ist für deinen Usecase gleich wichtig.
+          Hier die wichtigsten Eigenschaften und wofür sie wirklich relevant sind.
+        </p>
+
+        <h3>GHz (Taktfrequenz) &amp; IPC: wichtig für Gaming und „Snappiness“</h3>
+        <ul>
+          <li>
+            <strong>Gaming:</strong> Viele Engines skalieren nur bedingt auf viele Kerne, 
+            dafür stark mit Takt &amp; IPC. 
+            Hohe Boost-Taktraten und moderne Architektur bedeuten mehr FPS und stabilere 1-%-Lows.
+          </li>
+          <li>
+            <strong>Alltag &amp; UI-Responsiveness:</strong> 
+            Öffnen von Programmen, Render-Preview, Browsing – alles profitiert von starker Single-Core-Leistung.
+          </li>
+          <li>
+            <strong>Interpretation:</strong> 
+            5&nbsp;GHz auf einem aktuellen Zen- oder Core-Design schlagen 5&nbsp;GHz auf einem 5 Jahre alten Chip um Längen. 
+            GHz nur innerhalb derselben Architektur vergleichen.
+          </li>
+        </ul>
+
+        <h3>Kern- und Threadzahl: entscheidend für Rendering &amp; Video-Exports</h3>
+        <ul>
+          <li>
+            <strong>Rendering (Blender, Cinema 4D, CPU-Raytracing):</strong><br>
+            Skaliert oft fast linear mit Kernanzahl. 
+            16 Kerne rendern Szenen deutlich schneller als 8 – 
+            hier lohnt sich ein Ryzen 9 oder Core i7/i9.
+          </li>
+          <li>
+            <strong>Video-Editing:</strong><br>
+            Exporte und komplexe Effekte profitieren von 8+ Kernen, 
+            Timeline-Performance hängt aber auch stark von der GPU ab.
+          </li>
+          <li>
+            <strong>Gaming:</strong><br>
+            6–8 Kerne sind der Sweetspot. 
+            Mehr bringt meist kaum zusätzliche FPS, ausser du streamst nebenbei oder hast viele Hintergrund-Tasks.
+          </li>
+        </ul>
+
+        <h3>Cache (L3, 3D V-Cache): heimlicher Star für Gaming</h3>
+        <ul>
+          <li>
+            <strong>Gaming:</strong> 
+            Grosse L3-Caches halten mehr Game-Daten direkt in CPU-Nähe. 
+            Weniger Zugriffe auf den RAM bedeuten höhere FPS und bessere Frame-Konsistenz.
+            Genau deshalb sind 5800X3D/7800X3D so stark.
+          </li>
+          <li>
+            <strong>Produktivität:</strong> 
+            Je nach Workload messbar, aber weniger spektakulär als im Gaming. 
+            Nette Dreingabe, aber nicht das Hauptkriterium.
+          </li>
+        </ul>
+
+        <h3>RAM &amp; Features wie AMD Smart Access Memory (SAM) / Resizable BAR</h3>
+        <ul>
+          <li>
+            <strong>DDR4 vs. DDR5:</strong> 
+            DDR5 bietet höhere Bandbreite, hilft bei speicherintensiven Tasks 
+            und minimiert Bottlenecks bei sehr schnellen GPUs. 
+            Für viele Games ist der Unterschied klein, aber die Plattform ist zukunftssicherer.
+          </li>
+          <li>
+            <strong>Kapazität:</strong> 
+            16&nbsp;GB sind heute das absolute Minimum, 
+            32&nbsp;GB sinnvoll für Video-Editing und High-End-Gaming, 
+            64&nbsp;GB+ für 4K/8K-Workflows.
+          </li>
+          <li>
+            <strong>Smart Access Memory / Resizable BAR:</strong> 
+            CPU kann auf den kompletten VRAM der GPU zugreifen statt in kleinen Blöcken. 
+            Bringt je nach Game ein paar Prozent mehr FPS – 
+            „gratis“ Performance, wenn im BIOS aktiviert.
+          </li>
+        </ul>
+
+        <h3>iGPU &amp; Medien-Engines (Quick Sync, SmartAccess Video)</h3>
+        <ul>
+          <li>
+            <strong>Intel Quick Sync:</strong> 
+            Hardware-Encoder/Decoder für H.264/H.265/AV1. 
+            In Premiere Pro, DaVinci, OBS &amp; Co. oft ein Gamechanger:
+            niedrigere CPU-Last, flüssigeres Playback, schnellere Exporte.
+          </li>
+          <li>
+            <strong>AMD SmartAccess Video:</strong> 
+            Nutzt CPU und GPU gemeinsam zum Encoden. 
+            Besonders spannend mit aktuellen Radeon-GPUs in DaVinci Resolve.
+          </li>
+          <li>
+            <strong>Gaming:</strong> 
+            Wenn du eine dedizierte GPU nutzt, ist die iGPU nur Backup. 
+            Für reine Office-/HTPC-Systeme kann eine starke iGPU (APUs) hingegen die ganze GPU ersetzen.
+          </li>
+        </ul>
+
+        <h3>TDP, Effizienz &amp; Kühlung</h3>
+        <ul>
+          <li>
+            <strong>High-End-CPUs</strong> wie 13900K oder 7950X ziehen unter Volllast 200–250&nbsp;W+.
+            Ohne starke Kühlung (240/280 mm AIO oder High-End-Luft) wird es laut oder sie takten herunter.
+          </li>
+          <li>
+            <strong>Effizienz:</strong> 
+            Zen 4/5 ist pro Watt meist klar vor aktuellen Intel-Topmodellen. 
+            Bei langen Render-Jobs oder in kleinen Cases ist das ein echter Vorteil.
+          </li>
+          <li>
+            <strong>Praxis:</strong> 
+            Für Gaming reicht oft ein moderater Kühler, 
+            für Rendering-Workstations solltest du für die Kühllösung grosszügig planen.
+          </li>
+        </ul>
+
+        <h3>Overclocking &amp; Feintuning</h3>
+        <ul>
+          <li>
+            <strong>AMD:</strong> 
+            Alle Ryzen sind grundsätzlich übertaktbar, PBO (Precision Boost Overdrive) 
+            holt automatisch ein paar Prozent mehr heraus, wenn Kühlung &amp; VRMs mitmachen.
+          </li>
+          <li>
+            <strong>Intel:</strong> 
+            Nur „K“-Modelle auf Z-Boards lassen echtes OC zu. 
+            Der Mehrwert ist heute kleiner als früher, 
+            weil die CPUs ab Werk bereits sehr hoch boosten.
+          </li>
+          <li>
+            <strong>Realistisch:</strong> 
+            Wer Preis-Leistung optimieren will, 
+            kümmert sich eher um ein gutes XMP/EXPO-RAM-Profil, saubere Kühlung und BIOS-Settings, 
+            statt ans Limit zu übertakten.
+          </li>
+        </ul>
+      </section>
+
+      <section id="fazit">
+        <h2>Fazit: Wie du 2025 die richtige CPU für Gaming, Editing &amp; Rendering wählst</h2>
+
+        <p>
+          Der CPU-Markt 2025 bietet viele Optionen – aber einige klare Muster helfen bei der Auswahl:
+        </p>
+
+        <ul>
+          <li>
+            <strong>Reines Gaming (1080p/1440p, RTX- oder RX-GPU):</strong><br>
+            6–8 schnelle Kerne reichen. 
+            Ryzen 5 7600, Ryzen 7 7700 und vor allem 7800X3D liefern sehr starke FPS-pro-CHF-Werte. 
+            Intel-Alternativen sind moderne Core i5 (12400F, 13400F, 13600K), 
+            wenn der Preis stimmt.
+          </li>
+          <li>
+            <strong>Gaming + Streaming + gelegentliches Editing:</strong><br>
+            8–12 Kerne sind ideal, z. B. Ryzen 7 7700/7800X3D oder Core i5-13600K. 
+            Wer viel H.264-Video codiert oder streamt, 
+            profitiert stark von Intel Quick Sync.
+          </li>
+          <li>
+            <strong>Schweres Video-Editing &amp; 3D-Rendering:</strong><br>
+            Hier zählen Kerne und Plattform mehr als letzte 5&nbsp;% FPS in Games. 
+            Ryzen 9 7900X/7950X oder Core i7/i9 mit vielen E-Cores 
+            verkürzen Exporte und Renderzeiten deutlich.
+          </li>
+          <li>
+            <strong>Upgrades statt Komplett-Neubau:</strong><br>
+            Auf AM4 lohnt sich ein 5800X3D- oder 5900X-Upgrade.
+            Auf alten Intel-Plattformen lohnt sich meist direkt der Sprung auf AM5 oder 12./13. Gen – 
+            statt noch Geld in 10./11. Gen zu stecken.
+          </li>
+        </ul>
+
+        <p>
+          Unterm Strich gilt: 
+          <strong>Neue AMD-CPUs bieten 2025 das leicht bessere Gesamtpaket aus Leistung, Effizienz und Plattform-Zukunft, 
+          während Intel mit Quick Sync und hohen Taktraten in ausgewählten Workflows punktet.</strong> 
+          Wer seine eigenen Prioritäten – Gaming-FPS, Renderzeit, Lautstärke, Upgradepfad – nüchtern bewertet, 
+          findet im aktuellen CPU-Portfolio problemlos eine Lösung mit sehr guter Preis-Leistung 
+          für den Schweizer Markt.
+        </p>
+      </section>
+
+      <footer class="post-footer" id="kommentare">
+        <a class="back-link" href="../index.html">← Zurück zum Magazin</a>
+        <div class="taglist">Tags: Hardware, Preisvergleich, CPUs, Gaming</div>
+        <small class="muted">Kommentarfunktion folgt bald – sag uns bis dahin gern auf Mastodon Bescheid, was dir fehlt.</small>
+      </footer>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+        <div>
+          <strong>TechIndex.ch</strong>
+          <div class="muted">Hardware, Software &amp; Fotografie – aus der Schweiz.</div>
+        </div>
+        <div>
+          <strong>Magazin</strong>
+          <ul class="small" style="list-style:none;padding:0;margin:8px 0 0">
+            <li><a href="../index.html#featured">Empfehlungen</a></li>
+            <li><a href="../index.html#neuste">Neuste Beiträge</a></li>
+            <li><a href="../index.html#hardware">Hardware</a></li>
+            <li><a href="../index.html#software">Software</a></li>
+            <li><a href="../index.html#fotografie">Fotografie</a></li>
+            <li><a href="../index.html#preisindex">Preisvergleiche</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong>Rechtliches</strong>
+          <ul class="small" style="list-style:none;padding:0;margin:8px 0 0">
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+            <li><a href="#">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="muted small" style="margin-top:14px">© <span id="y"></span> TechIndex.ch — Hosted on Cloudflare.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Beispiel-Daten: relative Gaming-Performance (Index) und typische Strassenpreise in CHF
+    const cpuData = [
+      { name: 'Ryzen 7 7800X3D', performance: 195, priceChf: 410 },
+      { name: 'Ryzen 5 7600',    performance: 155, priceChf: 215 },
+      { name: 'Ryzen 7 5800X3D', performance: 185, priceChf: 290 },
+      { name: 'Core i5-12400F',  performance: 135, priceChf: 125 },
+      { name: 'Core i5-13600K',  performance: 170, priceChf: 305 },
+      { name: 'Core i9-13900K',  performance: 190, priceChf: 580 },
+      { name: 'Ryzen 9 7950X',   performance: 180, priceChf: 550 }
+    ];
+
+    const labels = cpuData.map(cpu => cpu.name);
+    const perfPerChf = cpuData.map(cpu => (cpu.performance / cpu.priceChf) * 100);
+    const perfAbsolute = cpuData.map(cpu => cpu.performance);
+
+    const ctx = document.getElementById('cpuPricePerfChart')?.getContext('2d');
+
+    if (ctx) {
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [
+            {
+              label: 'Performance pro 100 CHF (Gaming-Index)',
+              data: perfPerChf,
+              yAxisID: 'yPerfPerChf'
+            },
+            {
+              label: 'Relativer Gaming-Score (Index)',
+              data: perfAbsolute,
+              type: 'line',
+              yAxisID: 'yPerformance',
+              tension: 0.25,
+              borderWidth: 2,
+              pointRadius: 3
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          aspectRatio: 2,
+          plugins: {
+            legend: {
+              position: 'bottom'
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  if (context.dataset.yAxisID === 'yPerfPerChf') {
+                    const value = context.parsed.y.toFixed(2);
+                    const cpu = cpuData[context.dataIndex];
+                    return `${context.dataset.label}: ${value} (Score/100 CHF) – Preis: ~${cpu.priceChf} CHF`;
+                  } else {
+                    const cpu = cpuData[context.dataIndex];
+                    return `${context.dataset.label}: ${context.parsed.y} (Index) – Preis: ~${cpu.priceChf} CHF`;
+                  }
+                }
+              }
+            }
+          },
+          scales: {
+            yPerfPerChf: {
+              type: 'linear',
+              position: 'left',
+              title: {
+                display: true,
+                text: 'Performance pro 100 CHF (höher = besser)'
+              },
+              beginAtZero: true
+            },
+            yPerformance: {
+              type: 'linear',
+              position: 'right',
+              title: {
+                display: true,
+                text: 'Relativer Gaming-Score (Index)'
+              },
+              beginAtZero: true,
+              grid: {
+                drawOnChartArea: false
+              }
+            },
+            x: {
+              ticks: {
+                maxRotation: 45,
+                minRotation: 0
+              }
+            }
+          }
+        }
+      });
+    }
+  </script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
