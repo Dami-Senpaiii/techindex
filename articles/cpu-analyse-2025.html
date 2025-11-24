@@ -224,9 +224,278 @@
           </tbody>
         </table>
 
+        <section class="ti-chart-block">
+          <h3>Preis-Leistungs-Scatterplot (CPUs)</h3>
+          <p class="ti-chart-intro">
+            Preis (CHF) auf der X-Achse, relativer Gaming-Performance-Index auf der Y-Achse.<br />
+            Höher = mehr Gaming-Leistung pro investiertem Franken. Punkte repräsentieren typische Strassenpreise
+            in der Schweiz und eine zusammengefasste Gaming-Performance.
+          </p>
+
+          <div class="ti-chart-wrapper">
+            <canvas id="cpuPricePerfScatter" aria-label="CPU Preis-Leistungs-Scatterplot" role="img"></canvas>
+          </div>
+
+          <p class="ti-chart-hint">
+            * Performance-Index basierend auf relativen Gaming-Benchmarks (1080p/1440p, hoher Detailgrad).<br />
+            ** Preise sind typische Strassenpreise aus dem Schweizer Handel (Digitec, Brack, Microspot usw.).
+          </p>
+        </section>
+
+        <!-- Chart.js – ggf. nur einbinden, wenn nicht schon global geladen -->
+        <script>
+          (function loadChartJsIfNeeded() {
+            if (window.Chart) return;
+            var s = document.createElement("script");
+            s.src = "https://cdn.jsdelivr.net/npm/chart.js";
+            s.async = true;
+            document.head.appendChild(s);
+          })();
+        </script>
+
+        <script>
+          (function initCpuScatterWhenReady() {
+            // Warten, bis Chart.js verfügbar ist
+            function ready() {
+              if (!window.Chart) {
+                setTimeout(ready, 50);
+                return;
+              }
+
+              // Datenbasis aus der Tabelle (inkl. Plattform-Infos für Tooltip)
+              // Preisbereich = aus der Tabelle, priceMid = Mittelwert für die X-Achse
+              // perfIndex = relativer Gaming-Index (skalierbar nach Bedarf)
+              const cpuData = [
+                {
+                  name: "Ryzen 7 7800X3D",
+                  brand: "AMD",
+                  platform: "AM5, DDR5",
+                  cores: "8C / 16T + 3D-V-Cache",
+                  usage: "High-End Gaming, solides Editing",
+                  priceRangeChf: "~380–430",
+                  priceMidChf: 405,
+                  perfIndex: 195,
+                  summary: "Aktuell einer der besten Gaming-CPUs (FPS pro CHF), sehr effizient.",
+                },
+                {
+                  name: "Ryzen 5 7600",
+                  brand: "AMD",
+                  platform: "AM5, DDR5",
+                  cores: "6C / 12T",
+                  usage: "1080p/1440p Gaming, Einstieg Editing",
+                  priceRangeChf: "~200–230",
+                  priceMidChf: 215,
+                  perfIndex: 155,
+                  summary: "„Budget-King“ für neue Builds mit gutem Upgradepfad.",
+                },
+                {
+                  name: "Ryzen 7 5800X3D",
+                  brand: "AMD",
+                  platform: "AM4, DDR4",
+                  cores: "8C / 16T + 3D-V-Cache",
+                  usage: "Gaming-Upgrade für bestehende AM4-Systeme",
+                  priceRangeChf: "~260–320 (Restposten)",
+                  priceMidChf: 290,
+                  perfIndex: 185,
+                  summary:
+                    "Top-FPS auf alter Plattform – ideal als Drop-in-Upgrade, weniger sinnvoll für neue Builds.",
+                },
+                {
+                  name: "Core i5-12400F",
+                  brand: "Intel",
+                  platform: "LGA1700, DDR4/DDR5",
+                  cores: "6P / 12T",
+                  usage: "Preiswertes 1080p/1440p-Gaming",
+                  priceRangeChf: "~110–140",
+                  priceMidChf: 125,
+                  perfIndex: 135,
+                  summary: "Extrem gutes Preis-FPS-Verhältnis, aber Plattform kurz vor dem Ende.",
+                },
+                {
+                  name: "Core i5-13600K",
+                  brand: "Intel",
+                  platform: "LGA1700, DDR4/DDR5",
+                  cores: "6P + 8E (20T)",
+                  usage: "Gaming + starkes Rendering/Editing",
+                  priceRangeChf: "~280–330",
+                  priceMidChf: 305,
+                  perfIndex: 170,
+                  summary: "Sehr schnelles Allround-Paket, aber relativ hoher Stromverbrauch.",
+                },
+                {
+                  name: "Core i9-13900K / 14900K",
+                  brand: "Intel",
+                  platform: "LGA1700, DDR5",
+                  cores: "8P + 16E (32T)",
+                  usage: "High-End Workstation, Enthusiast-Gaming",
+                  priceRangeChf: "~520–650",
+                  priceMidChf: 585,
+                  perfIndex: 190,
+                  summary: "Maximale Rohleistung, aber teuer und stromhungrig – nur sinnvoll, wenn Zeit = Geld.",
+                },
+                {
+                  name: "Ryzen 9 7950X",
+                  brand: "AMD",
+                  platform: "AM5, DDR5",
+                  cores: "16C / 32T",
+                  usage: "CPU-Rendering, schweres Editing",
+                  priceRangeChf: "~520–580",
+                  priceMidChf: 550,
+                  perfIndex: 180,
+                  summary: "Enorme Multicore-Leistung bei guter Effizienz, attraktiver als viele High-End-Intels.",
+                },
+              ];
+
+              // Performance pro 100 CHF als zusätzliche Kennzahl
+              cpuData.forEach((cpu) => {
+                cpu.perfPer100Chf = (cpu.perfIndex / cpu.priceMidChf) * 100;
+              });
+
+              const amdPoints = cpuData
+                .filter((cpu) => cpu.brand === "AMD")
+                .map((cpu) => ({
+                  x: cpu.priceMidChf,
+                  y: cpu.perfIndex,
+                  meta: cpu,
+                }));
+
+              const intelPoints = cpuData
+                .filter((cpu) => cpu.brand === "Intel")
+                .map((cpu) => ({
+                  x: cpu.priceMidChf,
+                  y: cpu.perfIndex,
+                  meta: cpu,
+                }));
+
+              const ctx = document.getElementById("cpuPricePerfScatter").getContext("2d");
+
+              new Chart(ctx, {
+                type: "scatter",
+                data: {
+                  datasets: [
+                    {
+                      label: "AMD (Gaming-Performance vs. CHF)",
+                      data: amdPoints,
+                      pointRadius: 5,
+                      pointHoverRadius: 7,
+                      backgroundColor: "rgba(239, 68, 68, 0.8)", // rot
+                      borderColor: "rgba(185, 28, 28, 1)",
+                    },
+                    {
+                      label: "Intel (Gaming-Performance vs. CHF)",
+                      data: intelPoints,
+                      pointRadius: 5,
+                      pointHoverRadius: 7,
+                      backgroundColor: "rgba(37, 99, 235, 0.8)", // blau
+                      borderColor: "rgba(30, 64, 175, 1)",
+                    },
+                  ],
+                },
+                options: {
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  plugins: {
+                    legend: {
+                      position: "bottom",
+                    },
+                    tooltip: {
+                      callbacks: {
+                        label: function (context) {
+                          const cpu = context.raw.meta;
+                          const perfPer100 = cpu.perfPer100Chf.toFixed(2);
+                          return [
+                            cpu.name + " (" + cpu.brand + ")",
+                            "Preis: " + cpu.priceRangeChf,
+                            "Plattform: " + cpu.platform,
+                            "Kerne: " + cpu.cores,
+                            "Einsatz: " + cpu.usage,
+                            "Performance-Index: " + cpu.perfIndex,
+                            "Perf. pro 100 CHF: " + perfPer100,
+                            cpu.summary,
+                          ];
+                        },
+                      },
+                    },
+                  },
+                  scales: {
+                    x: {
+                      title: {
+                        display: true,
+                        text: "Preis (CHF, typischer Strassenpreis)",
+                      },
+                      ticks: {
+                        callback: function (value) {
+                          return value + " CHF";
+                        },
+                      },
+                      grid: {
+                        color: "rgba(148, 163, 184, 0.2)",
+                      },
+                    },
+                    y: {
+                      title: {
+                        display: true,
+                        text: "Relativer Gaming-Performance-Index",
+                      },
+                      beginAtZero: false,
+                      grid: {
+                        color: "rgba(148, 163, 184, 0.2)",
+                      },
+                    },
+                  },
+                },
+              });
+            }
+
+            ready();
+          })();
+        </script>
+
+        <style>
+          /* Grob an TechIndex-Style angelehnt, kannst du bei Bedarf ins globale CSS ziehen */
+          .ti-chart-block {
+            margin: 2.5rem 0;
+          }
+
+          .ti-chart-block h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+          }
+
+          .ti-chart-intro {
+            font-size: 0.95rem;
+            color: #4b5563;
+            margin-bottom: 0.75rem;
+          }
+
+          .ti-chart-wrapper {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            min-height: 320px;
+          }
+
+          .ti-chart-wrapper canvas {
+            width: 100%;
+            height: 100%;
+          }
+
+          .ti-chart-hint {
+            font-size: 0.8rem;
+            color: #6b7280;
+            margin-top: 0.75rem;
+          }
+
+          @media (max-width: 768px) {
+            .ti-chart-wrapper {
+              min-height: 260px;
+            }
+          }
+        </style>
+
         <p>
-          Klar wird schon hier: <strong>Die spannendsten CPUs sitzen im Bereich Ryzen 5 / Ryzen 7 / Core i5 / Core i7</strong>. 
-          Ganz oben explodiert der Preis pro Prozent Mehrleistung, ganz unten fehlt Reserven 
+          Klar wird schon hier: <strong>Die spannendsten CPUs sitzen im Bereich Ryzen 5 / Ryzen 7 / Core i5 / Core i7</strong>.
+          Ganz oben explodiert der Preis pro Prozent Mehrleistung, ganz unten fehlt Reserven
           für Multitasking und moderne Games.
         </p>
       </section>
