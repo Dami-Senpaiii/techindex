@@ -1,4 +1,0 @@
-# favicon.png (32x32) base64-encoded to avoid binary attachments
-# decode with: base64 -d favicon-base64.txt > favicon.png
-# strip comment lines before decoding if your tool does not ignore them.
-iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAACYktHRAAAqo0jMgAAAAd0SU1FB+kLFAgDE/S0UpYAAAAYSURBVEjHY2AYBaNgFIyCUTAKRsEoQAUACCAAAVWI1J0AAAAASUVORK5CYII=
