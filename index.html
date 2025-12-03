@@ -261,12 +261,11 @@
         <h2>TechIndex Weekly</h2>
         <small class="muted">Einmal pro Woche. Keine Werbung, nur Mehrwert.</small>
       </div>
-      <form id="newsletter-form" action="https://submit-form.com/Mo6PFcPRr" method="post" novalidate>
+      <form action="https://submit-form.com/Mo6PFcPRr" method="POST">
         <label for="email" class="visually-hidden">E‑Mail</label>
         <input id="email" name="email" type="email" placeholder="dein@email.ch" autocomplete="email" required>
-        <button class="btn" type="submit" id="newsletter-submit" name="newsletter-submit">Abonnieren</button>
+        <button class="btn" type="submit" name="newsletter-submit">Abonnieren</button>
       </form>
-      <p class="small" id="newsletter-status" role="status" aria-live="polite" style="margin-top:10px;color:var(--muted)"></p>
     </div>
   </section>
 
@@ -400,53 +399,6 @@
     const nextBtn = document.getElementById('next');
     const navToggle = document.getElementById('nav-toggle');
     const menuEl = document.getElementById('menu');
-    const newsletterForm = document.getElementById('newsletter-form');
-    const emailInput = document.getElementById('email');
-    const newsletterStatus = document.getElementById('newsletter-status');
-
-    function setNewsletterStatus(message, tone='info'){
-      if(!newsletterStatus) return;
-      newsletterStatus.textContent = message;
-      let color = 'var(--muted)';
-      if(tone === 'error') color = '#ffb4b4';
-      if(tone === 'success') color = '#d6ffd6';
-      newsletterStatus.style.color = color;
-    }
-
-    function initNewsletter(){
-      if(!newsletterForm || !emailInput){
-        return;
-      }
-      newsletterForm.addEventListener('submit', async (event)=>{
-        event.preventDefault();
-        const emailRaw = (emailInput.value || '').trim();
-        emailInput.value = emailRaw;
-        if(!emailRaw){
-          setNewsletterStatus('Bitte eine E-Mail-Adresse eingeben.', 'error');
-          emailInput.focus();
-          return;
-        }
-        if(!emailInput.checkValidity()){ emailInput.reportValidity(); return; }
-        setNewsletterStatus('Wird gesendet …');
-        try{
-          const formData = new FormData(newsletterForm);
-          const response = await fetch(newsletterForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: { 'Accept': 'application/json' }
-          });
-          if(!response.ok){
-            throw new Error(`HTTP ${response.status}`);
-          }
-          setNewsletterStatus('Danke fürs Abonnieren! Checke dein Postfach.', 'success');
-          newsletterForm.reset();
-        }catch(err){
-          console.error('Newsletter konnte nicht gesendet werden.', err);
-          setNewsletterStatus('Senden fehlgeschlagen – bitte später erneut versuchen.', 'error');
-        }
-      });
-    }
-
     function setNav(open){
       if(!navToggle || !menuEl) return;
       navToggle.setAttribute('aria-expanded', open);
@@ -536,7 +488,6 @@
     // Jahr im Footer
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    initNewsletter();
     setNav(false);
     handleMobileChange(mobileQuery);
     render();
