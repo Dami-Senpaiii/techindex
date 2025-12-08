@@ -118,6 +118,79 @@
         <h2>Wieso RAM knapp wurde: Die drei wichtigsten Ursachen</h2>
         <h3>1. KI-Rechenzentren ziehen den Markt leer</h3>
         <p>Der KI-Boom saugt Kapazitäten ab. Hyperscaler investieren in HBM und Server-RAM, weil dort die Margen höher sind als bei Consumer-DDR5. Hersteller priorisieren daher Data-Center-Wafer und liefern den Retail-Markt zuletzt aus – OEMs zahlen schlicht mehr. Ergebnis: Weniger Waferkapazität für klassische DIMMs, längere Lieferzeiten für den Handel.</p>
+        <div class="chart-container" style="max-width: 800px; margin: 1.5rem auto; text-align: center;">
+          <h4>Verteilung der DRAM-Produktion: Server/KI vs. Consumer (2023–2025)</h4>
+          <canvas id="dramShareChart" aria-label="Diagramm zur Verteilung der DRAM-Produktion" role="img"></canvas>
+          <p class="caption" style="font-size: 0.95rem; color: #444; margin-top: 0.5rem;">Anteile basieren 2023/2024 auf veröffentlichten Marktstudien (TrendForce, PatentPC); 2025 ist eine Schätzung aus dem starken AI-/HBM-Wachstum.</p>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+          const dramCtx = document.getElementById("dramShareChart");
+
+          const dramLabels = ["2023", "2024", "2025"];
+          const dramServerKi = [38, 47, 55];
+          const dramConsumer = [62, 53, 45];
+
+          new Chart(dramCtx, {
+            type: "bar",
+            data: {
+              labels: dramLabels,
+              datasets: [
+                {
+                  label: "Server / KI (Rechenzentren, HBM, AI-Workloads)",
+                  data: dramServerKi,
+                  borderWidth: 1
+                },
+                {
+                  label: "Consumer (PC, Mobile, Consumer & Embedded)",
+                  data: dramConsumer,
+                  borderWidth: 1
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                title: {
+                  display: true,
+                  text: "Verteilung der DRAM-Produktion nach Segment (Anteil an der Bitproduktion, in %)"
+                },
+                tooltip: {
+                  callbacks: {
+                    label: function (context) {
+                      const value = context.parsed.y;
+                      return `${context.dataset.label}: ${value.toFixed(0)} %`;
+                    }
+                  }
+                },
+                legend: {
+                  position: "bottom"
+                }
+              },
+              scales: {
+                x: {
+                  stacked: true,
+                  title: {
+                    display: true,
+                    text: "Jahr"
+                  }
+                },
+                y: {
+                  stacked: true,
+                  title: {
+                    display: true,
+                    text: "Anteil an der DRAM-Bitproduktion (%)"
+                  },
+                  min: 0,
+                  max: 100,
+                  ticks: {
+                    stepSize: 10
+                  }
+                }
+              }
+            }
+          });
+        </script>
         <h3>2. Das Ende von DDR4 verzerrt die Preise</h3>
         <p>Ab 2024 reduzierten die großen Hersteller ihre DDR4-Linien massiv, um DDR5 und HBM zu priorisieren. Die sinkende Stückzahl machte DDR4 plötzlich zum Nischenprodukt – mit paradoxem Effekt: In mehreren Monaten war DDR4 teurer als DDR5. Was früher die günstige Standardwahl war, kostet jetzt Premiumaufschlag.</p>
 
