@@ -65,6 +65,9 @@
     .post-footer{border-top:1px solid var(--border);padding-top:24px;margin-top:32px;display:flex;flex-direction:column;gap:12px}
     .back-link{display:inline-flex;align-items:center;gap:10px;font-weight:600;color:var(--accent)}
     .taglist{color:var(--muted);font-size:.9rem}
+    .chart-card{margin:30px auto;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:22px 22px 18px;box-shadow:var(--shadow);max-width:920px}
+    .chart-title{margin:0 0 10px;font-size:1.05rem;letter-spacing:-.01em}
+    .chart-caption{color:var(--muted);font-size:.92rem;margin:12px 0 0;line-height:1.5}
     footer{border-top:1px solid var(--border);padding:32px 0;background:#090909}
     footer .muted{color:var(--muted);font-size:.9rem}
     @media (max-width:720px){
@@ -118,10 +121,10 @@
         <h2>Wieso RAM knapp wurde: Die drei wichtigsten Ursachen</h2>
         <h3>1. KI-Rechenzentren ziehen den Markt leer</h3>
         <p>Der KI-Boom saugt Kapazitäten ab. Hyperscaler investieren in HBM und Server-RAM, weil dort die Margen höher sind als bei Consumer-DDR5. Hersteller priorisieren daher Data-Center-Wafer und liefern den Retail-Markt zuletzt aus – OEMs zahlen schlicht mehr. Ergebnis: Weniger Waferkapazität für klassische DIMMs, längere Lieferzeiten für den Handel.</p>
-        <div class="chart-container" style="max-width: 800px; margin: 1.5rem auto; text-align: center;">
-          <h4>Verteilung der DRAM-Produktion: Server/KI vs. Consumer (2023–2025)</h4>
-          <canvas id="dramShareChart" aria-label="Diagramm zur Verteilung der DRAM-Produktion" role="img"></canvas>
-          <p class="caption" style="font-size: 0.95rem; color: #444; margin-top: 0.5rem;">Anteile basieren 2023/2024 auf veröffentlichten Marktstudien (TrendForce, PatentPC); 2025 ist eine Schätzung aus dem starken AI-/HBM-Wachstum.</p>
+        <div class="chart-card">
+          <h4 class="chart-title">Verteilung der DRAM-Produktion: Server/KI vs. Consumer (2023–2025)</h4>
+          <canvas id="dramShareChart" aria-label="Diagramm zur Verteilung der DRAM-Produktion" role="img" height="340"></canvas>
+          <p class="chart-caption">Anteile basieren 2023/2024 auf veröffentlichten Marktstudien (TrendForce, PatentPC); 2025 ist eine Schätzung aus dem starken AI-/HBM-Wachstum. Die Werte sind absichtlich nicht gestapelt, damit die Sprünge zwischen den Jahren sichtbar bleiben.</p>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
@@ -131,6 +134,31 @@
           const dramServerKi = [38, 47, 55];
           const dramConsumer = [62, 53, 45];
 
+          const dramDeltaPlugin = {
+            id: "dramDeltaPlugin",
+            afterDatasetsDraw(chart) {
+              const { ctx } = chart;
+              const datasetIndex = 0; // Server / KI
+              const meta = chart.getDatasetMeta(datasetIndex);
+              const data = chart.data.datasets[datasetIndex].data;
+
+              ctx.save();
+              ctx.font = "12px 'Inter', system-ui, -apple-system, sans-serif";
+              ctx.fillStyle = "#dfffd7";
+              ctx.textAlign = "center";
+              ctx.textBaseline = "bottom";
+
+              meta.data.forEach((bar, index) => {
+                if (index === 0) return;
+                const delta = data[index] - data[index - 1];
+                const text = `${delta >= 0 ? "+" : ""}${delta.toFixed(0)} pp`;
+                ctx.fillText(text, bar.x, bar.y - 6);
+              });
+
+              ctx.restore();
+            }
+          };
+
           new Chart(dramCtx, {
             type: "bar",
             data: {
@@ -139,56 +167,84 @@
                 {
                   label: "Server / KI (Rechenzentren, HBM, AI-Workloads)",
                   data: dramServerKi,
-                  borderWidth: 1
+                  backgroundColor: "#7bd83a",
+                  borderColor: "#8ff753",
+                  borderWidth: 1.5,
+                  borderRadius: 10,
+                  barThickness: 32
                 },
                 {
                   label: "Consumer (PC, Mobile, Consumer & Embedded)",
                   data: dramConsumer,
-                  borderWidth: 1
+                  backgroundColor: "#3a8bff",
+                  borderColor: "#62a5ff",
+                  borderWidth: 1.5,
+                  borderRadius: 10,
+                  barThickness: 32
                 }
               ]
             },
             options: {
               responsive: true,
+              layout: {
+                padding: {
+                  top: 18,
+                  bottom: 12
+                }
+              },
               plugins: {
-                title: {
-                  display: true,
-                  text: "Verteilung der DRAM-Produktion nach Segment (Anteil an der Bitproduktion, in %)"
-                },
                 tooltip: {
                   callbacks: {
                     label: function (context) {
                       const value = context.parsed.y;
-                      return `${context.dataset.label}: ${value.toFixed(0)} %`;
+                      let deltaText = "";
+                      if (context.dataIndex > 0) {
+                        const prev = context.dataset.data[context.dataIndex - 1];
+                        const delta = value - prev;
+                        deltaText = ` (Δ ${delta >= 0 ? "+" : ""}${delta.toFixed(0)} pp ggü. Vorjahr)`;
+                      }
+                      return `${context.dataset.label}: ${value.toFixed(0)} %${deltaText}`;
                     }
                   }
                 },
                 legend: {
-                  position: "bottom"
+                  position: "bottom",
+                  labels: {
+                    color: "#dfe6e9",
+                    boxWidth: 14
+                  }
                 }
               },
               scales: {
                 x: {
-                  stacked: true,
-                  title: {
-                    display: true,
-                    text: "Jahr"
+                  stacked: false,
+                  grid: {
+                    display: false
+                  },
+                  ticks: {
+                    color: "#dfe6e9"
                   }
                 },
                 y: {
-                  stacked: true,
+                  stacked: false,
+                  beginAtZero: true,
+                  suggestedMax: 70,
                   title: {
                     display: true,
-                    text: "Anteil an der DRAM-Bitproduktion (%)"
+                    text: "Anteil an der DRAM-Bitproduktion (%)",
+                    color: "#dfe6e9"
                   },
-                  min: 0,
-                  max: 100,
+                  grid: {
+                    color: "rgba(255,255,255,0.06)"
+                  },
                   ticks: {
+                    color: "#dfe6e9",
                     stepSize: 10
                   }
                 }
               }
-            }
+            },
+            plugins: [dramDeltaPlugin]
           });
         </script>
         <h3>2. Das Ende von DDR4 verzerrt die Preise</h3>
