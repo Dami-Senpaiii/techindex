@@ -115,6 +115,11 @@
         <h2>Preisschock 2025: Wie sich die Kosten innerhalb weniger Monate verdoppelten</h2>
         <p>Die Preiskurve für Arbeitsspeicher verlief nicht linear, sondern in Wellen – und in extrem kurzen Zyklen. Zwischen Spätsommer und Jahresende 2025 verteuerten sich viele Kits im Wochentakt. Ein 32-GB-DDR5-Kit stieg von rund CHF 120 im Juli auf über CHF 200 im Oktober. High-End-Kits traf es noch härter: DDR5-5600 mit 64 GB kletterte zwischen Mai und Dezember von knapp CHF 170 auf bis zu CHF 700.</p>
         <p>Selbst DDR4, lange Zeit die Budget-Option, war zeitweise teurer als DDR5. DDR4-3200-32-GB-Kits sprangen von CHF 45–50 im Frühjahr auf über CHF 120 gegen Jahresende. Midrange-DDR5 mit 6000 MHz verdoppelte sich binnen weniger Wochen von rund CHF 90 auf deutlich über CHF 180.</p>
+        <div class="chart-card">
+          <h4 class="chart-title">Aktuelle RAM-Preise (Digitec): DDR4 vs. DDR5</h4>
+          <canvas id="ramScatter" aria-label="Scatterplot zu Digitec-RAM-Preisen" role="img" height="360"></canvas>
+          <p class="chart-caption">Exemplarische Preise (08.12.2025) für 2-Riegel-Kits bei Digitec in 16, 32 und 64&nbsp;GB. Die Punkte zeigen Leistungsstufen wie 3200, 5600 oder 6000&nbsp;MHz.</p>
+        </div>
       </section>
 
       <section>
@@ -128,6 +133,119 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
+          const ramCtx = document.getElementById("ramScatter");
+          const ramColorDdr5 = "#7bd83a";
+          const ramColorDdr4 = "#62a5ff";
+
+          const ddr5Data = [
+            { x: 16, y: 51.9, label: "Kingston FURY Beast 16 GB 5600 MHz" },
+            { x: 16, y: 61.9, label: "Kingston FURY Beast 16 GB 6000 MHz" },
+            { x: 32, y: 220.0, label: "Kingston FURY Beast 32 GB 5600 MHz" },
+            { x: 32, y: 469.0, label: "Corsair Vengeance 32 GB 6000 MHz" },
+            { x: 64, y: 653.0, label: "G.Skill Trident Z5 Neo 64 GB 6000 MHz" },
+            { x: 64, y: 662.0, label: "Corsair Vengeance 64 GB 5600 MHz" }
+          ];
+
+          const ddr4Data = [
+            { x: 16, y: 99.0, label: "Corsair Vengeance LPX 16 GB 3200 MHz" },
+            { x: 16, y: 95.9, label: "Kingston FURY Beast 16 GB 3600 MHz" },
+            { x: 32, y: 90.9, label: "Silicon Power 32 GB 3200 MHz" },
+            { x: 32, y: 166.0, label: "Kingston FURY Beast 32 GB 3200 MHz" },
+            { x: 64, y: 292.0, label: "Kingston FURY Beast 64 GB 3200 MHz" }
+          ];
+
+          new Chart(ramCtx, {
+            type: "scatter",
+            data: {
+              datasets: [
+                {
+                  label: "DDR5-Kits",
+                  data: ddr5Data,
+                  backgroundColor: ramColorDdr5,
+                  borderColor: "#8ff753",
+                  borderWidth: 1.5,
+                  pointRadius: 6,
+                  pointHoverRadius: 7,
+                  pointStyle: "circle"
+                },
+                {
+                  label: "DDR4-Kits",
+                  data: ddr4Data,
+                  backgroundColor: ramColorDdr4,
+                  borderColor: "#91beff",
+                  borderWidth: 1.5,
+                  pointRadius: 6,
+                  pointHoverRadius: 7,
+                  pointStyle: "triangle"
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false,
+              layout: {
+                padding: { top: 10, right: 12, bottom: 6, left: 6 }
+              },
+              plugins: {
+                title: {
+                  display: true,
+                  text: "Scatterplot: aktuelle RAM-Preise (Digitec, CHF) nach Kapazität",
+                  color: "#e8f5e1",
+                  padding: { bottom: 8 }
+                },
+                legend: {
+                  position: "bottom",
+                  labels: {
+                    color: "#dfe6e9",
+                    boxWidth: 14,
+                    usePointStyle: true
+                  }
+                },
+                tooltip: {
+                  callbacks: {
+                    label: function (context) {
+                      const d = context.raw;
+                      return `${d.label}: ${d.x} GB – CHF ${d.y.toFixed(2)}`;
+                    }
+                  }
+                }
+              },
+              scales: {
+                x: {
+                  title: {
+                    display: true,
+                    text: "Kapazität (GB, Kit)",
+                    color: "#dfe6e9"
+                  },
+                  ticks: {
+                    color: "#dfe6e9",
+                    stepSize: 16
+                  },
+                  grid: {
+                    color: "rgba(255,255,255,0.06)"
+                  },
+                  min: 12,
+                  max: 68
+                },
+                y: {
+                  title: {
+                    display: true,
+                    text: "Preis (CHF)",
+                    color: "#dfe6e9"
+                  },
+                  ticks: {
+                    color: "#dfe6e9"
+                  },
+                  grid: {
+                    color: "rgba(255,255,255,0.06)"
+                  },
+                  suggestedMin: 40,
+                  suggestedMax: 700
+                }
+              }
+            }
+          });
+
           const dramCtx = document.getElementById("dramShareChart");
 
           const dramLabels = ["2023", "2024", "2025"];
