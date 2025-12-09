@@ -117,7 +117,7 @@
         <p>Selbst DDR4, lange Zeit die Budget-Option, war zeitweise teurer als DDR5. DDR4-3200-32-GB-Kits sprangen von CHF 45–50 im Frühjahr auf über CHF 120 gegen Jahresende. Midrange-DDR5 mit 6000 MHz verdoppelte sich binnen weniger Wochen von rund CHF 90 auf deutlich über CHF 180.</p>
         <div class="chart-card">
           <h4 class="chart-title">Aktuelle RAM-Preise (Digitec): DDR4 vs. DDR5</h4>
-          <canvas id="ramScatter" aria-label="Scatterplot zu Digitec-RAM-Preisen" role="img" height="360"></canvas>
+          <canvas id="ramScatter" aria-label="Scatterplot zu Digitec-RAM-Preisen" role="img" height="300"></canvas>
           <p class="chart-caption">Exemplarische Preise (08.12.2025) für 2-Riegel-Kits bei Digitec in 16, 32 und 64&nbsp;GB. Die Punkte zeigen Leistungsstufen wie 3200, 5600 oder 6000&nbsp;MHz.</p>
         </div>
       </section>
@@ -182,7 +182,8 @@
             },
             options: {
               responsive: true,
-              maintainAspectRatio: false,
+              maintainAspectRatio: true,
+              aspectRatio: 1.8,
               layout: {
                 padding: { top: 10, right: 12, bottom: 6, left: 6 }
               },
@@ -234,13 +235,15 @@
                     color: "#dfe6e9"
                   },
                   ticks: {
-                    color: "#dfe6e9"
+                    color: "#dfe6e9",
+                    stepSize: 100
                   },
                   grid: {
                     color: "rgba(255,255,255,0.06)"
                   },
-                  suggestedMin: 40,
-                  suggestedMax: 700
+                  min: 40,
+                  max: 700,
+                  grace: 0
                 }
               }
             }
