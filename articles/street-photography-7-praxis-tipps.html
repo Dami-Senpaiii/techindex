@@ -65,6 +65,9 @@
     .post-footer{border-top:1px solid var(--border);padding-top:24px;margin-top:32px;display:flex;flex-direction:column;gap:12px}
     .back-link{display:inline-flex;align-items:center;gap:10px;font-weight:600;color:var(--accent)}
     .taglist{color:var(--muted);font-size:.9rem}
+    .chart-card{margin:30px auto;background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:22px 22px 18px;box-shadow:var(--shadow);max-width:920px}
+    .chart-title{margin:0 0 10px;font-size:1.05rem;letter-spacing:-.01em}
+    .chart-caption{color:var(--muted);font-size:.92rem;margin:12px 0 0;line-height:1.5}
     footer{border-top:1px solid var(--border);padding:32px 0;background:#090909}
     footer .muted{color:var(--muted);font-size:.9rem}
     @media (max-width:720px){
@@ -112,12 +115,259 @@
         <h2>Preisschock 2025: Wie sich die Kosten innerhalb weniger Monate verdoppelten</h2>
         <p>Die Preiskurve für Arbeitsspeicher verlief nicht linear, sondern in Wellen – und in extrem kurzen Zyklen. Zwischen Spätsommer und Jahresende 2025 verteuerten sich viele Kits im Wochentakt. Ein 32-GB-DDR5-Kit stieg von rund CHF 120 im Juli auf über CHF 200 im Oktober. High-End-Kits traf es noch härter: DDR5-5600 mit 64 GB kletterte zwischen Mai und Dezember von knapp CHF 170 auf bis zu CHF 700.</p>
         <p>Selbst DDR4, lange Zeit die Budget-Option, war zeitweise teurer als DDR5. DDR4-3200-32-GB-Kits sprangen von CHF 45–50 im Frühjahr auf über CHF 120 gegen Jahresende. Midrange-DDR5 mit 6000 MHz verdoppelte sich binnen weniger Wochen von rund CHF 90 auf deutlich über CHF 180.</p>
+        <div class="chart-card">
+          <h4 class="chart-title">Aktuelle RAM-Preise (Digitec): DDR4 vs. DDR5</h4>
+          <canvas id="ramScatter" aria-label="Scatterplot zu Digitec-RAM-Preisen" role="img" height="300"></canvas>
+          <p class="chart-caption">Exemplarische Preise (08.12.2025) für 2-Riegel-Kits bei Digitec in 16, 32 und 64&nbsp;GB. Die Punkte zeigen Leistungsstufen wie 3200, 5600 oder 6000&nbsp;MHz.</p>
+        </div>
       </section>
 
       <section>
         <h2>Wieso RAM knapp wurde: Die drei wichtigsten Ursachen</h2>
         <h3>1. KI-Rechenzentren ziehen den Markt leer</h3>
         <p>Der KI-Boom saugt Kapazitäten ab. Hyperscaler investieren in HBM und Server-RAM, weil dort die Margen höher sind als bei Consumer-DDR5. Hersteller priorisieren daher Data-Center-Wafer und liefern den Retail-Markt zuletzt aus – OEMs zahlen schlicht mehr. Ergebnis: Weniger Waferkapazität für klassische DIMMs, längere Lieferzeiten für den Handel.</p>
+        <div class="chart-card">
+          <h4 class="chart-title">Verteilung der DRAM-Produktion: Server/KI vs. Consumer (2023–2025)</h4>
+          <canvas id="dramShareChart" aria-label="Diagramm zur Verteilung der DRAM-Produktion" role="img" height="340"></canvas>
+          <p class="chart-caption">Anteile basieren 2023/2024 auf veröffentlichten Marktstudien (TrendForce, PatentPC); 2025 ist eine Schätzung aus dem starken AI-/HBM-Wachstum. Die Werte sind absichtlich nicht gestapelt, damit die Sprünge zwischen den Jahren sichtbar bleiben.</p>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+          const ramCtx = document.getElementById("ramScatter");
+          const ramColorDdr5 = "#7bd83a";
+          const ramColorDdr4 = "#62a5ff";
+
+          const ddr5Data = [
+            { x: 16, y: 51.9, label: "Kingston FURY Beast 16 GB 5600 MHz" },
+            { x: 16, y: 61.9, label: "Kingston FURY Beast 16 GB 6000 MHz" },
+            { x: 32, y: 220.0, label: "Kingston FURY Beast 32 GB 5600 MHz" },
+            { x: 32, y: 469.0, label: "Corsair Vengeance 32 GB 6000 MHz" },
+            { x: 64, y: 653.0, label: "G.Skill Trident Z5 Neo 64 GB 6000 MHz" },
+            { x: 64, y: 662.0, label: "Corsair Vengeance 64 GB 5600 MHz" }
+          ];
+
+          const ddr4Data = [
+            { x: 16, y: 99.0, label: "Corsair Vengeance LPX 16 GB 3200 MHz" },
+            { x: 16, y: 95.9, label: "Kingston FURY Beast 16 GB 3600 MHz" },
+            { x: 32, y: 90.9, label: "Silicon Power 32 GB 3200 MHz" },
+            { x: 32, y: 166.0, label: "Kingston FURY Beast 32 GB 3200 MHz" },
+            { x: 64, y: 292.0, label: "Kingston FURY Beast 64 GB 3200 MHz" }
+          ];
+
+          new Chart(ramCtx, {
+            type: "scatter",
+            data: {
+              datasets: [
+                {
+                  label: "DDR5-Kits",
+                  data: ddr5Data,
+                  backgroundColor: ramColorDdr5,
+                  borderColor: "#8ff753",
+                  borderWidth: 1.5,
+                  pointRadius: 6,
+                  pointHoverRadius: 7,
+                  pointStyle: "circle"
+                },
+                {
+                  label: "DDR4-Kits",
+                  data: ddr4Data,
+                  backgroundColor: ramColorDdr4,
+                  borderColor: "#91beff",
+                  borderWidth: 1.5,
+                  pointRadius: 6,
+                  pointHoverRadius: 7,
+                  pointStyle: "triangle"
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: true,
+              aspectRatio: 1.8,
+              layout: {
+                padding: { top: 10, right: 12, bottom: 6, left: 6 }
+              },
+              plugins: {
+                title: {
+                  display: true,
+                  text: "Scatterplot: aktuelle RAM-Preise (Digitec, CHF) nach Kapazität",
+                  color: "#e8f5e1",
+                  padding: { bottom: 8 }
+                },
+                legend: {
+                  position: "bottom",
+                  labels: {
+                    color: "#dfe6e9",
+                    boxWidth: 14,
+                    usePointStyle: true
+                  }
+                },
+                tooltip: {
+                  callbacks: {
+                    label: function (context) {
+                      const d = context.raw;
+                      return `${d.label}: ${d.x} GB – CHF ${d.y.toFixed(2)}`;
+                    }
+                  }
+                }
+              },
+              scales: {
+                x: {
+                  title: {
+                    display: true,
+                    text: "Kapazität (GB, Kit)",
+                    color: "#dfe6e9"
+                  },
+                  ticks: {
+                    color: "#dfe6e9",
+                    stepSize: 16
+                  },
+                  grid: {
+                    color: "rgba(255,255,255,0.06)"
+                  },
+                  min: 12,
+                  max: 68
+                },
+                y: {
+                  title: {
+                    display: true,
+                    text: "Preis (CHF)",
+                    color: "#dfe6e9"
+                  },
+                  ticks: {
+                    color: "#dfe6e9",
+                    stepSize: 100
+                  },
+                  grid: {
+                    color: "rgba(255,255,255,0.06)"
+                  },
+                  min: 40,
+                  max: 700,
+                  grace: 0
+                }
+              }
+            }
+          });
+
+          const dramCtx = document.getElementById("dramShareChart");
+
+          const dramLabels = ["2023", "2024", "2025"];
+          const dramServerKi = [38, 47, 55];
+          const dramConsumer = [62, 53, 45];
+
+          const dramDeltaPlugin = {
+            id: "dramDeltaPlugin",
+            afterDatasetsDraw(chart) {
+              const { ctx } = chart;
+              const datasetIndex = 0; // Server / KI
+              const meta = chart.getDatasetMeta(datasetIndex);
+              const data = chart.data.datasets[datasetIndex].data;
+
+              ctx.save();
+              ctx.font = "12px 'Inter', system-ui, -apple-system, sans-serif";
+              ctx.fillStyle = "#dfffd7";
+              ctx.textAlign = "center";
+              ctx.textBaseline = "bottom";
+
+              meta.data.forEach((bar, index) => {
+                if (index === 0) return;
+                const delta = data[index] - data[index - 1];
+                const text = `${delta >= 0 ? "+" : ""}${delta.toFixed(0)} pp`;
+                ctx.fillText(text, bar.x, bar.y - 6);
+              });
+
+              ctx.restore();
+            }
+          };
+
+          new Chart(dramCtx, {
+            type: "bar",
+            data: {
+              labels: dramLabels,
+              datasets: [
+                {
+                  label: "Server / KI (Rechenzentren, HBM, AI-Workloads)",
+                  data: dramServerKi,
+                  backgroundColor: "#7bd83a",
+                  borderColor: "#8ff753",
+                  borderWidth: 1.5,
+                  borderRadius: 10,
+                  barThickness: 32
+                },
+                {
+                  label: "Consumer (PC, Mobile, Consumer & Embedded)",
+                  data: dramConsumer,
+                  backgroundColor: "#3a8bff",
+                  borderColor: "#62a5ff",
+                  borderWidth: 1.5,
+                  borderRadius: 10,
+                  barThickness: 32
+                }
+              ]
+            },
+            options: {
+              responsive: true,
+              layout: {
+                padding: {
+                  top: 18,
+                  bottom: 12
+                }
+              },
+              plugins: {
+                tooltip: {
+                  callbacks: {
+                    label: function (context) {
+                      const value = context.parsed.y;
+                      let deltaText = "";
+                      if (context.dataIndex > 0) {
+                        const prev = context.dataset.data[context.dataIndex - 1];
+                        const delta = value - prev;
+                        deltaText = ` (Δ ${delta >= 0 ? "+" : ""}${delta.toFixed(0)} pp ggü. Vorjahr)`;
+                      }
+                      return `${context.dataset.label}: ${value.toFixed(0)} %${deltaText}`;
+                    }
+                  }
+                },
+                legend: {
+                  position: "bottom",
+                  labels: {
+                    color: "#dfe6e9",
+                    boxWidth: 14
+                  }
+                }
+              },
+              scales: {
+                x: {
+                  stacked: false,
+                  grid: {
+                    display: false
+                  },
+                  ticks: {
+                    color: "#dfe6e9"
+                  }
+                },
+                y: {
+                  stacked: false,
+                  beginAtZero: true,
+                  suggestedMax: 70,
+                  title: {
+                    display: true,
+                    text: "Anteil an der DRAM-Bitproduktion (%)",
+                    color: "#dfe6e9"
+                  },
+                  grid: {
+                    color: "rgba(255,255,255,0.06)"
+                  },
+                  ticks: {
+                    color: "#dfe6e9",
+                    stepSize: 10
+                  }
+                }
+              }
+            },
+            plugins: [dramDeltaPlugin]
+          });
+        </script>
         <h3>2. Das Ende von DDR4 verzerrt die Preise</h3>
         <p>Ab 2024 reduzierten die großen Hersteller ihre DDR4-Linien massiv, um DDR5 und HBM zu priorisieren. Die sinkende Stückzahl machte DDR4 plötzlich zum Nischenprodukt – mit paradoxem Effekt: In mehreren Monaten war DDR4 teurer als DDR5. Was früher die günstige Standardwahl war, kostet jetzt Premiumaufschlag.</p>
 
