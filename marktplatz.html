@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+
+  <title>Marktplatz – TechIndex</title>
+  <meta name="description" content="Marktplatz von TechIndex: Second-Hand-Angebote und kuratierte Hardware- & Software-Empfehlungen mit Affiliate-Links." />
+  <meta name="theme-color" content="#0a0a0a">
+  <style>
+    :root{
+      --bg:#0a0a0a;
+      --panel:#121212;
+      --muted:#a1a1a1;
+      --text:#fff;
+      --border:#1f1f1f;
+      --accent:#76B900;
+      --accent-weak:#5e9400;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,"Helvetica Neue",Arial}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max);padding:0 20px;margin:0 auto}
+
+    /* Nav */
+    .nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:700}
+    .brand-badge{width:28px;height:28px;border:2px solid var(--accent);border-radius:8px;display:grid;place-items:center}
+    .brand-badge svg{stroke:var(--accent)}
+    .menu{display:flex;gap:18px;align-items:center}
+    .menu a{color:#eaeaea;font-size:.95rem;opacity:.85}
+    .menu a:hover{opacity:1}
+    .mobile-nav-toggle{display:none;border:1px solid var(--border);background:#0d0d0d;color:#fff;padding:8px 10px;border-radius:12px;align-items:center;gap:8px;font-weight:600;cursor:pointer}
+    .mobile-nav-toggle .icon-bars{display:block;width:18px;height:2px;background:var(--accent);position:relative;border-radius:999px}
+    .mobile-nav-toggle .icon-bars::before,.mobile-nav-toggle .icon-bars::after{content:"";position:absolute;left:0;width:100%;height:100%;background:var(--accent);border-radius:999px;transition:transform .2s ease}
+    .mobile-nav-toggle .icon-bars::before{top:-6px}
+    .mobile-nav-toggle .icon-bars::after{top:6px}
+    .mobile-nav-toggle[aria-expanded="true"] .icon-bars{background:transparent}
+    .mobile-nav-toggle[aria-expanded="true"] .icon-bars::before{transform:translateY(6px) rotate(45deg)}
+    .mobile-nav-toggle[aria-expanded="true"] .icon-bars::after{transform:translateY(-6px) rotate(-45deg)}
+    body.nav-open{overflow:hidden}
+    body.nav-open::after{content:"";position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:40}
+
+    /* Hero */
+    .hero{position:relative;isolation:isolate}
+    .hero::before{content:"";position:absolute;inset:-20% -20% auto -20%;height:420px;background:radial-gradient(900px 380px at 50% -10%, rgba(118,185,0,.28), transparent);z-index:-1}
+    .hero-inner{padding:64px 0 48px}
+    .hero h1{font-size:clamp(32px,3.6vw,54px);line-height:1.1;margin:0 0 16px;font-weight:850;letter-spacing:-.01em}
+    .hero p{color:#d6ffd6;max-width:820px}
+
+    /* Sections */
+    section{padding:32px 0}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:12px}
+    .section-head h2{margin:0;font-size:clamp(22px,2.4vw,30px)}
+    .section-head p{margin:0;color:var(--muted)}
+    .section-note{color:var(--muted);max-width:820px;margin:0 0 16px}
+
+    /* Cards */
+    .market-grid{display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}
+    .market-card{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);display:flex;flex-direction:column;gap:12px;box-shadow:var(--shadow);overflow:hidden}
+    .card-media{width:100%;aspect-ratio:16/9;background:#0f0f0f}
+    .card-media img{width:100%;height:100%;object-fit:cover}
+    .card-body{padding:20px;display:flex;flex-direction:column;gap:12px;flex:1}
+    .market-card h3{margin:0;font-size:1.15rem}
+    .card-meta{display:grid;gap:6px;font-size:.95rem;color:#d6d6d6}
+    .card-meta span{display:flex;justify-content:space-between;gap:10px}
+    .card-meta strong{color:#fff;font-weight:600}
+    .pill{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:#001100;background:rgba(118,185,0,.9);padding:4px 8px;border-radius:999px;font-weight:700}
+    .card-actions{margin-top:auto;display:flex;align-items:center;gap:12px}
+    .cta{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);padding:8px 12px;border-radius:12px}
+    .cta.primary{background:var(--accent);color:#000;border:none;font-weight:700}
+    .cta.primary:hover{filter:brightness(1.05)}
+
+    /* Footer */
+    footer{border-top:1px solid var(--border);margin-top:64px}
+    .cols{display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}
+    .small{font-size:.9rem}
+
+    /* Responsive */
+    @media (max-width: 960px){
+      .market-grid{grid-template-columns:repeat(2,1fr)}
+      .cols{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 640px){
+      .mobile-nav-toggle{display:inline-flex}
+      .menu{display:none;position:fixed;top:68px;right:20px;left:20px;background:#101010;border:1px solid var(--border);border-radius:var(--radius);padding:20px;flex-direction:column;gap:12px;box-shadow:var(--shadow);z-index:70}
+      .menu.open{display:flex}
+      .menu a{font-size:1rem;opacity:1;padding:4px 0}
+      .cols{grid-template-columns:1fr}
+      .hero-inner{padding:48px 0 32px}
+      .market-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="TechIndex Startseite">
+        <span class="brand-badge" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="4" ry="4"/>
+            <path d="M7 16l5-8 5 8" fill="none"/>
+          </svg>
+        </span>
+        <span>TechIndex</span>
+      </a>
+      <button class="mobile-nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menü öffnen">
+        <span class="icon-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menü</span>
+      </button>
+      <div class="menu" role="navigation" aria-label="Hauptmenü" id="menu">
+        <a href="index.html#neuste">Neuste Beiträge</a>
+        <a href="index.html#preisindex">Preisindex</a>
+        <a href="index.html#techindex-weekly">TechIndex Weekly</a>
+        <a href="marktplatz.html" aria-current="page">Marktplatz</a>
+        <a href="about.html">Über uns</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-inner">
+      <p class="muted" style="text-transform:uppercase;letter-spacing:.22em;font-weight:600;color:#a6f0a6">TechIndex Marktplatz</p>
+      <h1>Second Hand &amp; kuratierte Empfehlungen</h1>
+      <p>Hier findest du ausgewählte Second-Hand-Angebote aus der Community sowie Hardware- und Software-Empfehlungen mit Affiliate-Links für deinen nächsten Tech-Deal.</p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Second Hand Angebote</h2>
+          <p>Direkt aus der Community</p>
+        </div>
+        <p class="section-note">Fragen zu einem Artikel? Schreib uns direkt über den Anfrage-Button. Wir prüfen jedes Angebot vor der Aufnahme.</p>
+        <div class="market-grid" id="second-hand-grid">
+          <div class="market-card">
+            <span class="pill">Lädt …</span>
+            <h3>Second-Hand-Angebote werden geladen</h3>
+            <p class="muted">Bitte einen Moment Geduld.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Hardware &amp; Software mit Affiliate-Links</h2>
+          <p>Unsere aktuellen Empfehlungen</p>
+        </div>
+        <p class="section-note">Bei diesen Links erhalten wir eine kleine Provision. Für dich bleibt der Preis gleich.</p>
+        <div class="market-grid" id="affiliate-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="padding:20px 0 28px">
+      <div class="cols">
+        <div>
+          <div class="brand" style="margin-bottom:8px">
+            <span class="brand-badge" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="4" ry="4"/>
+                <path d="M7 16l5-8 5 8" fill="none"/>
+              </svg>
+            </span>
+            <strong>TechIndex</strong>
+          </div>
+        </div>
+        <div>
+          <strong>Themen</strong>
+          <ul class="small" style="list-style:none;padding:0;margin:8px 0 0">
+            <li><a href="index.html#hardware">Hardware</a></li>
+            <li><a href="index.html#software">Software</a></li>
+            <li><a href="index.html#fotografie">Fotografie</a></li>
+            <li><a href="index.html#preisindex">Preisvergleiche</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong>Rechtliches</strong>
+          <ul class="small" style="list-style:none;padding:0;margin:8px 0 0">
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+            <li><a href="mailto:hallo@techindex.ch">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="muted small" style="margin-top:14px">© <span id="y"></span> TechIndex.ch — Hosted on Cloudflare.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    const navToggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('menu');
+
+    if (navToggle && menu) {
+      navToggle.addEventListener('click', () => {
+        const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!isOpen));
+        menu.classList.toggle('open', !isOpen);
+        document.body.classList.toggle('nav-open', !isOpen);
+      });
+    }
+
+    const secondHandGrid = document.getElementById('second-hand-grid');
+    const affiliateGrid = document.getElementById('affiliate-grid');
+
+    const buildMetaRow = (label, value) => {
+      const row = document.createElement('span');
+      const labelEl = document.createElement('span');
+      labelEl.textContent = label;
+      const valueEl = document.createElement('strong');
+      valueEl.textContent = value;
+      row.append(labelEl, valueEl);
+      return row;
+    };
+
+    const renderCards = (items, grid, options) => {
+      grid.innerHTML = '';
+      if (!items || items.length === 0) {
+        const empty = document.createElement('div');
+        empty.className = 'market-card';
+        empty.innerHTML = '<span class="pill">Aktuell leer</span><h3>Keine Angebote verfügbar</h3><p class="muted">Bitte später nochmals vorbeischauen.</p>';
+        grid.appendChild(empty);
+        return;
+      }
+
+      items.forEach((item) => {
+        const card = document.createElement('article');
+        card.className = 'market-card';
+
+        const media = document.createElement('div');
+        media.className = 'card-media';
+        const image = document.createElement('img');
+        image.src = item.image;
+        image.alt = item.name;
+        image.loading = 'lazy';
+        media.appendChild(image);
+
+        const body = document.createElement('div');
+        body.className = 'card-body';
+
+        const pill = document.createElement('span');
+        pill.className = 'pill';
+        pill.textContent = options.pill;
+
+        const title = document.createElement('h3');
+        title.textContent = item.name;
+
+        const desc = document.createElement('p');
+        desc.className = 'muted';
+        desc.textContent = item.description;
+
+        const meta = document.createElement('div');
+        meta.className = 'card-meta';
+        meta.append(
+          buildMetaRow(options.metaOneLabel, item[options.metaOneKey]),
+          buildMetaRow(options.metaTwoLabel, item[options.metaTwoKey]),
+          buildMetaRow(options.metaThreeLabel, item[options.metaThreeKey])
+        );
+
+        const actions = document.createElement('div');
+        actions.className = 'card-actions';
+        const button = document.createElement('a');
+        button.className = 'cta primary';
+        button.textContent = options.actionLabel;
+        button.href = item.link;
+        if (options.openInNewTab) {
+          button.target = '_blank';
+          button.rel = 'noopener noreferrer';
+        }
+        actions.appendChild(button);
+
+        body.append(pill, title, desc, meta, actions);
+        card.append(media, body);
+        grid.appendChild(card);
+      });
+    };
+
+    fetch('data/marktplatz.json')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Data load failed');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        renderCards(data.secondHand, secondHandGrid, {
+          pill: 'Second Hand',
+          metaOneLabel: 'Zustand',
+          metaOneKey: 'condition',
+          metaTwoLabel: 'Preis',
+          metaTwoKey: 'price',
+          metaThreeLabel: 'Ort',
+          metaThreeKey: 'location',
+          actionLabel: 'Anfragen',
+          openInNewTab: false
+        });
+        renderCards(data.affiliate, affiliateGrid, {
+          pill: 'Affiliate',
+          metaOneLabel: 'Kategorie',
+          metaOneKey: 'category',
+          metaTwoLabel: 'Preis',
+          metaTwoKey: 'price',
+          metaThreeLabel: 'Shop',
+          metaThreeKey: 'shop',
+          actionLabel: 'Zum Angebot',
+          openInNewTab: true
+        });
+      })
+      .catch(() => {
+        secondHandGrid.innerHTML = '';
+        affiliateGrid.innerHTML = '';
+        const errorCard = document.createElement('div');
+        errorCard.className = 'market-card';
+        errorCard.innerHTML = '<span class="pill">Fehler</span><h3>Marktplatzdaten nicht geladen</h3><p class="muted">Bitte prüfe die Verbindung oder lade die Seite neu.</p>';
+        secondHandGrid.appendChild(errorCard.cloneNode(true));
+        affiliateGrid.appendChild(errorCard);
+      });
+  </script>
+</body>
+</html>
