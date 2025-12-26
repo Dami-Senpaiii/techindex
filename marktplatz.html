@@ -200,6 +200,69 @@
     </div>
   </footer>
 
+  <script type="application/json" id="marktplatz-fallback-data">
+  {
+    "secondHand": [
+      {
+        "name": "NVIDIA GeForce RTX 4070 Super Founders Edition",
+        "condition": "Sehr guter Zustand",
+        "price": "CHF 520",
+        "location": "Zürich",
+        "link": "mailto:marktplatz@techindex.ch?subject=Anfrage%20RTX%204070%20Super",
+        "description": "Inkl. Originalverpackung, leichte Gebrauchsspuren, nur für Gaming genutzt.",
+        "image": "https://picsum.photos/seed/secondhand-gpu/640/360"
+      },
+      {
+        "name": "Apple MacBook Pro 14\" (M1 Pro, 16 GB, 512 GB)",
+        "condition": "Gebraucht",
+        "price": "CHF 1’290",
+        "location": "Bern",
+        "link": "mailto:marktplatz@techindex.ch?subject=Anfrage%20MacBook%20Pro%2014",
+        "description": "Akku 92 %, Display ohne Kratzer, inkl. Ladegerät.",
+        "image": "https://picsum.photos/seed/secondhand-macbook/640/360"
+      },
+      {
+        "name": "Sony A7 IV Body",
+        "condition": "Wie neu",
+        "price": "CHF 1’850",
+        "location": "St. Gallen",
+        "link": "mailto:marktplatz@techindex.ch?subject=Anfrage%20Sony%20A7%20IV",
+        "description": "Aus 2023, 14’000 Auslösungen, inkl. Originalgurt.",
+        "image": "https://picsum.photos/seed/secondhand-camera/640/360"
+      }
+    ],
+    "affiliate": [
+      {
+        "name": "Framework Laptop 13",
+        "category": "Laptop",
+        "price": "ab CHF 1’199",
+        "shop": "Framework",
+        "link": "https://frame.work/",
+        "description": "Modularer Laptop mit einfacher Aufrüstbarkeit und Ersatzteilen.",
+        "image": "https://picsum.photos/seed/affiliate-laptop/640/360"
+      },
+      {
+        "name": "Synology DS923+",
+        "category": "NAS",
+        "price": "ab CHF 569",
+        "shop": "Digitec",
+        "link": "https://www.digitec.ch/",
+        "description": "4-Bay-NAS für Backups, Medien und Home-Office-Setups.",
+        "image": "https://picsum.photos/seed/affiliate-nas/640/360"
+      },
+      {
+        "name": "Notion Plus",
+        "category": "Software",
+        "price": "CHF 9.50 / Monat",
+        "shop": "Notion",
+        "link": "https://www.notion.so/",
+        "description": "Team-Wiki, Projektplanung und Wissensdatenbank in einem.",
+        "image": "https://picsum.photos/seed/affiliate-notion/640/360"
+      }
+    ]
+  }
+  </script>
+
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
 
@@ -290,6 +353,34 @@
       });
     };
 
+    const fallbackDataEl = document.getElementById('marktplatz-fallback-data');
+    const fallbackData = fallbackDataEl ? JSON.parse(fallbackDataEl.textContent) : null;
+
+    const renderMarket = (data) => {
+      renderCards(data.secondHand, secondHandGrid, {
+        pill: 'Second Hand',
+        metaOneLabel: 'Zustand',
+        metaOneKey: 'condition',
+        metaTwoLabel: 'Preis',
+        metaTwoKey: 'price',
+        metaThreeLabel: 'Ort',
+        metaThreeKey: 'location',
+        actionLabel: 'Anfragen',
+        openInNewTab: false
+      });
+      renderCards(data.affiliate, affiliateGrid, {
+        pill: 'Affiliate',
+        metaOneLabel: 'Kategorie',
+        metaOneKey: 'category',
+        metaTwoLabel: 'Preis',
+        metaTwoKey: 'price',
+        metaThreeLabel: 'Shop',
+        metaThreeKey: 'shop',
+        actionLabel: 'Zum Angebot',
+        openInNewTab: true
+      });
+    };
+
     fetch('data/marktplatz.json')
       .then((response) => {
         if (!response.ok) {
@@ -297,31 +388,12 @@
         }
         return response.json();
       })
-      .then((data) => {
-        renderCards(data.secondHand, secondHandGrid, {
-          pill: 'Second Hand',
-          metaOneLabel: 'Zustand',
-          metaOneKey: 'condition',
-          metaTwoLabel: 'Preis',
-          metaTwoKey: 'price',
-          metaThreeLabel: 'Ort',
-          metaThreeKey: 'location',
-          actionLabel: 'Anfragen',
-          openInNewTab: false
-        });
-        renderCards(data.affiliate, affiliateGrid, {
-          pill: 'Affiliate',
-          metaOneLabel: 'Kategorie',
-          metaOneKey: 'category',
-          metaTwoLabel: 'Preis',
-          metaTwoKey: 'price',
-          metaThreeLabel: 'Shop',
-          metaThreeKey: 'shop',
-          actionLabel: 'Zum Angebot',
-          openInNewTab: true
-        });
-      })
+      .then(renderMarket)
       .catch(() => {
+        if (fallbackData) {
+          renderMarket(fallbackData);
+          return;
+        }
         secondHandGrid.innerHTML = '';
         affiliateGrid.innerHTML = '';
         const errorCard = document.createElement('div');
