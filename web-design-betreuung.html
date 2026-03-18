@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="alternate icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+
+  <title>Web Design &amp; Betreuung – TechIndex</title>
+  <meta name="description" content="Moderne Websites für Schweizer KMU, Freelancer und lokale Betriebe: fair kalkulierter Einstieg, klare Umsetzung und langfristige Betreuung durch TechIndex." />
+  <meta name="theme-color" content="#0a0a0a">
+  <style>
+    :root{
+      --bg:#0a0a0a;
+      --panel:#121212;
+      --muted:#a1a1a1;
+      --text:#fff;
+      --border:#1f1f1f;
+      --accent:#76B900;
+      --accent-weak:#5e9400;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,"Helvetica Neue",Arial}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);padding:0 20px;margin:0 auto}
+
+    .nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:700}
+    .brand-badge{width:28px;height:28px;border:2px solid var(--accent);border-radius:8px;display:grid;place-items:center}
+    .brand-badge svg{stroke:var(--accent)}
+    .menu{display:flex;gap:18px;align-items:center}
+    .menu a{color:#eaeaea;font-size:.95rem;opacity:.85}
+    .menu a:hover,.menu a[aria-current="page"]{opacity:1}
+    .mobile-nav-toggle{display:none;border:1px solid var(--border);background:#0d0d0d;color:#fff;padding:8px 10px;border-radius:12px;align-items:center;gap:8px;font-weight:600;cursor:pointer}
+    .mobile-nav-toggle .icon-bars{display:block;width:18px;height:2px;background:var(--accent);position:relative;border-radius:999px}
+    .mobile-nav-toggle .icon-bars::before,.mobile-nav-toggle .icon-bars::after{content:"";position:absolute;left:0;width:100%;height:100%;background:var(--accent);border-radius:999px;transition:transform .2s ease}
+    .mobile-nav-toggle .icon-bars::before{top:-6px}
+    .mobile-nav-toggle .icon-bars::after{top:6px}
+    .mobile-nav-toggle[aria-expanded="true"] .icon-bars{background:transparent}
+    .mobile-nav-toggle[aria-expanded="true"] .icon-bars::before{transform:translateY(6px) rotate(45deg)}
+    .mobile-nav-toggle[aria-expanded="true"] .icon-bars::after{transform:translateY(-6px) rotate(-45deg)}
+    body.nav-open{overflow:hidden}
+    body.nav-open::after{content:"";position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:40}
+
+    .hero{position:relative;isolation:isolate}
+    .hero::before{content:"";position:absolute;inset:-18% -20% auto -20%;height:460px;background:radial-gradient(900px 380px at 50% -12%, rgba(118,185,0,.28), transparent);z-index:-1}
+    .hero-inner{padding:76px 0 56px;max-width:880px}
+    .eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.78rem;font-weight:650;color:#a6f0a6;margin:0 0 10px}
+    h1{font-size:clamp(32px,4vw,58px);line-height:1.07;letter-spacing:-.015em;margin:0 0 16px}
+    .lead{font-size:1.08rem;color:#d9d9d9;max-width:760px;margin:0}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:12px;padding:12px 18px;font-weight:700;border:1px solid var(--border)}
+    .btn.primary{background:var(--accent);color:#000;border:none;box-shadow:var(--shadow)}
+
+    section{padding:34px 0}
+    h2{margin:0 0 12px;font-size:clamp(22px,2.5vw,34px)}
+    p{margin:0;color:#d0d0d0}
+    .section-intro{max-width:820px;margin-bottom:16px}
+
+    .card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+    .card h3{margin:0 0 10px;font-size:1.08rem}
+
+    .list{display:grid;gap:12px;margin:0;padding:0;list-style:none}
+    .list li{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:14px 16px;color:#d6d6d6}
+    .list strong{color:#fff}
+
+    .steps{counter-reset:flow;display:grid;gap:12px;grid-template-columns:repeat(5,minmax(0,1fr))}
+    .step{counter-increment:flow;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px}
+    .step::before{content:counter(flow, decimal-leading-zero);display:inline-block;font-weight:700;color:var(--accent);margin-bottom:8px}
+    .step h3{margin:0 0 8px;font-size:1rem}
+    .step p{font-size:.95rem}
+
+    .pricing{display:grid;gap:16px;grid-template-columns:1.1fr .9fr}
+    .pricing .card p + p{margin-top:10px}
+
+    .cta-band{margin:24px 0 6px;background:linear-gradient(120deg, rgba(118,185,0,.18), transparent);border:1px solid var(--border);border-radius:var(--radius);padding:26px}
+    .cta-band h2{margin-bottom:10px}
+    .cta-band .btn{margin-top:16px}
+
+    footer{border-top:1px solid var(--border);margin-top:56px}
+    .cols{display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}
+    .small{font-size:.9rem}
+
+    @media (max-width:960px){
+      .card-grid{grid-template-columns:1fr 1fr}
+      .steps{grid-template-columns:1fr 1fr}
+      .pricing{grid-template-columns:1fr}
+      .cols{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:640px){
+      .mobile-nav-toggle{display:inline-flex}
+      .menu{display:none;position:fixed;top:68px;right:20px;left:20px;background:#101010;border:1px solid var(--border);border-radius:var(--radius);padding:20px;flex-direction:column;gap:12px;box-shadow:var(--shadow);z-index:70}
+      .menu.open{display:flex}
+      .menu a{font-size:1rem;opacity:1;padding:4px 0}
+      .hero-inner{padding:50px 0 36px}
+      .card-grid{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+      .cols{grid-template-columns:1fr}
+    }
+    .visually-hidden{position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="TechIndex Startseite">
+        <span class="brand-badge" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="4" ry="4"/>
+            <path d="M7 16l5-8 5 8" fill="none"/>
+          </svg>
+        </span>
+        <span>TechIndex</span>
+      </a>
+      <button class="mobile-nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menü öffnen">
+        <span class="icon-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menü</span>
+      </button>
+      <div class="menu" role="navigation" aria-label="Hauptmenü" id="menu">
+        <a href="index.html#neuste">Neuste Beiträge</a>
+        <a href="index.html#preisindex">Preisindex</a>
+        <a href="index.html#techindex-weekly">TechIndex Weekly</a>
+        <a href="marktplatz.html">Marktplatz</a>
+        <a href="web-design-betreuung.html" aria-current="page">Web Design &amp; Betreuung</a>
+        <a href="about.html">Über uns</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">Web Design &amp; Betreuung</p>
+      <h1>Moderne Websites für Schweizer Unternehmen, fair gestartet und sauber betreut.</h1>
+      <p class="lead">Wir bauen klare, schnelle und vertrauenswürdige Webauftritte für KMU, Freelancer und lokale Betriebe. Der Einstieg bleibt schlank kalkuliert, der eigentliche Mehrwert entsteht in der langfristigen Betreuung.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="mailto:hallo@techindex.ch?subject=Anfrage%20Web%20Design%20%26%20Betreuung">Unverbindliche Anfrage starten</a>
+        <a class="btn" href="#ablauf">Ablauf ansehen</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h2>Nutzenversprechen</h2>
+        <p class="section-intro">Keine überladene Agenturproduktion, sondern ein präziser Auftritt mit Fokus auf Wirkung: verständliche Inhalte, gute Lesbarkeit, schnelle Ladezeiten und eine technische Basis, die zuverlässig weitergeführt werden kann.</p>
+        <div class="card-grid">
+          <article class="card"><h3>Modern und klar</h3><p>Editorial geprägtes Design, passend zur Marke TechIndex: sachlich, professionell und vertrauenswürdig.</p></article>
+          <article class="card"><h3>Faire Einstiegskosten</h3><p>Der Start ist bewusst effizient geplant, damit kleine Budgets nicht durch unnötigen Umfang belastet werden.</p></article>
+          <article class="card"><h3>Langfristig sinnvoll</h3><p>Regelmässige Betreuung, Wartung und Weiterentwicklung sorgen dafür, dass die Website aktuell und nützlich bleibt.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Zielgruppen</h2>
+        <ul class="list">
+          <li><strong>Schweizer KMU:</strong> Unternehmen, die einen seriösen digitalen Auftritt ohne komplexes Grossprojekt benötigen.</li>
+          <li><strong>Freelancer &amp; Selbständige:</strong> Klarer Auftritt für Angebote, Referenzen und Kontaktanfragen.</li>
+          <li><strong>Lokale Betriebe:</strong> Sichtbarkeit für Dienstleistungen, Öffnungszeiten, Standorte und direkte Anfragen.</li>
+          <li><strong>Projekte &amp; Initiativen:</strong> Strukturiertes Launch-Setup für neue Ideen mit realistischer Kostenkontrolle.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Leistungen</h2>
+        <div class="card-grid">
+          <article class="card"><h3>Web Design &amp; Struktur</h3><p>Informationsarchitektur, Seitenkonzept, visuelle Führung, responsive Umsetzung.</p></article>
+          <article class="card"><h3>Umsetzung &amp; Launch</h3><p>Technische Realisierung, Basis-SEO, Performance, Formulare, Tracking-Grundlagen.</p></article>
+          <article class="card"><h3>Inhalte &amp; Feinschliff</h3><p>Unterstützung bei Textstruktur, Qualitätssicherung und professioneller Endabnahme.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ablauf">
+      <div class="container">
+        <h2>Ablauf in 5 Schritten</h2>
+        <div class="steps">
+          <article class="step"><h3>Erstgespräch</h3><p>Ziele, Zielgruppe und Umfang werden in einem klaren Briefing festgelegt.</p></article>
+          <article class="step"><h3>Konzept</h3><p>Seitenstruktur, Inhalte und Prioritäten werden pragmatisch definiert.</p></article>
+          <article class="step"><h3>Design &amp; Build</h3><p>Visuelles System und technische Umsetzung entstehen parallel, effizient abgestimmt.</p></article>
+          <article class="step"><h3>Review &amp; Launch</h3><p>Feinschliff, letzte Korrekturen und sauberer Go-live mit dokumentiertem Setup.</p></article>
+          <article class="step"><h3>Betreuung</h3><p>Wartung, Support und gezielte Weiterentwicklung im laufenden Betrieb.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container pricing">
+        <article class="card">
+          <h2>Preismodell: Warum der Einstieg schlank ist</h2>
+          <p>Der Einstieg wird fair kalkuliert, weil wir auf eine klare Basis setzen statt auf unnötige Komplexität. Sie erhalten eine moderne, solide Website ohne aufgeblasenes Paket.</p>
+          <p>Unser Geschäftsmodell ist transparent: Der einmalige Projektstart deckt Konzeption und Umsetzung ab. Wiederkehrende Leistungen wie Wartung, Support und Weiterentwicklung werden im Anschluss monatlich geplant und nur nach Bedarf ausgebaut.</p>
+        </article>
+        <article class="card">
+          <h3>Was das für Sie bedeutet</h3>
+          <ul style="margin:10px 0 0;padding-left:18px;color:#d4d4d4">
+            <li>Schneller Start mit kontrollierbaren Kosten</li>
+            <li>Keine langfristige Bindung ohne Nutzen</li>
+            <li>Planbare Betreuung mit klaren Leistungen</li>
+            <li>Weiterentwicklung in realistischen Etappen</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Betreuung &amp; Wartung</h2>
+        <div class="card-grid">
+          <article class="card"><h3>Technische Wartung</h3><p>Updates, Sicherheitschecks, Backups und Monitoring für einen stabilen Betrieb.</p></article>
+          <article class="card"><h3>Support im Alltag</h3><p>Änderungen an Inhalten, neuen Seiten oder Aktionen werden zuverlässig umgesetzt.</p></article>
+          <article class="card"><h3>Weiterentwicklung</h3><p>Struktur, Conversion und Inhalte werden anhand realer Nutzung laufend verbessert.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container cta-band">
+        <h2>Kontakt-CTA</h2>
+        <p>Wenn Sie eine moderne Website für Ihr Unternehmen oder Projekt planen, besprechen wir gerne die passende Startlösung und ein sinnvolles Betreuungsmodell.</p>
+        <a class="btn primary" href="mailto:hallo@techindex.ch?subject=Projektanfrage%20Web%20Design%20%26%20Betreuung">Jetzt Kontakt aufnehmen</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="padding:20px 0 28px">
+      <div class="cols">
+        <div>
+          <div class="brand" style="margin-bottom:8px">
+            <span class="brand-badge" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="4" ry="4"/>
+                <path d="M7 16l5-8 5 8" fill="none"/>
+              </svg>
+            </span>
+            <strong>TechIndex</strong>
+          </div>
+        </div>
+        <div>
+          <strong>Themen</strong>
+          <ul class="small" style="list-style:none;padding:0;margin:8px 0 0">
+            <li><a href="index.html#hardware">Hardware</a></li>
+            <li><a href="index.html#software">Software</a></li>
+            <li><a href="index.html#fotografie">Fotografie</a></li>
+            <li><a href="index.html#preisindex">Preisvergleiche</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong>Rechtliches</strong>
+          <ul class="small" style="list-style:none;padding:0;margin:8px 0 0">
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+            <li><a href="mailto:hallo@techindex.ch">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="muted small" style="margin-top:14px">© <span id="y"></span> TechIndex.ch — Hosted on Cloudflare.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('nav-toggle');
+    const menuEl = document.getElementById('menu');
+
+    function setNav(open){
+      if(!navToggle || !menuEl) return;
+      navToggle.setAttribute('aria-expanded', open);
+      navToggle.setAttribute('aria-label', open ? 'Menü schliessen' : 'Menü öffnen');
+      menuEl.classList.toggle('open', open);
+      document.body.classList.toggle('nav-open', open);
+    }
+
+    if(navToggle && menuEl){
+      navToggle.addEventListener('click', ()=>{
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        setNav(!expanded);
+      });
+      menuEl.addEventListener('click', (e)=>{
+        if(e.target.closest('a')) setNav(false);
+      });
+    }
+  </script>
+</body>
+</html>
