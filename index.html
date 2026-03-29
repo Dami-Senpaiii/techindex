@@ -88,7 +88,6 @@
     h2{margin:0;font-size:clamp(20px,2.4vw,28px)}
 
     /* Latest + filter */
-    .filters{display:flex;gap:10px;flex-wrap:wrap}
     .pill{border:1px solid var(--border);padding:6px 10px;border-radius:999px;background:#0b0b0b;color:#eee;cursor:pointer;font-size:.92rem}
     .pill.active, .pill:hover{border-color:var(--accent);color:#fff}
     .search{flex:1;min-width:240px}
@@ -218,14 +217,6 @@
         <h2>Neuste Beiträge</h2>
         <div class="search"><label class="visually-hidden" for="q">Suche</label><input id="q" type="search" placeholder="Suche nach Themen oder Titeln…"></div>
       </div>
-      <div class="filters" id="tagbar" aria-label="Themenfilter">
-        <button class="pill active" data-tag="">Alle</button>
-        <button class="pill" data-tag="Hardware">Hardware</button>
-        <button class="pill" data-tag="Software">Software</button>
-        <button class="pill" data-tag="Fotografie">Fotografie</button>
-        <button class="pill" data-tag="Preisvergleich">Preisvergleich</button>
-      </div>
-
       <div class="grid grid-3" id="posts" style="margin-top:16px"></div>
       <div class="section-head" style="margin-top:10px">
         <small class="muted" id="count">Seite 1</small>
@@ -400,7 +391,7 @@
     });
 
     const mobileQuery = window.matchMedia('(max-width: 640px)');
-    let perPage = mobileQuery.matches ? 6 : 9; let page=1; let activeTag=''; let q='';
+    let perPage = mobileQuery.matches ? 6 : 9; let page=1; let q='';
     const postsEl = document.getElementById('posts');
     const countEl = document.getElementById('count');
     const prevBtn = document.getElementById('prev');
@@ -435,7 +426,7 @@
     }
 
     function render(){
-      const filtered = uniqueBySlug(POSTS.filter(p=>(!activeTag||p.tag===activeTag)&&(!q||p.title.toLowerCase().includes(q))));
+      const filtered = uniqueBySlug(POSTS.filter(p=>(!q||p.title.toLowerCase().includes(q))));
       const totalPages = Math.max(1, Math.ceil(filtered.length/perPage));
       page = Math.min(page, totalPages);
       const slice = filtered.slice((page-1)*perPage, page*perPage);
@@ -477,14 +468,6 @@
     });
 
     window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') setNav(false); });
-
-    // Filter‑Pills
-    document.getElementById('tagbar').addEventListener('click', (e)=>{
-      const t = e.target.closest('button.pill'); if(!t) return;
-      [...document.querySelectorAll('#tagbar .pill')].forEach(x=>x.classList.remove('active'));
-      t.classList.add('active');
-      activeTag = t.dataset.tag||''; page=1; render();
-    });
 
     // Suche
     document.getElementById('q').addEventListener('input', (e)=>{q=e.target.value.toLowerCase(); page=1; render();});
