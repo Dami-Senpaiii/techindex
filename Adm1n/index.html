@@ -9,7 +9,7 @@
   <link rel="alternate icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/favicon.svg" />
 
-  <title>Admin Login - TechIndex</title>
+  <title>Admin - TechIndex</title>
   <style>
     :root{
       --bg:#0a0a0a;
@@ -19,7 +19,6 @@
       --text:#fff;
       --border:#242424;
       --accent:#76B900;
-      --danger:#ff6b6b;
       --radius:14px;
       --shadow:0 18px 55px rgba(0,0,0,.38);
     }
@@ -34,29 +33,13 @@
     .login-panel{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
     h1{font-size:1.55rem;line-height:1.2;margin:0 0 8px;letter-spacing:0}
     p{margin:0;color:var(--muted)}
-    form{display:grid;gap:14px;margin-top:22px}
-    label{display:grid;gap:7px;color:#e6e6e6;font-weight:650;font-size:.92rem}
-    input{width:100%;border:1px solid var(--border);border-radius:12px;background:#0b0b0b;color:var(--text);padding:12px 13px;font:inherit}
-    input:focus{outline:2px solid rgba(118,185,0,.65);outline-offset:2px;border-color:var(--accent)}
-    .password-row{position:relative}
-    .password-row input{padding-right:48px}
-    .toggle-password{position:absolute;right:7px;top:50%;transform:translateY(-50%);border:1px solid transparent;background:transparent;color:var(--muted);border-radius:10px;padding:7px;cursor:pointer}
-    .toggle-password:hover,.toggle-password:focus-visible{color:#fff;border-color:var(--border);outline:none}
-    .toggle-password svg{display:block}
-    .actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:2px}
-    .remember{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.9rem;font-weight:500}
-    .remember input{width:16px;height:16px;accent-color:var(--accent)}
-    button[type="submit"]{border:none;border-radius:12px;background:var(--accent);color:#071000;font-weight:800;padding:12px 16px;cursor:pointer;box-shadow:0 10px 30px rgba(118,185,0,.18)}
-    button[type="submit"]:hover{filter:brightness(1.05)}
-    .status{min-height:22px;margin-top:14px;color:var(--danger);font-size:.92rem}
-    .future-note{margin-top:18px;border:1px solid var(--border);border-radius:12px;background:var(--panel-strong);padding:12px;color:#d6d6d6;font-size:.92rem}
-    .future-note strong{color:#fff}
+    .admin-status{display:flex;align-items:center;gap:10px;margin-top:22px;border:1px solid var(--border);border-radius:12px;background:var(--panel-strong);padding:12px;color:#d6d6d6;font-size:.94rem}
+    .status-dot{width:10px;height:10px;border-radius:999px;background:var(--accent);box-shadow:0 0 20px rgba(118,185,0,.45);flex:0 0 auto}
+    .next-step{margin-top:18px;color:#d6d6d6;font-size:.92rem}
     .visually-hidden{position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
     @media (max-width:480px){
       body{padding:18px}
       .login-panel{padding:20px}
-      .actions{align-items:stretch;flex-direction:column}
-      button[type="submit"]{width:100%}
     }
   </style>
 </head>
@@ -73,59 +56,15 @@
     </div>
 
     <section class="login-panel">
-      <h1 id="admin-title">Admin Login</h1>
+      <h1 id="admin-title">Admin</h1>
       <p>Interner Zugang fuer redaktionelle Werkzeuge.</p>
 
-      <form id="admin-login" autocomplete="on">
-        <label>
-          Benutzername
-          <input name="username" type="text" autocomplete="username" inputmode="email" required />
-        </label>
-        <label>
-          Passwort
-          <span class="password-row">
-            <input id="password" name="password" type="password" autocomplete="current-password" required />
-            <button class="toggle-password" type="button" aria-label="Passwort anzeigen" aria-pressed="false">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
-                <circle cx="12" cy="12" r="3"/>
-              </svg>
-            </button>
-          </span>
-        </label>
-        <div class="actions">
-          <label class="remember">
-            <input name="remember" type="checkbox" />
-            Angemeldet bleiben
-          </label>
-          <button type="submit">Einloggen</button>
-        </div>
-      </form>
-
-      <p class="status" id="status" role="status" aria-live="polite"></p>
-      <div class="future-note">
-        <strong>Hinweis:</strong> Diese Seite ist als spaeterer Einstiegspunkt vorbereitet. Die echte Anmeldung muss serverseitig oder ueber Cloudflare Access abgesichert werden, bevor Admin-Funktionen aktiviert werden.
+      <div class="admin-status">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Zugriff wurde ueber Cloudflare Access geprueft.</span>
       </div>
+      <p class="next-step">Der Artikel-Builder kann hier erst aktiviert werden, wenn die Access-Anwendung und Policy in Cloudflare Zero Trust veroeffentlicht sind.</p>
     </section>
   </main>
-
-  <script>
-    const form = document.getElementById('admin-login');
-    const statusEl = document.getElementById('status');
-    const passwordInput = document.getElementById('password');
-    const togglePassword = document.querySelector('.toggle-password');
-
-    togglePassword.addEventListener('click', () => {
-      const isVisible = passwordInput.type === 'text';
-      passwordInput.type = isVisible ? 'password' : 'text';
-      togglePassword.setAttribute('aria-pressed', String(!isVisible));
-      togglePassword.setAttribute('aria-label', isVisible ? 'Passwort anzeigen' : 'Passwort verbergen');
-    });
-
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      statusEl.textContent = 'Authentifizierung ist noch nicht verbunden. Bitte zuerst Cloudflare Access oder eine Backend-Login-API aktivieren.';
-    });
-  </script>
 </body>
 </html>
