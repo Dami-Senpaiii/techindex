@@ -14,57 +14,272 @@
     :root{
       --bg:#0a0a0a;
       --panel:#121212;
-      --panel-strong:#171717;
+      --panel-strong:#181818;
       --muted:#a1a1a1;
       --text:#fff;
-      --border:#242424;
+      --border:#262626;
       --accent:#76B900;
-      --radius:14px;
-      --shadow:0 18px 55px rgba(0,0,0,.38);
+      --accent-soft:rgba(118,185,0,.14);
+      --surface:#0f0f0f;
+      --line:#303030;
+      --radius:8px;
+      --shadow:0 18px 55px rgba(0,0,0,.34);
     }
     *{box-sizing:border-box}
-    html,body{min-height:100%;margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,"Helvetica Neue",Arial}
-    body{display:grid;place-items:center;padding:28px}
-    body::before{content:"";position:fixed;inset:-20% -10% auto -10%;height:520px;background:radial-gradient(900px 360px at 50% 0%,rgba(118,185,0,.22),transparent);pointer-events:none}
-    main{position:relative;width:min(100%,420px)}
-    .brand{display:flex;align-items:center;gap:10px;margin-bottom:18px;font-weight:750}
-    .brand-badge{width:30px;height:30px;border:2px solid var(--accent);border-radius:8px;display:grid;place-items:center}
+    html,body{min-height:100%;margin:0;background:var(--bg);color:var(--text);font:15px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,"Helvetica Neue",Arial}
+    body{padding:0}
+    button,input,select,textarea{font:inherit}
+    button{cursor:pointer}
+    .shell{display:grid;grid-template-columns:248px minmax(0,1fr);min-height:100vh}
+    .sidebar{border-right:1px solid var(--border);background:#0d0d0d;padding:22px 16px;position:sticky;top:0;height:100vh}
+    .brand{display:flex;align-items:center;gap:10px;margin-bottom:28px;font-weight:750}
+    .brand-badge{width:30px;height:30px;border:2px solid var(--accent);border-radius:8px;display:grid;place-items:center;flex:0 0 auto}
     .brand-badge svg{stroke:var(--accent)}
-    .login-panel{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
-    h1{font-size:1.55rem;line-height:1.2;margin:0 0 8px;letter-spacing:0}
+    .nav{display:grid;gap:6px}
+    .nav button{display:flex;align-items:center;gap:10px;width:100%;border:1px solid transparent;border-radius:var(--radius);background:transparent;color:#d6d6d6;padding:10px 11px;text-align:left}
+    .nav button[aria-current="page"],.nav button:hover{border-color:var(--border);background:var(--panel-strong);color:#fff}
+    .nav svg{color:var(--accent);flex:0 0 auto}
+    .access-note{margin-top:26px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);padding:12px;color:#cfcfcf;font-size:.9rem}
+    .access-note strong{display:block;color:#fff;margin-bottom:3px}
+    main{min-width:0;padding:28px}
+    .topbar{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:22px}
+    h1{font-size:1.55rem;line-height:1.2;margin:0 0 4px;letter-spacing:0}
     p{margin:0;color:var(--muted)}
-    .admin-status{display:flex;align-items:center;gap:10px;margin-top:22px;border:1px solid var(--border);border-radius:12px;background:var(--panel-strong);padding:12px;color:#d6d6d6;font-size:.94rem}
-    .status-dot{width:10px;height:10px;border-radius:999px;background:var(--accent);box-shadow:0 0 20px rgba(118,185,0,.45);flex:0 0 auto}
-    .next-step{margin-top:18px;color:#d6d6d6;font-size:.92rem}
-    .visually-hidden{position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
-    @media (max-width:480px){
-      body{padding:18px}
-      .login-panel{padding:20px}
+    .status{display:flex;align-items:center;gap:9px;border:1px solid var(--border);border-radius:999px;background:var(--surface);padding:7px 11px;color:#dcdcdc;font-size:.9rem;white-space:nowrap}
+    .status-dot{width:9px;height:9px;border-radius:999px;background:var(--accent);box-shadow:0 0 18px rgba(118,185,0,.5)}
+    .layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:18px;align-items:start}
+    .panel{border:1px solid var(--border);border-radius:var(--radius);background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));box-shadow:var(--shadow)}
+    .panel-header{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--border);padding:14px 16px}
+    .panel-title{margin:0;font-size:1rem;line-height:1.25}
+    .panel-body{padding:16px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    label{display:grid;gap:6px;color:#e9e9e9;font-weight:650;font-size:.9rem}
+    .full{grid-column:1/-1}
+    input,select,textarea{width:100%;border:1px solid var(--line);border-radius:var(--radius);background:#0b0b0b;color:var(--text);padding:10px 11px}
+    textarea{min-height:280px;resize:vertical}
+    input:focus,select:focus,textarea:focus{outline:2px solid rgba(118,185,0,.55);outline-offset:2px;border-color:var(--accent)}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .primary,.secondary{border-radius:var(--radius);padding:10px 13px;font-weight:750}
+    .primary{border:1px solid var(--accent);background:var(--accent);color:#071000}
+    .secondary{border:1px solid var(--line);background:var(--surface);color:#fff}
+    .secondary:hover{border-color:#4a4a4a}
+    .preview-title{font-size:1.35rem;line-height:1.25;margin:0 0 8px}
+    .meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px;color:#cfcfcf;font-size:.88rem}
+    .pill{border:1px solid var(--line);border-radius:999px;background:var(--surface);padding:3px 8px}
+    .preview-text{white-space:pre-wrap;color:#e5e5e5}
+    .path-box{margin-top:16px;border:1px solid var(--line);border-radius:var(--radius);background:#090909;padding:12px;color:#dcdcdc}
+    code{color:#fff;word-break:break-all}
+    .draft-list{display:grid;gap:10px}
+    .draft-item{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:11px}
+    .draft-item strong{display:block;margin-bottom:2px}
+    @media (max-width:920px){
+      .shell{grid-template-columns:1fr}
+      .sidebar{position:static;height:auto;border-right:none;border-bottom:1px solid var(--border)}
+      .nav{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .layout{grid-template-columns:1fr}
+    }
+    @media (max-width:620px){
+      main{padding:20px 16px}
+      .topbar{display:grid}
+      .status{width:max-content}
+      .form-grid{grid-template-columns:1fr}
+      .nav{grid-template-columns:1fr}
     }
   </style>
 </head>
 <body>
-  <main aria-labelledby="admin-title">
-    <div class="brand" aria-label="TechIndex Admin">
-      <span class="brand-badge" aria-hidden="true">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2">
-          <rect x="2" y="2" width="20" height="20" rx="4" ry="4"/>
-          <path d="M7 16l5-8 5 8" fill="none"/>
-        </svg>
-      </span>
-      <span>TechIndex</span>
-    </div>
-
-    <section class="login-panel">
-      <h1 id="admin-title">Admin</h1>
-      <p>Interner Zugang fuer redaktionelle Werkzeuge.</p>
-
-      <div class="admin-status">
-        <span class="status-dot" aria-hidden="true"></span>
-        <span>Zugriff wurde ueber Cloudflare Access geprueft.</span>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Admin Navigation">
+      <div class="brand" aria-label="TechIndex Admin">
+        <span class="brand-badge" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="4" ry="4"/>
+            <path d="M7 16l5-8 5 8" fill="none"/>
+          </svg>
+        </span>
+        <span>TechIndex Admin</span>
       </div>
-      <p class="next-step">Der Artikel-Builder kann hier erst aktiviert werden, wenn die Access-Anwendung und Policy in Cloudflare Zero Trust veroeffentlicht sind.</p>
-    </section>
-  </main>
+
+      <nav class="nav">
+        <button type="button" aria-current="page">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 13h6V4H4v9Z"/><path d="M14 20h6V4h-6v16Z"/><path d="M4 20h6v-3H4v3Z"/></svg>
+          Dashboard
+        </button>
+        <button type="button">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+          Neuer Artikel
+        </button>
+        <button type="button">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-1.5Z"/><path d="M8 7h6"/><path d="M8 11h7"/></svg>
+          Entwuerfe
+        </button>
+      </nav>
+
+      <div class="access-note">
+        <strong>Cloudflare Access aktiv</strong>
+        Diese Oberflaeche wird erst nach erfolgreichem Access-Login ausgeliefert.
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div>
+          <h1>Artikel erstellen</h1>
+          <p>Basis-Workflow fuer redaktionelle Entwuerfe.</p>
+        </div>
+        <div class="status" aria-label="Access Status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Zugriff geprueft
+        </div>
+      </header>
+
+      <div class="layout">
+        <section class="panel" aria-labelledby="editor-title">
+          <div class="panel-header">
+            <h2 class="panel-title" id="editor-title">Neuer Artikel</h2>
+          </div>
+          <div class="panel-body">
+            <form id="article-form">
+              <div class="form-grid">
+                <label class="full">
+                  Titel
+                  <input id="title" name="title" type="text" placeholder="z.B. Beste Mini-PCs fuer Homeoffice" />
+                </label>
+                <label>
+                  Kategorie
+                  <select id="category" name="category">
+                    <option>Hardware</option>
+                    <option>Software</option>
+                    <option>Fotografie</option>
+                    <option>Security</option>
+                    <option>Marktanalyse</option>
+                  </select>
+                </label>
+                <label>
+                  Status
+                  <select id="status" name="status">
+                    <option>Entwurf</option>
+                    <option>Review</option>
+                    <option>Bereit zur Veroeffentlichung</option>
+                  </select>
+                </label>
+                <label>
+                  Slug
+                  <input id="slug" name="slug" type="text" placeholder="beste-mini-pcs-homeoffice" />
+                </label>
+                <label>
+                  Autor
+                  <input id="author" name="author" type="text" value="TechIndex Redaktion" />
+                </label>
+                <label class="full">
+                  Kurzbeschreibung
+                  <input id="excerpt" name="excerpt" type="text" placeholder="Ein kurzer Teaser fuer Karten und Suchmaschinen." />
+                </label>
+                <label class="full">
+                  Inhalt
+                  <textarea id="content" name="content" placeholder="Abschnitte, Notizen und Rohtext fuer den Artikel..."></textarea>
+                </label>
+              </div>
+              <div class="actions">
+                <button class="primary" type="button" id="update-preview">Vorschau aktualisieren</button>
+                <button class="secondary" type="reset">Leeren</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <aside class="panel" aria-labelledby="preview-title">
+          <div class="panel-header">
+            <h2 class="panel-title" id="preview-title">Vorschau</h2>
+          </div>
+          <div class="panel-body">
+            <article>
+              <h3 class="preview-title" id="preview-heading">Unbenannter Artikel</h3>
+              <div class="meta">
+                <span class="pill" id="preview-category">Hardware</span>
+                <span class="pill" id="preview-status">Entwurf</span>
+                <span class="pill" id="preview-author">TechIndex Redaktion</span>
+              </div>
+              <p id="preview-excerpt">Kurzbeschreibung erscheint hier.</p>
+              <div class="path-box">
+                Datei: <code id="preview-path">articles/unbenannter-artikel.html</code>
+              </div>
+              <p class="preview-text" id="preview-content">Artikelinhalt erscheint hier.</p>
+            </article>
+
+            <div class="path-box">
+              <strong>Naechster Schritt</strong>
+              <p>Im naechsten Ausbau kann dieser Entwurf als HTML-Datei oder Pull Request gespeichert werden.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const fields = {
+      title: document.getElementById('title'),
+      category: document.getElementById('category'),
+      status: document.getElementById('status'),
+      slug: document.getElementById('slug'),
+      author: document.getElementById('author'),
+      excerpt: document.getElementById('excerpt'),
+      content: document.getElementById('content'),
+    };
+
+    const preview = {
+      heading: document.getElementById('preview-heading'),
+      category: document.getElementById('preview-category'),
+      status: document.getElementById('preview-status'),
+      author: document.getElementById('preview-author'),
+      excerpt: document.getElementById('preview-excerpt'),
+      path: document.getElementById('preview-path'),
+      content: document.getElementById('preview-content'),
+    };
+
+    function slugify(value) {
+      return value
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '')
+        .slice(0, 80);
+    }
+
+    function updatePreview() {
+      const title = fields.title.value.trim() || 'Unbenannter Artikel';
+      const slug = fields.slug.value.trim() || slugify(title) || 'unbenannter-artikel';
+
+      fields.slug.value = slug;
+      preview.heading.textContent = title;
+      preview.category.textContent = fields.category.value;
+      preview.status.textContent = fields.status.value;
+      preview.author.textContent = fields.author.value.trim() || 'TechIndex Redaktion';
+      preview.excerpt.textContent = fields.excerpt.value.trim() || 'Kurzbeschreibung erscheint hier.';
+      preview.path.textContent = `articles/${slug}.html`;
+      preview.content.textContent = fields.content.value.trim() || 'Artikelinhalt erscheint hier.';
+    }
+
+    fields.title.addEventListener('input', () => {
+      if (!fields.slug.value.trim()) {
+        fields.slug.value = slugify(fields.title.value);
+      }
+      updatePreview();
+    });
+
+    Object.values(fields).forEach((field) => {
+      field.addEventListener('input', updatePreview);
+      field.addEventListener('change', updatePreview);
+    });
+
+    document.getElementById('update-preview').addEventListener('click', updatePreview);
+    document.getElementById('article-form').addEventListener('reset', () => {
+      setTimeout(updatePreview, 0);
+    });
+
+    updatePreview();
+  </script>
 </body>
 </html>
