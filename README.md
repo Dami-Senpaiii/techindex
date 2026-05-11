@@ -42,3 +42,9 @@ The admin API is under `/Adm1n`, so the existing Cloudflare Access middleware pr
 - `ARTICLES_KV`
 
 Without a KV binding, the functions return the seeded article set and the admin keeps edits only in the browser as a local fallback.
+
+## Newsletter signups
+
+The newsletter form on `/index.html` posts to `/api/newsletter`. Admin users can view stored signups in `/Adm1n` under the Newsletter panel, which calls `/Adm1n/api/newsletter` and is protected by the existing Cloudflare Access middleware.
+
+Newsletter persistence uses the same KV binding as dynamic articles, preferably `TECHINDEX_ARTICLES`. Existing signups previously captured by the external `submit-form.com` endpoint are not automatically imported.
