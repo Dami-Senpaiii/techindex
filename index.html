@@ -176,7 +176,7 @@
       <div class="grid grid-3">
         <!-- Card 1 -->
         <article class="card">
-          <a href="articles/grafikkarten-analyse-2025.html">
+          <a href="/articles/grafikkarten-analyse-2025">
             <div class="thumb"><img src="articles/pictures/grafikkarten-analyse-2025.jpg" alt="Moderne Grafikkarten mit Benchmark-Diagrammen"></div>
             <div class="body">
               <span class="tag">Hardware</span>
@@ -187,7 +187,7 @@
         </article>
         <!-- Card 2 -->
         <article class="card">
-          <a href="articles/cpu-analyse-2025.html">
+          <a href="/articles/cpu-analyse-2025">
             <div class="thumb"><img src="articles/pictures/CPU-Analyse-2025.jpg" alt="AMD- und Intel-Desktop-CPUs nebeneinander auf einem Mainboard"></div>
             <div class="body">
               <span class="tag">Hardware</span>
@@ -198,7 +198,7 @@
         </article>
         <!-- Card 3 -->
         <article class="card">
-          <a href="articles/ram-knappheit-analyse.html">
+          <a href="/articles/ram-knappheit-analyse">
             <div class="thumb"><img src="articles/pictures/RAM_Kriese.png" alt="RAM-Module auf einem Mainboard mit Preisschild"></div>
             <div class="body">
               <span class="tag">Hardware</span>
@@ -315,89 +315,18 @@
   </footer>
 
   <script>
-    const BASE_POSTS = [
-      {
-        slug: 'langzeit-test-nvme-ssds-2025',
-        title: 'Langzeit‑Test: NVMe SSDs 2025',
-        tag: 'Hardware',
-        excerpt: '12 Monate Belastungstest: Performance-Drift, Temperaturlimits und Firmware-Fallen im Überblick.',
-        image: 'https://picsum.photos/seed/langzeit-test-nvme-ssds-2025/800/450',
-        imageAlt: 'NVMe SSDs auf einem Testbench'
-      },
-      {
-        slug: 'cloud-backup-3-2-1-strategie-einfach-erklaert',
-        title: 'Cloud‑Backup: 3‑2‑1‑Strategie einfach erklärt',
-        tag: 'Software',
-        excerpt: 'So kombinierst du lokale Platten, NAS und verschlüsselte Cloud-Speicher ohne Bauchweh.',
-        image: 'https://picsum.photos/seed/cloud-backup-3-2-1-strategie-einfach-erklaert/800/450',
-        imageAlt: 'Symbolbild aus Wolken-Icons und NAS-System'
-      },
-      {
-        slug: 'ram-knappheit-analyse',
-        title: 'DDR4 &amp; DDR5 RAM-Knappheit 2025/2026',
-        tag: 'Hardware',
-        excerpt: 'RAM-Krise in der Schweiz: Preise explodieren, Verfügbarkeit sinkt – Ursachen, Prognosen und Upgradetipps.',
-        image: 'articles/pictures/RAM_Kriese.png',
-        imageAlt: 'RAM-Module auf einem Mainboard mit Preisschild'
-      },
-      {
-        slug: 'grafikkarten-analyse-2025',
-        title: 'Grafikkarten-Analyse 2025',
-        tag: 'Hardware',
-        excerpt: 'RTX 50 vs. RX 9000: Unser FPS-pro-100-CHF-Index für den Schweizer Markt 2025.',
-        image: 'articles/pictures/grafikkarten-analyse-2025.jpg',
-        imageAlt: 'RTX 50 und RX 9000 Grafikkarten nebeneinander'
-      },
-      {
-        slug: 'raw-workflow-mit-capture-one-vs-lightroom',
-        title: 'RAW‑Workflow mit Capture One vs. Lightroom',
-        tag: 'Fotografie',
-        excerpt: 'Farb-Engines, Tethering und KI-Masken im direkten Vergleich für Studio und Reportage.',
-        image: 'https://picsum.photos/seed/raw-workflow-mit-capture-one-vs-lightroom/800/450',
-        imageAlt: 'Laptop mit Capture One und Lightroom nebeneinander'
-      },
-      {
-        slug: 'guenstige-4k-monitore-im-vergleich',
-        title: 'Günstige 4K‑Monitore im Vergleich',
-        tag: 'Preisvergleich',
-        excerpt: 'IPS, VA oder OLED? Wir testen Farbraumabdeckung, Uniformity und Ergonomie unter 500 Franken.',
-        image: 'https://picsum.photos/seed/guenstige-4k-monitore-im-vergleich/800/450',
-        imageAlt: 'Drei 4K-Monitore nebeneinander auf einem Schreibtisch'
-      },
-      {
-        slug: 'cpu-analyse-2025',
-        title: 'CPU‑Analyse 2025',
-        tag: 'Hardware',
-        excerpt: 'Ryzen 7000/9000 vs. Intel 12.–14. Gen: Preis-Leistungs-Check für Gaming, Editing & Rendering.',
-        image: 'articles/pictures/CPU-Analyse-2025.jpg',
-        imageAlt: 'AMD- und Intel-Desktop-CPUs nebeneinander auf einem Mainboard'
-      },
-      {
-        slug: 'noise-reduction-topaz-vs-dxo',
-        title: 'Noise‑Reduction: Topaz vs. DxO',
-        tag: 'Fotografie',
-        excerpt: 'KI-Modelle im Direktvergleich: Detailerhalt, Batch-Fähigkeit und GPU-Performance.',
-        image: 'https://picsum.photos/seed/noise-reduction-topaz-vs-dxo/800/450',
-        imageAlt: 'Vergleich von entrauschten Nachtaufnahmen'
-      },
-      {
-        slug: 'windows-11-privacy-hardening',
-        title: 'Windows 11: Privacy Hardening',
-        tag: 'Software',
-        excerpt: 'Von O&O ShutUp bis Winget-Automation: So reduzierst du Telemetrie auf einem frischen System.',
-        image: 'https://picsum.photos/seed/windows-11-privacy-hardening/800/450',
-        imageAlt: 'Laptop mit Windows 11 Datenschutz-Einstellungen'
-      }
+    let POSTS = [];
+    const fallbackPosts = [
+      { slug: 'langzeit-test-nvme-ssds-2025', title: 'Langzeit-Test: NVMe SSDs 2025', category: 'Hardware', excerpt: '12 Monate Belastungstest: Performance-Drift, Temperaturlimits und Firmware-Fallen im Ueberblick.', image: 'https://picsum.photos/seed/langzeit-test-nvme-ssds-2025/800/450', imageAlt: 'NVMe SSDs auf einem Testbench', date: '2025-11-21' },
+      { slug: 'cloud-backup-3-2-1-strategie-einfach-erklaert', title: 'Cloud-Backup: 3-2-1-Strategie einfach erklaert', category: 'Software', excerpt: 'So kombinierst du lokale Platten, NAS und verschluesselte Cloud-Speicher ohne Bauchweh.', image: 'https://picsum.photos/seed/cloud-backup-3-2-1-strategie-einfach-erklaert/800/450', imageAlt: 'Symbolbild aus Wolken-Icons und NAS-System', date: '2025-11-18' },
+      { slug: 'ram-knappheit-analyse', title: 'DDR4 & DDR5 RAM-Knappheit 2025/2026', category: 'Hardware', excerpt: 'RAM-Krise in der Schweiz: Preise explodieren, Verfuegbarkeit sinkt - Ursachen, Prognosen und Upgradetipps.', image: 'articles/pictures/RAM_Kriese.png', imageAlt: 'RAM-Module auf einem Mainboard mit Preisschild', date: '2026-01-08' },
+      { slug: 'grafikkarten-analyse-2025', title: 'Grafikkarten-Analyse 2025', category: 'Hardware', excerpt: 'RTX 50 vs. RX 9000: Unser FPS-pro-100-CHF-Index fuer den Schweizer Markt 2025.', image: 'articles/pictures/grafikkarten-analyse-2025.jpg', imageAlt: 'RTX 50 und RX 9000 Grafikkarten nebeneinander', date: '2025-11-19' },
+      { slug: 'raw-workflow-mit-capture-one-vs-lightroom', title: 'RAW-Workflow mit Capture One vs. Lightroom', category: 'Fotografie', excerpt: 'Farb-Engines, Tethering und KI-Masken im direkten Vergleich fuer Studio und Reportage.', image: 'https://picsum.photos/seed/raw-workflow-mit-capture-one-vs-lightroom/800/450', imageAlt: 'Laptop mit Capture One und Lightroom nebeneinander', date: '2025-11-02' },
+      { slug: 'guenstige-4k-monitore-im-vergleich', title: 'Guenstige 4K-Monitore im Vergleich', category: 'Preisvergleich', excerpt: 'IPS, VA oder OLED? Wir testen Farbraumabdeckung, Uniformity und Ergonomie unter 500 Franken.', image: 'https://picsum.photos/seed/guenstige-4k-monitore-im-vergleich/800/450', imageAlt: 'Drei 4K-Monitore nebeneinander auf einem Schreibtisch', date: '2025-10-30' },
+      { slug: 'cpu-analyse-2025', title: 'CPU-Analyse 2025', category: 'Hardware', excerpt: 'Ryzen 7000/9000 vs. Intel 12.-14. Gen: Preis-Leistungs-Check fuer Gaming, Editing und Rendering.', image: 'articles/pictures/CPU-Analyse-2025.jpg', imageAlt: 'AMD- und Intel-Desktop-CPUs nebeneinander auf einem Mainboard', date: '2025-11-19' },
+      { slug: 'noise-reduction-topaz-vs-dxo', title: 'Noise-Reduction: Topaz vs. DxO', category: 'Fotografie', excerpt: 'KI-Modelle im Direktvergleich: Detailerhalt, Batch-Faehigkeit und GPU-Performance.', image: 'https://picsum.photos/seed/noise-reduction-topaz-vs-dxo/800/450', imageAlt: 'Vergleich von entrauschten Nachtaufnahmen', date: '2025-10-20' },
+      { slug: 'windows-11-privacy-hardening', title: 'Windows 11: Privacy Hardening', category: 'Software', excerpt: 'Von O&O ShutUp bis Winget-Automation: So reduzierst du Telemetrie auf einem frischen System.', image: 'https://picsum.photos/seed/windows-11-privacy-hardening/800/450', imageAlt: 'Laptop mit Windows 11 Datenschutz-Einstellungen', date: '2025-10-15' }
     ];
-
-    const POSTS = Array.from({length:18}).map((_,i)=>{
-      const base = BASE_POSTS[i % BASE_POSTS.length];
-      return {
-        ...base,
-        id: i+1,
-        date: new Date(2025,10,(i%28)+1)
-      };
-    });
 
     const mobileQuery = window.matchMedia('(max-width: 640px)');
     let perPage = mobileQuery.matches ? 6 : 9; let page=1; let activeTag=''; let q='';
@@ -410,95 +339,74 @@
     function setNav(open){
       if(!navToggle || !menuEl) return;
       navToggle.setAttribute('aria-expanded', open);
-      navToggle.setAttribute('aria-label', open ? 'Menü schliessen' : 'Menü öffnen');
+      navToggle.setAttribute('aria-label', open ? 'Menue schliessen' : 'Menue oeffnen');
       menuEl.classList.toggle('open', open);
       document.body.classList.toggle('nav-open', open);
     }
 
     if(navToggle && menuEl){
-      navToggle.addEventListener('click', ()=>{
-        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-        setNav(!expanded);
-      });
-      menuEl.addEventListener('click', (e)=>{
-        if(e.target.closest('a')) setNav(false);
-      });
+      navToggle.addEventListener('click', function(){ const expanded = navToggle.getAttribute('aria-expanded') === 'true'; setNav(!expanded); });
+      menuEl.addEventListener('click', function(e){ if(e.target.closest('a')) setNav(false); });
     }
 
-    function uniqueBySlug(list){
-      const seen = new Set();
-      return list.filter(item=>{
-        if(seen.has(item.slug)) return false;
-        seen.add(item.slug);
-        return true;
-      });
+    function articleImage(article){
+      if(!article.image) return 'https://picsum.photos/seed/' + article.slug + '/800/450';
+      if(article.image.startsWith('pictures/')) return 'articles/' + article.image;
+      return article.image;
     }
 
     function render(){
-      const filtered = uniqueBySlug(POSTS.filter(p=>(!activeTag||p.tag===activeTag)&&(!q||p.title.toLowerCase().includes(q))));
+      const filtered = POSTS.filter(function(p){ return (!activeTag || p.category === activeTag || p.tag === activeTag) && (!q || p.title.toLowerCase().includes(q) || String(p.excerpt || '').toLowerCase().includes(q)); });
       const totalPages = Math.max(1, Math.ceil(filtered.length/perPage));
       page = Math.min(page, totalPages);
       const slice = filtered.slice((page-1)*perPage, page*perPage);
-      postsEl.innerHTML = slice.map(p=>`
-        <a class="card" href="articles/${p.slug}.html">
-          <div class="thumb"><img src="${p.image||`https://picsum.photos/seed/${p.slug}/800/450`}" alt="${p.imageAlt||'Vorschaubild'}" loading="lazy"></div>
-          <div class="body">
-            <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#cfcfcf"><span>${p.tag}</span><time datetime="${p.date.toISOString()}">${p.date.toLocaleDateString('de-CH',{day:'2-digit',month:'short',year:'numeric'})}</time></div>
-            <h3 class="title">${p.title}</h3>
-            <p class="muted">${p.excerpt}</p>
-            <span style="display:inline-block;margin-top:8px;color:var(--accent);font-weight:600">Weiterlesen →</span>
-          </div>
-        </a>`).join('');
-      countEl.textContent = `Seite ${page} von ${totalPages}`;
+      postsEl.innerHTML = slice.map(function(p){
+        const date = new Date((p.date || new Date().toISOString().slice(0,10)) + 'T12:00:00');
+        return '<a class="card" href="/articles/' + p.slug + '"><div class="thumb"><img src="' + articleImage(p) + '" alt="' + (p.imageAlt || 'Vorschaubild') + '" loading="lazy"></div><div class="body"><div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#cfcfcf"><span>' + (p.category || p.tag) + '</span><time datetime="' + date.toISOString() + '">' + date.toLocaleDateString('de-CH',{day:'2-digit',month:'short',year:'numeric'}) + '</time></div><h3 class="title">' + p.title + '</h3><p class="muted">' + (p.excerpt || '') + '</p><span style="display:inline-block;margin-top:8px;color:var(--accent);font-weight:600">Weiterlesen -></span></div></a>';
+      }).join('');
+      countEl.textContent = 'Seite ' + page + ' von ' + totalPages;
       prevBtn.disabled = page===1;
       nextBtn.disabled = page===totalPages;
     }
 
-    const handleMobileChange = (event)=>{
+    async function loadPosts(){
+      POSTS = fallbackPosts;
+      render();
+      try{
+        const response = await fetch('/api/articles', { headers: { Accept: 'application/json' } });
+        if(!response.ok) throw new Error('Article API unavailable');
+        const data = await response.json();
+        if(Array.isArray(data.articles) && data.articles.length){ POSTS = data.articles; page = 1; render(); }
+      }catch(error){ console.warn(error); }
+    }
+
+    const handleMobileChange = function(event){
       const nextPerPage = event.matches ? 6 : 9;
-      if(nextPerPage !== perPage){
-        perPage = nextPerPage;
-        page = 1;
-        render();
-      }
+      if(nextPerPage !== perPage){ perPage = nextPerPage; page = 1; render(); }
       if(!event.matches) setNav(false);
     };
 
-    if(mobileQuery.addEventListener){
-      mobileQuery.addEventListener('change', handleMobileChange);
-    }else if(mobileQuery.addListener){
-      mobileQuery.addListener(handleMobileChange);
-    }
+    if(mobileQuery.addEventListener) mobileQuery.addEventListener('change', handleMobileChange);
+    else if(mobileQuery.addListener) mobileQuery.addListener(handleMobileChange);
 
-    document.addEventListener('click', (e)=>{
+    document.addEventListener('click', function(e){
       if(!menuEl || !navToggle || !menuEl.classList.contains('open')) return;
       if(e.target === navToggle || navToggle.contains(e.target) || menuEl.contains(e.target)) return;
       setNav(false);
     });
-
-    window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') setNav(false); });
-
-    // Filter‑Pills
-    document.getElementById('tagbar').addEventListener('click', (e)=>{
+    window.addEventListener('keydown', function(e){ if(e.key === 'Escape') setNav(false); });
+    document.getElementById('tagbar').addEventListener('click', function(e){
       const t = e.target.closest('button.pill'); if(!t) return;
-      [...document.querySelectorAll('#tagbar .pill')].forEach(x=>x.classList.remove('active'));
-      t.classList.add('active');
-      activeTag = t.dataset.tag||''; page=1; render();
+      [].slice.call(document.querySelectorAll('#tagbar .pill')).forEach(function(x){ x.classList.remove('active'); });
+      t.classList.add('active'); activeTag = t.dataset.tag || ''; page=1; render();
     });
-
-    // Suche
-    document.getElementById('q').addEventListener('input', (e)=>{q=e.target.value.toLowerCase(); page=1; render();});
-
-    // Pagination
-    prevBtn.addEventListener('click', ()=>{page=Math.max(1,page-1); render();});
-    nextBtn.addEventListener('click', ()=>{page=page+1; render();});
-
-    // Jahr im Footer
+    document.getElementById('q').addEventListener('input', function(e){ q=e.target.value.toLowerCase(); page=1; render(); });
+    prevBtn.addEventListener('click', function(){ page=Math.max(1,page-1); render(); });
+    nextBtn.addEventListener('click', function(){ page=page+1; render(); });
     document.getElementById('y').textContent = new Date().getFullYear();
-
     setNav(false);
     handleMobileChange(mobileQuery);
-    render();
+    loadPosts();
   </script>
 
 </body>

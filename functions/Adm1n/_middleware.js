@@ -1,6 +1,8 @@
 const ACCESS_JWT_HEADER = 'Cf-Access-Jwt-Assertion';
 const ACCESS_COOKIE_NAME = 'CF_Authorization';
 const CERTS_CACHE_TTL_MS = 10 * 60 * 1000;
+const DEFAULT_TEAM_DOMAIN = 'techindex.cloudflareaccess.com';
+const DEFAULT_ACCESS_AUD = 'b8170f2d603260b4c78b47a808d076e9733dfde3d1bca377547b9821123e618c';
 
 let cachedCerts = null;
 let cachedCertsUntil = 0;
@@ -38,8 +40,8 @@ export async function onRequest(context) {
 }
 
 function getAccessConfig(env) {
-  const teamDomain = normalizeTeamDomain(env.CF_ACCESS_TEAM_DOMAIN || '');
-  const audiences = String(env.CF_ACCESS_AUD || '')
+  const teamDomain = normalizeTeamDomain(env.CF_ACCESS_TEAM_DOMAIN || DEFAULT_TEAM_DOMAIN);
+  const audiences = String(env.CF_ACCESS_AUD || DEFAULT_ACCESS_AUD)
     .split(',')
     .map((audience) => audience.trim())
     .filter(Boolean);

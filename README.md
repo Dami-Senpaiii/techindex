@@ -26,3 +26,19 @@ Cloudflare Zero Trust setup:
 
 If either environment variable is missing, `/Adm1n` returns `503` instead of
 serving the admin placeholder.
+
+## Dynamic articles
+
+Articles are now served through Cloudflare Pages Functions:
+
+- Public list API: `/api/articles`
+- Dynamic article pages: `/articles/{slug}`
+- Protected admin API: `/Adm1n/api/articles`
+
+The admin API is under `/Adm1n`, so the existing Cloudflare Access middleware protects article writes. For server-side persistence, bind a Cloudflare KV namespace to the Pages project with one of these binding names:
+
+- `TECHINDEX_ARTICLES` recommended
+- `ARTICLE_STORE`
+- `ARTICLES_KV`
+
+Without a KV binding, the functions return the seeded article set and the admin keeps edits only in the browser as a local fallback.
