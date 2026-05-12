@@ -272,6 +272,7 @@
         <input id="email" name="email" type="email" placeholder="dein@email.ch" autocomplete="email" required>
         <button class="btn" type="submit" name="newsletter-submit">Abonnieren</button>
       </form>
+      <p class="muted small" id="newsletter-status" role="status" aria-live="polite" style="margin-top:10px"></p>
     </div>
   </section>
 
@@ -403,6 +404,15 @@
     document.getElementById('q').addEventListener('input', function(e){ q=e.target.value.toLowerCase(); page=1; render(); });
     prevBtn.addEventListener('click', function(){ page=Math.max(1,page-1); render(); });
     nextBtn.addEventListener('click', function(){ page=page+1; render(); });
+    const newsletterStatus = document.getElementById('newsletter-status');
+    const newsletterResult = new URLSearchParams(window.location.search).get('newsletter');
+    if(newsletterStatus && newsletterResult){
+      newsletterStatus.textContent = {
+        ok: 'Danke, deine Anmeldung wurde gespeichert.',
+        invalid: 'Bitte gib eine gültige E-Mail-Adresse ein.',
+        unavailable: 'Newsletter-Speicherung ist noch nicht konfiguriert.'
+      }[newsletterResult] || '';
+    }
     document.getElementById('y').textContent = new Date().getFullYear();
     setNav(false);
     handleMobileChange(mobileQuery);

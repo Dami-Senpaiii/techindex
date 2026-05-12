@@ -26,6 +26,11 @@ export async function onRequestPost(context) {
     : [{ email, createdAt: now, updatedAt: now }, ...signups];
   const persistent = await writeSignups(context.env, nextSignups);
 
+  if (!persistent) {
+    if (wantsJson) return json({ error: 'Newsletter storage is not configured.', ok: false, persistent }, { status: 503 });
+    return redirect('/?newsletter=unavailable#techindex-weekly');
+  }
+
   if (wantsJson) return json({ ok: true, persistent });
   return redirect('/?newsletter=ok#techindex-weekly');
 }

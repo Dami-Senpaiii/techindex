@@ -1,5 +1,13 @@
 const STORE_KEY = 'newsletter-signups';
-const STORE_BINDINGS = ['TECHINDEX_ARTICLES', 'ARTICLE_STORE', 'ARTICLES_KV'];
+const STORE_BINDINGS = [
+  'TECHINDEX_NEWSLETTER',
+  'NEWSLETTER_STORE',
+  'NEWSLETTER_KV',
+  'SIGNUPS_KV',
+  'TECHINDEX_ARTICLES',
+  'ARTICLE_STORE',
+  'ARTICLES_KV'
+];
 
 export function getStore(env) {
   return STORE_BINDINGS.map((name) => env[name]).find(Boolean) || null;
