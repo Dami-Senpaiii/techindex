@@ -166,51 +166,6 @@
     </div>
   </header>
 
-  <!-- FEATURED -->
-  <section id="featured">
-    <div class="container">
-      <div class="section-head">
-        <h2>Empfehlungen der Redaktion</h2>
-        <a class="small" href="#neuste" style="color:var(--accent)">Alle Beiträge →</a>
-      </div>
-      <div class="grid grid-3">
-        <!-- Card 1 -->
-        <article class="card">
-          <a href="/articles/grafikkarten-analyse-2025">
-            <div class="thumb"><img src="articles/pictures/grafikkarten-analyse-2025.jpg" alt="Moderne Grafikkarten mit Benchmark-Diagrammen"></div>
-            <div class="body">
-              <span class="tag">Hardware</span>
-              <h3 class="title">Grafikkarten-Analyse 2025</h3>
-              <p class="muted">RTX 50 vs. RX 9000: Diese GPUs liefern in der Schweiz das meiste FPS pro Franken.</p>
-            </div>
-          </a>
-        </article>
-        <!-- Card 2 -->
-        <article class="card">
-          <a href="/articles/cpu-analyse-2025">
-            <div class="thumb"><img src="articles/pictures/CPU-Analyse-2025.jpg" alt="AMD- und Intel-Desktop-CPUs nebeneinander auf einem Mainboard"></div>
-            <div class="body">
-              <span class="tag">Hardware</span>
-              <h3 class="title">CPU‑Analyse 2025</h3>
-              <p class="muted">Ryzen 7000/9000 vs. Intel 12.–14. Gen: Welche CPUs liefern die beste FPS‑pro‑CHF?</p>
-            </div>
-          </a>
-        </article>
-        <!-- Card 3 -->
-        <article class="card">
-          <a href="/articles/ram-knappheit-analyse">
-            <div class="thumb"><img src="articles/pictures/RAM_Kriese.png" alt="RAM-Module auf einem Mainboard mit Preisschild"></div>
-            <div class="body">
-              <span class="tag">Hardware</span>
-              <h3 class="title">DDR4 &amp; DDR5 RAM-Knappheit 2025/2026</h3>
-              <p class="muted">Warum Arbeitsspeicher in der Schweiz so teuer wurde, welche Ursachen die Knappheit treibt und was 2026 bringt.</p>
-            </div>
-          </a>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <!-- LATEST / FILTERS -->
   <section id="neuste">
     <div class="container">
@@ -317,18 +272,6 @@
 
   <script>
     let POSTS = [];
-    const fallbackPosts = [
-      { slug: 'langzeit-test-nvme-ssds-2025', title: 'Langzeit-Test: NVMe SSDs 2025', category: 'Hardware', excerpt: '12 Monate Belastungstest: Performance-Drift, Temperaturlimits und Firmware-Fallen im Überblick.', image: 'https://picsum.photos/seed/langzeit-test-nvme-ssds-2025/800/450', imageAlt: 'NVMe SSDs auf einem Testbench', date: '2025-11-21' },
-      { slug: 'cloud-backup-3-2-1-strategie-einfach-erklaert', title: 'Cloud-Backup: 3-2-1-Strategie einfach erklärt', category: 'Software', excerpt: 'So kombinierst du lokale Platten, NAS und verschlüsselte Cloud-Speicher ohne Bauchweh.', image: 'https://picsum.photos/seed/cloud-backup-3-2-1-strategie-einfach-erklaert/800/450', imageAlt: 'Symbolbild aus Wolken-Icons und NAS-System', date: '2025-11-18' },
-      { slug: 'ram-knappheit-analyse', title: 'DDR4 & DDR5 RAM-Knappheit 2025/2026', category: 'Hardware', excerpt: 'RAM-Krise in der Schweiz: Preise explodieren, Verfügbarkeit sinkt - Ursachen, Prognosen und Upgradetipps.', image: 'articles/pictures/RAM_Kriese.png', imageAlt: 'RAM-Module auf einem Mainboard mit Preisschild', date: '2026-01-08' },
-      { slug: 'grafikkarten-analyse-2025', title: 'Grafikkarten-Analyse 2025', category: 'Hardware', excerpt: 'RTX 50 vs. RX 9000: Unser FPS-pro-100-CHF-Index für den Schweizer Markt 2025.', image: 'articles/pictures/grafikkarten-analyse-2025.jpg', imageAlt: 'RTX 50 und RX 9000 Grafikkarten nebeneinander', date: '2025-11-19' },
-      { slug: 'raw-workflow-mit-capture-one-vs-lightroom', title: 'RAW-Workflow mit Capture One vs. Lightroom', category: 'Fotografie', excerpt: 'Farb-Engines, Tethering und KI-Masken im direkten Vergleich für Studio und Reportage.', image: 'https://picsum.photos/seed/raw-workflow-mit-capture-one-vs-lightroom/800/450', imageAlt: 'Laptop mit Capture One und Lightroom nebeneinander', date: '2025-11-02' },
-      { slug: 'guenstige-4k-monitore-im-vergleich', title: 'Günstige 4K-Monitore im Vergleich', category: 'Preisvergleich', excerpt: 'IPS, VA oder OLED? Wir testen Farbraumabdeckung, Uniformity und Ergonomie unter 500 Franken.', image: 'https://picsum.photos/seed/guenstige-4k-monitore-im-vergleich/800/450', imageAlt: 'Drei 4K-Monitore nebeneinander auf einem Schreibtisch', date: '2025-10-30' },
-      { slug: 'cpu-analyse-2025', title: 'CPU-Analyse 2025', category: 'Hardware', excerpt: 'Ryzen 7000/9000 vs. Intel 12.-14. Gen: Preis-Leistungs-Check für Gaming, Editing und Rendering.', image: 'articles/pictures/CPU-Analyse-2025.jpg', imageAlt: 'AMD- und Intel-Desktop-CPUs nebeneinander auf einem Mainboard', date: '2025-11-19' },
-      { slug: 'noise-reduction-topaz-vs-dxo', title: 'Noise-Reduction: Topaz vs. DxO', category: 'Fotografie', excerpt: 'KI-Modelle im Direktvergleich: Detailerhalt, Batch-Fähigkeit und GPU-Performance.', image: 'https://picsum.photos/seed/noise-reduction-topaz-vs-dxo/800/450', imageAlt: 'Vergleich von entrauschten Nachtaufnahmen', date: '2025-10-20' },
-      { slug: 'windows-11-privacy-hardening', title: 'Windows 11: Privacy Hardening', category: 'Software', excerpt: 'Von O&O ShutUp bis Winget-Automation: So reduzierst du Telemetrie auf einem frischen System.', image: 'https://picsum.photos/seed/windows-11-privacy-hardening/800/450', imageAlt: 'Laptop mit Windows 11 Datenschutz-Einstellungen', date: '2025-10-15' }
-    ];
-
     const mobileQuery = window.matchMedia('(max-width: 640px)');
     let perPage = mobileQuery.matches ? 6 : 9; let page=1; let activeTag=''; let q='';
     const postsEl = document.getElementById('posts');
@@ -357,10 +300,17 @@
     }
 
     function render(){
-      const filtered = POSTS.filter(function(p){ return (!activeTag || p.category === activeTag || p.tag === activeTag) && (!q || p.title.toLowerCase().includes(q) || String(p.excerpt || '').toLowerCase().includes(q)); });
+      const filtered = POSTS.filter(function(p){ return p.status === 'live' && (!activeTag || p.category === activeTag || p.tag === activeTag) && (!q || String(p.title || '').toLowerCase().includes(q) || String(p.excerpt || '').toLowerCase().includes(q)); });
       const totalPages = Math.max(1, Math.ceil(filtered.length/perPage));
       page = Math.min(page, totalPages);
       const slice = filtered.slice((page-1)*perPage, page*perPage);
+      if(!filtered.length){
+        postsEl.innerHTML = '<p class="muted">Noch keine Live-Artikel veröffentlicht.</p>';
+        countEl.textContent = 'Keine Artikel';
+        prevBtn.disabled = true;
+        nextBtn.disabled = true;
+        return;
+      }
       postsEl.innerHTML = slice.map(function(p){
         const date = new Date((p.date || new Date().toISOString().slice(0,10)) + 'T12:00:00');
         return '<a class="card" href="/articles/' + p.slug + '"><div class="thumb"><img src="' + articleImage(p) + '" alt="' + (p.imageAlt || 'Vorschaubild') + '" loading="lazy"></div><div class="body"><div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#cfcfcf"><span>' + (p.category || p.tag) + '</span><time datetime="' + date.toISOString() + '">' + date.toLocaleDateString('de-CH',{day:'2-digit',month:'short',year:'numeric'}) + '</time></div><h3 class="title">' + p.title + '</h3><p class="muted">' + (p.excerpt || '') + '</p><span style="display:inline-block;margin-top:8px;color:var(--accent);font-weight:600">Weiterlesen -></span></div></a>';
@@ -371,14 +321,18 @@
     }
 
     async function loadPosts(){
-      POSTS = fallbackPosts;
-      render();
+      postsEl.innerHTML = '<p class="muted">Artikel werden geladen.</p>';
+      countEl.textContent = '';
+      prevBtn.disabled = true;
+      nextBtn.disabled = true;
       try{
         const response = await fetch('/api/articles', { headers: { Accept: 'application/json' } });
         if(!response.ok) throw new Error('Article API unavailable');
         const data = await response.json();
-        if(Array.isArray(data.articles) && data.articles.length){ POSTS = data.articles; page = 1; render(); }
-      }catch(error){ console.warn(error); }
+        POSTS = Array.isArray(data.articles) ? data.articles : [];
+        page = 1;
+        render();
+      }catch(error){ POSTS = []; render(); console.warn(error); }
     }
 
     const handleMobileChange = function(event){

@@ -41,7 +41,7 @@ The admin API is under `/Adm1n`, so the existing Cloudflare Access middleware pr
 - `ARTICLE_STORE`
 - `ARTICLES_KV`
 
-Without a KV binding, the functions return the seeded article set and the admin keeps edits only in the browser as a local fallback.
+Articles are stored only in the bound KV namespace. Without a KV binding, the public article list is empty and admin writes fail instead of falling back to browser-local storage.
 
 ## Newsletter signups
 
