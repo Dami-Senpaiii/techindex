@@ -10,7 +10,10 @@ const STORE_BINDINGS = [
 ];
 
 export function getStore(env) {
-  return STORE_BINDINGS.map((name) => env[name]).find(Boolean) || null;
+  return STORE_BINDINGS
+    .map((name) => env[name])
+    .find((store) => store && typeof store.get === 'function' && typeof store.put === 'function')
+    || null;
 }
 
 export async function readSignups(env) {

@@ -48,3 +48,10 @@ Without a KV binding, the functions return the seeded article set and the admin 
 The newsletter form on `/index.html` posts to `/api/newsletter`. Admin users can view stored signups in `/Adm1n` under the Newsletter panel, which calls `/Adm1n/api/newsletter` and is protected by the existing Cloudflare Access middleware.
 
 Newsletter persistence can use a dedicated KV binding named `TECHINDEX_NEWSLETTER`, `NEWSLETTER_STORE`, `NEWSLETTER_KV`, or `SIGNUPS_KV`. It also falls back to the article KV bindings above. Without one of these bindings, the signup endpoint returns an unavailable status instead of pretending the signup was stored. Existing signups previously captured by the external `submit-form.com` endpoint are not automatically imported.
+
+In Cloudflare Pages, add a KV namespace binding for the newsletter with:
+
+- Variable name: `TECHINDEX_NEWSLETTER`
+- KV namespace: `TECHINDEX_NEWSLETTER`
+
+Do not add this as a plain environment variable; the Functions code needs the bound KV namespace object.
