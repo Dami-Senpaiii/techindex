@@ -1,5 +1,5 @@
 const STORE_KEY = 'articles';
-export const STORE_BINDINGS = ['TECHINDEX_ARTICLES', 'ARTICLE_STORE', 'ARTICLES_KV'];
+export const STORE_BINDINGS = ['TECHINDEX_ARTICLES', 'techindex-articles', 'ARTICLE_STORE', 'ARTICLES_KV'];
 
 const EMPTY_ARTICLES = [];
 
