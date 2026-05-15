@@ -1,5 +1,5 @@
 const STORE_KEY = 'newsletter-signups';
-const STORE_BINDINGS = [
+export const STORE_BINDINGS = [
   'TECHINDEX_NEWSLETTER',
   'NEWSLETTER_STORE',
   'NEWSLETTER_KV',
