@@ -8,7 +8,7 @@ export async function onRequestGet(context) {
   return new Response(renderArticle(article), {
     headers: {
       'Content-Type': 'text/html; charset=utf-8',
-      'Cache-Control': 'public, max-age=60'
+      'Cache-Control': 'no-store'
     }
   });
 }
