@@ -7,8 +7,8 @@
   <link rel="alternate icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/favicon.svg" />
 
-  <title>Web Design &amp; Betreuung – TechIndex</title>
-  <meta name="description" content="Moderne Websites für Schweizer KMU, Freelancer und lokale Betriebe: fair kalkulierter Einstieg, klare Umsetzung und langfristige Betreuung durch TechIndex." />
+  <title>Web Design &amp; Betreuung - TechIndex</title>
+  <meta name="description" content="Moderne Websites für Schweizer KMU, Freelancer und lokale Betriebe: kompakte Webauftritte, bessere Wirkung, schnelle Umsetzung und laufende Betreuung durch TechIndex." />
   <meta name="theme-color" content="#0a0a0a">
   <style>
     :root{
@@ -104,6 +104,36 @@
       .cols{grid-template-columns:1fr}
     }
     .visually-hidden{position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+    .hero{overflow:hidden;border-bottom:1px solid rgba(255,255,255,.06)}
+    .hero::before{inset:-28% -18% auto -18%;height:560px;background:radial-gradient(760px 360px at 28% 0%, rgba(118,185,0,.28), transparent 64%),radial-gradient(520px 300px at 78% 9%, rgba(22,214,163,.18), transparent 70%)}
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(180deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,#000,transparent 82%);opacity:.36;z-index:-1}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(340px,.78fr);gap:30px;align-items:center;padding:58px 0 44px}
+    .hero-grid .eyebrow{display:inline-flex;align-items:center;gap:8px}
+    .hero-grid .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 20px rgba(118,185,0,.8)}
+    .hero-grid h1{font-size:clamp(35px,4.6vw,62px);line-height:1.02}
+    .hero-actions .btn{gap:8px}
+    .btn svg{width:18px;height:18px;stroke:currentColor}
+    .quick-proof{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+    .proof-pill{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.045);border-radius:999px;padding:7px 10px;color:#ececec;font-size:.86rem}
+    .site-visual{position:relative;min-height:390px;border:1px solid rgba(255,255,255,.11);border-radius:18px;background:linear-gradient(145deg,#151515,#0d0d0d 56%,#101610);box-shadow:0 24px 70px rgba(0,0,0,.45);overflow:hidden}
+    .site-visual::before{content:"";position:absolute;inset:18px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.015))}
+    .browser-dots{position:absolute;top:32px;left:34px;display:flex;gap:7px}.browser-dots span{width:8px;height:8px;border-radius:999px}.browser-dots span:nth-child(1){background:#ff675f}.browser-dots span:nth-child(2){background:#f5c542}.browser-dots span:nth-child(3){background:#76B900}
+    .visual-nav{position:absolute;top:31px;right:34px;display:flex;gap:7px}.visual-nav span{width:34px;height:7px;border-radius:999px;background:rgba(255,255,255,.12)}
+    .visual-hero{position:absolute;left:34px;right:34px;top:64px;height:104px;border-radius:10px;background:linear-gradient(120deg,rgba(118,185,0,.96),rgba(22,214,163,.74));overflow:hidden}.visual-hero::before{content:"";position:absolute;inset:16px 34% 16px 16px;border-radius:7px;background:rgba(0,0,0,.18)}.visual-hero::after{content:"";position:absolute;right:18px;top:18px;width:74px;height:74px;border-radius:50%;background:rgba(0,0,0,.18);box-shadow:-42px 24px 0 rgba(255,255,255,.14)}
+    .visual-cards{position:absolute;left:34px;right:34px;top:186px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.visual-card{height:84px;border-radius:10px;background:#191919;border:1px solid rgba(255,255,255,.09);padding:12px}.visual-card::before,.visual-card::after{content:"";display:block;height:8px;border-radius:999px;background:rgba(255,255,255,.17)}.visual-card::before{width:76%;margin-bottom:13px}.visual-card::after{width:52%}
+    .signal{position:absolute;display:grid;place-items:center;width:56px;height:56px;border-radius:14px;border:1px solid rgba(118,185,0,.45);background:#111;color:#b9ff8a;box-shadow:0 12px 28px rgba(0,0,0,.36);animation:float 5s ease-in-out infinite}.signal svg{width:25px;height:25px;stroke:currentColor}.signal.one{right:26px;bottom:40px}.signal.two{left:20px;bottom:32px;animation-delay:-1.6s;color:#99ffe3;border-color:rgba(22,214,163,.5)}.signal.three{right:96px;top:132px;animation-delay:-3s;color:#ffe29b;border-color:rgba(245,197,66,.45)}
+    .pulse-line{position:absolute;left:42px;right:42px;bottom:118px;height:2px;background:linear-gradient(90deg,transparent,rgba(118,185,0,.9),transparent);animation:scan 3.8s linear infinite}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}.panel{border:1px solid var(--border);border-radius:var(--radius);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));padding:22px;box-shadow:var(--shadow)}.panel h2,.panel h3{margin:0 0 10px}.panel h2{font-size:clamp(22px,2.4vw,32px);line-height:1.14}
+    .pain-list{display:grid;gap:9px;margin-top:16px;padding:0;list-style:none}.pain-list li{display:flex;gap:10px;align-items:flex-start;padding:11px 12px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:#111;color:#d7d7d7}.pain-list svg{flex:0 0 auto;width:18px;height:18px;margin-top:2px;stroke:var(--accent)}
+    .service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,1fr);gap:12px}.service-card{position:relative;border:1px solid var(--border);border-radius:14px;padding:14px;background:var(--panel);overflow:hidden;transition:transform .18s ease,border-color .18s ease}.service-card:hover{transform:translateY(-3px);border-color:rgba(118,185,0,.65)}.service-card .icon{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;margin-bottom:10px;background:rgba(118,185,0,.12);color:#b9ff8a;border:1px solid rgba(118,185,0,.26)}.service-card svg{width:19px;height:19px;stroke:currentColor}.service-card h3{margin:0 0 5px;font-size:1rem}.service-card p{font-size:.9rem;line-height:1.45;color:#c9c9c9}
+    .timeline{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;counter-reset:steps}.step{counter-increment:steps;position:relative;border:1px solid var(--border);border-radius:14px;padding:15px;background:linear-gradient(180deg,#141414,#101010)}.step::before{content:counter(steps, decimal-leading-zero);display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;margin-bottom:14px;background:rgba(118,185,0,.14);color:#b9ff8a;font-weight:850}.step h3{margin:0 0 7px;font-size:1rem}.step p{font-size:.91rem;color:#c7c7c7}
+    .offer-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:14px}.offer-card{border:1px solid var(--border);border-radius:var(--radius);padding:20px;background:linear-gradient(135deg,rgba(118,185,0,.13),rgba(255,255,255,.025) 48%,rgba(22,214,163,.08))}.offer-card h2{margin:0 0 10px;font-size:clamp(22px,2.5vw,34px);line-height:1.12}.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}.check{display:flex;gap:9px;align-items:flex-start;color:#dcdcdc;font-size:.94rem}.check svg{width:18px;height:18px;stroke:var(--accent);flex:0 0 auto;margin-top:2px}.mini-stack{display:grid;gap:10px}.mini-card{border:1px solid var(--border);border-radius:14px;padding:16px;background:#111}.mini-card strong{display:block;margin-bottom:5px}.mini-card p{font-size:.93rem;color:#c8c8c8}
+    .cta-content{position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px}.cta-content h2{margin:0 0 8px;font-size:clamp(24px,3vw,38px);line-height:1.08}.cta-content p{max-width:650px;color:#e3e3e3}.cta-content .btn{white-space:nowrap;flex:0 0 auto}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}@keyframes scan{0%{transform:translateX(-34%);opacity:.25}50%{opacity:1}100%{transform:translateX(34%);opacity:.25}}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.signal,.pulse-line{animation:none}.service-card,.btn{transition:none}}
+    @media (max-width:960px){.hero-grid,.split,.offer-grid{grid-template-columns:1fr}.site-visual{min-height:350px}.timeline{grid-template-columns:1fr 1fr}.cta-content{align-items:flex-start;flex-direction:column}}
+    @media (max-width:640px){.hero-grid{padding:42px 0 30px}.hero-actions .btn{width:100%}.proof-pill{font-size:.82rem}.site-visual{min-height:310px;border-radius:14px}.visual-nav{display:none}.visual-cards{grid-template-columns:1fr;top:178px}.visual-card:nth-child(2){display:none}.signal.three{right:28px;top:142px}.service-grid,.timeline,.check-grid{grid-template-columns:1fr;grid-template-rows:auto}.panel,.offer-card{padding:18px}.cta-content .btn{width:100%}}
   </style>
 </head>
 <body>
@@ -138,96 +168,129 @@
   </nav>
 
   <header class="hero">
-    <div class="container hero-inner">
-      <p class="eyebrow">Web Design &amp; Betreuung</p>
-      <h1>Moderne Websites für Schweizer Unternehmen, fair gestartet und sauber betreut.</h1>
-      <p class="lead">Wir bauen klare, schnelle und vertrauenswürdige Webauftritte für KMU, Freelancer und lokale Betriebe. Der Einstieg bleibt schlank kalkuliert, der eigentliche Mehrwert entsteht in der langfristigen Betreuung.</p>
-      <div class="hero-actions">
-        <a class="btn primary" href="mailto:hallo@techindex.ch?subject=Anfrage%20Web%20Design%20%26%20Betreuung">Unverbindliche Anfrage starten</a>
-        <a class="btn" href="#ablauf">Ablauf ansehen</a>
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Web Design &amp; Betreuung</p>
+        <h1>Wenn Ihre Website älter wirkt als Ihr Angebot, kostet sie Vertrauen.</h1>
+        <p class="lead">TechIndex modernisiert Webauftritte für Selbständige, lokale Betriebe und Schweizer KMU: kompakt geplant, klar gestaltet, schnell umgesetzt und langfristig betreut.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="mailto:hallo@techindex.ch?subject=Anfrage%20Web%20Design%20%26%20Betreuung">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7Z"/></svg>
+            Modernisierung anfragen
+          </a>
+          <a class="btn" href="#leistungen">
+            Leistungen ansehen
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="quick-proof" aria-label="Projektvorteile">
+          <span class="proof-pill">Responsive ab Start</span>
+          <span class="proof-pill">Performance-fokussiert</span>
+          <span class="proof-pill">Betreuung nach Bedarf</span>
+        </div>
+      </div>
+      <div class="site-visual" aria-hidden="true">
+        <div class="browser-dots"><span></span><span></span><span></span></div>
+        <div class="visual-nav"><span></span><span></span><span></span></div>
+        <div class="visual-hero"></div>
+        <div class="visual-cards"><div class="visual-card"></div><div class="visual-card"></div></div>
+        <div class="pulse-line"></div>
+        <div class="signal one"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
+        <div class="signal two"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <div class="signal three"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/></svg></div>
       </div>
     </div>
   </header>
 
   <main>
-    <section>
-      <div class="container">
-        <h2>Nutzenversprechen</h2>
-        <p class="section-intro">Keine überladene Agenturproduktion, sondern ein präziser Auftritt mit Fokus auf Wirkung: verständliche Inhalte, gute Lesbarkeit, schnelle Ladezeiten und eine technische Basis, die zuverlässig weitergeführt werden kann.</p>
-        <div class="card-grid">
-          <article class="card"><h3>Modern und klar</h3><p>Editorial geprägtes Design, passend zur Marke TechIndex: sachlich, professionell und vertrauenswürdig.</p></article>
-          <article class="card"><h3>Faire Einstiegskosten</h3><p>Der Start ist bewusst effizient geplant, damit kleine Budgets nicht durch unnötigen Umfang belastet werden.</p></article>
-          <article class="card"><h3>Langfristig sinnvoll</h3><p>Regelmässige Betreuung, Wartung und Weiterentwicklung sorgen dafür, dass die Website aktuell und nützlich bleibt.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <h2>Zielgruppen</h2>
-        <ul class="list">
-          <li><strong>Schweizer KMU:</strong> Unternehmen, die einen seriösen digitalen Auftritt ohne komplexes Grossprojekt benötigen.</li>
-          <li><strong>Freelancer &amp; Selbständige:</strong> Klarer Auftritt für Angebote, Referenzen und Kontaktanfragen.</li>
-          <li><strong>Lokale Betriebe:</strong> Sichtbarkeit für Dienstleistungen, Öffnungszeiten, Standorte und direkte Anfragen.</li>
-          <li><strong>Projekte &amp; Initiativen:</strong> Strukturiertes Launch-Setup für neue Ideen mit realistischer Kostenkontrolle.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <h2>Leistungen</h2>
-        <div class="card-grid">
-          <article class="card"><h3>Web Design &amp; Struktur</h3><p>Informationsarchitektur, Seitenkonzept, visuelle Führung, responsive Umsetzung.</p></article>
-          <article class="card"><h3>Umsetzung &amp; Launch</h3><p>Technische Realisierung, Basis-SEO, Performance, Formulare, Tracking-Grundlagen.</p></article>
-          <article class="card"><h3>Inhalte &amp; Feinschliff</h3><p>Unterstützung bei Textstruktur, Qualitätssicherung und professioneller Endabnahme.</p></article>
+    <section id="leistungen">
+      <div class="container split">
+        <article class="panel">
+          <h2>Aus einem passiven Auftritt wird ein brauchbares Vertriebswerkzeug.</h2>
+          <p>Wir konzentrieren uns auf die Stellen, die Kunden wirklich bewerten: erster Eindruck, Verständlichkeit, Glaubwürdigkeit, Ladezeit und die nächste Aktion.</p>
+          <ul class="pain-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Veraltetes Design wirkt kleiner als Ihr Unternehmen heute ist.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Unklare Seitenstruktur lässt gute Angebote unnötig erklärungsbedürftig wirken.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Fehlende Pflege macht Inhalte, Technik und Vertrauen schrittweise schwächer.</span></li>
+          </ul>
+        </article>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8"/><path d="M12 18v2"/></svg></div>
+            <h3>Redesign &amp; Struktur</h3>
+            <p>Neue Seitenführung, klare Angebotslogik und visuelles System für einen professionellen Eindruck.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 14a8 8 0 0 1 16 0"/><path d="M12 14l4-4"/><path d="M4 14h16"/></svg></div>
+            <h3>Performance &amp; Technik</h3>
+            <p>Schnelle, robuste Umsetzung mit sauberer mobiler Darstellung, Basis-SEO und Kontaktwegen.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 19.5V4a2 2 0 0 1 2-2h10l4 4v13.5"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h5"/></svg></div>
+            <h3>Inhalte mit Wirkung</h3>
+            <p>Textstruktur, Leistungsargumente, Trust-Elemente und CTA-Flows, die Anfragen einfacher machen.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3>Betreuung &amp; Wartung</h3>
+            <p>Updates, kleine Änderungen, Monitoring und Weiterentwicklung, damit der Auftritt frisch bleibt.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="ablauf">
       <div class="container">
-        <h2>Ablauf in 5 Schritten</h2>
-        <div class="steps">
-          <article class="step"><h3>Erstgespräch</h3><p>Ziele, Zielgruppe und Umfang werden in einem klaren Briefing festgelegt.</p></article>
-          <article class="step"><h3>Konzept</h3><p>Seitenstruktur, Inhalte und Prioritäten werden pragmatisch definiert.</p></article>
-          <article class="step"><h3>Design &amp; Build</h3><p>Visuelles System und technische Umsetzung entstehen parallel, effizient abgestimmt.</p></article>
-          <article class="step"><h3>Review &amp; Launch</h3><p>Feinschliff, letzte Korrekturen und sauberer Go-live mit dokumentiertem Setup.</p></article>
-          <article class="step"><h3>Betreuung</h3><p>Wartung, Support und gezielte Weiterentwicklung im laufenden Betrieb.</p></article>
+        <div class="section-head">
+          <h2>Kompakter Ablauf, ohne Agenturtheater.</h2>
+          <p>Der Prozess ist bewusst schlank: schnell genug für kleine Budgets, sauber genug für Unternehmen, die damit ernsthaft Kunden gewinnen wollen.</p>
+        </div>
+        <div class="timeline">
+          <article class="step"><h3>Check</h3><p>Wir prüfen Ziel, Zielgruppe, bestehende Seite und die wichtigsten Reibungspunkte.</p></article>
+          <article class="step"><h3>Konzept</h3><p>Seitenstruktur, Botschaften, Inhaltsbedarf und Prioritäten werden festgelegt.</p></article>
+          <article class="step"><h3>Design</h3><p>Der neue Look wird kompakt ausgearbeitet und auf mobile Wirkung geprüft.</p></article>
+          <article class="step"><h3>Build</h3><p>Umsetzung, Performance, Basis-SEO, Kontaktwege und Qualitätssicherung.</p></article>
+          <article class="step"><h3>Pflege</h3><p>Nach dem Launch bleiben Inhalte, Technik und Verbesserungen planbar betreut.</p></article>
         </div>
       </div>
     </section>
 
     <section>
-      <div class="container pricing">
-        <article class="card">
-          <h2>Preismodell: Warum der Einstieg schlank ist</h2>
-          <p>Der Einstieg wird fair kalkuliert, weil wir auf eine klare Basis setzen statt auf unnötige Komplexität. Sie erhalten eine moderne, solide Website ohne aufgeblasenes Paket.</p>
-          <p>Unser Geschäftsmodell ist transparent: Der einmalige Projektstart deckt Konzeption und Umsetzung ab. Wiederkehrende Leistungen wie Wartung, Support und Weiterentwicklung werden im Anschluss monatlich geplant und nur nach Bedarf ausgebaut.</p>
+      <div class="container offer-grid">
+        <article class="offer-card">
+          <h2>Für Menschen und Unternehmen, die online seriöser wirken wollen.</h2>
+          <p>Ob Ein-Personen-Business, lokaler Betrieb oder KMU: Die Website muss in wenigen Sekunden erklären, warum man Ihnen vertrauen kann und wie man mit Ihnen startet.</p>
+          <div class="check-grid">
+            <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Moderner Ersteindruck ohne überladenes Rebranding</span></div>
+            <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Klare Angebotsseiten für Beratung, Dienstleistungen oder lokale Services</span></div>
+            <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Kontakt, Anfrage oder Terminbuchung als sichtbarer nächster Schritt</span></div>
+            <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Ausbau in Etappen statt unnötig grossem Startpaket</span></div>
+          </div>
         </article>
-        <article class="card">
-          <h3>Was das für Sie bedeutet</h3>
-          <ul style="margin:10px 0 0;padding-left:18px;color:#d4d4d4">
-            <li>Schneller Start mit kontrollierbaren Kosten</li>
-            <li>Keine langfristige Bindung ohne Nutzen</li>
-            <li>Planbare Betreuung mit klaren Leistungen</li>
-            <li>Weiterentwicklung in realistischen Etappen</li>
-          </ul>
-        </article>
+        <div class="mini-stack">
+          <article class="mini-card"><strong>Selbständige</strong><p>Positionierung, Angebot, Referenzen und Kontakt in einer Website, die nicht nach Baukasten aussieht.</p></article>
+          <article class="mini-card"><strong>Lokale Betriebe</strong><p>Öffnungszeiten, Leistungen, Standort, Vertrauen und schnelle Anfragewege für regionale Kunden.</p></article>
+          <article class="mini-card"><strong>KMU</strong><p>Seriöser Auftritt, bessere Informationsstruktur und Betreuung für laufende Aktualisierungen.</p></article>
+        </div>
       </div>
     </section>
 
     <section>
       <div class="container">
-        <h2>Betreuung &amp; Wartung</h2>
-        <div class="card-grid">
-          <article class="card"><h3>Technische Wartung</h3><p>Updates, Sicherheitschecks, Backups und Monitoring für einen stabilen Betrieb.</p></article>
-          <article class="card"><h3>Support im Alltag</h3><p>Änderungen an Inhalten, neuen Seiten oder Aktionen werden zuverlässig umgesetzt.</p></article>
-          <article class="card"><h3>Weiterentwicklung</h3><p>Struktur, Conversion und Inhalte werden anhand realer Nutzung laufend verbessert.</p></article>
+        <div class="cta-band">
+          <div class="cta-content">
+            <div>
+              <h2>Bereit für eine Website, die wieder nach Gegenwart aussieht?</h2>
+              <p>Schicken Sie kurz Ihre aktuelle Website oder Idee. Wir melden uns mit einer ehrlichen Einschätzung, wo ein Redesign den grössten Effekt hätte.</p>
+            </div>
+            <a class="btn primary" href="mailto:hallo@techindex.ch?subject=Website%20modernisieren">
+              Anfrage senden
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7Z"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <footer>
