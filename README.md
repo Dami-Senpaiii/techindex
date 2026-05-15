@@ -34,6 +34,7 @@ Articles are now served through Cloudflare Pages Functions:
 - Public list API: `/api/articles`
 - Dynamic article pages: `/articles/{slug}`
 - Protected admin API: `/Adm1n/api/articles`
+- Protected admin diagnostics: `/Adm1n/api/env-check`
 
 The admin API is under `/Adm1n`, so the existing Cloudflare Access middleware protects article writes. For server-side persistence, bind a Cloudflare KV namespace to the Pages project with one of these binding names:
 
@@ -42,6 +43,8 @@ The admin API is under `/Adm1n`, so the existing Cloudflare Access middleware pr
 - `ARTICLES_KV`
 
 Articles are stored only in the bound KV namespace. Without a KV binding, the public article list is empty and admin writes fail instead of falling back to browser-local storage.
+
+If persistence does not activate after adding the binding, open `/Adm1n/api/env-check` while authenticated. It reports only whether each expected article binding exists and whether it exposes KV-style `.get` and `.put` methods.
 
 ## Newsletter signups
 
