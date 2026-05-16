@@ -7,38 +7,58 @@
   <link rel="alternate icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/favicon.svg" />
 
-  <title>Über uns – TechIndex</title>
-  <meta name="description" content="Techindex: Schweizer Technologie-Analysen, Performance-Benchmarks, IT-Preisvergleiche und Expertenwissen für klare Kauf- und IT-Service-Entscheide." />
-  <meta name="theme-color" content="#0a0a0a">
+  <title>Über uns - TechIndex</title>
+  <meta name="description" content="Techindex: Schweizer Technologie-Analysen, Performance-Benchmarks, IT-Preisvergleiche, IT-Service-Orientierung und Webdesign-Services für klare digitale Entscheidungen." />
+  <meta name="theme-color" content="#080909">
   <style>
     :root{
-      --bg:#0a0a0a;
-      --panel:#121212;
-      --muted:#a1a1a1;
+      --bg:#080909;
+      --panel:#111313;
+      --panel-2:#151817;
+      --muted:#a7adab;
       --text:#fff;
-      --border:#1f1f1f;
+      --soft:#dce5e1;
+      --border:#232826;
       --accent:#76B900;
-      --accent-weak:#5e9400;
+      --cyan:#16d6c2;
+      --amber:#f2c14e;
       --radius:16px;
-      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --shadow:0 20px 60px rgba(0,0,0,.34);
       --max:1120px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,"Helvetica Neue",Arial}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),
+        linear-gradient(180deg,rgba(255,255,255,.03) 1px,transparent 1px),
+        linear-gradient(180deg,#080909 0%,#0b0d0c 42%,#080909 100%);
+      background-size:72px 72px,72px 72px,auto;
+      color:var(--text);
+      font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,"Helvetica Neue",Arial;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:linear-gradient(115deg,rgba(118,185,0,.12),transparent 28%,transparent 66%,rgba(22,214,194,.08));
+      z-index:-1;
+    }
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
-    .container{max-width:var(--max);padding:0 20px;margin:0 auto}
+    .container{width:100%;max-width:var(--max);padding:0 20px;margin:0 auto}
 
-    /* Nav */
-    .nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;gap:10px;align-items:center;font-weight:700}
-    .brand-badge{width:28px;height:28px;border:2px solid var(--accent);border-radius:8px;display:grid;place-items:center}
+    .nav{position:sticky;top:0;z-index:50;background:rgba(8,9,9,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:750}
+    .brand-badge{width:28px;height:28px;border:2px solid var(--accent);border-radius:8px;display:grid;place-items:center;background:#0e100f}
     .brand-badge svg{stroke:var(--accent)}
     .menu{display:flex;gap:18px;align-items:center}
-    .menu a{color:#eaeaea;font-size:.95rem;opacity:.85}
-    .menu a:hover{opacity:1}
-    .mobile-nav-toggle{display:none;border:1px solid var(--border);background:#0d0d0d;color:#fff;padding:8px 10px;border-radius:12px;align-items:center;gap:8px;font-weight:600;cursor:pointer}
+    .menu a{color:#eaeaea;font-size:.95rem;opacity:.84}
+    .menu a:hover,.menu a[aria-current="page"]{opacity:1;color:#fff}
+    .mobile-nav-toggle{display:none;border:1px solid var(--border);background:#0d0f0e;color:#fff;padding:8px 10px;border-radius:12px;align-items:center;gap:8px;font-weight:650;cursor:pointer}
     .mobile-nav-toggle .icon-bars{display:block;width:18px;height:2px;background:var(--accent);position:relative;border-radius:999px}
     .mobile-nav-toggle .icon-bars::before,.mobile-nav-toggle .icon-bars::after{content:"";position:absolute;left:0;width:100%;height:100%;background:var(--accent);border-radius:999px;transition:transform .2s ease}
     .mobile-nav-toggle .icon-bars::before{top:-6px}
@@ -49,48 +69,192 @@
     body.nav-open{overflow:hidden}
     body.nav-open::after{content:"";position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:40}
 
-    /* Hero */
-    .hero{position:relative;isolation:isolate}
-    .hero::before{content:"";position:absolute;inset:-20% -20% auto -20%;height:420px;background:radial-gradient(900px 380px at 50% -10%, rgba(118,185,0,.28), transparent);z-index:-1}
-    .hero-inner{padding:64px 0 48px}
-    .hero h1{font-size:clamp(32px,3.6vw,54px);line-height:1.1;margin:0 0 16px;font-weight:850;letter-spacing:-.01em}
-    .hero p{color:#d6ffd6;max-width:760px}
+    .hero{position:relative;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.06)}
+    .hero::after{
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      height:1px;
+      background:linear-gradient(90deg,transparent,var(--accent),var(--cyan),transparent);
+      opacity:.7;
+    }
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.86fr);gap:34px;align-items:center;padding:72px 20px 58px}
+    .hero-copy{max-width:700px}
+    .hero-copy,.analysis-visual,.story-panel,.sticky-graphic,.mission-grid > *,.offer-card > *,.value-card,.process-step{min-width:0}
+    h1{font-size:3.6rem;line-height:1.04;margin:0 0 18px;font-weight:850}
+    h1 span{display:block}
+    .lead{font-size:1.12rem;color:#d7e1dd;max-width:690px;margin:0}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:12px;padding:12px 18px;font-weight:760;border:1px solid var(--border);background:#0f1110;color:#fff;transition:transform .18s ease,border-color .18s ease,filter .18s ease}
+    .btn:hover{transform:translateY(-2px);border-color:rgba(118,185,0,.72)}
+    .btn.primary{background:var(--accent);color:#050604;border-color:transparent;box-shadow:var(--shadow)}
+    .btn svg{width:18px;height:18px;stroke:currentColor}
+    .hero-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:28px;max-width:680px}
+    .fact{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);border-radius:14px;padding:12px 13px}
+    .fact strong{display:block;font-size:.98rem}
+    .fact span{display:block;color:var(--muted);font-size:.87rem;line-height:1.35;margin-top:2px}
 
-    /* About */
-    section{padding:32px 0}
-    .section-head{margin-bottom:12px;font-size:clamp(20px,2.4vw,30px)}
-    .about-section{max-width:820px;margin:0 auto;padding:0 1rem;text-align:left}
-    .about-section h2,.about-section h3{font-weight:650;margin-bottom:.75rem}
-    .about-section p{line-height:1.7;margin-bottom:1.8rem;color:#d1d1d1}
-    .about-grid{display:grid;gap:24px;margin-top:40px}
-    .about-card{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
-    .about-card h3{margin-top:0;margin-bottom:.5rem;font-size:1.2rem}
-    .about-card p{margin:0;color:var(--muted)}
+    .analysis-visual{
+      position:relative;
+      min-height:420px;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:20px;
+      overflow:hidden;
+      background:linear-gradient(145deg,#151817,#0b0d0c 58%,#101715);
+      box-shadow:var(--shadow);
+    }
+    .analysis-visual::before{
+      content:"";
+      position:absolute;
+      inset:18px;
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:14px;
+      background:
+        linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px),
+        linear-gradient(180deg,rgba(255,255,255,.035) 1px,transparent 1px);
+      background-size:38px 38px;
+    }
+    .visual-top{position:absolute;top:30px;left:32px;right:32px;display:flex;justify-content:space-between;align-items:center}
+    .dots{display:flex;gap:7px}
+    .dots span{width:8px;height:8px;border-radius:999px;background:#555}
+    .dots span:nth-child(1){background:#ff675f}
+    .dots span:nth-child(2){background:#f2c14e}
+    .dots span:nth-child(3){background:#76B900}
+    .visual-label{color:#dce5e1;font-size:.8rem;font-weight:800}
+    .chart-svg{position:absolute;left:20px;right:20px;top:72px;width:calc(100% - 40px);height:210px}
+    .chart-svg text{font:700 12px system-ui,-apple-system,Segoe UI,Roboto,Arial;fill:#dce5e1}
+    .grid-line{stroke:rgba(255,255,255,.12);stroke-width:1}
+    .trend{fill:none;stroke:var(--cyan);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:520;animation:draw 4.6s ease-in-out infinite}
+    .bar{transform-origin:bottom;animation:barRise 3.8s ease-in-out infinite}
+    .bar.green{fill:rgba(118,185,0,.82)}
+    .bar.cyan{fill:rgba(22,214,194,.74);animation-delay:.25s}
+    .bar.amber{fill:rgba(242,193,78,.82);animation-delay:.5s}
+    .visual-cards{position:absolute;left:32px;right:32px;bottom:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .mini-card{border:1px solid rgba(255,255,255,.1);border-radius:13px;background:rgba(12,14,13,.86);padding:12px;min-height:96px}
+    .mini-card .value{display:block;color:#fff;font-weight:850;font-size:1.02rem}
+    .mini-card .label{display:block;color:var(--muted);font-size:.84rem;line-height:1.35;margin-top:4px}
+    .mini-card::before{content:"";display:block;width:30px;height:3px;border-radius:999px;background:var(--accent);margin-bottom:10px}
+    .mini-card:nth-child(2)::before{background:var(--cyan)}
+    .mini-card:nth-child(3)::before{background:var(--amber)}
+    .scan-line{position:absolute;left:28px;right:28px;top:182px;height:2px;background:linear-gradient(90deg,transparent,var(--accent),var(--cyan),transparent);animation:scan 3.8s linear infinite}
 
-    /* Contact */
-    .contact-form{display:flex;flex-direction:column;gap:1rem}
-    .contact-form label{font-weight:600;font-size:.95rem}
-    .contact-form input,.contact-form textarea{width:100%;padding:.85rem;border:1px solid var(--border);border-radius:.75rem;background:#0b0b0b;color:var(--text);font:inherit}
-    .contact-form input:focus,.contact-form textarea:focus{outline:1px solid var(--accent)}
-    .contact-form button{width:fit-content;background:var(--accent);color:#000;border:none;border-radius:.75rem;padding:.85rem 1.75rem;cursor:pointer;font-weight:600;box-shadow:var(--shadow)}
-    .contact-form button:hover{filter:brightness(1.05)}
+    section{padding:54px 0}
+    .section-title{font-size:2.15rem;line-height:1.12;margin:0 0 14px;font-weight:820}
+    .section-kicker{color:#aeea7c;font-size:.78rem;font-weight:850;text-transform:uppercase;margin:0 0 10px}
+    p{margin:0;color:#d1d7d4}
+    .story-layout{display:grid;grid-template-columns:minmax(0,.84fr) minmax(320px,.56fr);gap:24px;align-items:start}
+    .story-copy{display:grid;gap:18px}
+    .story-panel{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.024));border:1px solid var(--border);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+    .story-panel h2,.story-panel h3{margin:0 0 10px}
+    .story-panel p + p{margin-top:16px}
+    .sticky-graphic{position:sticky;top:92px;display:grid;gap:12px}
+    .signal-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+    .signal-list li{display:flex;gap:12px;align-items:flex-start;border:1px solid rgba(255,255,255,.09);background:#101211;border-radius:14px;padding:13px;color:#dde4e1}
+    .signal-list svg{width:20px;height:20px;stroke:var(--accent);flex:0 0 auto;margin-top:2px}
 
-    /* Footer */
-    footer{border-top:1px solid var(--border);margin-top:64px}
+    .mission-band{background:linear-gradient(120deg,rgba(118,185,0,.14),rgba(22,214,194,.08) 45%,rgba(242,193,78,.08));border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07)}
+    .mission-grid{display:grid;grid-template-columns:.8fr 1fr;gap:24px;align-items:center}
+    .process-map{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .process-step{position:relative;min-height:142px;border:1px solid rgba(255,255,255,.1);border-radius:15px;background:#0f1210;padding:16px;overflow:hidden}
+    .process-step::after{content:"";position:absolute;left:16px;right:16px;bottom:16px;height:3px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--cyan));transform-origin:left;animation:meter 4s ease-in-out infinite}
+    .process-step:nth-child(2)::after{animation-delay:.25s}
+    .process-step:nth-child(3)::after{animation-delay:.5s;background:linear-gradient(90deg,var(--cyan),var(--amber))}
+    .process-step:nth-child(4)::after{animation-delay:.75s;background:linear-gradient(90deg,var(--amber),var(--accent))}
+    .process-step span{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:10px;background:rgba(118,185,0,.15);color:#c8ff99;font-weight:850;margin-bottom:16px}
+    .process-step h3{font-size:1rem;margin:0 0 7px}
+    .process-step p{font-size:.9rem;line-height:1.45;color:#bfc8c4}
+
+    .offer-section{padding-top:60px}
+    .offer-card{
+      position:relative;
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:24px;
+      align-items:center;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:20px;
+      padding:28px;
+      background:linear-gradient(135deg,rgba(118,185,0,.18),rgba(255,255,255,.035) 46%,rgba(22,214,194,.12));
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .offer-card::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.05),transparent);transform:translateX(-100%);animation:sheen 7s ease-in-out infinite}
+    .offer-card > *{position:relative}
+    .offer-card h2{margin:0 0 10px;font-size:2rem;line-height:1.15}
+    .offer-card p{max-width:760px;color:#e0e8e4}
+    .link-arrow{white-space:nowrap}
+
+    .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .value-card{border:1px solid var(--border);border-radius:var(--radius);background:var(--panel);padding:22px;transition:transform .18s ease,border-color .18s ease}
+    .value-card:hover{transform:translateY(-4px);border-color:rgba(22,214,194,.55)}
+    .value-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:rgba(118,185,0,.14);color:#bfff8d;margin-bottom:16px}
+    .value-card:nth-child(2) .value-icon{background:rgba(22,214,194,.13);color:#97fff1}
+    .value-card:nth-child(3) .value-icon{background:rgba(242,193,78,.14);color:#ffe1a0}
+    .value-icon svg{width:22px;height:22px;stroke:currentColor}
+    .value-card h3{margin:0 0 9px;font-size:1.08rem}
+    .value-card p{font-size:.94rem;color:#c4ccc8}
+
+    footer{border-top:1px solid var(--border);margin-top:64px;background:rgba(8,9,9,.72)}
     .cols{display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}
     .small{font-size:.9rem}
+    .muted{color:var(--muted)}
+    .visually-hidden{position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.is-visible{opacity:1;transform:translateY(0)}
 
-    /* Responsive */
-    @media (max-width: 960px){
-      .cols{grid-template-columns:1fr 1fr}
+    @keyframes draw{0%{stroke-dashoffset:520}42%,60%{stroke-dashoffset:0}100%{stroke-dashoffset:-520}}
+    @keyframes barRise{0%,100%{transform:scaleY(.72)}50%{transform:scaleY(1)}}
+    @keyframes scan{0%{transform:translateY(-70px);opacity:.24}50%{opacity:1}100%{transform:translateY(70px);opacity:.24}}
+    @keyframes meter{0%,100%{transform:scaleX(.42)}50%{transform:scaleX(1)}}
+    @keyframes sheen{0%,70%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .bar,.trend,.scan-line,.process-step::after,.offer-card::before{animation:none}
+      .reveal{opacity:1;transform:none;transition:none}
+      .btn,.value-card{transition:none}
     }
-    @media (max-width: 640px){
-      .mobile-nav-toggle{display:inline-flex}
-      .menu{display:none;position:fixed;top:68px;right:20px;left:20px;background:#101010;border:1px solid var(--border);border-radius:var(--radius);padding:20px;flex-direction:column;gap:12px;box-shadow:var(--shadow);z-index:70}
+    @media (max-width:960px){
+      h1{font-size:3rem}
+      .hero-grid,.story-layout,.mission-grid,.offer-card{grid-template-columns:1fr}
+      .analysis-visual{min-height:430px}
+      .sticky-graphic{position:static}
+      .process-map,.values-grid{grid-template-columns:1fr 1fr}
+      .cols{grid-template-columns:1fr 1fr}
+      .offer-card{align-items:start}
+      .link-arrow{justify-self:start}
+    }
+    @media (max-width:640px){
+      body{background-size:44px 44px,44px 44px,auto}
+      body{overflow-x:hidden}
+      .mobile-nav-toggle{display:inline-flex;position:fixed;top:12px;right:auto;left:min(330px, calc(100vw - 58px));z-index:80}
+      .menu{display:none;position:fixed;top:68px;right:20px;left:20px;background:#101211;border:1px solid var(--border);border-radius:var(--radius);padding:20px;flex-direction:column;gap:12px;box-shadow:var(--shadow);z-index:70}
       .menu.open{display:flex}
       .menu a{font-size:1rem;opacity:1;padding:4px 0}
-      .cols{grid-template-columns:1fr}
-      .hero-inner{padding:48px 0 32px}
+      .hero-grid{display:flex;flex-direction:column;align-items:stretch;padding:48px 20px 38px}
+      .hero-copy,.analysis-visual{width:350px;max-width:350px}
+      h1{font-size:2.08rem;overflow-wrap:anywhere}
+      .lead,.hero-actions,.hero-facts{width:350px;max-width:350px}
+      .lead{font-size:1rem;overflow-wrap:anywhere}
+      .hero-actions .btn{width:100%}
+      .hero-facts,.visual-cards,.process-map,.values-grid,.cols{grid-template-columns:1fr}
+      .analysis-visual{min-height:560px;border-radius:16px}
+      .analysis-visual::before{inset:12px}
+      .visual-top{left:20px;right:20px}
+      .visual-label{max-width:210px;text-align:right;line-height:1.2}
+      .chart-svg{top:68px;height:170px}
+      .chart-svg text{font-size:10px}
+      .visual-cards{bottom:18px}
+      .mini-card{min-height:auto}
+      section{padding:40px 0}
+      .story-panel,.offer-card{padding:20px}
+      .section-title{font-size:1.72rem}
+      .offer-card h2{font-size:1.62rem}
+    }
+    @media (max-width:370px){
+      .hero-copy,.analysis-visual,.lead,.hero-actions,.hero-facts{width:calc(100vw - 40px);max-width:calc(100vw - 40px)}
     }
   </style>
 </head>
@@ -126,46 +290,152 @@
   </nav>
 
   <header class="hero">
-    <div class="container hero-inner">
-      <p class="muted" style="text-transform:uppercase;letter-spacing:.22em;font-weight:600;color:#a6f0a6">Über Techindex</p>
-      <h1>Schweizer Technologie-Analysen mit Klarheit</h1>
-      <p>Techindex liefert unabhängige Technologie-Recherchen, präzise Benchmarks und klare Einschätzungen für fundierte Entscheidungen im Schweizer Markt.</p>
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <h1><span>Schweizer</span><span>Technologie-</span><span>Analysen mit</span><span>Klarheit</span></h1>
+        <p class="lead">Techindex liefert unabhängige Technologie-Recherchen, präzise Benchmarks und klare Einschätzungen für fundierte Entscheidungen im Schweizer Markt.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#ueber-techindex">
+            Mehr über TechIndex
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a class="btn" href="web-design-betreuung.html">
+            Webdesign Services
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8"/><path d="M12 18v2"/></svg>
+          </a>
+        </div>
+        <div class="hero-facts" aria-label="TechIndex Schwerpunkte">
+          <div class="fact"><strong>Analysen</strong><span>Recherchen mit klarer Datenbasis.</span></div>
+          <div class="fact"><strong>Benchmarks</strong><span>Performance unter realen Bedingungen.</span></div>
+          <div class="fact"><strong>Services</strong><span>Orientierung für IT und Webauftritte.</span></div>
+        </div>
+      </div>
+      <div class="analysis-visual reveal" aria-hidden="true">
+        <div class="visual-top">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <div class="visual-label">TechIndex Decision Graph</div>
+        </div>
+        <svg class="chart-svg" viewBox="0 0 520 240" role="img" aria-label="Grafische Darstellung von Benchmarks und Preis-Leistung">
+          <line class="grid-line" x1="52" y1="42" x2="490" y2="42"/>
+          <line class="grid-line" x1="52" y1="96" x2="490" y2="96"/>
+          <line class="grid-line" x1="52" y1="150" x2="490" y2="150"/>
+          <line class="grid-line" x1="52" y1="204" x2="490" y2="204"/>
+          <rect class="bar green" x="82" y="86" width="42" height="118" rx="8"/>
+          <rect class="bar cyan" x="158" y="64" width="42" height="140" rx="8"/>
+          <rect class="bar amber" x="234" y="112" width="42" height="92" rx="8"/>
+          <rect class="bar green" x="310" y="54" width="42" height="150" rx="8"/>
+          <rect class="bar cyan" x="386" y="78" width="42" height="126" rx="8"/>
+          <path class="trend" d="M82 170 C136 128 166 138 205 98 C250 52 284 142 334 82 C382 24 424 68 468 38"/>
+          <circle cx="82" cy="170" r="5" fill="#16d6c2"/>
+          <circle cx="205" cy="98" r="5" fill="#16d6c2"/>
+          <circle cx="334" cy="82" r="5" fill="#16d6c2"/>
+          <circle cx="468" cy="38" r="5" fill="#16d6c2"/>
+          <text x="72" y="226">Leistung</text>
+          <text x="186" y="226">Preis</text>
+          <text x="294" y="226">Service</text>
+          <text x="392" y="226">Verfügbarkeit</text>
+        </svg>
+        <div class="scan-line"></div>
+        <div class="visual-cards">
+          <div class="mini-card"><span class="value">Leistungsdaten</span><span class="label">Benchmarks werden nachvollziehbar eingeordnet.</span></div>
+          <div class="mini-card"><span class="value">CHF-Kontext</span><span class="label">Preisvergleiche bleiben auf die Schweiz bezogen.</span></div>
+          <div class="mini-card"><span class="value">Entscheidung</span><span class="label">Komplexe Technik wird konkret nutzbar.</span></div>
+        </div>
+      </div>
     </div>
   </header>
 
   <main>
-    <section>
-      <div class="about-section">
-        <h2 class="section-head">Über Techindex</h2>
-        <p>Techindex ist eine unabhängige Schweizer Kleinredaktion für Technologie-Recherche, die technische Produkte, Software und IT-Services im Schweizer Markt transparent analysiert und verständlich erklärt. Wir liefern objektive Leistungsdaten, detaillierte Benchmarks, präzise Preisvergleiche und klare Einschätzungen zu aktuellen Technologien und digitalen Lösungen in der Schweiz.</p>
-        <p>Neben unseren Analysen vernetzen wir Leserinnen und Leser direkt mit passenden IT-Dienstleistungen und Beratungen, sodass fundierte Entscheidungen im Technikalltag einfach und effizient möglich werden.</p>
+    <section id="ueber-techindex">
+      <div class="container story-layout">
+        <div class="story-copy">
+          <article class="story-panel reveal">
+            <p class="section-kicker">Über Techindex</p>
+            <h2 class="section-title">Unabhängige Recherche für bessere Technikentscheide.</h2>
+            <p>Techindex ist eine unabhängige Schweizer Kleinredaktion für Technologie-Recherche, die technische Produkte, Software und IT-Services im Schweizer Markt transparent analysiert und verständlich erklärt. Wir liefern objektive Leistungsdaten, detaillierte Benchmarks, präzise Preisvergleiche und klare Einschätzungen zu aktuellen Technologien und digitalen Lösungen in der Schweiz.</p>
+            <p>Neben unseren Analysen vernetzen wir Leserinnen und Leser direkt mit passenden IT-Dienstleistungen und Beratungen, sodass fundierte Entscheidungen im Technikalltag einfach und effizient möglich werden.</p>
+          </article>
+          <article class="story-panel reveal">
+            <p class="section-kicker">Was wir bieten</p>
+            <h2 class="section-title">Orientierung für Produkte, IT-Lösungen und digitale Dienstleistungen.</h2>
+            <p>Wir beleuchten Technologieprodukte, IT-Lösungen und digitale Dienstleistungen so, dass sowohl interessierte Privatpersonen als auch Unternehmen eine verlässliche Orientierung erhalten. Unsere Inhalte basieren auf unabhängiger Recherche, reproduzierbaren Testkriterien und einer klaren Datenbasis. Dabei betrachten wir immer das Verhältnis von Preis zu Leistung, die Verfügbarkeit in der Schweiz sowie Garantie- und Serviceaspekte.</p>
+          </article>
+        </div>
+        <aside class="sticky-graphic reveal" aria-label="TechIndex Arbeitsweise">
+          <div class="story-panel">
+            <h3>Unser Fokus</h3>
+            <ul class="signal-list">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 19h16"/><path d="M7 16V9"/><path d="M12 16V5"/><path d="M17 16v-3"/></svg><span>Leistungsdaten und Performance-Vergleiche statt Bauchgefühl.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3v18"/><path d="M17 7H9.5a3.5 3.5 0 0 0 0 7H14a3 3 0 0 1 0 6H6"/></svg><span>Preise, Verfügbarkeit und Serviceaspekte im Schweizer Markt.</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg><span>Klare Sprache für Konsumenten, Unternehmen und IT-Entscheider.</span></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="mission-band">
+      <div class="container mission-grid">
+        <div class="reveal">
+          <p class="section-kicker">Unsere Mission</p>
+          <h2 class="section-title">Transparenz, Daten und Schweizer Kontext.</h2>
+          <p>Techindex verfolgt das Ziel, Technologieentscheide im Schweizer Markt einfacher, transparenter und datenbasiert nachvollziehbar zu machen. Unsere Recherchen stützen sich auf statistische Leistungswerte, Performance-Tests und objektive Benchmarks, die zeigen, wie Geräte, Software und Cloud-Services unter realen Bedingungen abschneiden. Ergänzend dazu bieten wir präzise Preisvergleiche und Marktanalysen, die speziell auf Schweizer Bedürfnisse, Preise in CHF und lokale Rahmenbedingungen zugeschnitten sind.</p>
+        </div>
+        <div class="process-map reveal" aria-label="TechIndex Rechercheprozess">
+          <article class="process-step"><span>01</span><h3>Testen</h3><p>Produkte und Services werden nach reproduzierbaren Kriterien betrachtet.</p></article>
+          <article class="process-step"><span>02</span><h3>Vergleichen</h3><p>Preis, Leistung und Verfügbarkeit werden in Relation gesetzt.</p></article>
+          <article class="process-step"><span>03</span><h3>Einordnen</h3><p>Die Analyse übersetzt Rohdaten in klare Empfehlungen.</p></article>
+          <article class="process-step"><span>04</span><h3>Vernetzen</h3><p>Passende IT-Dienstleistungen und Beratungen werden sichtbar.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="offer-section">
+      <div class="container">
+        <div class="offer-card reveal">
+          <div>
+            <p class="section-kicker">Webdesign Services</p>
+            <h2>TechIndex analysiert digitale Lösungen nicht nur, sondern hilft auch beim besseren Webauftritt.</h2>
+            <p>Für Schweizer KMU, Freelancer und lokale Betriebe bieten wir moderne Webdesign-Services, Website-Modernisierung und laufende Betreuung an. Der gleiche Anspruch gilt auch hier: klare Struktur, schnelle Technik, verständliche Inhalte und ein Auftritt, der Vertrauen schafft.</p>
+          </div>
+          <a class="btn primary link-arrow" href="web-design-betreuung.html">
+            Webdesign ansehen
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
       </div>
     </section>
 
     <section>
-      <div class="about-section">
-        <h2>Unsere Mission</h2>
-        <p>Techindex verfolgt das Ziel, Technologieentscheide im Schweizer Markt einfacher, transparenter und datenbasiert nachvollziehbar zu machen. Unsere Recherchen stützen sich auf statistische Leistungswerte, Performance-Tests und objektive Benchmarks, die zeigen, wie Geräte, Software und Cloud-Services unter realen Bedingungen abschneiden. Ergänzend dazu bieten wir präzise Preisvergleiche und Marktanalysen, die speziell auf Schweizer Bedürfnisse, Preise in CHF und lokale Rahmenbedingungen zugeschnitten sind.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="about-section">
-        <h2>Was wir bieten</h2>
-        <p>Wir beleuchten Technologieprodukte, IT-Lösungen und digitale Dienstleistungen so, dass sowohl interessierte Privatpersonen als auch Unternehmen eine verlässliche Orientierung erhalten. Unsere Inhalte basieren auf unabhängiger Recherche, reproduzierbaren Testkriterien und einer klaren Datenbasis. Dabei betrachten wir immer das Verhältnis von Preis zu Leistung, die Verfügbarkeit in der Schweiz sowie Garantie- und Serviceaspekte.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="about-section">
-        <h2>Was uns auszeichnet</h2>
-        <p>Ein besonderes Merkmal von Techindex ist die Kombination aus journalistischer Unabhängigkeit, technischer Tiefenschärfe und datengestützter Analyse. Wir gehen bewusst tief in die Materie, arbeiten mit umfangreichen Leistungsdaten und visualisieren komplexe Informationen durch klare Grafiken – etwa Leistungs-pro-Franken-Diagramme oder Performance-Vergleiche, die technologische Unterschiede sofort sichtbar machen. Unser Fokus liegt auf einer verständlichen Darstellung fundierter Analysen, die echte Entscheidungsgrundlagen für Konsumenten und Unternehmen bieten.</p>
+      <div class="container">
+        <div class="story-panel reveal" style="margin-bottom:16px">
+          <p class="section-kicker">Was uns auszeichnet</p>
+          <h2 class="section-title">Technische Tiefe, journalistische Unabhängigkeit und klare Grafiken.</h2>
+          <p>Ein besonderes Merkmal von Techindex ist die Kombination aus journalistischer Unabhängigkeit, technischer Tiefenschärfe und datengestützter Analyse. Wir gehen bewusst tief in die Materie, arbeiten mit umfangreichen Leistungsdaten und visualisieren komplexe Informationen durch klare Grafiken – etwa Leistungs-pro-Franken-Diagramme oder Performance-Vergleiche, die technologische Unterschiede sofort sichtbar machen. Unser Fokus liegt auf einer verständlichen Darstellung fundierter Analysen, die echte Entscheidungsgrundlagen für Konsumenten und Unternehmen bieten.</p>
+        </div>
+        <div class="values-grid">
+          <article class="value-card reveal">
+            <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 4v16h16"/><path d="m7 15 4-4 3 3 5-7"/></svg></div>
+            <h3>Daten sichtbar machen</h3>
+            <p>Grafiken und Vergleiche zeigen Unterschiede dort, wo Zahlen allein schwer lesbar wären.</p>
+          </article>
+          <article class="value-card reveal">
+            <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3>Unabhängig bleiben</h3>
+            <p>Die Einschätzung folgt Testkriterien, Marktbezug und nachvollziehbaren Argumenten.</p>
+          </article>
+          <article class="value-card reveal">
+            <div class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 8h10"/><path d="M7 12h6"/><path d="M8 20h8"/></svg></div>
+            <h3>Digital umsetzen</h3>
+            <p>Webdesign und Betreuung ergänzen die Redaktion, wenn aus Analyse ein besserer Auftritt werden soll.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container" style="padding:20px 0 28px">
+    <div class="container" style="padding:20px 20px 28px">
       <div class="cols">
         <div>
           <div class="brand" style="margin-bottom:8px">
@@ -184,6 +454,7 @@
             <li><a href="index.html#hardware">Hardware</a></li>
             <li><a href="index.html#software">Software</a></li>
             <li><a href="index.html#fotografie">Fotografie</a></li>
+            <li><a href="web-design-betreuung.html">Web Design</a></li>
             <!-- Preisvergleiche vorübergehend ausgeblendet
             <li><a href="index.html#preisindex">Preisvergleiche</a></li>
             -->
@@ -198,7 +469,7 @@
           </ul>
         </div>
       </div>
-      <div class="muted small" style="margin-top:14px">© <span id="y"></span> TechIndex.ch — Hosted on Cloudflare.</div>
+      <div class="muted small" style="margin-top:14px">© <span id="y"></span> TechIndex.ch - Hosted on Cloudflare.</div>
     </div>
   </footer>
 
@@ -224,9 +495,27 @@
       menuEl.addEventListener('click', (e)=>{
         if(e.target.closest('a')) setNav(false);
       });
+      document.addEventListener('click', (e)=>{
+        if(!menuEl.classList.contains('open')) return;
+        if(e.target === navToggle || navToggle.contains(e.target) || menuEl.contains(e.target)) return;
+        setNav(false);
+      });
+    }
+
+    const revealItems = document.querySelectorAll('.reveal');
+    if('IntersectionObserver' in window){
+      const revealObserver = new IntersectionObserver((entries)=>{
+        entries.forEach((entry)=>{
+          if(entry.isIntersecting){
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: .15 });
+      revealItems.forEach((item)=>revealObserver.observe(item));
+    }else{
+      revealItems.forEach((item)=>item.classList.add('is-visible'));
     }
   </script>
-
-  <style>.visually-hidden{position:absolute !important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}</style>
 </body>
 </html>
