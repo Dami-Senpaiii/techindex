@@ -326,7 +326,12 @@
       prevBtn.disabled = true;
       nextBtn.disabled = true;
       try{
-        const response = await fetch('/api/articles', { headers: { Accept: 'application/json' } });
+        let response;
+        for(let attempt=0;attempt<3;attempt+=1){
+          response = await fetch('/api/articles', { headers: { Accept: 'application/json' } });
+          if(response.ok || response.status!==503) break;
+          await new Promise(function(resolve){ setTimeout(resolve, 300 * Math.pow(2, attempt)); });
+        }
         if(!response.ok) throw new Error('Article API unavailable');
         const data = await response.json();
         POSTS = Array.isArray(data.articles) ? data.articles : [];

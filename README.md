@@ -44,6 +44,10 @@ The admin API is under `/Adm1n`, so the existing Cloudflare Access middleware pr
 
 Articles are stored only in the bound KV namespace. Without a KV binding, the public article list is empty and admin writes fail instead of falling back to browser-local storage.
 
+The public list is cached for 60 seconds to reduce KV reads. Transient KV errors
+(including the per-key write rate limit) are retried automatically; API error
+responses include a request ID for correlation with the Pages Functions logs.
+
 If persistence does not activate after adding the binding, open `/Adm1n/api/env-check` while authenticated. It reports only whether each expected article binding exists and whether it exposes KV-style `.get` and `.put` methods.
 
 ## Newsletter signups

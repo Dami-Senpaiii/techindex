@@ -73,5 +73,8 @@ function storageError(error, context, fallback) {
       requestId,
     }, { status: 413 });
   }
-  return json({ error: fallback, code: 'ARTICLE_STORAGE_ERROR', requestId }, { status: 503 });
+  return json({ error: fallback, code: 'ARTICLE_STORAGE_ERROR', requestId }, {
+    status: 503,
+    headers: { 'Retry-After': '2' }
+  });
 }
