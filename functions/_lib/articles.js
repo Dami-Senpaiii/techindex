@@ -1,4 +1,7 @@
 const STORE_KEY = 'articles';
+// Cloudflare KV values are limited to 25 MB. Keep a little headroom for
+// platform-side encoding/metadata and return a useful error before KV rejects it.
+export const MAX_STORE_BYTES = 24_000_000;
 export const STORE_BINDINGS = ['TECHINDEX_ARTICLES', 'techindex-articles', 'ARTICLE_STORE', 'ARTICLES_KV'];
 
 const EMPTY_ARTICLES = [];
@@ -20,7 +23,15 @@ export async function readArticles(env) {
 export async function writeArticles(env, articles) {
   const store = getArticleStore(env);
   if (!store) return false;
-  await store.put(STORE_KEY, JSON.stringify(articles));
+  const serialized = JSON.stringify(articles);
+  const bytes = new TextEncoder().encode(serialized).byteLength;
+  if (bytes > MAX_STORE_BYTES) {
+    const error = new Error(`Article store needs ${bytes} bytes; maximum is ${MAX_STORE_BYTES} bytes.`);
+    error.code = 'ARTICLE_STORE_TOO_LARGE';
+    error.bytes = bytes;
+    throw error;
+  }
+  await store.put(STORE_KEY, serialized);
   return true;
 }
 
