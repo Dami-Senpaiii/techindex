@@ -46,3 +46,39 @@ test('public API returns a controlled 503 when KV remains unavailable', async ()
   assert.equal(data.error, 'Artikel konnten vorübergehend nicht geladen werden.');
   assert.ok(data.requestId);
 });
+
+test('public API returns articles in pages of nine', async () => {
+  const articles = Array.from({ length: 20 }, (_, index) => ({
+    id: `article-${index}`,
+    slug: `article-${index}`,
+    title: `Article ${index}`,
+    status: 'live',
+    date: `2026-07-${String(index + 1).padStart(2, '0')}`
+  }));
+  const env = { TECHINDEX_ARTICLES: {
+    async get() { return articles; },
+    async put() {}
+  } };
+  const response = await onRequestGet({ env, request: new Request('https://example.test/api/articles?page=2') });
+  const data = await response.json();
+
+  assert.equal(data.articles.length, 9);
+  assert.deepEqual(data.pagination, { page: 2, pageSize: 9, total: 20, totalPages: 3 });
+});
+
+test('public API returns every available tag independently of pagination', async () => {
+  const articles = [
+    { slug: 'one', title: 'One', status: 'live', date: '2026-07-03', category: 'Hardware' },
+    { slug: 'two', title: 'Two', status: 'live', date: '2026-07-02', tag: 'Software' },
+    { slug: 'three', title: 'Three', status: 'live', date: '2026-07-01', tags: ['Ratgeber', 'Hardware'] },
+  ];
+  const env = { TECHINDEX_ARTICLES: {
+    async get() { return articles; },
+    async put() {}
+  } };
+  const response = await onRequestGet({ env, request: new Request('https://example.test/api/articles?tag=Hardware') });
+  const data = await response.json();
+
+  assert.deepEqual(data.tags, ['Hardware', 'Ratgeber', 'Software']);
+  assert.equal(data.pagination.total, 2);
+});

@@ -1,9 +1,24 @@
-import { getArticleStore, json, normalizeArticle, readArticles, writeArticles } from '../../_lib/articles.js';
+import { ARTICLES_PER_PAGE, getArticleStore, json, normalizeArticle, paginateArticles, readArticles, writeArticles } from '../../_lib/articles.js';
 
 export async function onRequestGet(context) {
   try {
     const articles = await readArticles(context.env);
-    return json({ articles, persistent: Boolean(getArticleStore(context.env)) });
+    const url = new URL(context.request.url);
+    const query = String(url.searchParams.get('q') || '').trim().toLowerCase();
+    const status = String(url.searchParams.get('status') || '');
+    const category = String(url.searchParams.get('category') || '');
+    const filtered = articles.filter((article) => {
+      const statusMatches = status ? article.status === status : article.status !== 'deleted';
+      const haystack = `${article.title} ${article.category} ${article.slug}`.toLowerCase();
+      return statusMatches && (!category || article.category === category) && (!query || haystack.includes(query));
+    });
+    const summary = {
+      total: articles.filter((article) => article.status !== 'deleted').length,
+      live: articles.filter((article) => article.status === 'live').length,
+      draft: articles.filter((article) => article.status === 'draft').length,
+      archived: articles.filter((article) => article.status === 'archived').length
+    };
+    return json({ ...paginateArticles(filtered, url.searchParams.get('page'), ARTICLES_PER_PAGE), summary, persistent: Boolean(getArticleStore(context.env)) });
   } catch (error) {
     return storageError(error, context, 'Artikel konnten nicht aus dem KV-Speicher gelesen werden.');
   }
@@ -30,7 +45,7 @@ export async function onRequestPost(context) {
     return storageError(error, context, 'Der Artikel konnte nicht in KV gespeichert werden.');
   }
   if (!persistent) return json({ error: 'Missing KV binding TECHINDEX_ARTICLES.', articles: nextArticles, persistent }, { status: 501 });
-  return json({ article: nextArticle, articles: nextArticles, persistent });
+  return json({ article: nextArticle, persistent });
 }
 
 export async function onRequestPatch(context) {
@@ -59,7 +74,7 @@ export async function onRequestPatch(context) {
     return storageError(error, context, 'Der Artikelstatus konnte nicht in KV gespeichert werden.');
   }
   if (!persistent) return json({ error: 'Missing KV binding TECHINDEX_ARTICLES.', articles: nextArticles, persistent }, { status: 501 });
-  return json({ articles: nextArticles, persistent });
+  return json({ persistent });
 }
 
 function storageError(error, context, fallback) {

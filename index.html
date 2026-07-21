@@ -272,11 +272,11 @@
   </footer>
 
   <script type="module">
-    import { filterArticles, listArticleTags, normalizeFilterValue } from './assets/article-filter.js';
+    import { normalizeFilterValue } from './assets/article-filter.js';
 
     let POSTS = [];
     const mobileQuery = window.matchMedia('(max-width: 640px)');
-    let perPage = mobileQuery.matches ? 6 : 9; let page=1; let activeTag=''; let q='';
+    let page=1; let totalPages=1; let activeTag=''; let q='';
     const postsEl = document.getElementById('posts');
     const countEl = document.getElementById('count');
     const prevBtn = document.getElementById('prev');
@@ -304,18 +304,14 @@
     }
 
     function render(){
-      const filtered = filterArticles(POSTS, { tag: activeTag, query: q });
-      const totalPages = Math.max(1, Math.ceil(filtered.length/perPage));
-      page = Math.min(page, totalPages);
-      const slice = filtered.slice((page-1)*perPage, page*perPage);
-      if(!filtered.length){
+      if(!POSTS.length){
         postsEl.innerHTML = '<p class="muted">Keine Beiträge für diese Auswahl gefunden.</p>';
         countEl.textContent = 'Keine Artikel';
         prevBtn.disabled = true;
         nextBtn.disabled = true;
         return;
       }
-      postsEl.innerHTML = slice.map(function(p){
+      postsEl.innerHTML = POSTS.map(function(p){
         const date = new Date((p.date || new Date().toISOString().slice(0,10)) + 'T12:00:00');
         return '<a class="card" href="/articles/' + p.slug + '"><div class="thumb"><img src="' + articleImage(p) + '" alt="' + (p.imageAlt || 'Vorschaubild') + '" loading="lazy"></div><div class="body"><div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#cfcfcf"><span>' + (p.category || p.tag) + '</span><time datetime="' + date.toISOString() + '">' + date.toLocaleDateString('de-CH',{day:'2-digit',month:'short',year:'numeric'}) + '</time></div><h3 class="title">' + p.title + '</h3><p class="muted">' + (p.excerpt || '') + '</p><span style="display:inline-block;margin-top:8px;color:var(--accent);font-weight:600">Weiterlesen -></span></div></a>';
       }).join('');
@@ -324,37 +320,40 @@
       nextBtn.disabled = page===totalPages;
     }
 
-    function updateTagOptions(){
+    function updateTagOptions(tags){
+      const selectedTag = activeTag;
       const allOption = new Option('Alle Themen', '');
-      const tagOptions = listArticleTags(POSTS).map(function(tag){ return new Option(tag, tag); });
+      const tagOptions = tags.map(function(tag){ return new Option(tag, tag); });
       tagFilterEl.replaceChildren(allOption, ...tagOptions);
-      tagFilterEl.value = activeTag;
+      tagFilterEl.value = selectedTag;
     }
 
-    async function loadPosts(){
+    async function loadPosts(requestedPage=page){
       postsEl.innerHTML = '<p class="muted">Artikel werden geladen.</p>';
       countEl.textContent = '';
       prevBtn.disabled = true;
       nextBtn.disabled = true;
       try{
+        const params = new URLSearchParams({ page: String(requestedPage) });
+        if(activeTag) params.set('tag', activeTag);
+        if(q) params.set('q', q);
         let response;
         for(let attempt=0;attempt<3;attempt+=1){
-          response = await fetch('/api/articles', { headers: { Accept: 'application/json' } });
+          response = await fetch('/api/articles?' + params, { headers: { Accept: 'application/json' } });
           if(response.ok || response.status!==503) break;
           await new Promise(function(resolve){ setTimeout(resolve, 300 * Math.pow(2, attempt)); });
         }
         if(!response.ok) throw new Error('Article API unavailable');
         const data = await response.json();
         POSTS = Array.isArray(data.articles) ? data.articles : [];
-        page = 1;
-        updateTagOptions();
+        page = data.pagination ? data.pagination.page : 1;
+        totalPages = data.pagination ? data.pagination.totalPages : 1;
+        updateTagOptions(Array.isArray(data.tags) ? data.tags : []);
         render();
-      }catch(error){ POSTS = []; updateTagOptions(); render(); console.warn(error); }
+      }catch(error){ POSTS = []; page=1; totalPages=1; updateTagOptions([]); render(); console.warn(error); }
     }
 
     const handleMobileChange = function(event){
-      const nextPerPage = event.matches ? 6 : 9;
-      if(nextPerPage !== perPage){ perPage = nextPerPage; page = 1; render(); }
       if(!event.matches) setNav(false);
     };
 
@@ -367,10 +366,10 @@
       setNav(false);
     });
     window.addEventListener('keydown', function(e){ if(e.key === 'Escape') setNav(false); });
-    tagFilterEl.addEventListener('change', function(e){ activeTag=e.target.value; page=1; render(); });
-    document.getElementById('q').addEventListener('input', function(e){ q=normalizeFilterValue(e.target.value); page=1; render(); });
-    prevBtn.addEventListener('click', function(){ page=Math.max(1,page-1); render(); });
-    nextBtn.addEventListener('click', function(){ page=page+1; render(); });
+    tagFilterEl.addEventListener('change', function(e){ activeTag=e.target.value; page=1; loadPosts(); });
+    document.getElementById('q').addEventListener('input', function(e){ q=normalizeFilterValue(e.target.value); page=1; loadPosts(); });
+    prevBtn.addEventListener('click', function(){ loadPosts(Math.max(1,page-1)); });
+    nextBtn.addEventListener('click', function(){ loadPosts(Math.min(totalPages,page+1)); });
     const newsletterStatus = document.getElementById('newsletter-status');
     const newsletterResult = new URLSearchParams(window.location.search).get('newsletter');
     if(newsletterStatus && newsletterResult){

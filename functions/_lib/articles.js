@@ -70,6 +70,20 @@ export function publicArticles(articles) {
     .sort((a, b) => String(b.date).localeCompare(String(a.date)));
 }
 
+export const ARTICLES_PER_PAGE = 9;
+
+export function paginateArticles(articles, page = 1, pageSize = ARTICLES_PER_PAGE) {
+  const safePageSize = Math.max(1, Number.parseInt(pageSize, 10) || ARTICLES_PER_PAGE);
+  const total = articles.length;
+  const totalPages = Math.max(1, Math.ceil(total / safePageSize));
+  const currentPage = Math.min(Math.max(1, Number.parseInt(page, 10) || 1), totalPages);
+  const start = (currentPage - 1) * safePageSize;
+  return {
+    articles: articles.slice(start, start + safePageSize),
+    pagination: { page: currentPage, pageSize: safePageSize, total, totalPages }
+  };
+}
+
 export function normalizeArticle(input) {
   const title = clean(input.title) || 'Unbenannter Artikel';
   const slug = slugify(input.slug || title) || 'unbenannter-artikel';
