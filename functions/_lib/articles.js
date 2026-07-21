@@ -3,6 +3,8 @@ const STORE_KEY = 'articles';
 // platform-side encoding/metadata and return a useful error before KV rejects it.
 export const MAX_STORE_BYTES = 24_000_000;
 export const STORE_BINDINGS = ['TECHINDEX_ARTICLES', 'techindex-articles', 'ARTICLE_STORE', 'ARTICLES_KV'];
+const STORAGE_ATTEMPTS = 4;
+const STORAGE_RETRY_BASE_MS = 150;
 
 const EMPTY_ARTICLES = [];
 
@@ -16,7 +18,7 @@ export function getArticleStore(env) {
 export async function readArticles(env) {
   const store = getArticleStore(env);
   if (!store) return EMPTY_ARTICLES;
-  const stored = await store.get(STORE_KEY, 'json');
+  const stored = await retryStorageOperation(() => store.get(STORE_KEY, 'json'));
   return Array.isArray(stored) ? stored : EMPTY_ARTICLES;
 }
 
@@ -31,8 +33,35 @@ export async function writeArticles(env, articles) {
     error.bytes = bytes;
     throw error;
   }
-  await store.put(STORE_KEY, serialized);
+  // KV limits writes to the same key to roughly one per second. Admin actions
+  // can easily collide with that limit, so retry transient/rate-limit errors.
+  await retryStorageOperation(() => store.put(STORE_KEY, serialized));
   return true;
+}
+
+async function retryStorageOperation(operation) {
+  let lastError;
+  for (let attempt = 0; attempt < STORAGE_ATTEMPTS; attempt += 1) {
+    try {
+      return await operation();
+    } catch (error) {
+      lastError = error;
+      if (!isRetryableStorageError(error) || attempt === STORAGE_ATTEMPTS - 1) throw error;
+      await sleep(STORAGE_RETRY_BASE_MS * (2 ** attempt));
+    }
+  }
+  throw lastError;
+}
+
+function isRetryableStorageError(error) {
+  const status = Number(error && (error.status || error.statusCode));
+  const message = String((error && error.message) || '').toLowerCase();
+  if (status === 429 || status >= 500) return true;
+  return /rate.?limit|too many requests|temporar|timeout|internal|unavailable|network/.test(message);
+}
+
+function sleep(milliseconds) {
+  return new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
 
 export function publicArticles(articles) {
