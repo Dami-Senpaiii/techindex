@@ -1,4 +1,4 @@
-import { ARTICLES_PER_PAGE, getArticleStore, json, normalizeArticle, paginateArticles, readArticles, writeArticles } from '../../_lib/articles.js';
+import { ARTICLES_PER_PAGE, getArticleStore, json, normalizeArticle, paginateArticles, readArticles, reorderArticles, writeArticles } from '../../_lib/articles.js';
 
 export async function onRequestGet(context) {
   try {
@@ -50,6 +50,7 @@ export async function onRequestPost(context) {
 
 export async function onRequestPatch(context) {
   const body = await context.request.json().catch(() => null);
+  if (body && Array.isArray(body.order)) return saveArticleOrder(context, body.order);
   const key = String((body && (body.id || body.slug)) || '').trim();
   const status = String((body && body.status) || '').trim();
   if (!key) return json({ error: 'Missing article id.' }, { status: 400 });
@@ -75,6 +76,24 @@ export async function onRequestPatch(context) {
   }
   if (!persistent) return json({ error: 'Missing KV binding TECHINDEX_ARTICLES.', articles: nextArticles, persistent }, { status: 501 });
   return json({ persistent });
+}
+
+async function saveArticleOrder(context, order) {
+  let articles;
+  try {
+    articles = await readArticles(context.env);
+  } catch (error) {
+    return storageError(error, context, 'Artikel konnten vor dem Sortieren nicht aus KV gelesen werden.');
+  }
+  const nextArticles = reorderArticles(articles, order);
+  if (!nextArticles) return json({ error: 'Die Artikelliste enthält unbekannte Artikel.' }, { status: 400 });
+  try {
+    const persistent = await writeArticles(context.env, nextArticles);
+    if (!persistent) return json({ error: 'Missing KV binding TECHINDEX_ARTICLES.', articles: nextArticles, persistent }, { status: 501 });
+    return json({ persistent });
+  } catch (error) {
+    return storageError(error, context, 'Die Artikelreihenfolge konnte nicht in KV gespeichert werden.');
+  }
 }
 
 function storageError(error, context, fallback) {

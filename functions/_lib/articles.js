@@ -66,8 +66,21 @@ function sleep(milliseconds) {
 
 export function publicArticles(articles) {
   return articles
-    .filter((article) => article.status === 'live')
-    .sort((a, b) => String(b.date).localeCompare(String(a.date)));
+    .filter((article) => article.status === 'live');
+}
+
+export function reorderArticles(articles, orderedKeys) {
+  const keys = [...new Set((Array.isArray(orderedKeys) ? orderedKeys : []).map(clean).filter(Boolean))];
+  const articleByKey = new Map();
+  articles.forEach((article) => {
+    articleByKey.set(clean(article.id) || clean(article.slug), article);
+  });
+  if (keys.some((key) => !articleByKey.has(key))) return null;
+
+  const reordered = keys.map((key) => articleByKey.get(key));
+  let nextIndex = 0;
+  const selected = new Set(reordered);
+  return articles.map((article) => selected.has(article) ? reordered[nextIndex++] : article);
 }
 
 export const ARTICLES_PER_PAGE = 9;
