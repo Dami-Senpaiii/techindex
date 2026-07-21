@@ -88,9 +88,11 @@
     h2{margin:0;font-size:clamp(20px,2.4vw,28px)}
 
     /* Latest + filter */
-    .filters{display:flex;gap:10px;flex-wrap:wrap}
+    .filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
     .pill{border:1px solid var(--border);padding:6px 10px;border-radius:999px;background:#0b0b0b;color:#eee;cursor:pointer;font-size:.92rem}
     .pill.active, .pill:hover{border-color:var(--accent);color:#fff}
+    .tag-filter{padding:10px 36px 10px 12px;border:1px solid var(--border);border-radius:12px;background:#0b0b0b;color:#fff;font:inherit;cursor:pointer}
+    .tag-filter:focus{border-color:var(--accent);outline:2px solid var(--accent);outline-offset:2px}
     .search{flex:1;min-width:240px}
     .search input{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:#0b0b0b;color:#fff}
 
@@ -174,11 +176,10 @@
         <div class="search"><label class="visually-hidden" for="q">Suche</label><input id="q" type="search" placeholder="Suche nach Themen oder Titeln…"></div>
       </div>
       <div class="filters" id="tagbar" aria-label="Themenfilter">
-        <button class="pill active" type="button" data-tag="" aria-pressed="true">Alle</button>
-        <button class="pill" type="button" data-tag="Hardware" aria-pressed="false">Hardware</button>
-        <button class="pill" type="button" data-tag="Software" aria-pressed="false">Software</button>
-        <button class="pill" type="button" data-tag="Fotografie" aria-pressed="false">Fotografie</button>
-        <button class="pill" type="button" data-tag="Preisvergleich" aria-pressed="false">Preisvergleich</button>
+        <label for="tag-filter">Thema:</label>
+        <select class="tag-filter" id="tag-filter">
+          <option value="">Alle Themen</option>
+        </select>
       </div>
 
       <div class="grid grid-3" id="posts" style="margin-top:16px"></div>
@@ -280,6 +281,7 @@
     const countEl = document.getElementById('count');
     const prevBtn = document.getElementById('prev');
     const nextBtn = document.getElementById('next');
+    const tagFilterEl = document.getElementById('tag-filter');
     const navToggle = document.getElementById('nav-toggle');
     const menuEl = document.getElementById('menu');
     function setNav(open){
@@ -318,6 +320,14 @@
       nextBtn.disabled = page===totalPages;
     }
 
+    function updateTagOptions(tags){
+      const selectedTag = activeTag;
+      const allOption = new Option('Alle Themen', '');
+      const tagOptions = tags.map(function(tag){ return new Option(tag, tag); });
+      tagFilterEl.replaceChildren(allOption, ...tagOptions);
+      tagFilterEl.value = selectedTag;
+    }
+
     async function loadPosts(requestedPage=page){
       postsEl.innerHTML = '<p class="muted">Artikel werden geladen.</p>';
       countEl.textContent = '';
@@ -338,8 +348,9 @@
         POSTS = Array.isArray(data.articles) ? data.articles : [];
         page = data.pagination ? data.pagination.page : 1;
         totalPages = data.pagination ? data.pagination.totalPages : 1;
+        updateTagOptions(Array.isArray(data.tags) ? data.tags : []);
         render();
-      }catch(error){ POSTS = []; page=1; totalPages=1; render(); console.warn(error); }
+      }catch(error){ POSTS = []; page=1; totalPages=1; updateTagOptions([]); render(); console.warn(error); }
     }
 
     const handleMobileChange = function(event){
@@ -355,11 +366,7 @@
       setNav(false);
     });
     window.addEventListener('keydown', function(e){ if(e.key === 'Escape') setNav(false); });
-    document.getElementById('tagbar').addEventListener('click', function(e){
-      const t = e.target.closest('button.pill'); if(!t) return;
-      [].slice.call(document.querySelectorAll('#tagbar .pill')).forEach(function(x){ x.classList.remove('active'); x.setAttribute('aria-pressed', 'false'); });
-      t.classList.add('active'); t.setAttribute('aria-pressed', 'true'); activeTag = t.dataset.tag || ''; page=1; loadPosts();
-    });
+    tagFilterEl.addEventListener('change', function(e){ activeTag=e.target.value; page=1; loadPosts(); });
     document.getElementById('q').addEventListener('input', function(e){ q=normalizeFilterValue(e.target.value); page=1; loadPosts(); });
     prevBtn.addEventListener('click', function(){ loadPosts(Math.max(1,page-1)); });
     nextBtn.addEventListener('click', function(){ loadPosts(Math.min(totalPages,page+1)); });

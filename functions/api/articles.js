@@ -1,4 +1,5 @@
 import { ARTICLES_PER_PAGE, json, paginateArticles, publicArticles, readArticles } from '../_lib/articles.js';
+import { listArticleTags } from '../../assets/article-filter.js';
 
 export async function onRequestGet(context) {
   try {
@@ -12,7 +13,10 @@ export async function onRequestGet(context) {
       const haystack = [article.title, article.excerpt, article.description, ...tags].map(normalize).join(' ');
       return (!tag || tags.includes(tag)) && (!query || haystack.includes(query));
     });
-    return json(paginateArticles(filtered, url.searchParams.get('page'), ARTICLES_PER_PAGE), {
+    return json({
+      ...paginateArticles(filtered, url.searchParams.get('page'), ARTICLES_PER_PAGE),
+      tags: listArticleTags(articles),
+    }, {
       // Avoid one KV read for every homepage visit. Revalidation keeps newly
       // published articles visible promptly while stale data bridges outages.
       headers: { 'Cache-Control': 'public, max-age=60, stale-if-error=86400' }

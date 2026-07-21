@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
-import { filterArticles, normalizeFilterValue } from '../assets/article-filter.js';
+import { filterArticles, listArticleTags, normalizeFilterValue } from '../assets/article-filter.js';
 
 const articles = [
   { title: 'Grafikkarten im Test', excerpt: 'Aktuelle GPUs', category: 'Hardware' },
@@ -23,4 +23,20 @@ test('search covers article metadata and ignores accents and casing', () => {
 test('search and tag selection can be combined', () => {
   assert.deepEqual(filterArticles(articles, { tag: 'Hardware', query: 'GPU' }), [articles[0]]);
   assert.deepEqual(filterArticles(articles, { tag: 'Hardware', query: 'Cloud' }), []);
+});
+
+test('dropdown tags include every category and tag exactly once', () => {
+  const taggedArticles = [
+    ...articles,
+    { title: 'Duplicate', category: 'hardware', tag: 'Kaufberatung', tags: ['Ratgeber', 'News'] },
+  ];
+
+  assert.deepEqual(listArticleTags(taggedArticles), [
+    'fotografie',
+    'Hardware',
+    'Kaufberatung',
+    'News',
+    'Ratgeber',
+    'Software',
+  ]);
 });
