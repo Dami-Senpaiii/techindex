@@ -1,8 +1,9 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
-import { readArticles, writeArticles } from '../functions/_lib/articles.js';
+import { publicArticles, readArticles, reorderArticles, writeArticles } from '../functions/_lib/articles.js';
 import { onRequestGet } from '../functions/api/articles.js';
+import { onRequestPatch as onAdminPatch } from '../functions/Adm1n/api/articles.js';
 
 test('KV reads retry transient failures', async () => {
   let attempts = 0;
@@ -81,4 +82,44 @@ test('public API returns every available tag independently of pagination', async
 
   assert.deepEqual(data.tags, ['Hardware', 'Ratgeber', 'Software']);
   assert.equal(data.pagination.total, 2);
+});
+
+test('public articles keep the order selected in the admin', () => {
+  const articles = [
+    { id: 'older-first', status: 'live', date: '2026-01-01' },
+    { id: 'newer-second', status: 'live', date: '2026-07-01' },
+    { id: 'draft', status: 'draft', date: '2026-08-01' },
+  ];
+
+  assert.deepEqual(publicArticles(articles).map((article) => article.id), ['older-first', 'newer-second']);
+});
+
+test('reordering a page preserves articles outside that page', () => {
+  const articles = ['a', 'b', 'c', 'd'].map((id) => ({ id }));
+
+  assert.deepEqual(reorderArticles(articles, ['c', 'b']).map((article) => article.id), ['a', 'c', 'b', 'd']);
+  assert.equal(reorderArticles(articles, ['unknown']), null);
+});
+
+test('admin API persists a drag-and-drop article order', async () => {
+  let stored = [
+    { id: 'one', slug: 'one', status: 'live' },
+    { id: 'two', slug: 'two', status: 'live' },
+    { id: 'three', slug: 'three', status: 'draft' },
+  ];
+  const env = { TECHINDEX_ARTICLES: {
+    async get() { return stored; },
+    async put(_key, value) { stored = JSON.parse(value); }
+  } };
+  const response = await onAdminPatch({
+    env,
+    request: new Request('https://example.test/Adm1n/api/articles', {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ order: ['two', 'one'] })
+    })
+  });
+
+  assert.equal(response.status, 200);
+  assert.deepEqual(stored.map((article) => article.id), ['two', 'one', 'three']);
 });
