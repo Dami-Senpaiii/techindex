@@ -78,6 +78,8 @@
     .card:hover{border-color:var(--accent);transform:translateY(-3px)}
     .card .thumb{aspect-ratio:16/9;background:#0f0f0f;overflow:hidden}
     .card .body{padding:16px}
+    .card-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#cfcfcf}
+    .read-more{display:inline-block;margin-top:8px;color:var(--accent);font-weight:600}
     .tag{display:inline-block;padding:4px 8px;border:1px solid var(--border);border-radius:999px;color:#eee;font-size:12px;opacity:.85}
     .title{margin:6px 0 6px;font-weight:750;font-size:1.15rem}
     .muted{color:var(--muted)}
@@ -182,7 +184,7 @@
         </select>
       </div>
 
-      <div class="grid grid-3" id="posts" style="margin-top:16px"></div>
+      <div class="grid grid-3" id="posts" style="margin-top:16px"><!-- SERVER_RENDERED_POSTS --></div>
       <div class="section-head" style="margin-top:10px">
         <small class="muted" id="count">Seite 1</small>
         <div>
@@ -271,12 +273,18 @@
     </div>
   </footer>
 
+  <script id="initial-articles" type="application/json"><!-- SERVER_RENDERED_ARTICLE_DATA --></script>
   <script type="module">
     import { normalizeFilterValue } from './assets/article-filter.js';
 
-    let POSTS = [];
+    const initialDataEl = document.getElementById('initial-articles');
+    let initialData = null;
+    try{ initialData = JSON.parse(initialDataEl.textContent); }catch(error){ initialData = null; }
+    let POSTS = initialData && Array.isArray(initialData.articles) ? initialData.articles : [];
     const mobileQuery = window.matchMedia('(max-width: 640px)');
-    let page=1; let totalPages=1; let activeTag=''; let q='';
+    let page=initialData && initialData.pagination ? initialData.pagination.page : 1;
+    let totalPages=initialData && initialData.pagination ? initialData.pagination.totalPages : 1;
+    let activeTag=''; let q='';
     const postsEl = document.getElementById('posts');
     const countEl = document.getElementById('count');
     const prevBtn = document.getElementById('prev');
@@ -303,6 +311,12 @@
       return article.image;
     }
 
+    function escapeHtml(value){
+      return String(value || '').replace(/[&<>"']/g, function(character){
+        return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[character];
+      });
+    }
+
     function render(){
       if(!POSTS.length){
         postsEl.innerHTML = '<p class="muted">Keine Beiträge für diese Auswahl gefunden.</p>';
@@ -313,7 +327,7 @@
       }
       postsEl.innerHTML = POSTS.map(function(p){
         const date = new Date((p.date || new Date().toISOString().slice(0,10)) + 'T12:00:00');
-        return '<a class="card" href="/articles/' + p.slug + '"><div class="thumb"><img src="' + articleImage(p) + '" alt="' + (p.imageAlt || 'Vorschaubild') + '" loading="lazy"></div><div class="body"><div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#cfcfcf"><span>' + (p.category || p.tag) + '</span><time datetime="' + date.toISOString() + '">' + date.toLocaleDateString('de-CH',{day:'2-digit',month:'short',year:'numeric'}) + '</time></div><h3 class="title">' + p.title + '</h3><p class="muted">' + (p.excerpt || '') + '</p><span style="display:inline-block;margin-top:8px;color:var(--accent);font-weight:600">Weiterlesen -></span></div></a>';
+        return '<article class="card"><a href="/articles/' + encodeURIComponent(p.slug) + '"><div class="thumb"><img src="' + escapeHtml(articleImage(p)) + '" alt="' + escapeHtml(p.imageAlt || 'Vorschaubild') + '" loading="lazy"></div><div class="body"><div class="card-meta"><span>' + escapeHtml(p.category || p.tag) + '</span><time datetime="' + date.toISOString() + '">' + date.toLocaleDateString('de-CH',{day:'2-digit',month:'short',year:'numeric'}) + '</time></div><h3 class="title">' + escapeHtml(p.title) + '</h3><p class="muted">' + escapeHtml(p.excerpt || p.description || '') + '</p><span class="read-more">Weiterlesen →</span></div></a></article>';
       }).join('');
       countEl.textContent = 'Seite ' + page + ' von ' + totalPages;
       prevBtn.disabled = page===1;
@@ -329,8 +343,7 @@
     }
 
     async function loadPosts(requestedPage=page){
-      postsEl.innerHTML = '<p class="muted">Artikel werden geladen.</p>';
-      countEl.textContent = '';
+      if(!POSTS.length) postsEl.innerHTML = '<p class="muted">Artikel werden geladen.</p>';
       prevBtn.disabled = true;
       nextBtn.disabled = true;
       try{
@@ -350,7 +363,10 @@
         totalPages = data.pagination ? data.pagination.totalPages : 1;
         updateTagOptions(Array.isArray(data.tags) ? data.tags : []);
         render();
-      }catch(error){ POSTS = []; page=1; totalPages=1; updateTagOptions([]); render(); console.warn(error); }
+      }catch(error){
+        if(!POSTS.length){ page=1; totalPages=1; updateTagOptions([]); render(); }
+        console.warn(error);
+      }
     }
 
     const handleMobileChange = function(event){
