@@ -10,7 +10,7 @@ Das bestehende Pages-Projekt `techindex` ist mit `Dami-Senpaiii/techindex` verbu
 | Build-Befehl | `npm run build` |
 | Ausgabeordner | `dist` |
 | Root-Verzeichnis | Repository-Wurzel |
-| Domain | `www.techindex.ch` |
+| Domains | `techindex.ch`, `www.techindex.ch` |
 | Pages-Domain | `techindex.pages.dev` |
 
 ## Änderungen veröffentlichen
@@ -22,7 +22,9 @@ Das bestehende Pages-Projekt `techindex` ist mit `Dami-Senpaiii/techindex` verbu
 
 Der Build hat keine Paketabhängigkeiten und kopiert eine explizite Liste öffentlicher Dateien. Recherchedateien, Dokumentation, Tests und Skripte werden nicht ausgeliefert. Der Vorschaustand bleibt `noindex, nofollow` und ermöglicht keine Bestellungen oder Zahlungen.
 
-Die früheren Blog- und Admin-Funktionen sind aus dem Repository entfernt. Bestehende Cloudflare-KV-Daten und Secrets wurden beim Neuaufbau nicht gelöscht; die statische Vorschau verwendet sie nicht.
+Die früheren Blog- und Admin-Funktionen sind aus dem Repository entfernt. Bestehende Cloudflare-KV-Daten, Secrets und die Access-Regel für den früheren Admin-Pfad wurden beim Neuaufbau nicht gelöscht; die statische Vorschau verwendet sie nicht.
+
+Beide Domains sind dem Pages-Projekt zugeordnet. Der frühere A-Eintrag der Hauptdomain zeigte auf einen nicht erreichbaren Ursprung (HTTP 521) und wurde durch `CNAME @ → techindex.pages.dev` ersetzt.
 
 ## Wiederherstellung
 
