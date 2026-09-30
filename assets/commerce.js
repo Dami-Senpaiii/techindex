@@ -12,6 +12,6 @@ export function shippingChoices(shipping) {
   };
 }
 export function variantItem(product, variant) {
-  return { sku: variant.sku, name: product.name, variant: variant.name.replace(product.name + ' · ', ''), image: product.image, status: product.status, priceMinor: variant.priceMinor, shipping: variant.shipping };
+  return { sku: variant.sku, name: product.name, variant: variant.name.replace(product.name + ' · ', ''), image: variant.image || product.image, status: product.status, priceMinor: variant.priceMinor, shipping: variant.shipping };
 }
 export const subtotal = items => items.reduce((sum, item) => sum + item.priceMinor * item.quantity, 0);

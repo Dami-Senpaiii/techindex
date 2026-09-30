@@ -33,10 +33,10 @@ test('every purchasable variant has an exact CHF 20 markup and complete Swiss sh
 test('the four accessory categories each contain 12 distinct models', () => {
   for (const category of ['controller', 'kabel', 'beamer', 'peripherie']) assert.equal(products.filter(p => p.category === category).length, 12);
 });
-test('50 unique handheld variants are grouped into 19 models', () => {
+test('59 unique handheld variants are grouped into 20 models', () => {
   const handhelds = products.filter(p => p.category === 'handhelds');
-  assert.equal(handhelds.length, 19);
-  assert.equal(handhelds.flatMap(p => p.variants).length, 50);
+  assert.equal(handhelds.length, 20);
+  assert.equal(handhelds.flatMap(p => p.variants).length, 59);
   assert.equal(new Set(products.flatMap(p => p.variants.map(v => v.sku))).size, products.flatMap(p => p.variants).length);
 });
 test('search combines model and variant terms without case or accent sensitivity', () => {
@@ -50,9 +50,15 @@ test('pagination clamps invalid pages and never duplicates models', () => {
   assert.equal(selectProducts(products, 'handhelds', '', -10).page, 1);
   assert.equal(selectProducts(products, 'handhelds', '', 999).page, 4);
   const pages = [1, 2, 3, 4].flatMap(page => selectProducts(products, 'handhelds', '', page).products);
-  assert.equal(pages.length, 19);
-  assert.equal(new Set(pages.map(p => p.id)).size, 19);
+  assert.equal(pages.length, 20);
+  assert.equal(new Set(pages.map(p => p.id)).size, 20);
 });
 test('every referenced local product image exists', async () => {
-  for (const product of products) if (product.image) await access(new URL('..' + product.image, import.meta.url));
+  for (const product of products) {
+    await access(new URL('..' + product.image, import.meta.url));
+    for (const variant of product.variants) {
+      assert.ok(variant.image.toLowerCase().includes(variant.sku.toLowerCase()), `Wrong colour image for ${variant.sku}`);
+      await access(new URL('..' + variant.image, import.meta.url));
+    }
+  }
 });

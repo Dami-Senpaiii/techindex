@@ -6331,5 +6331,509 @@
         "dayType": "calendar"
       }
     ]
+  },
+  {
+    "sku": "6819000454A",
+    "source": "https://www.tvcmall.com/details/ayn-thor-8gb-128gb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-black-sku6819000454a.html?c=CHF",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 33805,
+    "markupMinor": 2000,
+    "priceMinor": 35805,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1012,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1275,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1591,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000455A",
+    "source": "https://www.tvcmall.com/details/12gb-256gb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-black-sku6819000455a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 43496,
+    "markupMinor": 2000,
+    "priceMinor": 45496,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1055,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1312,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1657,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000455B",
+    "source": "https://www.tvcmall.com/details/12gb-256gb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-white-sku6819000455b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 43496,
+    "markupMinor": 2000,
+    "priceMinor": 45496,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1055,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1312,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3640,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 8581,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000455C",
+    "source": "https://www.tvcmall.com/details/12gb-256gb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-gray-sku6819000455c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 43496,
+    "markupMinor": 2000,
+    "priceMinor": 45496,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1055,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1312,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1657,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000455D",
+    "source": "https://www.tvcmall.com/details/12gb-256gb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-purple-sku6819000455d.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 43496,
+    "markupMinor": 2000,
+    "priceMinor": 45496,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1055,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1312,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1657,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000453A",
+    "source": "https://www.tvcmall.com/details/16gb-1tb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-black-sku6819000453a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 59523,
+    "markupMinor": 2000,
+    "priceMinor": 61523,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1060,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1317,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1665,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000453B",
+    "source": "https://www.tvcmall.com/details/16gb-1tb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-white-sku6819000453b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 59523,
+    "markupMinor": 2000,
+    "priceMinor": 61523,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1060,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1317,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1665,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000453C",
+    "source": "https://www.tvcmall.com/details/16gb-1tb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-gray-sku6819000453c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 59523,
+    "markupMinor": 2000,
+    "priceMinor": 61523,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1060,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1317,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1665,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000453D",
+    "source": "https://www.tvcmall.com/details/16gb-1tb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-purple-sku6819000453d.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 59523,
+    "markupMinor": 2000,
+    "priceMinor": 61523,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1060,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1317,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1665,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
   }
 ]

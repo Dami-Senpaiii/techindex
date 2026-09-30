@@ -21,10 +21,11 @@ try {
     assert.equal((await request('/api/auth/get-session',{client})).data.user.id, users[client]);
   }
   assert.equal((await request('/api/shop?resource=cart',{method:'PUT',origin:'https://untrusted.example',body:{items:[]}})).response.status,403);
-  const catalogue = await (await fetch(base+'/data/catalogue.json')).json(); const sku=catalogue.products[0].variants[0].sku;
+  const catalogue = await (await fetch(base+'/data/catalogue.json')).json(); const selected=catalogue.products.find(p=>p.featured).variants.find(v=>v.sku==='6819000453D'); const sku=selected.sku;
   const cart=await request('/api/shop?resource=cart',{method:'PUT',body:{items:[{sku,quantity:3,priceMinor:1}],userId:users[1]}}); assert.equal(cart.response.status,200,JSON.stringify(cart.data));
-  assert.equal(cart.data.items[0].priceMinor,catalogue.products[0].variants[0].priceMinor);
-  assert.deepEqual(cart.data.items[0].shipping,catalogue.products[0].variants[0].shipping);
+  assert.equal(cart.data.items[0].priceMinor,selected.priceMinor);
+  assert.deepEqual(cart.data.items[0].shipping,selected.shipping);
+  assert.equal(cart.data.items[0].image,selected.image);
   assert.equal((await request('/api/shop?resource=cart',{client:1})).data.items.length,0);
   assert.equal((await request('/api/shop?resource=cart')).data.items[0].quantity,3);
   assert.equal((await request('/api/shop?resource=cart',{method:'PUT',body:{items:[{sku:'fake',quantity:2}]}})).response.status,400);

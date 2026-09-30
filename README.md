@@ -27,7 +27,7 @@ Der Build erzeugt `dist/` und kopiert nur die öffentlichen Dateien der neuen Pl
 
 ## Inhalt und Verkaufsstatus
 
-`data/catalogue.json`: 19 Handheld-Modellfamilien mit 50 Varianten sowie jeweils 12 Controller, Kabel, Beamer und Peripherie-Modelle. Verfügbarkeit, CHF-Verkaufspreise, aufklappbare Produktdetails und Schweizer Versandoptionen stehen pro Ausführung bereit. Jeder Verkaufspreis entspricht dem sichtbaren TVCMALL-Einkaufspreis plus CHF 20. Die Preisgrundlage steht in `research/supplier-pricing.json` und wird nicht als statische Datei veröffentlicht. Warenkorb und echte Kundenkonten sind verfügbar; Bestellabschluss und Zahlungsabwicklung sind noch nicht eingerichtet.
+`data/catalogue.json`: 20 Handheld-Modellfamilien mit 59 Varianten sowie jeweils 12 Controller, Kabel, Beamer und Peripherie-Modelle. Verfügbarkeit, CHF-Verkaufspreise, aufklappbare Produktdetails und Schweizer Versandoptionen stehen pro Ausführung bereit. Jeder Verkaufspreis entspricht dem sichtbaren TVCMALL-Einkaufspreis plus CHF 20. Die Preisgrundlage steht in `research/supplier-pricing.json` und wird nicht als statische Datei veröffentlicht. Warenkorb und echte Kundenkonten sind verfügbar; Bestellabschluss und Zahlungsabwicklung sind noch nicht eingerichtet.
 
 Versandtarife sind datierte Lieferantenschätzungen für die angegebene Stückzahl. Günstigste Option: niedrigste Gebühr. Schnellste Option: kleinste obere Dauer, danach kleinere untere Dauer, danach günstigster Tarif. Werktage werden für den Vergleich mit 7/5 normalisiert; angezeigt wird immer die ursprüngliche Zeiteinheit. Bearbeitungszeiten stehen separat. Es wird kein unbestätigter Sammelversandbetrag berechnet. Im Warenkorb werden mögliche Einfuhrabgaben und Zollabfertigungsgebühren mit BAZG-Quelle erläutert.
 
@@ -40,3 +40,5 @@ python3 scripts/import-catalogue.py /pfad/supplier-observations.json /pfad/detai
 ```
 
 Hosting, Veröffentlichung und Wiederherstellung: [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
+
+Der AYN Thor ist als Hero mit drei Speicheroptionen (8/128 GB, 12/256 GB, 16 GB/1 TB) und neun Farb-/Speichervarianten integriert. Der Hero nutzt dieselben SKU-Daten wie Produktdialog und Warenkorb. Jede Katalogvariante hat ein eigenes lokales Bild; die Auswahl aktualisiert Bild, Preis, Versand und variantenspezifische Speicherdetails gemeinsam.
