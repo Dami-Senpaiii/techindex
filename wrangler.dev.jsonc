@@ -1,0 +1,16 @@
+{
+  "name": "techindex",
+  "pages_build_output_dir": "dist",
+  "compatibility_date": "2026-09-30",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "d1_databases": [
+    {
+      "binding": "SHOP_DB",
+      "database_name": "techindex-shop",
+      "database_id": "cdd20e5f-c44b-49a4-a67a-717e81dc3839",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

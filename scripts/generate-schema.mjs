@@ -1,0 +1,10 @@
+import { DatabaseSync } from 'node:sqlite';
+import { getMigrations } from 'better-auth/db/migration';
+import { authOptions } from '../server/auth.js';
+import { writeFile } from 'node:fs/promises';
+import { randomBytes } from 'node:crypto';
+const db = new DatabaseSync(':memory:');
+const options = authOptions({ SHOP_DB: db, BETTER_AUTH_SECRET: randomBytes(32).toString('hex') }, 'http://127.0.0.1:4173');
+const migration = await getMigrations(options);
+await writeFile(new URL('../migrations/0001_auth.sql', import.meta.url), await migration.compileMigrations() + '\n');
+db.close();

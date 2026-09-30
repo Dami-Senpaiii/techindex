@@ -1,3 +1,4 @@
+import { changeCart } from './cart-store.js';
 import { CATEGORY_LABELS, productSubtitle, selectProducts } from './catalogue.js';
 const $ = (selector) => document.querySelector(selector);
 const grid = $('#products');
@@ -50,7 +51,7 @@ function openProduct(product, opener) {
   activeProduct = product; lastOpener = opener; $('#detail-title').textContent = product.name; $('#detail-description').textContent = productSubtitle(product);
   const image = $('#detail-image'); image.hidden = !product.image; image.alt = `Produktabbildung ${product.name}`; if (product.image) image.src = product.image; else image.removeAttribute('src');
   $('#detail-variant').replaceChildren(...product.variants.map((variant, index) => { const option = element('option', '', variant.name.replace(product.name + ' · ', '')); option.value = String(index); return option; }));
-  updateVariant(); dialog.showModal(); $('.close-dialog').focus();
+  $('#cart-feedback').hidden = true; $('#view-cart').hidden = true; updateVariant(); dialog.showModal(); $('.close-dialog').focus();
 }
 async function load() {
   if (loading) return; loading = true; grid.setAttribute('aria-busy', 'true'); $('#load-error').hidden = true; $('#empty-state').hidden = true; $('#results-count').textContent = 'Sortiment wird geladen …';
@@ -73,7 +74,12 @@ for (const [selector, direction] of [['#previous-page', -1], ['#next-page', 1]])
 $('#detail-variant').addEventListener('change', updateVariant); $('.close-dialog').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', (event) => { const rect = dialog.getBoundingClientRect(); if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) dialog.close(); });
 dialog.addEventListener('close', () => lastOpener?.focus());
-const menuToggle = $('.menu-toggle'); function closeMenu() { menuToggle.setAttribute('aria-expanded', 'false'); $('#navigation').classList.remove('is-open'); }
-menuToggle.addEventListener('click', () => { const opened = menuToggle.getAttribute('aria-expanded') !== 'true'; menuToggle.setAttribute('aria-expanded', String(opened)); $('#navigation').classList.toggle('is-open', opened); });
-$('#navigation').addEventListener('click', (event) => { if (event.target.closest('a')) closeMenu(); }); document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
 $('.hero .button').addEventListener('click', () => { category = 'handhelds'; query = ''; page = 1; search.value = ''; render(); }); load();
+
+$('#add-to-cart').addEventListener('click', async () => {
+  const button = $('#add-to-cart'); button.disabled = true;
+  const message = $('#cart-feedback'); message.hidden = false; message.classList.remove('is-error'); message.textContent = 'Wird gespeichert …';
+  try { await changeCart(activeProduct.variants[Number($('#detail-variant').value)].sku, 1, true); message.textContent = 'Deine Auswahl ist im Warenkorb.'; $('#view-cart').hidden = false; }
+  catch (error) { message.textContent = error.message; message.classList.add('is-error'); }
+  finally { button.disabled = false; }
+});

@@ -20,9 +20,9 @@ Das bestehende Pages-Projekt `techindex` ist mit `Dami-Senpaiii/techindex` verbu
 3. Unter Workers & Pages → techindex → Deployments den erfolgreichen Produktionsbuild prüfen.
 4. Startseite, Katalog, Suche und Produktdialog auf der Domain kontrollieren.
 
-Der Build hat keine Paketabhängigkeiten und kopiert eine explizite Liste öffentlicher Dateien. Recherchedateien, Dokumentation, Tests und Skripte werden nicht ausgeliefert. Der Vorschaustand bleibt `noindex, nofollow` und ermöglicht keine Bestellungen oder Zahlungen.
+Der Build kopiert eine explizite Liste öffentlicher Dateien. Cloudflare kompiliert zusätzlich die Pages Functions unter `functions/`; nur `/api/*` wird an sie weitergeleitet. Recherchedateien, Dokumentation, Tests und Skripte werden nicht ausgeliefert. Der Vorschaustand bleibt `noindex, nofollow` und ermöglicht keine Bestellungen oder Zahlungen.
 
-Die früheren Blog- und Admin-Funktionen sind aus dem Repository entfernt. Bestehende Cloudflare-KV-Daten, Secrets und die Access-Regel für den früheren Admin-Pfad wurden beim Neuaufbau nicht gelöscht; die statische Vorschau verwendet sie nicht.
+Die früheren Blog- und Admin-Funktionen sind aus dem Repository entfernt. Bestehende Cloudflare-KV-Daten, Secrets und die Access-Regel für den früheren Admin-Pfad wurden beim Neuaufbau nicht gelöscht; der neue Shop verwendet sie nicht. Die neue D1-Bindung und Auth-Konfiguration sind in [ACCOUNTS.md](ACCOUNTS.md) dokumentiert.
 
 Beide Domains sind dem Pages-Projekt zugeordnet. Der frühere A-Eintrag der Hauptdomain zeigte auf einen nicht erreichbaren Ursprung (HTTP 521) und wurde durch `CNAME @ → techindex.pages.dev` ersetzt.
 

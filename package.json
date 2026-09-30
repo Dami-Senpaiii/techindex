@@ -1,11 +1,20 @@
 {
-   "name": "techindex-static",
+  "name": "techindex-static",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Die Schweizer Open-Source Gaming Plattform – Shop-Vorschau.",
+  "description": "Die Schweizer Open-Source Gaming Plattform \u2013 Shop-Vorschau.",
   "scripts": {
-      "build": "node scripts/build.mjs",
-      "dev": "node scripts/preview.mjs",
-      "test": "node --test" }
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && node scripts/dev.mjs",
+    "test": "node --test test/*.test.js",
+    "db:local": "wrangler d1 migrations apply techindex-shop --local --config wrangler.dev.jsonc",
+    "test:integration": "node scripts/test-accounts.mjs"
+  },
+  "dependencies": {
+    "better-auth": "^1.7.6"
+  },
+  "devDependencies": {
+    "wrangler": "^4.144.0"
+  }
 }

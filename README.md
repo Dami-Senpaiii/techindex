@@ -6,9 +6,11 @@ Shop-Vorschau auf [www.techindex.ch](https://www.techindex.ch): Handhelds, Contr
 
 ## Lokal öffnen
 
-Node.js ist erforderlich; es gibt keine Paketabhängigkeiten.
+Node.js und npm sind erforderlich. Kundenkonten nutzen Better Auth und Cloudflare D1. Einrichtung: [docs/ACCOUNTS.md](docs/ACCOUNTS.md).
 
 ```sh
+npm ci
+npm run db:local
 npm run dev
 ```
 
@@ -25,7 +27,7 @@ Der Build erzeugt `dist/` und kopiert nur die öffentlichen Dateien der neuen Pl
 
 ## Inhalt und Verkaufsstatus
 
-`data/catalogue.json`: 19 Handheld-Modellfamilien mit 50 Varianten plus 12 ausgewählte Zubehörmodelle. Alle Produkte bleiben nicht bestellbare Recherchekandidaten. Keine Verkaufspreise, Bestellungen oder Zahlungen sind angebunden. Produktbilder und Lieferantenquellen sind pro Modell dokumentiert; Produktfreigaben und Bildrechte sind vor dem Verkaufsstart zu klären.
+`data/catalogue.json`: 19 Handheld-Modellfamilien mit 50 Varianten plus 12 ausgewählte Zubehörmodelle. Alle Produkte bleiben nicht bestellbare Recherchekandidaten. Warenkorb und echte Kundenkonten sind verfügbar. Es gibt noch keine Verkaufspreise, Bestellabschlüsse oder Zahlungen. Produktbilder und Lieferantenquellen sind pro Modell dokumentiert; Produktfreigaben und Bildrechte sind vor dem Verkaufsstart zu klären.
 
 Die Modellsuche berücksichtigt Ausführungen und Farben. Kategorie, Suche und Seite bleiben beim Neuladen über URL-Parameter erhalten.
 

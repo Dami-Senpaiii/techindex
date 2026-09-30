@@ -14,6 +14,8 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/shop.css">
   <link rel="preload" as="image" href="/assets/shop/handheld-hero.png">
+  <link rel="stylesheet" href="/assets/account.css">
+  <script src="/assets/navigation.js" type="module"></script>
   <script src="/assets/shop.js" type="module"></script>
 </head>
 <body>
@@ -22,7 +24,7 @@
     <div class="container header-inner">
       <a class="brand" href="/" aria-label="TechIndex Startseite"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="5"/><path d="m11 25 9-13 9 13"/></svg><span>TechIndex</span></a>
       <button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false">Menü <span aria-hidden="true">+</span></button>
-      <nav id="navigation" aria-label="Hauptnavigation"><a href="#shop" class="nav-shop" aria-current="page">Shop</a><a href="#community">Community <span class="nav-note">Später</span></a></nav>
+      <nav id="navigation" aria-label="Hauptnavigation"><a href="#shop" class="nav-shop" aria-current="page">Shop</a><a href="#community">Community <span class="nav-note">Später</span></a><a href="/konto" class="nav-account"><span data-account-label>Login / Registrieren</span></a><a href="/warenkorb" class="nav-cart">Warenkorb <span class="cart-count" data-cart-count>0</span></a></nav>
     </div>
   </header>
   <main>
@@ -54,6 +56,6 @@
     <section class="community" id="community" aria-labelledby="community-title"><div class="container community-inner"><div><p class="section-label">Community · Schritt 2</p><h2 id="community-title">Gute Games. Geteiltes Wissen.</h2><p>Games, Kompatibilität und Linux. Ein gemeinsamer Ort für Fragen, Erfahrungen und Entdeckungen.</p></div><div class="community-topics"><ul><li>Games &amp; Entdeckungen</li><li>Hardware &amp; Kompatibilität</li><li>Linux &amp; Open Source</li></ul><p>Das Forum folgt nach dem Shop.</p></div></div></section>
   </main>
   <footer id="ueber"><div class="container footer-inner"><div><a class="brand" href="/" aria-label="TechIndex Startseite"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="5"/><path d="m11 25 9-13 9 13"/></svg><span>TechIndex</span></a><p>Die Schweizer Open-Source Gaming Plattform.</p></div><nav aria-label="Fussnavigation"><a href="#shop">Shop</a><a href="#community">Community</a></nav></div></footer>
-  <dialog id="product-dialog" aria-labelledby="detail-title"><button class="close-dialog" type="button" aria-label="Geräteansicht schliessen">×</button><div class="detail-grid"><div class="detail-image-stage"><img id="detail-image" alt="" width="600" height="600"></div><div class="detail-content"><p class="product-status">Sortiment in Vorbereitung</p><h2 id="detail-title"></h2><p id="detail-description"></p><label for="detail-variant">Recherchierte Ausführung</label><select id="detail-variant"></select><p class="detail-note">Produktabbildung der Modellfamilie. Farbe und Lieferumfang können je nach Ausführung abweichen.</p><dl class="product-facts"><div><dt>Verfügbarkeit</dt><dd>Noch nicht bestellbar</dd></div><div><dt>Verkaufspreis</dt><dd>Folgt zum Shopstart</dd></div><div><dt>Kompatibilität</dt><dd>Wird geprüft</dd></div></dl><p class="detail-note">Diese Vorschau ist noch kein Verkaufsangebot. Die endgültige Ausführung und die enthaltene Software stehen noch nicht fest.</p><a id="supplier-link" class="text-button" target="_blank" rel="noopener noreferrer">Lieferantenangaben ansehen <span aria-hidden="true">↗</span></a></div></div></dialog>
+  <dialog id="product-dialog" aria-labelledby="detail-title"><button class="close-dialog" type="button" aria-label="Geräteansicht schliessen">×</button><div class="detail-grid"><div class="detail-image-stage"><img id="detail-image" alt="" width="600" height="600"></div><div class="detail-content"><p class="product-status">Sortiment in Vorbereitung</p><h2 id="detail-title"></h2><p id="detail-description"></p><label for="detail-variant">Recherchierte Ausführung</label><select id="detail-variant"></select><p class="detail-note">Produktabbildung der Modellfamilie. Farbe und Lieferumfang können je nach Ausführung abweichen.</p><dl class="product-facts"><div><dt>Verfügbarkeit</dt><dd>Noch nicht bestellbar</dd></div><div><dt>Verkaufspreis</dt><dd>Folgt zum Shopstart</dd></div><div><dt>Kompatibilität</dt><dd>Wird geprüft</dd></div></dl><p class="detail-note">Diese Vorschau ist noch kein Verkaufsangebot. Die endgültige Ausführung und die enthaltene Software stehen noch nicht fest.</p><button class="button add-to-cart" id="add-to-cart" type="button">In den Warenkorb <span aria-hidden="true">+</span></button><p id="cart-feedback" role="status" class="form-message" hidden></p><a href="/warenkorb" id="view-cart" class="text-button" hidden>Zum Warenkorb →</a><a id="supplier-link" class="text-button" target="_blank" rel="noopener noreferrer">Lieferantenangaben ansehen <span aria-hidden="true">↗</span></a></div></div></dialog>
 </body>
 </html>

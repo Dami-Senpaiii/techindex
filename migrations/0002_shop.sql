@@ -1,0 +1,4 @@
+CREATE TABLE customer_profile (user_id TEXT PRIMARY KEY REFERENCES user(id) ON DELETE CASCADE, data TEXT NOT NULL CHECK(json_valid(data)));
+CREATE TABLE cart_item (user_id TEXT NOT NULL REFERENCES user(id) ON DELETE CASCADE, sku TEXT NOT NULL, quantity INTEGER NOT NULL CHECK(quantity BETWEEN 1 AND 99), PRIMARY KEY(user_id, sku));
+CREATE TABLE shop_order (id TEXT PRIMARY KEY, user_id TEXT NOT NULL REFERENCES user(id), order_number TEXT NOT NULL UNIQUE, status TEXT NOT NULL CHECK(status IN ('pending','paid','processing','shipped','completed','cancelled','refunded')), total_minor INTEGER NOT NULL CHECK(total_minor >= 0), currency TEXT NOT NULL DEFAULT 'CHF', created_at TEXT NOT NULL, items TEXT NOT NULL CHECK(json_valid(items)));
+CREATE INDEX shop_order_user_date ON shop_order(user_id, created_at DESC);

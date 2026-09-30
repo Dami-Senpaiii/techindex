@@ -4,3 +4,8 @@ dist/
 .DS_Store
 __pycache__/
 docs/REBUILD.md
+
+.wrangler/
+.dev.vars*
+.env*
+wrangler.jsonc
