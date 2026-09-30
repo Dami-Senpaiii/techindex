@@ -79,12 +79,13 @@ function updateVariant() {
 function updateVariantOptions(hardware, color) {
   activeVariant = selectVariant(activeProduct, hardware, color);
   const hardwareOptions = [...new Map(activeProduct.variants.map(variant => [variant.hardware || 'Standard', variant])).entries()];
+  $('#detail-hardware-field').hidden = hardwareOptions.length <= 1;
   $('#detail-hardware').replaceChildren(...hardwareOptions.map(([value, variant]) => {
     const option = element('option', '', variant.ramGB ? `${variant.ramGB} GB RAM / ${variant.storage}` : value);
     option.value = value; option.selected = value === hardware; return option;
   }));
   const colors = activeProduct.variants.filter(variant => (variant.hardware || 'Standard') === hardware && variant.color);
-  $('#detail-color-field').hidden = colors.length === 0;
+  $('#detail-color-field').hidden = colors.length <= 1;
   $('#detail-color').replaceChildren(...colors.map(variant => {
     const option = element('option', '', variant.color); option.value = variant.color;
     option.selected = variant.sku === activeVariant.sku; return option;

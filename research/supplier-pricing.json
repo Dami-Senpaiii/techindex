@@ -6835,5 +6835,6515 @@
         "dayType": "calendar"
       }
     ]
+  },
+  {
+    "sku": "6819000288B",
+    "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-with-128g-tf-card-english-version-grey-sku6819000288b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 6775,
+    "markupMinor": 2000,
+    "priceMinor": 8775,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 681,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 922,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 987,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000288C",
+    "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-with-128g-tf-card-english-version-transparent-blue-sku6819000288c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 6775,
+    "markupMinor": 2000,
+    "priceMinor": 8775,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 681,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 922,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 987,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000288A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-with-128g-tf-card-english-version-transparent-black-sku6819000288a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 6775,
+    "markupMinor": 2000,
+    "priceMinor": 8775,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 681,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 922,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 987,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000288D",
+    "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-with-128g-tf-card-english-version-silver-sku6819000288d.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 6775,
+    "markupMinor": 2000,
+    "priceMinor": 8775,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 681,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 922,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 987,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000723B",
+    "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-with-128g-tf-card-black-sku6811000723b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 7266,
+    "markupMinor": 2000,
+    "priceMinor": 9266,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 735,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 964,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1058,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000723A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-with-128g-tf-card-blue-sku6811000723a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 7266,
+    "markupMinor": 2000,
+    "priceMinor": 9266,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 735,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 964,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1058,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000723C",
+    "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-with-128g-tf-card-grey-sku6811000723c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 7266,
+    "markupMinor": 2000,
+    "priceMinor": 9266,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 735,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 964,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1058,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000721B",
+    "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-with-256g-tf-card-grey-sku6811000721b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 9054,
+    "markupMinor": 2000,
+    "priceMinor": 11054,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 735,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 964,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1058,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000721A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-with-256g-tf-card-black-sku6811000721a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 9054,
+    "markupMinor": 2000,
+    "priceMinor": 11054,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 735,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 964,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1058,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000721C",
+    "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-with-256g-tf-card-blue-sku6811000721c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 9054,
+    "markupMinor": 2000,
+    "priceMinor": 11054,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 735,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 964,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1058,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000286A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg353v-3-5-inch-screen-16-256g-android-handheld-game-console-35000-games-english-version-transparent-black-sku6819000286a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 13007,
+    "markupMinor": 2000,
+    "priceMinor": 15007,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 708,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 943,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1023,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000285A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg353v-handheld-game-console-with-16g-128g-tf-card-built-in-25000-english-games-transparent-black-sku6819000285a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 10587,
+    "markupMinor": 2000,
+    "priceMinor": 12587,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 708,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 943,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1023,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000284A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg353v-3-5-inch-screen-16-64g-android-handheld-game-console-15000-games-english-version-transparent-black-sku6819000284a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 9525,
+    "markupMinor": 2000,
+    "priceMinor": 11525,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 708,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 943,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1023,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000720C",
+    "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-retro-video-game-console-with-256g-tf-card-white-sku6811000720c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 9217,
+    "markupMinor": 2000,
+    "priceMinor": 11217,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 721,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 954,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1040,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000720A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-retro-video-game-console-with-256g-tf-card-blue-sku6811000720a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 9217,
+    "markupMinor": 2000,
+    "priceMinor": 11217,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 721,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 954,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1040,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000720B",
+    "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-retro-video-game-console-with-256g-tf-card-transparent-black-sku6811000720b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 9217,
+    "markupMinor": 2000,
+    "priceMinor": 11217,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 721,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 954,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1040,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000719A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-retro-video-game-console-with-128g-tf-card-transparent-black-sku6811000719a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 7427,
+    "markupMinor": 2000,
+    "priceMinor": 9427,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 721,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 954,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1040,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000719B",
+    "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-retro-video-game-console-with-128g-tf-card-white-sku6811000719b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 7427,
+    "markupMinor": 2000,
+    "priceMinor": 9427,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 721,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 954,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1040,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000719C",
+    "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-retro-video-game-console-with-128g-tf-card-blue-sku6811000719c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 7427,
+    "markupMinor": 2000,
+    "priceMinor": 9427,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 721,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 954,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1040,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000522D",
+    "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-with-128g-tf-card-beige-sku6811000522d.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 5504,
+    "markupMinor": 2000,
+    "priceMinor": 7504,
+    "quoteQuantity": 2,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 879,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1073,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1247,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000522A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-with-128g-tf-card-orange-sku6811000522a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 5504,
+    "markupMinor": 2000,
+    "priceMinor": 7504,
+    "quoteQuantity": 2,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 879,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1073,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1247,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000522B",
+    "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-with-128g-tf-card-transparent-black-sku6811000522b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 5504,
+    "markupMinor": 2000,
+    "priceMinor": 7504,
+    "quoteQuantity": 2,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 879,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1073,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1247,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000522C",
+    "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-with-128g-tf-card-grey-sku6811000522c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 5504,
+    "markupMinor": 2000,
+    "priceMinor": 7504,
+    "quoteQuantity": 2,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 879,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1073,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1247,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000474D",
+    "source": "https://www.tvcmall.com/details/h55-pro-handheld-game-console-without-tf-card-5-5-inch-ips-screen-dual-joysticks-wifi-retro-gamepad-silver-grey-sku6819000474d.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 5600,
+    "markupMinor": 2000,
+    "priceMinor": 7600,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 942,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1212,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1549,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000428A",
+    "source": "https://www.tvcmall.com/details/anbernic-256g-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-red-black-sku6819000428a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 12869,
+    "markupMinor": 2000,
+    "priceMinor": 14869,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 911,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1098,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1290,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000428B",
+    "source": "https://www.tvcmall.com/details/anbernic-256g-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-white-sku6819000428b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 12869,
+    "markupMinor": 2000,
+    "priceMinor": 14869,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 911,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1098,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1290,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000428C",
+    "source": "https://www.tvcmall.com/details/anbernic-256g-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-blue-sku6819000428c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 12869,
+    "markupMinor": 2000,
+    "priceMinor": 14869,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 911,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1098,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1290,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000427C",
+    "source": "https://www.tvcmall.com/details/anbernic-128g-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-blue-sku6819000427c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 11110,
+    "markupMinor": 2000,
+    "priceMinor": 13110,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 826,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1109,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1307,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000427A",
+    "source": "https://www.tvcmall.com/details/anbernic-128g-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-red-black-sku6819000427a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 11110,
+    "markupMinor": 2000,
+    "priceMinor": 13110,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 826,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1109,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1307,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000427B",
+    "source": "https://www.tvcmall.com/details/anbernic-128g-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-white-sku6819000427b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 11110,
+    "markupMinor": 2000,
+    "priceMinor": 13110,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 826,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1109,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1307,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000267B",
+    "source": "https://www.tvcmall.com/details/anbernic-rg556-8-128g-wireless-gamepad-retro-joystick-game-console-with-128g-tf-card-english-version-black-sku6819000267b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 18250,
+    "markupMinor": 2000,
+    "priceMinor": 20250,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 935,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1206,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1474,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000267A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg556-8-128g-wireless-gamepad-retro-joystick-game-console-with-128g-tf-card-english-version-blue-sku6819000267a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 18250,
+    "markupMinor": 2000,
+    "priceMinor": 20250,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 935,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1206,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1474,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000266B",
+    "source": "https://www.tvcmall.com/details/anbernic-rg556-8-128g-wireless-gamepad-retro-joystick-game-console-with-256g-tf-card-english-version-blue-sku6819000266b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 19969,
+    "markupMinor": 2000,
+    "priceMinor": 21969,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 935,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1206,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1474,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000266A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg556-8-128g-wireless-gamepad-retro-joystick-game-console-with-256g-tf-card-english-version-black-sku6819000266a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 19969,
+    "markupMinor": 2000,
+    "priceMinor": 21969,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 935,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1206,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1474,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000301A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg406v-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-with-256g-card-transparent-black-sku6819000301a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 18556,
+    "markupMinor": 2000,
+    "priceMinor": 20556,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 820,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1104,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1298,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000301B",
+    "source": "https://www.tvcmall.com/details/anbernic-rg406v-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-with-256g-card-grey-sku6819000301b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 18556,
+    "markupMinor": 2000,
+    "priceMinor": 20556,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 820,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1104,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1298,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000301C",
+    "source": "https://www.tvcmall.com/details/anbernic-rg406v-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-with-256g-card-white-sku6819000301c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 18556,
+    "markupMinor": 2000,
+    "priceMinor": 20556,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 820,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1104,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1298,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000300C",
+    "source": "https://www.tvcmall.com/details/anbernic-rg406v-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-with-128g-card-white-sku6819000300c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 16837,
+    "markupMinor": 2000,
+    "priceMinor": 18837,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 899,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1089,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1274,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000300A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg406v-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-with-128g-card-transparent-black-sku6819000300a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 16837,
+    "markupMinor": 2000,
+    "priceMinor": 18837,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 899,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1089,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1274,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000300B",
+    "source": "https://www.tvcmall.com/details/anbernic-rg406v-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-with-128g-card-grey-sku6819000300b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 16837,
+    "markupMinor": 2000,
+    "priceMinor": 18837,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 899,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1089,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1274,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000524A",
+    "source": "https://www.tvcmall.com/details/ampown-rg-cube-3-95-inch-ips-screen-handheld-gaming-console-wireless-gamepad-with-256g-tf-card-black-sku6811000524a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 17459,
+    "markupMinor": 2000,
+    "priceMinor": 19459,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 843,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1047,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1200,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000524B",
+    "source": "https://www.tvcmall.com/details/ampown-rg-cube-3-95-inch-ips-screen-handheld-gaming-console-wireless-gamepad-with-256g-tf-card-grey-sku6811000524b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 17459,
+    "markupMinor": 2000,
+    "priceMinor": 19459,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 843,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1047,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1200,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6811000524C",
+    "source": "https://www.tvcmall.com/details/ampown-rg-cube-3-95-inch-ips-screen-handheld-gaming-console-wireless-gamepad-with-256g-tf-card-beige-sku6811000524c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 17459,
+    "markupMinor": 2000,
+    "priceMinor": 19459,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 843,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1047,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1200,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000397A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-slide-4-7-inch-touch-screen-handheld-gaming-console-android-13-ai-powered-retro-gamepad-with-128gb-tf-card-white-sku6819000397a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 17157,
+    "markupMinor": 2000,
+    "priceMinor": 19157,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 949,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1218,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1495,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000397B",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-slide-4-7-inch-touch-screen-handheld-gaming-console-android-13-ai-powered-retro-gamepad-with-128gb-tf-card-black-sku6819000397b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 17157,
+    "markupMinor": 2000,
+    "priceMinor": 19157,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 949,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1218,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1495,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000398B",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-slide-4-7-inch-touch-screen-handheld-gaming-console-android-13-ai-powered-retro-gamepad-with-256gb-tf-card-black-sku6819000398b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 18876,
+    "markupMinor": 2000,
+    "priceMinor": 20876,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 949,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1218,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1495,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000398A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-slide-4-7-inch-touch-screen-handheld-gaming-console-android-13-ai-powered-retro-gamepad-with-256gb-tf-card-white-sku6819000398a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 18876,
+    "markupMinor": 2000,
+    "priceMinor": 20876,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 949,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1218,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1495,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000430A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-477v-8gb-128gb-4-7-inch-handheld-game-console-with-128g-tf-card-120hz-high-refresh-display-portable-gaming-device-grey-sku6819000430a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 25980,
+    "markupMinor": 2000,
+    "priceMinor": 27980,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 837,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1119,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1325,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000430B",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-477v-8gb-128gb-4-7-inch-handheld-game-console-with-128g-tf-card-120hz-high-refresh-display-portable-gaming-device-black-sku6819000430b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 25980,
+    "markupMinor": 2000,
+    "priceMinor": 27980,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 837,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1119,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1325,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000431B",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-477v-8gb-128gb-4-7-inch-handheld-game-console-with-256g-tf-card-120hz-high-refresh-display-portable-gaming-device-black-sku6819000431b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 28638,
+    "markupMinor": 2000,
+    "priceMinor": 30638,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 837,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1119,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1325,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000431A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-477v-8gb-128gb-4-7-inch-handheld-game-console-with-256g-tf-card-120hz-high-refresh-display-portable-gaming-device-grey-sku6819000431a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 28638,
+    "markupMinor": 2000,
+    "priceMinor": 30638,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 837,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1119,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1325,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000434A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-477v-12gb-256gb-4-7-inch-handheld-game-console-with-256g-tf-card-120hz-high-refresh-rate-gaming-device-black-sku6819000434a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 30189,
+    "markupMinor": 2000,
+    "priceMinor": 32189,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 837,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1119,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1325,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000433A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-477v-12gb-256gb-4-7-inch-handheld-game-console-with-128g-tf-card-120hz-high-refresh-rate-gaming-device-black-sku6819000433a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 27870,
+    "markupMinor": 2000,
+    "priceMinor": 29870,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 837,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1119,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1325,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000432A",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-477v-12gb-256gb-4-7-inch-handheld-game-console-120hz-high-refresh-rate-gaming-device-black-sku6819000432a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 26323,
+    "markupMinor": 2000,
+    "priceMinor": 28323,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 837,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1119,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1325,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000405B",
+    "source": "https://www.tvcmall.com/details/anbernic-rg477m-12g-256g-android-14-4-7-inch-ltps-incell-screen-retro-handheld-game-console-with-128g-tf-card-silver-sku6819000405b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 32082,
+    "markupMinor": 2000,
+    "priceMinor": 34082,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 965,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1232,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1521,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6819000406B",
+    "source": "https://www.tvcmall.com/details/anbernic-rg477m-12g-256g-android-14-4-7-inch-ltps-incell-screen-retro-handheld-game-console-with-256g-tf-card-silver-sku6819000406b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 33645,
+    "markupMinor": 2000,
+    "priceMinor": 35645,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 965,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1232,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1521,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "662802508A",
+    "source": "https://www.tvcmall.com/details/essager-1m-pd-100w-type-c-to-type-c-phone-fast-charging-cord-nylon-braided-data-cable-black-sku662802508a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 207,
+    "markupMinor": 2000,
+    "priceMinor": 2207,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 356,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 480,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 513,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 628,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2080,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 2649,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "662802509A",
+    "source": "https://www.tvcmall.com/details/essager-2m-type-c-to-type-c-pd-100w-5a-data-cable-nylon-braided-phone-tablet-fast-charging-cord-black-sku662802509a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 265,
+    "markupMinor": 2000,
+    "priceMinor": 2265,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 395,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 523,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 546,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 653,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2080,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 2649,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "662802509B",
+    "source": "https://www.tvcmall.com/details/essager-2m-type-c-to-type-c-pd-100w-5a-data-cable-nylon-braided-phone-tablet-fast-charging-cord-blue-sku662802509b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 265,
+    "markupMinor": 2000,
+    "priceMinor": 2265,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 395,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 523,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 546,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 653,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2080,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 2649,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "662802507A",
+    "source": "https://www.tvcmall.com/details/essager-3m-type-c-to-type-c-pd-100w-phone-tablet-laptop-fast-charging-cord-nylon-braided-data-cable-black-sku662802507a.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 325,
+    "markupMinor": 2000,
+    "priceMinor": 2325,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 433,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 566,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 579,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 677,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2080,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 2649,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "662802508B",
+    "source": "https://www.tvcmall.com/details/essager-1m-pd-100w-type-c-to-type-c-phone-fast-charging-cord-nylon-braided-data-cable-blue-sku662802508b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 207,
+    "markupMinor": 2000,
+    "priceMinor": 2207,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 356,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 480,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 513,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 628,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2080,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 2649,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "662802463B",
+    "source": "https://www.tvcmall.com/details/3m-type-c-to-type-c-pd-60w-charging-cable-nylon-braided-usb2-0-data-cable-for-cell-phones-tables-laptops-grey-sku662802463b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 162,
+    "markupMinor": 2000,
+    "priceMinor": 2162,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 408,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 537,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 557,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 661,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2080,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 2649,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806018025C",
+    "source": "https://www.tvcmall.com/details/imc360-1gb-8gb-lcd-projector-autofocus-1080p-hd-wifi-6-home-cinema-projector-dual-speakers-cloth-coating-base-black-eu-plug-sku6806018025c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 5316,
+    "markupMinor": 2000,
+    "priceMinor": 7316,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1651,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1842,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 2569,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2940,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3434,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 3612,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4213,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806018025D",
+    "source": "https://www.tvcmall.com/details/imc360-1gb-8gb-lcd-projector-autofocus-1080p-hd-wifi-6-home-cinema-projector-dual-speakers-cloth-coating-base-black-us-plug-sku6806018025d.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 5316,
+    "markupMinor": 2000,
+    "priceMinor": 7316,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1651,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1842,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 2569,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2940,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3434,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 3612,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4213,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806018025B",
+    "source": "https://www.tvcmall.com/details/imc360-1gb-8gb-lcd-projector-autofocus-1080p-hd-wifi-6-home-cinema-projector-dual-speakers-cloth-coating-base-white-us-plug-sku6806018025b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 5316,
+    "markupMinor": 2000,
+    "priceMinor": 7316,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1651,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1842,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 2569,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2940,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3434,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 3612,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4213,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806013111B",
+    "source": "https://www.tvcmall.com/details/a10-720p-1280x720-portable-projector-home-min-electric-focus-adjustment-hd-projector-uk-plug-sku6806013111b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 4892,
+    "markupMinor": 2000,
+    "priceMinor": 6892,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 2012,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 2163,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 2528,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 3120,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 3370,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3916,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 4225,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4433,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806013111C",
+    "source": "https://www.tvcmall.com/details/a10-720p-1280x720-portable-projector-home-min-electric-focus-adjustment-hd-projector-us-plug-sku6806013111c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 4892,
+    "markupMinor": 2000,
+    "priceMinor": 6892,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 2012,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 2163,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 2528,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 3120,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 3370,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3916,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 4225,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4433,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806013111D",
+    "source": "https://www.tvcmall.com/details/a10-720p-1280x720-portable-projector-home-min-electric-focus-adjustment-hd-projector-au-plug-sku6806013111d.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 4892,
+    "markupMinor": 2000,
+    "priceMinor": 6892,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 2012,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 2163,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 2528,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 3120,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 3370,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3916,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 4225,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4433,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806018017B",
+    "source": "https://www.tvcmall.com/details/imc880-portable-4k-projector-wifi-6-bt-5-0-200-ansi-lumens-android-14-mini-projector-1-8gb-us-plug-sku6806018017b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 3907,
+    "markupMinor": 2000,
+    "priceMinor": 5907,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1291,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1522,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 1991,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 2416,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2940,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3434,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 3612,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4213,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806018017C",
+    "source": "https://www.tvcmall.com/details/imc880-portable-4k-projector-wifi-6-bt-5-0-200-ansi-lumens-android-14-mini-projector-1-8gb-uk-plug-sku6806018017c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 3907,
+    "markupMinor": 2000,
+    "priceMinor": 5907,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1291,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1522,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 1991,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 2416,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2940,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3434,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 3612,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4213,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806017798B",
+    "source": "https://www.tvcmall.com/details/yesido-tv16-1080p-projector-auto-focus-bluetooth-compatible-5-4-smart-home-theater-system-uk-plug-sku6806017798b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 7219,
+    "markupMinor": 2000,
+    "priceMinor": 9219,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1286,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1517,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 1748,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 2098,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2940,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3434,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 3612,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4213,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806018612B",
+    "source": "https://www.tvcmall.com/details/a10-plus-portable-smart-projector-720p-native-4k-decoding-android-11-wifi-200-ansi-lumens-home-theater-black-us-plug-sku6806018612b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 4444,
+    "markupMinor": 2000,
+    "priceMinor": 6444,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 2012,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 2163,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 2528,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 3120,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 3370,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3916,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 4225,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4433,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806014849B",
+    "source": "https://www.tvcmall.com/details/c1000-upgraded-dlp-mini-projector-home-outdoor-portable-hd-projection-device-ce-certified-black-uk-plug-sku6806014849b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 16986,
+    "markupMinor": 2000,
+    "priceMinor": 18986,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1512,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1718,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 2356,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3434,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4213,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806014849C",
+    "source": "https://www.tvcmall.com/details/c1000-upgraded-dlp-mini-projector-home-outdoor-portable-hd-projection-device-ce-certified-black-us-plug-sku6806014849c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 16986,
+    "markupMinor": 2000,
+    "priceMinor": 18986,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1512,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1718,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 2356,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3434,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4213,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806014849D",
+    "source": "https://www.tvcmall.com/details/c1000-upgraded-dlp-mini-projector-home-outdoor-portable-hd-projection-device-ce-certified-white-eu-plug-sku6806014849d.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 16986,
+    "markupMinor": 2000,
+    "priceMinor": 18986,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1512,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1718,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 2356,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3434,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4213,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806014849E",
+    "source": "https://www.tvcmall.com/details/c1000-upgraded-dlp-mini-projector-home-outdoor-portable-hd-projection-device-ce-certified-white-uk-plug-sku6806014849e.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 16986,
+    "markupMinor": 2000,
+    "priceMinor": 18986,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1512,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1718,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 2356,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3434,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4213,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806014849F",
+    "source": "https://www.tvcmall.com/details/c1000-upgraded-dlp-mini-projector-home-outdoor-portable-hd-projection-device-ce-certified-white-us-plug-sku6806014849f.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 16986,
+    "markupMinor": 2000,
+    "priceMinor": 18986,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1512,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1718,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 2356,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3434,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4213,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6116000046B",
+    "source": "https://www.tvcmall.com/details/1080p-home-projector-600-ansi-lumens-360-degree-rotatable-stand-voice-control-auto-focus-lcd-projection-machine-for-home-theater-uk-plug-sku6116000046b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 10570,
+    "markupMinor": 2000,
+    "priceMinor": 12570,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "SUNYOU",
+        "costMinor": 3383,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "YunExpress",
+        "costMinor": 3385,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 4660,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 5132,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 5508,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 5711,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806019209B",
+    "source": "https://www.tvcmall.com/details/q6-720p-wifi-6-android-projector-2-69-inch-glass-lens-electronic-keystone-correction-for-home-white-us-plug-sku6806019209b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 4175,
+    "markupMinor": 2000,
+    "priceMinor": 6175,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1047,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1305,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 1824,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 2197,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2940,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3434,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 3612,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4213,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806018625B",
+    "source": "https://www.tvcmall.com/details/p40-smart-projector-native-720p-hd-portable-mini-projector-5g-wifi-wireless-screen-mirroring-home-theater-white-us-plug-sku6806018625b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 2683,
+    "markupMinor": 2000,
+    "priceMinor": 4683,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 895,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1171,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 1410,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1654,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2510,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 3000,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806018581B",
+    "source": "https://www.tvcmall.com/details/y8s-pro-x3-smart-projector-720p-hd-180-ansi-mini-portable-wifi-bluetooth-compatible-home-theater-system-us-plug-sku6806018581b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 4209,
+    "markupMinor": 2000,
+    "priceMinor": 6209,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1345,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1571,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 1804,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 2172,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2940,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3434,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 3612,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4213,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806018581C",
+    "source": "https://www.tvcmall.com/details/y8s-pro-x3-smart-projector-720p-hd-180-ansi-mini-portable-wifi-bluetooth-compatible-home-theater-system-uk-plug-sku6806018581c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 4209,
+    "markupMinor": 2000,
+    "priceMinor": 6209,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1345,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1571,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 1804,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 2172,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2940,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3434,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 3612,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4213,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806018581D",
+    "source": "https://www.tvcmall.com/details/y8s-pro-x3-smart-projector-720p-hd-180-ansi-mini-portable-wifi-bluetooth-compatible-home-theater-system-au-plug-sku6806018581d.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 4209,
+    "markupMinor": 2000,
+    "priceMinor": 6209,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1345,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1571,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 1804,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 2172,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2940,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3434,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 3612,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4213,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806018580B",
+    "source": "https://www.tvcmall.com/details/h96-max-pj-x6-android-11-smart-projector-1080p-native-280-ansi-wifi-6-bluetooth-compatible-5-4-home-theater-system-us-plug-sku6806018580b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 6299,
+    "markupMinor": 2000,
+    "priceMinor": 8299,
+    "quoteQuantity": 5,
+    "shippingOptions": [
+      {
+        "method": "SUNYOU",
+        "costMinor": 11100,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 11459,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 12601,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 12875,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 13697,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806018580C",
+    "source": "https://www.tvcmall.com/details/h96-max-pj-x6-android-11-smart-projector-1080p-native-280-ansi-wifi-6-bluetooth-compatible-5-4-home-theater-system-uk-plug-sku6806018580c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 6299,
+    "markupMinor": 2000,
+    "priceMinor": 8299,
+    "quoteQuantity": 5,
+    "shippingOptions": [
+      {
+        "method": "SUNYOU",
+        "costMinor": 11100,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 11459,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 12601,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 12875,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 13697,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806018580D",
+    "source": "https://www.tvcmall.com/details/h96-max-pj-x6-android-11-smart-projector-1080p-native-280-ansi-wifi-6-bluetooth-compatible-5-4-home-theater-system-au-plug-sku6806018580d.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 6299,
+    "markupMinor": 2000,
+    "priceMinor": 8299,
+    "quoteQuantity": 5,
+    "shippingOptions": [
+      {
+        "method": "SUNYOU",
+        "costMinor": 11100,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 11459,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 12601,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 12875,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 13697,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6816000622B",
+    "source": "https://www.tvcmall.com/details/gamwing-aobing-max-bluetooth-compatible-type-c-wired-dual-mode-expandable-grip-mobile-game-controller-white-sku6816000622b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 1992,
+    "markupMinor": 2000,
+    "priceMinor": 3992,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 736,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 965,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 1259,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1457,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2510,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 3000,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "681600408B",
+    "source": "https://www.tvcmall.com/details/8bitdo-wireless-arcade-stick-for-xbox-series-x-s-xbox-one-windows-arcade-gaming-joy-pad-with-2-4g-adapter-black-sku681600408b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 7491,
+    "markupMinor": 2000,
+    "priceMinor": 9491,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 3373,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 3373,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 5132,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 5711,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "681600409B",
+    "source": "https://www.tvcmall.com/details/8bitdo-ultimate-bluetooth-controller-with-charging-dock-wireless-gamepad-compatible-with-nintendo-switch-steam-deck-black-sku681600409b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 3119,
+    "markupMinor": 2000,
+    "priceMinor": 5119,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 963,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1231,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1596,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6816000637B",
+    "source": "https://www.tvcmall.com/details/easysmx-d10-game-controller-tmr-joystick-dual-trigger-bluetooth-compatible-2-4g-wireless-wired-gamepad-with-smart-charging-dock-purple-sku6816000637b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 2791,
+    "markupMinor": 2000,
+    "priceMinor": 4791,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1041,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1300,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1636,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "681600305B",
+    "source": "https://www.tvcmall.com/details/aolion-wireless-controller-for-nintendo-switch-vibrating-continuous-wireless-bluetooth-game-handle-for-steam-deck-white-sku681600305b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 2194,
+    "markupMinor": 2000,
+    "priceMinor": 4194,
+    "quoteQuantity": 3,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 2689,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 2765,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 4118,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4652,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "681600419B",
+    "source": "https://www.tvcmall.com/details/8bitdo-m30-bluetooth-controller-for-switch-windows-android-6-button-layout-for-sega-s-classic-games-white-sku681600419b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 1734,
+    "markupMinor": 2000,
+    "priceMinor": 3734,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 621,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 877,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 909,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "681600411B",
+    "source": "https://www.tvcmall.com/details/8bitdo-ultimate-wired-controller-for-xbox-series-x-s-xbox-one-cabled-handheld-gamepad-with-3-5mm-audio-white-sku681600411b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 1778,
+    "markupMinor": 2000,
+    "priceMinor": 3778,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 839,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1044,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 1210,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1392,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2510,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 3000,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6816000600B",
+    "source": "https://www.tvcmall.com/details/pxn-p5-bluetooth-wireless-game-controller-with-receiver-for-steam-pc-android-ios-nintendo-switch-black-sku6816000600b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 1587,
+    "markupMinor": 2000,
+    "priceMinor": 3587,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 714,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 949,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1394,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6816000600C",
+    "source": "https://www.tvcmall.com/details/pxn-p5-bluetooth-wireless-game-controller-with-receiver-for-steam-pc-android-ios-nintendo-switch-pink-sku6816000600c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 1587,
+    "markupMinor": 2000,
+    "priceMinor": 3587,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 714,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 949,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1394,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6101000705B",
+    "source": "https://www.tvcmall.com/details/jomaa-jom255-2-4g-wireless-bluetooth-compatible-dual-mode-trackball-mouse-rechargeable-silent-ergonomic-cordless-mouse-black-red-trackball-sku6101000705b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 2315,
+    "markupMinor": 2000,
+    "priceMinor": 4315,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 498,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 736,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 739,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "612900072B",
+    "source": "https://www.tvcmall.com/details/ugreen-90318-2-4ghz-wireless-bluetooth-mute-mouse-with-4000-dpi-for-pc-laptop-computer-grey-sku612900072b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 747,
+    "markupMinor": 2000,
+    "priceMinor": 2747,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 462,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 622,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 2649,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 8581,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6101000691B",
+    "source": "https://www.tvcmall.com/details/hxsj-t22-ergonomic-vertical-mouse-2-4g-bluetooth-compatible-dual-mode-2400dpi-adjustable-mouse-black-sku6101000691b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 659,
+    "markupMinor": 2000,
+    "priceMinor": 2659,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 532,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 762,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 895,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6101000691C",
+    "source": "https://www.tvcmall.com/details/hxsj-t22-ergonomic-vertical-mouse-2-4g-bluetooth-compatible-dual-mode-2400dpi-adjustable-mouse-white-sku6101000691c.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 659,
+    "markupMinor": 2000,
+    "priceMinor": 2659,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 532,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 762,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 895,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6102000981B",
+    "source": "https://www.tvcmall.com/details/yesido-kb49-tri-fold-wireless-bluetooth-compatible-keyboard-with-touchpad-numeric-keypad-keyboard-for-phone-tablet-pc-arabic-sku6102000981b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 1663,
+    "markupMinor": 2000,
+    "priceMinor": 3663,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 641,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 893,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 936,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2386,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 3825,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "613200077B",
+    "source": "https://www.tvcmall.com/details/hxsj-v500-mechanical-wired-keyboard-63-keys-gaming-keyboard-with-backlight-effect-red-switch-sku613200077b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 1127,
+    "markupMinor": 2000,
+    "priceMinor": 3127,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1027,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1287,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 1379,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1615,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2510,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 3000,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6102000831B",
+    "source": "https://www.tvcmall.com/details/ajazz-ak820pro-wireless-mechanical-keyboard-bluetooth-tri-mode-with-flying-fish-switches-81-keys-rgb-backlit-keyboard-black-grey-yellow-sku6102000831b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 3645,
+    "markupMinor": 2000,
+    "priceMinor": 5645,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 1457,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1670,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 2272,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 3434,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4213,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
+  },
+  {
+    "sku": "6806015339B",
+    "source": "https://www.tvcmall.com/details/p30-pro-mini-projector-720p-hd-portable-home-theater-video-projector-us-plug-sku6806015339b.html",
+    "checkedAt": "2026-09-30",
+    "currency": "CHF",
+    "purchasePriceMinor": 2558,
+    "markupMinor": 2000,
+    "priceMinor": 4558,
+    "quoteQuantity": 1,
+    "shippingOptions": [
+      {
+        "method": "YunExpress",
+        "costMinor": 895,
+        "days": [
+          8,
+          12
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "SUNYOU",
+        "costMinor": 1171,
+        "days": [
+          20,
+          25
+        ],
+        "dayType": "business"
+      },
+      {
+        "method": "EUB",
+        "costMinor": 1568,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "POST NL",
+        "costMinor": 1862,
+        "days": [
+          10,
+          25
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL-CN",
+        "costMinor": 2510,
+        "days": [
+          3,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "DHL",
+        "costMinor": 2814,
+        "days": [
+          6,
+          9
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "Fedex",
+        "costMinor": 3000,
+        "days": [
+          5,
+          7
+        ],
+        "dayType": "calendar"
+      },
+      {
+        "method": "UPS",
+        "costMinor": 4006,
+        "days": [
+          6,
+          10
+        ],
+        "dayType": "calendar"
+      }
+    ]
   }
 ]

@@ -33,17 +33,17 @@ test('every purchasable variant has an exact CHF 20 markup and complete Swiss sh
 test('the four accessory categories each contain 12 distinct models', () => {
   for (const category of ['controller', 'kabel', 'beamer', 'peripherie']) assert.equal(products.filter(p => p.category === category).length, 12);
 });
-test('59 unique handheld variants are grouped into 20 models', () => {
+test('115 unique handheld variants are grouped into 20 models', () => {
   const handhelds = products.filter(p => p.category === 'handhelds');
   assert.equal(handhelds.length, 20);
-  assert.equal(handhelds.flatMap(p => p.variants).length, 59);
+  assert.equal(handhelds.flatMap(p => p.variants).length, 115);
   assert.equal(new Set(products.flatMap(p => p.variants.map(v => v.sku))).size, products.flatMap(p => p.variants).length);
 });
-test('separate hardware and colour choices resolve every handheld SKU without ambiguity', () => {
-  for (const product of products.filter(p => p.category === 'handhelds')) {
+test('separate hardware and colour choices resolve every catalogue SKU without ambiguity', () => {
+  for (const product of products) {
     assert.equal(new Set(product.variants.map(v => `${v.hardware}|${v.color}`)).size, product.variants.length);
     for (const variant of product.variants) {
-      assert.ok(variant.hardware && variant.color);
+      assert.ok(variant.hardware);
       assert.equal(selectVariant(product, variant.hardware, variant.color).sku, variant.sku);
     }
   }

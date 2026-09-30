@@ -1,0 +1,2138 @@
+[
+  {
+    "productId": "h001",
+    "name": "ANBERNIC RG35XXSP",
+    "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-without-tf-card-english-version-grey-sku6819000287b.html",
+    "checkedAt": "2026-09-30T21:39:12.579Z",
+    "hardwareOptions": [
+      "64G / ohne TF",
+      "128 GB TF-Karte"
+    ],
+    "variants": [
+      {
+        "sku": "6819000287B",
+        "hardware": "64G / ohne TF",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-without-tf-card-english-version-grey-sku6819000287b.html"
+      },
+      {
+        "sku": "6819000287A",
+        "hardware": "64G / ohne TF",
+        "color": "Transparent Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-without-tf-card-english-version-transparent-black-sku6819000287a.html"
+      },
+      {
+        "sku": "6819000287C",
+        "hardware": "64G / ohne TF",
+        "color": "Transparent Blau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-without-tf-card-english-version-transparent-blue-sku6819000287c.html"
+      },
+      {
+        "sku": "6819000287D",
+        "hardware": "64G / ohne TF",
+        "color": "Silber",
+        "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-without-tf-card-english-version-silver-sku6819000287d.html"
+      },
+      {
+        "sku": "6819000288B",
+        "hardware": "128 GB TF-Karte",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-with-128g-tf-card-english-version-grey-sku6819000288b.html"
+      },
+      {
+        "sku": "6819000288C",
+        "hardware": "128 GB TF-Karte",
+        "color": "Transparent Blau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-with-128g-tf-card-english-version-transparent-blue-sku6819000288c.html"
+      },
+      {
+        "sku": "6819000288A",
+        "hardware": "128 GB TF-Karte",
+        "color": "Transparent Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-with-128g-tf-card-english-version-transparent-black-sku6819000288a.html"
+      },
+      {
+        "sku": "6819000288D",
+        "hardware": "128 GB TF-Karte",
+        "color": "Silber",
+        "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-with-128g-tf-card-english-version-silver-sku6819000288d.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h019",
+    "name": "TRIMUI Brick Pro",
+    "source": "https://www.tvcmall.com/details/trimui-brick-pro-handheld-game-console-without-tf-card-dual-hall-joysticks-3-95-inch-ips-screen-linux-retro-gamepad-white-sku6819000470a.html",
+    "checkedAt": "2026-09-30T21:39:16.095Z",
+    "hardwareOptions": [
+      "ohne TF"
+    ],
+    "variants": [
+      {
+        "sku": "6819000470A",
+        "hardware": "ohne TF",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/trimui-brick-pro-handheld-game-console-without-tf-card-dual-hall-joysticks-3-95-inch-ips-screen-linux-retro-gamepad-white-sku6819000470a.html"
+      },
+      {
+        "sku": "6819000470B",
+        "hardware": "ohne TF",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/trimui-brick-pro-handheld-game-console-without-tf-card-dual-hall-joysticks-3-95-inch-ips-screen-linux-retro-gamepad-grey-sku6819000470b.html"
+      },
+      {
+        "sku": "6819000470C",
+        "hardware": "ohne TF",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/trimui-brick-pro-handheld-game-console-without-tf-card-dual-hall-joysticks-3-95-inch-ips-screen-linux-retro-gamepad-black-sku6819000470c.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h005",
+    "name": "ANBERNIC RG40XXH",
+    "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-without-tf-card-black-sku6811000722a.html",
+    "checkedAt": "2026-09-30T21:39:16.761Z",
+    "hardwareOptions": [
+      "64G / ohne TF",
+      "128 GB TF-Karte",
+      "256 GB TF-Karte"
+    ],
+    "variants": [
+      {
+        "sku": "6811000722A",
+        "hardware": "64G / ohne TF",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-without-tf-card-black-sku6811000722a.html"
+      },
+      {
+        "sku": "6811000722B",
+        "hardware": "64G / ohne TF",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-without-tf-card-grey-sku6811000722b.html"
+      },
+      {
+        "sku": "6811000722C",
+        "hardware": "64G / ohne TF",
+        "color": "Blau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-without-tf-card-blue-sku6811000722c.html"
+      },
+      {
+        "sku": "6811000723B",
+        "hardware": "128 GB TF-Karte",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-with-128g-tf-card-black-sku6811000723b.html"
+      },
+      {
+        "sku": "6811000723A",
+        "hardware": "128 GB TF-Karte",
+        "color": "Blau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-with-128g-tf-card-blue-sku6811000723a.html"
+      },
+      {
+        "sku": "6811000723C",
+        "hardware": "128 GB TF-Karte",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-with-128g-tf-card-grey-sku6811000723c.html"
+      },
+      {
+        "sku": "6811000721B",
+        "hardware": "256 GB TF-Karte",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-with-256g-tf-card-grey-sku6811000721b.html"
+      },
+      {
+        "sku": "6811000721A",
+        "hardware": "256 GB TF-Karte",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-with-256g-tf-card-black-sku6811000721a.html"
+      },
+      {
+        "sku": "6811000721C",
+        "hardware": "256 GB TF-Karte",
+        "color": "Blau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-with-256g-tf-card-blue-sku6811000721c.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h022",
+    "name": "ANBERNIC RG353V",
+    "source": "https://www.tvcmall.com/details/anbernic-rg353v-32gb-retro-gamepad-android-11-linux-handheld-game-console-with-3-5-inch-ips-screen-without-tf-card-games-transparent-black-sku6819000283a.html",
+    "checkedAt": "2026-09-30T21:39:17.423Z",
+    "hardwareOptions": [
+      "32GB / ohne TF & Spiele",
+      "32 GB / 256 GB TF-Karte",
+      "32 GB / 128 GB TF-Karte",
+      "32 GB / 64 GB TF-Karte"
+    ],
+    "variants": [
+      {
+        "sku": "6819000283A",
+        "hardware": "32GB / ohne TF & Spiele",
+        "color": "Transparent Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg353v-32gb-retro-gamepad-android-11-linux-handheld-game-console-with-3-5-inch-ips-screen-without-tf-card-games-transparent-black-sku6819000283a.html"
+      },
+      {
+        "sku": "6819000286A",
+        "hardware": "32 GB / 256 GB TF-Karte",
+        "color": "Transparent Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg353v-3-5-inch-screen-16-256g-android-handheld-game-console-35000-games-english-version-transparent-black-sku6819000286a.html"
+      },
+      {
+        "sku": "6819000285A",
+        "hardware": "32 GB / 128 GB TF-Karte",
+        "color": "Transparent Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg353v-handheld-game-console-with-16g-128g-tf-card-built-in-25000-english-games-transparent-black-sku6819000285a.html"
+      },
+      {
+        "sku": "6819000284A",
+        "hardware": "32 GB / 64 GB TF-Karte",
+        "color": "Transparent Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg353v-3-5-inch-screen-16-64g-android-handheld-game-console-15000-games-english-version-transparent-black-sku6819000284a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h008",
+    "name": "ANBERNIC RG40XXV",
+    "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-compatible-64gb-retro-video-game-console-without-tf-card-white-sku6811000718a.html",
+    "checkedAt": "2026-09-30T21:39:18.080Z",
+    "hardwareOptions": [
+      "64G / ohne TF",
+      "256 GB TF-Karte",
+      "128 GB TF-Karte"
+    ],
+    "variants": [
+      {
+        "sku": "6811000718A",
+        "hardware": "64G / ohne TF",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-compatible-64gb-retro-video-game-console-without-tf-card-white-sku6811000718a.html"
+      },
+      {
+        "sku": "6811000718B",
+        "hardware": "64G / ohne TF",
+        "color": "Transparent Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-compatible-64gb-retro-video-game-console-without-tf-card-transparent-black-sku6811000718b.html"
+      },
+      {
+        "sku": "6811000718C",
+        "hardware": "64G / ohne TF",
+        "color": "Blau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-compatible-64gb-retro-video-game-console-without-tf-card-blue-sku6811000718c.html"
+      },
+      {
+        "sku": "6811000720C",
+        "hardware": "256 GB TF-Karte",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-retro-video-game-console-with-256g-tf-card-white-sku6811000720c.html"
+      },
+      {
+        "sku": "6811000720A",
+        "hardware": "256 GB TF-Karte",
+        "color": "Blau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-retro-video-game-console-with-256g-tf-card-blue-sku6811000720a.html"
+      },
+      {
+        "sku": "6811000720B",
+        "hardware": "256 GB TF-Karte",
+        "color": "Transparent Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-retro-video-game-console-with-256g-tf-card-transparent-black-sku6811000720b.html"
+      },
+      {
+        "sku": "6811000719A",
+        "hardware": "128 GB TF-Karte",
+        "color": "Transparent Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-retro-video-game-console-with-128g-tf-card-transparent-black-sku6811000719a.html"
+      },
+      {
+        "sku": "6811000719B",
+        "hardware": "128 GB TF-Karte",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-retro-video-game-console-with-128g-tf-card-white-sku6811000719b.html"
+      },
+      {
+        "sku": "6811000719C",
+        "hardware": "128 GB TF-Karte",
+        "color": "Blau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-retro-video-game-console-with-128g-tf-card-blue-sku6811000719c.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h011",
+    "name": "ANBERNIC RG28XX",
+    "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-without-tf-card-beige-sku6811000523d.html",
+    "checkedAt": "2026-09-30T21:39:18.766Z",
+    "hardwareOptions": [
+      "64G / ohne TF",
+      "128 GB TF-Karte"
+    ],
+    "variants": [
+      {
+        "sku": "6811000523D",
+        "hardware": "64G / ohne TF",
+        "color": "Beige",
+        "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-without-tf-card-beige-sku6811000523d.html"
+      },
+      {
+        "sku": "6811000523A",
+        "hardware": "64G / ohne TF",
+        "color": "Orange",
+        "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-without-tf-card-orange-sku6811000523a.html"
+      },
+      {
+        "sku": "6811000523B",
+        "hardware": "64G / ohne TF",
+        "color": "Transparent Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-without-tf-card-transparent-black-sku6811000523b.html"
+      },
+      {
+        "sku": "6811000523C",
+        "hardware": "64G / ohne TF",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-without-tf-card-grey-sku6811000523c.html"
+      },
+      {
+        "sku": "6811000522D",
+        "hardware": "128 GB TF-Karte",
+        "color": "Beige",
+        "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-with-128g-tf-card-beige-sku6811000522d.html"
+      },
+      {
+        "sku": "6811000522A",
+        "hardware": "128 GB TF-Karte",
+        "color": "Orange",
+        "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-with-128g-tf-card-orange-sku6811000522a.html"
+      },
+      {
+        "sku": "6811000522B",
+        "hardware": "128 GB TF-Karte",
+        "color": "Transparent Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-with-128g-tf-card-transparent-black-sku6811000522b.html"
+      },
+      {
+        "sku": "6811000522C",
+        "hardware": "128 GB TF-Karte",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-with-128g-tf-card-grey-sku6811000522c.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h015",
+    "name": "ANBERNIC RG SP",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-sp-16gb-handheld-game-console-3-4-inch-ips-screen-quad-core-clamshell-retro-gaming-device-black-sku6819000478a.html",
+    "checkedAt": "2026-09-30T21:39:22.090Z",
+    "hardwareOptions": [
+      "16GB"
+    ],
+    "variants": [
+      {
+        "sku": "6819000478A",
+        "hardware": "16GB",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-sp-16gb-handheld-game-console-3-4-inch-ips-screen-quad-core-clamshell-retro-gaming-device-black-sku6819000478a.html"
+      },
+      {
+        "sku": "6819000478B",
+        "hardware": "16GB",
+        "color": "Silber",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-sp-16gb-handheld-game-console-3-4-inch-ips-screen-quad-core-clamshell-retro-gaming-device-silver-sku6819000478b.html"
+      },
+      {
+        "sku": "6819000478C",
+        "hardware": "16GB",
+        "color": "Rosa",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-sp-16gb-handheld-game-console-3-4-inch-ips-screen-quad-core-clamshell-retro-gaming-device-pink-sku6819000478c.html"
+      },
+      {
+        "sku": "6819000478D",
+        "hardware": "16GB",
+        "color": "Blau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-sp-16gb-handheld-game-console-3-4-inch-ips-screen-quad-core-clamshell-retro-gaming-device-blue-sku6819000478d.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h023",
+    "name": "H55 PRO",
+    "source": "https://www.tvcmall.com/details/h55-pro-handheld-game-console-without-tf-card-5-5-inch-ips-screen-dual-joysticks-wifi-retro-gamepad-black-sku6819000474a.html",
+    "checkedAt": "2026-09-30T21:39:31.968Z",
+    "hardwareOptions": [
+      "ohne TF"
+    ],
+    "variants": [
+      {
+        "sku": "6819000474A",
+        "hardware": "ohne TF",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/h55-pro-handheld-game-console-without-tf-card-5-5-inch-ips-screen-dual-joysticks-wifi-retro-gamepad-black-sku6819000474a.html"
+      },
+      {
+        "sku": "6819000474B",
+        "hardware": "ohne TF",
+        "color": "Schillernd Violett",
+        "source": "https://www.tvcmall.com/details/h55-pro-handheld-game-console-without-tf-card-5-5-inch-ips-screen-dual-joysticks-wifi-retro-gamepad-iridescent-purple-sku6819000474b.html"
+      },
+      {
+        "sku": "6819000474C",
+        "hardware": "ohne TF",
+        "color": "Beige",
+        "source": "https://www.tvcmall.com/details/h55-pro-handheld-game-console-without-tf-card-5-5-inch-ips-screen-dual-joysticks-wifi-retro-gamepad-beige-sku6819000474c.html"
+      },
+      {
+        "sku": "6819000474D",
+        "hardware": "ohne TF",
+        "color": "Silbergrau",
+        "source": "https://www.tvcmall.com/details/h55-pro-handheld-game-console-without-tf-card-5-5-inch-ips-screen-dual-joysticks-wifi-retro-gamepad-silver-grey-sku6819000474d.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h026",
+    "name": "ANBERNIC RG DS PLUS",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-ds-plus-16gb-handheld-gaming-console-without-tf-card-dual-4-3-inch-ips-screens-flip-design-rk3568-processor-4000mah-battery-black-sku6819000503a.html",
+    "checkedAt": "2026-09-30T21:39:35.230Z",
+    "hardwareOptions": [
+      "16GB / ohne TF"
+    ],
+    "variants": [
+      {
+        "sku": "6819000503A",
+        "hardware": "16GB / ohne TF",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-ds-plus-16gb-handheld-gaming-console-without-tf-card-dual-4-3-inch-ips-screens-flip-design-rk3568-processor-4000mah-battery-black-sku6819000503a.html"
+      },
+      {
+        "sku": "6819000503B",
+        "hardware": "16GB / ohne TF",
+        "color": "Rosa",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-ds-plus-16gb-handheld-gaming-console-without-tf-card-dual-4-3-inch-ips-screens-flip-design-rk3568-processor-4000mah-battery-pink-sku6819000503b.html"
+      },
+      {
+        "sku": "6819000503C",
+        "hardware": "16GB / ohne TF",
+        "color": "Blau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-ds-plus-16gb-handheld-gaming-console-without-tf-card-dual-4-3-inch-ips-screens-flip-design-rk3568-processor-4000mah-battery-blue-sku6819000503c.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h029",
+    "name": "ANBERNIC RG Rotate",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-rotate-handheld-game-console-3-5-inch-touchscreen-android-12-portable-retro-gaming-device-with-rotating-screen-black-sku6819000449a.html",
+    "checkedAt": "2026-09-30T21:39:38.494Z",
+    "hardwareOptions": [
+      "3+32GB / ohne Spiele"
+    ],
+    "variants": [
+      {
+        "sku": "6819000449A",
+        "hardware": "3+32GB / ohne Spiele",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-rotate-handheld-game-console-3-5-inch-touchscreen-android-12-portable-retro-gaming-device-with-rotating-screen-black-sku6819000449a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h030",
+    "name": "ANBERNIC RG DS",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-3-32g-without-games-red-black-sku6819000426a.html",
+    "checkedAt": "2026-09-30T21:39:39.196Z",
+    "hardwareOptions": [
+      "3+32GB / ohne Spiele",
+      "3 GB / 32 GB · 256 GB-Ausführung",
+      "3 GB / 32 GB · 128 GB-Ausführung"
+    ],
+    "variants": [
+      {
+        "sku": "6819000426A",
+        "hardware": "3+32GB / ohne Spiele",
+        "color": "Rot/Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-3-32g-without-games-red-black-sku6819000426a.html"
+      },
+      {
+        "sku": "6819000426B",
+        "hardware": "3+32GB / ohne Spiele",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-3-32g-without-games-white-sku6819000426b.html"
+      },
+      {
+        "sku": "6819000426C",
+        "hardware": "3+32GB / ohne Spiele",
+        "color": "Blau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-3-32g-without-games-blue-sku6819000426c.html"
+      },
+      {
+        "sku": "6819000428A",
+        "hardware": "3 GB / 32 GB · 256 GB-Ausführung",
+        "color": "Rot / Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-256g-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-red-black-sku6819000428a.html"
+      },
+      {
+        "sku": "6819000428B",
+        "hardware": "3 GB / 32 GB · 256 GB-Ausführung",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/anbernic-256g-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-white-sku6819000428b.html"
+      },
+      {
+        "sku": "6819000428C",
+        "hardware": "3 GB / 32 GB · 256 GB-Ausführung",
+        "color": "Blau",
+        "source": "https://www.tvcmall.com/details/anbernic-256g-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-blue-sku6819000428c.html"
+      },
+      {
+        "sku": "6819000427C",
+        "hardware": "3 GB / 32 GB · 128 GB-Ausführung",
+        "color": "Blau",
+        "source": "https://www.tvcmall.com/details/anbernic-128g-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-blue-sku6819000427c.html"
+      },
+      {
+        "sku": "6819000427A",
+        "hardware": "3 GB / 32 GB · 128 GB-Ausführung",
+        "color": "Rot / Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-128g-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-red-black-sku6819000427a.html"
+      },
+      {
+        "sku": "6819000427B",
+        "hardware": "3 GB / 32 GB · 128 GB-Ausführung",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/anbernic-128g-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-white-sku6819000427b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h033",
+    "name": "ANBERNIC RG556",
+    "source": "https://www.tvcmall.com/details/anbernic-rg556-8-128g-wireless-gamepad-retro-joystick-game-console-without-tf-card-and-games-english-version-black-sku6819000268a.html",
+    "checkedAt": "2026-09-30T21:39:40.003Z",
+    "hardwareOptions": [
+      "8+128GB / ohne TF & Spiele",
+      "8 GB / 128 GB / 128 GB TF-Karte",
+      "8 GB / 128 GB / 256 GB TF-Karte"
+    ],
+    "variants": [
+      {
+        "sku": "6819000268A",
+        "hardware": "8+128GB / ohne TF & Spiele",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg556-8-128g-wireless-gamepad-retro-joystick-game-console-without-tf-card-and-games-english-version-black-sku6819000268a.html"
+      },
+      {
+        "sku": "6819000268B",
+        "hardware": "8+128GB / ohne TF & Spiele",
+        "color": "Blau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg556-8-128g-wireless-gamepad-retro-joystick-game-console-without-tf-card-and-games-english-version-blue-sku6819000268b.html"
+      },
+      {
+        "sku": "6819000267B",
+        "hardware": "8 GB / 128 GB / 128 GB TF-Karte",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg556-8-128g-wireless-gamepad-retro-joystick-game-console-with-128g-tf-card-english-version-black-sku6819000267b.html"
+      },
+      {
+        "sku": "6819000267A",
+        "hardware": "8 GB / 128 GB / 128 GB TF-Karte",
+        "color": "Blau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg556-8-128g-wireless-gamepad-retro-joystick-game-console-with-128g-tf-card-english-version-blue-sku6819000267a.html"
+      },
+      {
+        "sku": "6819000266B",
+        "hardware": "8 GB / 128 GB / 256 GB TF-Karte",
+        "color": "Blau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg556-8-128g-wireless-gamepad-retro-joystick-game-console-with-256g-tf-card-english-version-blue-sku6819000266b.html"
+      },
+      {
+        "sku": "6819000266A",
+        "hardware": "8 GB / 128 GB / 256 GB TF-Karte",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg556-8-128g-wireless-gamepad-retro-joystick-game-console-with-256g-tf-card-english-version-black-sku6819000266a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h035",
+    "name": "ANBERNIC RG406V",
+    "source": "https://www.tvcmall.com/details/anbernic-rg406v-retro-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-no-tf-card-transparent-black-sku6819000299a.html",
+    "checkedAt": "2026-09-30T21:39:40.697Z",
+    "hardwareOptions": [
+      "8+128GB / ohne TF",
+      "8 GB / 128 GB / 256 GB TF-Karte",
+      "8 GB / 128 GB / 128 GB TF-Karte"
+    ],
+    "variants": [
+      {
+        "sku": "6819000299A",
+        "hardware": "8+128GB / ohne TF",
+        "color": "Transparent Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg406v-retro-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-no-tf-card-transparent-black-sku6819000299a.html"
+      },
+      {
+        "sku": "6819000299B",
+        "hardware": "8+128GB / ohne TF",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg406v-retro-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-no-tf-card-grey-sku6819000299b.html"
+      },
+      {
+        "sku": "6819000299C",
+        "hardware": "8+128GB / ohne TF",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/anbernic-rg406v-retro-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-no-tf-card-white-sku6819000299c.html"
+      },
+      {
+        "sku": "6819000301A",
+        "hardware": "8 GB / 128 GB / 256 GB TF-Karte",
+        "color": "Transparent Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg406v-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-with-256g-card-transparent-black-sku6819000301a.html"
+      },
+      {
+        "sku": "6819000301B",
+        "hardware": "8 GB / 128 GB / 256 GB TF-Karte",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg406v-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-with-256g-card-grey-sku6819000301b.html"
+      },
+      {
+        "sku": "6819000301C",
+        "hardware": "8 GB / 128 GB / 256 GB TF-Karte",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/anbernic-rg406v-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-with-256g-card-white-sku6819000301c.html"
+      },
+      {
+        "sku": "6819000300C",
+        "hardware": "8 GB / 128 GB / 128 GB TF-Karte",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/anbernic-rg406v-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-with-128g-card-white-sku6819000300c.html"
+      },
+      {
+        "sku": "6819000300A",
+        "hardware": "8 GB / 128 GB / 128 GB TF-Karte",
+        "color": "Transparent Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg406v-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-with-128g-card-transparent-black-sku6819000300a.html"
+      },
+      {
+        "sku": "6819000300B",
+        "hardware": "8 GB / 128 GB / 128 GB TF-Karte",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg406v-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-with-128g-card-grey-sku6819000300b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h038",
+    "name": "ANBERNIC RG Cube",
+    "source": "https://www.tvcmall.com/details/ampown-rg-cube-wireless-gamepad-3-95-inch-ips-screen-handheld-gaming-console-without-tf-card-black-sku6811000526a.html",
+    "checkedAt": "2026-09-30T21:39:41.428Z",
+    "hardwareOptions": [
+      "ohne TF",
+      "8 GB / 128 GB / 256 GB TF-Karte"
+    ],
+    "variants": [
+      {
+        "sku": "6811000526A",
+        "hardware": "ohne TF",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/ampown-rg-cube-wireless-gamepad-3-95-inch-ips-screen-handheld-gaming-console-without-tf-card-black-sku6811000526a.html"
+      },
+      {
+        "sku": "6811000526C",
+        "hardware": "ohne TF",
+        "color": "Beige",
+        "source": "https://www.tvcmall.com/details/ampown-rg-cube-wireless-gamepad-3-95-inch-ips-screen-handheld-gaming-console-without-tf-card-beige-sku6811000526c.html"
+      },
+      {
+        "sku": "6811000526B",
+        "hardware": "ohne TF",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/ampown-rg-cube-wireless-gamepad-3-95-inch-ips-screen-handheld-gaming-console-without-tf-card-grey-sku6811000526b.html"
+      },
+      {
+        "sku": "6811000524A",
+        "hardware": "8 GB / 128 GB / 256 GB TF-Karte",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/ampown-rg-cube-3-95-inch-ips-screen-handheld-gaming-console-wireless-gamepad-with-256g-tf-card-black-sku6811000524a.html"
+      },
+      {
+        "sku": "6811000524B",
+        "hardware": "8 GB / 128 GB / 256 GB TF-Karte",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/ampown-rg-cube-3-95-inch-ips-screen-handheld-gaming-console-wireless-gamepad-with-256g-tf-card-grey-sku6811000524b.html"
+      },
+      {
+        "sku": "6811000524C",
+        "hardware": "8 GB / 128 GB / 256 GB TF-Karte",
+        "color": "Beige",
+        "source": "https://www.tvcmall.com/details/ampown-rg-cube-3-95-inch-ips-screen-handheld-gaming-console-wireless-gamepad-with-256g-tf-card-beige-sku6811000524c.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h041",
+    "name": "ANBERNIC RG VITA",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-vita-5-46-inch-ips-gaming-handheld-game-console-built-in-3-64g-android-12-t618-octa-core-competitive-gaming-machine-white-sku6819000446a.html",
+    "checkedAt": "2026-09-30T21:39:50.764Z",
+    "hardwareOptions": [
+      "3+64GB"
+    ],
+    "variants": [
+      {
+        "sku": "6819000446A",
+        "hardware": "3+64GB",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-vita-5-46-inch-ips-gaming-handheld-game-console-built-in-3-64g-android-12-t618-octa-core-competitive-gaming-machine-white-sku6819000446a.html"
+      },
+      {
+        "sku": "6819000446B",
+        "hardware": "3+64GB",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-vita-5-46-inch-ips-gaming-handheld-game-console-built-in-3-64g-android-12-t618-octa-core-competitive-gaming-machine-black-sku6819000446b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h043",
+    "name": "ANBERNIC RG Slide",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-slide-4-7-inch-touch-screen-handheld-gaming-console-android-13-ai-powered-retro-gamepad-white-sku6819000396a.html",
+    "checkedAt": "2026-09-30T21:39:51.397Z",
+    "hardwareOptions": [
+      "128GB / ohne TF",
+      "8 GB / 128 GB / 128 GB TF-Karte",
+      "8 GB / 128 GB / 256 GB TF-Karte"
+    ],
+    "variants": [
+      {
+        "sku": "6819000396A",
+        "hardware": "128GB / ohne TF",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-slide-4-7-inch-touch-screen-handheld-gaming-console-android-13-ai-powered-retro-gamepad-white-sku6819000396a.html"
+      },
+      {
+        "sku": "6819000396B",
+        "hardware": "128GB / ohne TF",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-slide-4-7-inch-touch-screen-handheld-gaming-console-android-13-ai-powered-retro-gamepad-black-sku6819000396b.html"
+      },
+      {
+        "sku": "6819000397A",
+        "hardware": "8 GB / 128 GB / 128 GB TF-Karte",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-slide-4-7-inch-touch-screen-handheld-gaming-console-android-13-ai-powered-retro-gamepad-with-128gb-tf-card-white-sku6819000397a.html"
+      },
+      {
+        "sku": "6819000397B",
+        "hardware": "8 GB / 128 GB / 128 GB TF-Karte",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-slide-4-7-inch-touch-screen-handheld-gaming-console-android-13-ai-powered-retro-gamepad-with-128gb-tf-card-black-sku6819000397b.html"
+      },
+      {
+        "sku": "6819000398B",
+        "hardware": "8 GB / 128 GB / 256 GB TF-Karte",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-slide-4-7-inch-touch-screen-handheld-gaming-console-android-13-ai-powered-retro-gamepad-with-256gb-tf-card-black-sku6819000398b.html"
+      },
+      {
+        "sku": "6819000398A",
+        "hardware": "8 GB / 128 GB / 256 GB TF-Karte",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-slide-4-7-inch-touch-screen-handheld-gaming-console-android-13-ai-powered-retro-gamepad-with-256gb-tf-card-white-sku6819000398a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h045",
+    "name": "ANBERNIC RG476H",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-476h-8gb-128gb-android-13-handheld-game-console-4-7-inch-touchscreen-gaming-device-purple-sku6819000415a.html",
+    "checkedAt": "2026-09-30T21:39:54.710Z",
+    "hardwareOptions": [
+      "8+128GB"
+    ],
+    "variants": [
+      {
+        "sku": "6819000415A",
+        "hardware": "8+128GB",
+        "color": "Violett",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-476h-8gb-128gb-android-13-handheld-game-console-4-7-inch-touchscreen-gaming-device-purple-sku6819000415a.html"
+      },
+      {
+        "sku": "6819000415B",
+        "hardware": "8+128GB",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-476h-8gb-128gb-android-13-handheld-game-console-4-7-inch-touchscreen-gaming-device-grey-sku6819000415b.html"
+      },
+      {
+        "sku": "6819000415C",
+        "hardware": "8+128GB",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-476h-8gb-128gb-android-13-handheld-game-console-4-7-inch-touchscreen-gaming-device-black-sku6819000415c.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h048",
+    "name": "ANBERNIC RG477V",
+    "source": "https://www.tvcmall.com/details/anbernic-rg-477v-8gb-128gb-4-7-inch-handheld-game-console-120hz-high-refresh-display-portable-gaming-device-grey-sku6108000745a.html",
+    "checkedAt": "2026-09-30T21:39:55.363Z",
+    "hardwareOptions": [
+      "8+128GB / ohne TF",
+      "8 GB / 128 GB / 128 GB TF-Karte",
+      "8 GB / 128 GB / 256 GB TF-Karte",
+      "12 GB / 256 GB / 256 GB TF-Karte",
+      "12 GB / 256 GB / 128 GB TF-Karte",
+      "12 GB / 256 GB / ohne TF"
+    ],
+    "variants": [
+      {
+        "sku": "6108000745A",
+        "hardware": "8+128GB / ohne TF",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-477v-8gb-128gb-4-7-inch-handheld-game-console-120hz-high-refresh-display-portable-gaming-device-grey-sku6108000745a.html"
+      },
+      {
+        "sku": "6108000745B",
+        "hardware": "8+128GB / ohne TF",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-477v-8gb-128gb-4-7-inch-handheld-game-console-120hz-high-refresh-display-portable-gaming-device-black-sku6108000745b.html"
+      },
+      {
+        "sku": "6819000430A",
+        "hardware": "8 GB / 128 GB / 128 GB TF-Karte",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-477v-8gb-128gb-4-7-inch-handheld-game-console-with-128g-tf-card-120hz-high-refresh-display-portable-gaming-device-grey-sku6819000430a.html"
+      },
+      {
+        "sku": "6819000430B",
+        "hardware": "8 GB / 128 GB / 128 GB TF-Karte",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-477v-8gb-128gb-4-7-inch-handheld-game-console-with-128g-tf-card-120hz-high-refresh-display-portable-gaming-device-black-sku6819000430b.html"
+      },
+      {
+        "sku": "6819000431B",
+        "hardware": "8 GB / 128 GB / 256 GB TF-Karte",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-477v-8gb-128gb-4-7-inch-handheld-game-console-with-256g-tf-card-120hz-high-refresh-display-portable-gaming-device-black-sku6819000431b.html"
+      },
+      {
+        "sku": "6819000431A",
+        "hardware": "8 GB / 128 GB / 256 GB TF-Karte",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-477v-8gb-128gb-4-7-inch-handheld-game-console-with-256g-tf-card-120hz-high-refresh-display-portable-gaming-device-grey-sku6819000431a.html"
+      },
+      {
+        "sku": "6819000434A",
+        "hardware": "12 GB / 256 GB / 256 GB TF-Karte",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-477v-12gb-256gb-4-7-inch-handheld-game-console-with-256g-tf-card-120hz-high-refresh-rate-gaming-device-black-sku6819000434a.html"
+      },
+      {
+        "sku": "6819000433A",
+        "hardware": "12 GB / 256 GB / 128 GB TF-Karte",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-477v-12gb-256gb-4-7-inch-handheld-game-console-with-128g-tf-card-120hz-high-refresh-rate-gaming-device-black-sku6819000433a.html"
+      },
+      {
+        "sku": "6819000432A",
+        "hardware": "12 GB / 256 GB / ohne TF",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/anbernic-rg-477v-12gb-256gb-4-7-inch-handheld-game-console-120hz-high-refresh-rate-gaming-device-black-sku6819000432a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h050",
+    "name": "ANBERNIC RG477M",
+    "source": "https://www.tvcmall.com/details/anbernic-rg477m-12g-256g-android-14-4-7-inch-ltps-incell-screen-retro-handheld-game-console-silver-sku6819000404b.html",
+    "checkedAt": "2026-09-30T21:39:56.209Z",
+    "hardwareOptions": [
+      "12+256GB / ohne TF",
+      "12 GB / 256 GB / 128 GB TF-Karte",
+      "12 GB / 256 GB / 256 GB TF-Karte"
+    ],
+    "variants": [
+      {
+        "sku": "6819000404B",
+        "hardware": "12+256GB / ohne TF",
+        "color": "Silber",
+        "source": "https://www.tvcmall.com/details/anbernic-rg477m-12g-256g-android-14-4-7-inch-ltps-incell-screen-retro-handheld-game-console-silver-sku6819000404b.html"
+      },
+      {
+        "sku": "6819000405B",
+        "hardware": "12 GB / 256 GB / 128 GB TF-Karte",
+        "color": "Silber",
+        "source": "https://www.tvcmall.com/details/anbernic-rg477m-12g-256g-android-14-4-7-inch-ltps-incell-screen-retro-handheld-game-console-with-128g-tf-card-silver-sku6819000405b.html"
+      },
+      {
+        "sku": "6819000406B",
+        "hardware": "12 GB / 256 GB / 256 GB TF-Karte",
+        "color": "Silber",
+        "source": "https://www.tvcmall.com/details/anbernic-rg477m-12g-256g-android-14-4-7-inch-ltps-incell-screen-retro-handheld-game-console-with-256g-tf-card-silver-sku6819000406b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "h051",
+    "name": "AYN Thor",
+    "source": "https://www.tvcmall.com/details/ayn-thor-8gb-128gb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-black-sku6819000454a.html?c=CHF",
+    "checkedAt": "2026-09-30T21:39:56.771Z",
+    "hardwareOptions": [
+      "8 GB / 128 GB",
+      "12 GB / 256 GB",
+      "16 GB / 1 TB"
+    ],
+    "variants": [
+      {
+        "sku": "6819000454A",
+        "hardware": "8 GB / 128 GB",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/ayn-thor-8gb-128gb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-black-sku6819000454a.html?c=CHF"
+      },
+      {
+        "sku": "6819000455A",
+        "hardware": "12 GB / 256 GB",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/12gb-256gb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-black-sku6819000455a.html"
+      },
+      {
+        "sku": "6819000455B",
+        "hardware": "12 GB / 256 GB",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/12gb-256gb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-white-sku6819000455b.html"
+      },
+      {
+        "sku": "6819000455C",
+        "hardware": "12 GB / 256 GB",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/12gb-256gb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-gray-sku6819000455c.html"
+      },
+      {
+        "sku": "6819000455D",
+        "hardware": "12 GB / 256 GB",
+        "color": "Transparent Violett",
+        "source": "https://www.tvcmall.com/details/12gb-256gb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-purple-sku6819000455d.html"
+      },
+      {
+        "sku": "6819000453A",
+        "hardware": "16 GB / 1 TB",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/16gb-1tb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-black-sku6819000453a.html"
+      },
+      {
+        "sku": "6819000453B",
+        "hardware": "16 GB / 1 TB",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/16gb-1tb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-white-sku6819000453b.html"
+      },
+      {
+        "sku": "6819000453C",
+        "hardware": "16 GB / 1 TB",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/16gb-1tb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-gray-sku6819000453c.html"
+      },
+      {
+        "sku": "6819000453D",
+        "hardware": "16 GB / 1 TB",
+        "color": "Transparent Violett",
+        "source": "https://www.tvcmall.com/details/16gb-1tb-open-source-android-13-handheld-gaming-console-dual-screen-retro-arcade-gamepad-purple-sku6819000453d.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "001",
+    "name": "USB-A–C 0.3 m, 3 A, 5 Gbit/s",
+    "source": "https://www.tvcmall.com/details/type-c-to-usb-3-0-male-charge-data-sync-cable-30cm-sku801201564a.html",
+    "checkedAt": "2026-09-30T21:34:03.172Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "801201564A",
+        "hardware": "Standard",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/type-c-to-usb-3-0-male-charge-data-sync-cable-30cm-sku801201564a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "002",
+    "name": "ESSAGER C–C, 100 W",
+    "source": "https://www.tvcmall.com/details/essager-0-25m-type-c-to-type-c-pd-100w-nylon-braided-data-cable-phone-tablet-fast-charging-cord-black-sku662802506a.html",
+    "checkedAt": "2026-09-30T21:39:57.438Z",
+    "hardwareOptions": [
+      "0.25 m",
+      "1 m",
+      "2 m",
+      "3 m"
+    ],
+    "variants": [
+      {
+        "sku": "662802506A",
+        "hardware": "0.25 m",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/essager-0-25m-type-c-to-type-c-pd-100w-nylon-braided-data-cable-phone-tablet-fast-charging-cord-black-sku662802506a.html"
+      },
+      {
+        "sku": "662802508A",
+        "hardware": "1 m",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/essager-1m-pd-100w-type-c-to-type-c-phone-fast-charging-cord-nylon-braided-data-cable-black-sku662802508a.html"
+      },
+      {
+        "sku": "662802509A",
+        "hardware": "2 m",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/essager-2m-type-c-to-type-c-pd-100w-5a-data-cable-nylon-braided-phone-tablet-fast-charging-cord-black-sku662802509a.html"
+      },
+      {
+        "sku": "662802509B",
+        "hardware": "2 m",
+        "color": "Blau",
+        "source": "https://www.tvcmall.com/details/essager-2m-type-c-to-type-c-pd-100w-5a-data-cable-nylon-braided-phone-tablet-fast-charging-cord-blue-sku662802509b.html"
+      },
+      {
+        "sku": "662802507A",
+        "hardware": "3 m",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/essager-3m-type-c-to-type-c-pd-100w-phone-tablet-laptop-fast-charging-cord-nylon-braided-data-cable-black-sku662802507a.html"
+      },
+      {
+        "sku": "662802508B",
+        "hardware": "1 m",
+        "color": "Blau",
+        "source": "https://www.tvcmall.com/details/essager-1m-pd-100w-type-c-to-type-c-phone-fast-charging-cord-nylon-braided-data-cable-blue-sku662802508b.html"
+      }
+    ],
+    "unavailable": [
+      {
+        "productId": "002",
+        "sku": "662802507B",
+        "source": "https://www.tvcmall.com/details/essager-3m-type-c-to-type-c-pd-100w-phone-tablet-laptop-fast-charging-cord-nylon-braided-data-cable-blue-sku662802507b.html",
+        "reason": "Supplier page states item currently unavailable",
+        "checkedAt": "2026-09-30T21:59:49.703Z"
+      }
+    ]
+  },
+  {
+    "productId": "006",
+    "name": "C–C Winkel/Halter 1.5 m, 240 W",
+    "source": "https://www.tvcmall.com/details/90-degree-angled-type-c-to-type-c-240w-fast-charging-cable-data-sync-cord-with-phone-holder-for-gaming-multitasking-1-5m-sku6628004122a.html",
+    "checkedAt": "2026-09-30T21:34:25.029Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6628004122A",
+        "hardware": "Standard",
+        "color": "1.5m",
+        "source": "https://www.tvcmall.com/details/90-degree-angled-type-c-to-type-c-240w-fast-charging-cable-data-sync-cord-with-phone-holder-for-gaming-multitasking-1-5m-sku6628004122a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "010",
+    "name": "C–C 3 m, 60 W, USB 2.0",
+    "source": "https://www.tvcmall.com/details/3m-type-c-to-type-c-pd-60w-charging-cable-nylon-braided-usb2-0-data-cable-for-cell-phones-tables-laptops-black-sku662802463a.html",
+    "checkedAt": "2026-09-30T21:37:38.457Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "662802463A",
+        "hardware": "Standard",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/3m-type-c-to-type-c-pd-60w-charging-cable-nylon-braided-usb2-0-data-cable-for-cell-phones-tables-laptops-black-sku662802463a.html"
+      },
+      {
+        "sku": "662802463B",
+        "hardware": "Standard",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/3m-type-c-to-type-c-pd-60w-charging-cable-nylon-braided-usb2-0-data-cable-for-cell-phones-tables-laptops-grey-sku662802463b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "012",
+    "name": "C–C Winkel 0.5 m, 100 W, 20 Gbit/s",
+    "source": "https://www.tvcmall.com/details/0-5m-100w-usb-c-to-usb-c-braided-cable-right-angle-type-c-fast-charging-data-cable-20gb-s-4k-60hz-sku662802966a.html",
+    "checkedAt": "2026-09-30T21:35:05.587Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "662802966A",
+        "hardware": "Standard",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/0-5m-100w-usb-c-to-usb-c-braided-cable-right-angle-type-c-fast-charging-data-cable-20gb-s-4k-60hz-sku662802966a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "021",
+    "name": "ENKAY C–C 1 m, E-Marker, 100 W",
+    "source": "https://www.tvcmall.com/details/enkay-1m-type-c-charge-cable-e-marker-pd-100w-5a-fast-charging-wire-480mbps-data-transmission-usb-c-cord-sku662801618a.html",
+    "checkedAt": "2026-09-30T21:35:07.943Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "662801618A",
+        "hardware": "Standard",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/enkay-1m-type-c-charge-cable-e-marker-pd-100w-5a-fast-charging-wire-480mbps-data-transmission-usb-c-cord-sku662801618a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "029",
+    "name": "UGREEN 70427 C–C 1 m, 100 W",
+    "source": "https://www.tvcmall.com/details/ugreen-70427-100w-4-0-pd-usb-c-to-usb-c-fast-charging-cable-nylon-braided-type-c-cable-for-samsung-s20-macbook-ipad-pro-1m-sku662801195a.html",
+    "checkedAt": "2026-09-30T21:35:12.513Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "662801195A",
+        "hardware": "Standard",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/ugreen-70427-100w-4-0-pd-usb-c-to-usb-c-fast-charging-cable-nylon-braided-type-c-cable-for-samsung-s20-macbook-ipad-pro-1m-sku662801195a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "032",
+    "name": "JOYROOM S-A65 C–C 1.2 m, magnetisch, 100 W",
+    "source": "https://www.tvcmall.com/details/joyroom-s-a65-1-2m-magnetic-self-winding-cable-type-c-to-type-c-pd-100w-fast-charging-data-cable-black-sku6628004382a.html",
+    "checkedAt": "2026-09-30T21:35:16.515Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6628004382A",
+        "hardware": "Standard",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/joyroom-s-a65-1-2m-magnetic-self-winding-cable-type-c-to-type-c-pd-100w-fast-charging-data-cable-black-sku6628004382a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "034",
+    "name": "YESIDO CA205 C–C Spiralkabel, 60 W",
+    "source": "https://www.tvcmall.com/details/yesido-ca205-pd-60w-fast-charging-spring-cable-type-c-to-type-c-data-cable-for-carplay-hicar-carlife-black-sku6628004309a.html",
+    "checkedAt": "2026-09-30T21:35:18.356Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6628004309A",
+        "hardware": "Standard",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/yesido-ca205-pd-60w-fast-charging-spring-cable-type-c-to-type-c-data-cable-for-carplay-hicar-carlife-black-sku6628004309a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "045",
+    "name": "UGREEN L705 USB4 C–C 1 m, 240 W",
+    "source": "https://www.tvcmall.com/details/ugreen-l705-1m-usb4-gen3-full-featured-usb-c-data-cable-40gbps-8k-60hz-pd-240w-fast-charging-cord-sku6628004393a.html",
+    "checkedAt": "2026-09-30T21:35:19.946Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6628004393A",
+        "hardware": "Standard",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/ugreen-l705-1m-usb4-gen3-full-featured-usb-c-data-cable-40gbps-8k-60hz-pd-240w-fast-charging-cord-sku6628004393a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "047",
+    "name": "HD023 USB-C–HD-Video 1.8 m, 4K60",
+    "source": "https://www.tvcmall.com/details/hd023-1-8m-type-c-to-hd-cable-4k-60hz-video-adapter-cord-for-macbook-ipad-android-black-sku6114000158a.html",
+    "checkedAt": "2026-09-30T21:35:23.137Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6114000158A",
+        "hardware": "Standard",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/hd023-1-8m-type-c-to-hd-cable-4k-60hz-video-adapter-cord-for-macbook-ipad-android-black-sku6114000158a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "049",
+    "name": "RJ45 flach 3 m, beworben CAT-7",
+    "source": "https://www.tvcmall.com/details/3m-cat-7-10-gigabit-ethernet-flat-patch-cable-sku80000407a.html",
+    "checkedAt": "2026-09-30T21:35:25.021Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "80000407A",
+        "hardware": "Standard",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/3m-cat-7-10-gigabit-ethernet-flat-patch-cable-sku80000407a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "051",
+    "name": "IMC360 Dual-Speaker; 1920×1080",
+    "source": "https://www.tvcmall.com/details/imc360-1gb-8gb-lcd-projector-autofocus-1080p-hd-wifi-6-home-cinema-projector-dual-speakers-cloth-coating-base-white-eu-plug-sku6806018025a.html",
+    "checkedAt": "2026-09-30T21:35:32.508Z",
+    "hardwareOptions": [
+      "EU-Stecker",
+      "US-Stecker"
+    ],
+    "variants": [
+      {
+        "sku": "6806018025A",
+        "hardware": "EU-Stecker",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/imc360-1gb-8gb-lcd-projector-autofocus-1080p-hd-wifi-6-home-cinema-projector-dual-speakers-cloth-coating-base-white-eu-plug-sku6806018025a.html"
+      },
+      {
+        "sku": "6806018025C",
+        "hardware": "EU-Stecker",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/imc360-1gb-8gb-lcd-projector-autofocus-1080p-hd-wifi-6-home-cinema-projector-dual-speakers-cloth-coating-base-black-eu-plug-sku6806018025c.html"
+      },
+      {
+        "sku": "6806018025D",
+        "hardware": "US-Stecker",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/imc360-1gb-8gb-lcd-projector-autofocus-1080p-hd-wifi-6-home-cinema-projector-dual-speakers-cloth-coating-base-black-us-plug-sku6806018025d.html"
+      },
+      {
+        "sku": "6806018025B",
+        "hardware": "US-Stecker",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/imc360-1gb-8gb-lcd-projector-autofocus-1080p-hd-wifi-6-home-cinema-projector-dual-speakers-cloth-coating-base-white-us-plug-sku6806018025b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "052",
+    "name": "A10; 1280×720",
+    "source": "https://www.tvcmall.com/details/a10-720p-1280x720-portable-projector-home-min-electric-focus-adjustment-hd-projector-eu-plug-sku6806013111a.html",
+    "checkedAt": "2026-09-30T21:35:36.880Z",
+    "hardwareOptions": [
+      "EU-Stecker",
+      "UK-Stecker",
+      "US-Stecker",
+      "AU-Stecker"
+    ],
+    "variants": [
+      {
+        "sku": "6806013111A",
+        "hardware": "EU-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/a10-720p-1280x720-portable-projector-home-min-electric-focus-adjustment-hd-projector-eu-plug-sku6806013111a.html"
+      },
+      {
+        "sku": "6806013111B",
+        "hardware": "UK-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/a10-720p-1280x720-portable-projector-home-min-electric-focus-adjustment-hd-projector-uk-plug-sku6806013111b.html"
+      },
+      {
+        "sku": "6806013111C",
+        "hardware": "US-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/a10-720p-1280x720-portable-projector-home-min-electric-focus-adjustment-hd-projector-us-plug-sku6806013111c.html"
+      },
+      {
+        "sku": "6806013111D",
+        "hardware": "AU-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/a10-720p-1280x720-portable-projector-home-min-electric-focus-adjustment-hd-projector-au-plug-sku6806013111d.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "053",
+    "name": "IMC880; 1280×720",
+    "source": "https://www.tvcmall.com/details/imc880-portable-4k-projector-wifi-6-bt-5-0-200-ansi-lumens-android-14-mini-projector-1-8gb-eu-plug-sku6806018017a.html",
+    "checkedAt": "2026-09-30T21:35:38.606Z",
+    "hardwareOptions": [
+      "EU-Stecker",
+      "US-Stecker",
+      "UK-Stecker"
+    ],
+    "variants": [
+      {
+        "sku": "6806018017A",
+        "hardware": "EU-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/imc880-portable-4k-projector-wifi-6-bt-5-0-200-ansi-lumens-android-14-mini-projector-1-8gb-eu-plug-sku6806018017a.html"
+      },
+      {
+        "sku": "6806018017B",
+        "hardware": "US-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/imc880-portable-4k-projector-wifi-6-bt-5-0-200-ansi-lumens-android-14-mini-projector-1-8gb-us-plug-sku6806018017b.html"
+      },
+      {
+        "sku": "6806018017C",
+        "hardware": "UK-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/imc880-portable-4k-projector-wifi-6-bt-5-0-200-ansi-lumens-android-14-mini-projector-1-8gb-uk-plug-sku6806018017c.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "054",
+    "name": "YESIDO TV16; 1920×1080",
+    "source": "https://www.tvcmall.com/details/yesido-tv16-1080p-projector-auto-focus-bluetooth-compatible-5-4-smart-home-theater-system-eu-plug-sku6806017798a.html",
+    "checkedAt": "2026-09-30T21:35:40.275Z",
+    "hardwareOptions": [
+      "EU-Stecker",
+      "UK-Stecker"
+    ],
+    "variants": [
+      {
+        "sku": "6806017798A",
+        "hardware": "EU-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/yesido-tv16-1080p-projector-auto-focus-bluetooth-compatible-5-4-smart-home-theater-system-eu-plug-sku6806017798a.html"
+      },
+      {
+        "sku": "6806017798B",
+        "hardware": "UK-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/yesido-tv16-1080p-projector-auto-focus-bluetooth-compatible-5-4-smart-home-theater-system-uk-plug-sku6806017798b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "055",
+    "name": "A10 PLUS; 1280×720",
+    "source": "https://www.tvcmall.com/details/a10-plus-portable-smart-projector-720p-native-4k-decoding-android-11-wifi-200-ansi-lumens-home-theater-black-eu-plug-sku6806018612a.html",
+    "checkedAt": "2026-09-30T21:35:42.303Z",
+    "hardwareOptions": [
+      "EU-Stecker",
+      "US-Stecker"
+    ],
+    "variants": [
+      {
+        "sku": "6806018612A",
+        "hardware": "EU-Stecker",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/a10-plus-portable-smart-projector-720p-native-4k-decoding-android-11-wifi-200-ansi-lumens-home-theater-black-eu-plug-sku6806018612a.html"
+      },
+      {
+        "sku": "6806018612B",
+        "hardware": "US-Stecker",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/a10-plus-portable-smart-projector-720p-native-4k-decoding-android-11-wifi-200-ansi-lumens-home-theater-black-us-plug-sku6806018612b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "056",
+    "name": "C1000 DLP; 960×540",
+    "source": "https://www.tvcmall.com/details/c1000-upgraded-dlp-mini-projector-home-outdoor-portable-hd-projection-device-ce-certified-black-eu-plug-sku6806014849a.html",
+    "checkedAt": "2026-09-30T21:35:43.752Z",
+    "hardwareOptions": [
+      "EU-Stecker",
+      "UK-Stecker",
+      "US-Stecker"
+    ],
+    "variants": [
+      {
+        "sku": "6806014849A",
+        "hardware": "EU-Stecker",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/c1000-upgraded-dlp-mini-projector-home-outdoor-portable-hd-projection-device-ce-certified-black-eu-plug-sku6806014849a.html"
+      },
+      {
+        "sku": "6806014849B",
+        "hardware": "UK-Stecker",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/c1000-upgraded-dlp-mini-projector-home-outdoor-portable-hd-projection-device-ce-certified-black-uk-plug-sku6806014849b.html"
+      },
+      {
+        "sku": "6806014849C",
+        "hardware": "US-Stecker",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/c1000-upgraded-dlp-mini-projector-home-outdoor-portable-hd-projection-device-ce-certified-black-us-plug-sku6806014849c.html"
+      },
+      {
+        "sku": "6806014849D",
+        "hardware": "EU-Stecker",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/c1000-upgraded-dlp-mini-projector-home-outdoor-portable-hd-projection-device-ce-certified-white-eu-plug-sku6806014849d.html"
+      },
+      {
+        "sku": "6806014849E",
+        "hardware": "UK-Stecker",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/c1000-upgraded-dlp-mini-projector-home-outdoor-portable-hd-projection-device-ce-certified-white-uk-plug-sku6806014849e.html"
+      },
+      {
+        "sku": "6806014849F",
+        "hardware": "US-Stecker",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/c1000-upgraded-dlp-mini-projector-home-outdoor-portable-hd-projection-device-ce-certified-white-us-plug-sku6806014849f.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "058",
+    "name": "600-ANSI-Modell ohne Modellname; 1920×1080",
+    "source": "https://www.tvcmall.com/details/1080p-home-projector-600-ansi-lumens-360-degree-rotatable-stand-voice-control-auto-focus-lcd-projection-machine-for-home-theater-eu-plug-sku6116000046a.html",
+    "checkedAt": "2026-09-30T21:35:45.606Z",
+    "hardwareOptions": [
+      "EU-Stecker",
+      "UK-Stecker"
+    ],
+    "variants": [
+      {
+        "sku": "6116000046A",
+        "hardware": "EU-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/1080p-home-projector-600-ansi-lumens-360-degree-rotatable-stand-voice-control-auto-focus-lcd-projection-machine-for-home-theater-eu-plug-sku6116000046a.html"
+      },
+      {
+        "sku": "6116000046B",
+        "hardware": "UK-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/1080p-home-projector-600-ansi-lumens-360-degree-rotatable-stand-voice-control-auto-focus-lcd-projection-machine-for-home-theater-uk-plug-sku6116000046b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "061",
+    "name": "Q6; 1280×720",
+    "source": "https://www.tvcmall.com/details/q6-720p-wifi-6-android-projector-2-69-inch-glass-lens-electronic-keystone-correction-for-home-white-eu-plug-sku6806019209a.html",
+    "checkedAt": "2026-09-30T21:35:47.933Z",
+    "hardwareOptions": [
+      "EU-Stecker",
+      "US-Stecker"
+    ],
+    "variants": [
+      {
+        "sku": "6806019209A",
+        "hardware": "EU-Stecker",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/q6-720p-wifi-6-android-projector-2-69-inch-glass-lens-electronic-keystone-correction-for-home-white-eu-plug-sku6806019209a.html"
+      },
+      {
+        "sku": "6806019209B",
+        "hardware": "US-Stecker",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/q6-720p-wifi-6-android-projector-2-69-inch-glass-lens-electronic-keystone-correction-for-home-white-us-plug-sku6806019209b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "067",
+    "name": "P40; 720p",
+    "source": "https://www.tvcmall.com/details/p40-smart-projector-native-720p-hd-portable-mini-projector-5g-wifi-wireless-screen-mirroring-home-theater-white-eu-plug-sku6806018625a.html",
+    "checkedAt": "2026-09-30T21:35:59.670Z",
+    "hardwareOptions": [
+      "EU-Stecker",
+      "US-Stecker"
+    ],
+    "variants": [
+      {
+        "sku": "6806018625A",
+        "hardware": "EU-Stecker",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/p40-smart-projector-native-720p-hd-portable-mini-projector-5g-wifi-wireless-screen-mirroring-home-theater-white-eu-plug-sku6806018625a.html"
+      },
+      {
+        "sku": "6806018625B",
+        "hardware": "US-Stecker",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/p40-smart-projector-native-720p-hd-portable-mini-projector-5g-wifi-wireless-screen-mirroring-home-theater-white-us-plug-sku6806018625b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "068",
+    "name": "Y8S PRO X3; 1280×720",
+    "source": "https://www.tvcmall.com/details/y8s-pro-x3-smart-projector-720p-hd-180-ansi-mini-portable-wifi-bluetooth-compatible-home-theater-system-eu-plug-sku6806018581a.html",
+    "checkedAt": "2026-09-30T21:36:02.886Z",
+    "hardwareOptions": [
+      "EU-Stecker",
+      "US-Stecker",
+      "UK-Stecker",
+      "AU-Stecker"
+    ],
+    "variants": [
+      {
+        "sku": "6806018581A",
+        "hardware": "EU-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/y8s-pro-x3-smart-projector-720p-hd-180-ansi-mini-portable-wifi-bluetooth-compatible-home-theater-system-eu-plug-sku6806018581a.html"
+      },
+      {
+        "sku": "6806018581B",
+        "hardware": "US-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/y8s-pro-x3-smart-projector-720p-hd-180-ansi-mini-portable-wifi-bluetooth-compatible-home-theater-system-us-plug-sku6806018581b.html"
+      },
+      {
+        "sku": "6806018581C",
+        "hardware": "UK-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/y8s-pro-x3-smart-projector-720p-hd-180-ansi-mini-portable-wifi-bluetooth-compatible-home-theater-system-uk-plug-sku6806018581c.html"
+      },
+      {
+        "sku": "6806018581D",
+        "hardware": "AU-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/y8s-pro-x3-smart-projector-720p-hd-180-ansi-mini-portable-wifi-bluetooth-compatible-home-theater-system-au-plug-sku6806018581d.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "069",
+    "name": "P30 Pro; 1280×720",
+    "source": "https://www.tvcmall.com/details/p30-pro-mini-projector-720p-hd-portable-home-theater-video-projector-eu-plug-sku6806015339a.html",
+    "checkedAt": "2026-09-30T21:36:04.563Z",
+    "hardwareOptions": [
+      "EU-Stecker",
+      "US-Stecker"
+    ],
+    "variants": [
+      {
+        "sku": "6806015339A",
+        "hardware": "EU-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/p30-pro-mini-projector-720p-hd-portable-home-theater-video-projector-eu-plug-sku6806015339a.html"
+      },
+      {
+        "sku": "6806015339B",
+        "hardware": "US-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/p30-pro-mini-projector-720p-hd-portable-home-theater-video-projector-us-plug-sku6806015339b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "070",
+    "name": "H96 Max PJ-X6; 1920×1080",
+    "source": "https://www.tvcmall.com/details/h96-max-pj-x6-android-11-smart-projector-1080p-native-280-ansi-wifi-6-bluetooth-compatible-5-4-home-theater-system-eu-plug-sku6806018580a.html",
+    "checkedAt": "2026-09-30T21:36:06.195Z",
+    "hardwareOptions": [
+      "EU-Stecker",
+      "US-Stecker",
+      "UK-Stecker",
+      "AU-Stecker"
+    ],
+    "variants": [
+      {
+        "sku": "6806018580A",
+        "hardware": "EU-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/h96-max-pj-x6-android-11-smart-projector-1080p-native-280-ansi-wifi-6-bluetooth-compatible-5-4-home-theater-system-eu-plug-sku6806018580a.html"
+      },
+      {
+        "sku": "6806018580B",
+        "hardware": "US-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/h96-max-pj-x6-android-11-smart-projector-1080p-native-280-ansi-wifi-6-bluetooth-compatible-5-4-home-theater-system-us-plug-sku6806018580b.html"
+      },
+      {
+        "sku": "6806018580C",
+        "hardware": "UK-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/h96-max-pj-x6-android-11-smart-projector-1080p-native-280-ansi-wifi-6-bluetooth-compatible-5-4-home-theater-system-uk-plug-sku6806018580c.html"
+      },
+      {
+        "sku": "6806018580D",
+        "hardware": "AU-Stecker",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/h96-max-pj-x6-android-11-smart-projector-1080p-native-280-ansi-wifi-6-bluetooth-compatible-5-4-home-theater-system-au-plug-sku6806018580d.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "071",
+    "name": "DATA FROG S80 Elite, Switch/PC",
+    "source": "https://www.tvcmall.com/details/data-frog-s80-elite-edition-controller-for-nintendo-switch-switch-lite-oled-pc-wireless-bluetooth-game-console-black-sku6816000472a.html",
+    "checkedAt": "2026-09-30T21:36:10.543Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6816000472A",
+        "hardware": "Standard",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/data-frog-s80-elite-edition-controller-for-nintendo-switch-switch-lite-oled-pc-wireless-bluetooth-game-console-black-sku6816000472a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "074",
+    "name": "GAMWING Type-C, ausziehbar",
+    "source": "https://www.tvcmall.com/details/gamwing-type-c-mobile-game-controller-wired-wireless-retractable-phone-controller-sku6816000586a.html",
+    "checkedAt": "2026-09-30T21:36:12.064Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6816000586A",
+        "hardware": "Standard",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/gamwing-type-c-mobile-game-controller-wired-wireless-retractable-phone-controller-sku6816000586a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "075",
+    "name": "GAMWING Aobing Max",
+    "source": "https://www.tvcmall.com/details/gamwing-aobing-max-bluetooth-compatible-type-c-wired-dual-mode-expandable-grip-mobile-game-controller-black-sku6816000622a.html",
+    "checkedAt": "2026-09-30T21:36:13.668Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6816000622A",
+        "hardware": "Standard",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/gamwing-aobing-max-bluetooth-compatible-type-c-wired-dual-mode-expandable-grip-mobile-game-controller-black-sku6816000622a.html"
+      },
+      {
+        "sku": "6816000622B",
+        "hardware": "Standard",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/gamwing-aobing-max-bluetooth-compatible-type-c-wired-dual-mode-expandable-grip-mobile-game-controller-white-sku6816000622b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "076",
+    "name": "MOCUTE 060",
+    "source": "https://www.tvcmall.com/details/mocute-060-bluetooth-wireless-retractable-gamepad-game-joystick-controller-for-android-ios-mobile-phone-black-sku681600093b.html",
+    "checkedAt": "2026-09-30T21:36:15.273Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "681600093B",
+        "hardware": "Standard",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/mocute-060-bluetooth-wireless-retractable-gamepad-game-joystick-controller-for-android-ios-mobile-phone-black-sku681600093b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "078",
+    "name": "8BitDo Arcade Stick für Xbox",
+    "source": "https://www.tvcmall.com/details/8bitdo-wireless-arcade-stick-for-xbox-series-x-s-xbox-one-windows-arcade-gaming-joy-pad-with-2-4g-adapter-white-sku681600408a.html",
+    "checkedAt": "2026-09-30T21:36:20.278Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "681600408A",
+        "hardware": "Standard",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/8bitdo-wireless-arcade-stick-for-xbox-series-x-s-xbox-one-windows-arcade-gaming-joy-pad-with-2-4g-adapter-white-sku681600408a.html"
+      },
+      {
+        "sku": "681600408B",
+        "hardware": "Standard",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/8bitdo-wireless-arcade-stick-for-xbox-series-x-s-xbox-one-windows-arcade-gaming-joy-pad-with-2-4g-adapter-black-sku681600408b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "085",
+    "name": "EASYSMX X20",
+    "source": "https://www.tvcmall.com/details/easysmx-x20-gaming-controller-bluetooth-compatible-2-4g-wired-programmable-gamepad-sku6816000635a.html",
+    "checkedAt": "2026-09-30T21:36:22.590Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6816000635A",
+        "hardware": "Standard",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/easysmx-x20-gaming-controller-bluetooth-compatible-2-4g-wired-programmable-gamepad-sku6816000635a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "086",
+    "name": "8BitDo Ultimate Bluetooth + Dock",
+    "source": "https://www.tvcmall.com/details/8bitdo-ultimate-bluetooth-controller-with-charging-dock-wireless-gamepad-compatible-with-nintendo-switch-steam-deck-white-sku681600409a.html",
+    "checkedAt": "2026-09-30T21:36:25.618Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "681600409A",
+        "hardware": "Standard",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/8bitdo-ultimate-bluetooth-controller-with-charging-dock-wireless-gamepad-compatible-with-nintendo-switch-steam-deck-white-sku681600409a.html"
+      },
+      {
+        "sku": "681600409B",
+        "hardware": "Standard",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/8bitdo-ultimate-bluetooth-controller-with-charging-dock-wireless-gamepad-compatible-with-nintendo-switch-steam-deck-black-sku681600409b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "088",
+    "name": "EASYSMX D10 TMR",
+    "source": "https://www.tvcmall.com/details/easysmx-d10-game-controller-tmr-joystick-dual-trigger-bluetooth-compatible-2-4g-wireless-wired-gamepad-with-smart-charging-dock-black-sku6816000637a.html",
+    "checkedAt": "2026-09-30T21:36:27.951Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6816000637A",
+        "hardware": "Standard",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/easysmx-d10-game-controller-tmr-joystick-dual-trigger-bluetooth-compatible-2-4g-wireless-wired-gamepad-with-smart-charging-dock-black-sku6816000637a.html"
+      },
+      {
+        "sku": "6816000637B",
+        "hardware": "Standard",
+        "color": "Violett",
+        "source": "https://www.tvcmall.com/details/easysmx-d10-game-controller-tmr-joystick-dual-trigger-bluetooth-compatible-2-4g-wireless-wired-gamepad-with-smart-charging-dock-purple-sku6816000637b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "097",
+    "name": "AOLION Switch/Steam-Deck-Controller",
+    "source": "https://www.tvcmall.com/details/aolion-wireless-controller-for-nintendo-switch-vibrating-continuous-wireless-bluetooth-game-handle-for-steam-deck-black-sku681600305a.html",
+    "checkedAt": "2026-09-30T21:36:32.710Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "681600305A",
+        "hardware": "Standard",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/aolion-wireless-controller-for-nintendo-switch-vibrating-continuous-wireless-bluetooth-game-handle-for-steam-deck-black-sku681600305a.html"
+      },
+      {
+        "sku": "681600305B",
+        "hardware": "Standard",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/aolion-wireless-controller-for-nintendo-switch-vibrating-continuous-wireless-bluetooth-game-handle-for-steam-deck-white-sku681600305b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "103",
+    "name": "8BitDo M30 Bluetooth",
+    "source": "https://www.tvcmall.com/details/8bitdo-m30-bluetooth-controller-for-switch-windows-android-6-button-layout-for-sega-s-classic-games-black-sku681600419a.html",
+    "checkedAt": "2026-09-30T21:36:34.371Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "681600419A",
+        "hardware": "Standard",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/8bitdo-m30-bluetooth-controller-for-switch-windows-android-6-button-layout-for-sega-s-classic-games-black-sku681600419a.html"
+      },
+      {
+        "sku": "681600419B",
+        "hardware": "Standard",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/8bitdo-m30-bluetooth-controller-for-switch-windows-android-6-button-layout-for-sega-s-classic-games-white-sku681600419b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "105",
+    "name": "8BitDo Ultimate Wired",
+    "source": "https://www.tvcmall.com/details/8bitdo-ultimate-wired-controller-for-xbox-series-x-s-xbox-one-cabled-handheld-gamepad-with-3-5mm-audio-black-sku681600411a.html",
+    "checkedAt": "2026-09-30T21:36:35.814Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "681600411A",
+        "hardware": "Standard",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/8bitdo-ultimate-wired-controller-for-xbox-series-x-s-xbox-one-cabled-handheld-gamepad-with-3-5mm-audio-black-sku681600411a.html"
+      },
+      {
+        "sku": "681600411B",
+        "hardware": "Standard",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/8bitdo-ultimate-wired-controller-for-xbox-series-x-s-xbox-one-cabled-handheld-gamepad-with-3-5mm-audio-white-sku681600411b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "118",
+    "name": "PXN P5",
+    "source": "https://www.tvcmall.com/details/pxn-p5-bluetooth-wireless-game-controller-with-receiver-for-steam-pc-android-ios-nintendo-switch-white-sku6816000600a.html",
+    "checkedAt": "2026-09-30T21:36:38.717Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6816000600A",
+        "hardware": "Standard",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/pxn-p5-bluetooth-wireless-game-controller-with-receiver-for-steam-pc-android-ios-nintendo-switch-white-sku6816000600a.html"
+      },
+      {
+        "sku": "6816000600B",
+        "hardware": "Standard",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/pxn-p5-bluetooth-wireless-game-controller-with-receiver-for-steam-pc-android-ios-nintendo-switch-black-sku6816000600b.html"
+      },
+      {
+        "sku": "6816000600C",
+        "hardware": "Standard",
+        "color": "Rosa",
+        "source": "https://www.tvcmall.com/details/pxn-p5-bluetooth-wireless-game-controller-with-receiver-for-steam-pc-android-ios-nintendo-switch-pink-sku6816000600c.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "121",
+    "name": "YESIDO KB51, USB, 7200 DPI",
+    "source": "https://www.tvcmall.com/details/yesido-kb51-rgb-gradient-wired-gaming-mouse-8-buttons-7200-dpi-optical-sensor-mouse-for-pc-gaming-purple-blue-sku6101000733a.html",
+    "checkedAt": "2026-09-30T21:36:47.135Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6101000733A",
+        "hardware": "Standard",
+        "color": "Violett/Blau",
+        "source": "https://www.tvcmall.com/details/yesido-kb51-rgb-gradient-wired-gaming-mouse-8-buttons-7200-dpi-optical-sensor-mouse-for-pc-gaming-purple-blue-sku6101000733a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "122",
+    "name": "JOMAA JOM255 Trackball, Funk",
+    "source": "https://www.tvcmall.com/details/jomaa-jom255-2-4g-wireless-bluetooth-compatible-dual-mode-trackball-mouse-rechargeable-silent-ergonomic-cordless-mouse-sku6101000705a.html",
+    "checkedAt": "2026-09-30T21:36:48.656Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6101000705A",
+        "hardware": "Standard",
+        "color": "Schwarz / schwarzer Trackball",
+        "source": "https://www.tvcmall.com/details/jomaa-jom255-2-4g-wireless-bluetooth-compatible-dual-mode-trackball-mouse-rechargeable-silent-ergonomic-cordless-mouse-sku6101000705a.html"
+      },
+      {
+        "sku": "6101000705B",
+        "hardware": "Standard",
+        "color": "Schwarz / roter Trackball",
+        "source": "https://www.tvcmall.com/details/jomaa-jom255-2-4g-wireless-bluetooth-compatible-dual-mode-trackball-mouse-rechargeable-silent-ergonomic-cordless-mouse-black-red-trackball-sku6101000705b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "126",
+    "name": "UGREEN MU001, 2.4 GHz",
+    "source": "https://www.tvcmall.com/details/ugreen-90318-2-4ghz-wireless-bluetooth-mute-mouse-with-4000-dpi-for-pc-laptop-computer-black-sku612900072a.html",
+    "checkedAt": "2026-09-30T21:36:50.028Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "612900072A",
+        "hardware": "Standard",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/ugreen-90318-2-4ghz-wireless-bluetooth-mute-mouse-with-4000-dpi-for-pc-laptop-computer-black-sku612900072a.html"
+      },
+      {
+        "sku": "612900072B",
+        "hardware": "Standard",
+        "color": "Grau",
+        "source": "https://www.tvcmall.com/details/ugreen-90318-2-4ghz-wireless-bluetooth-mute-mouse-with-4000-dpi-for-pc-laptop-computer-grey-sku612900072b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "130",
+    "name": "HXSJ T22 Vertikal, Funk",
+    "source": "https://www.tvcmall.com/details/hxsj-t22-ergonomic-vertical-mouse-2-4g-bluetooth-compatible-dual-mode-2400dpi-adjustable-mouse-metallic-gray-sku6101000691a.html",
+    "checkedAt": "2026-09-30T21:36:53.917Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6101000691A",
+        "hardware": "Standard",
+        "color": "Metallic-Grau",
+        "source": "https://www.tvcmall.com/details/hxsj-t22-ergonomic-vertical-mouse-2-4g-bluetooth-compatible-dual-mode-2400dpi-adjustable-mouse-metallic-gray-sku6101000691a.html"
+      },
+      {
+        "sku": "6101000691B",
+        "hardware": "Standard",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/hxsj-t22-ergonomic-vertical-mouse-2-4g-bluetooth-compatible-dual-mode-2400dpi-adjustable-mouse-black-sku6101000691b.html"
+      },
+      {
+        "sku": "6101000691C",
+        "hardware": "Standard",
+        "color": "Weiss",
+        "source": "https://www.tvcmall.com/details/hxsj-t22-ergonomic-vertical-mouse-2-4g-bluetooth-compatible-dual-mode-2400dpi-adjustable-mouse-white-sku6101000691c.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "141",
+    "name": "YESIDO KB49, faltbar, Touchpad",
+    "source": "https://www.tvcmall.com/details/yesido-kb49-tri-fold-wireless-bluetooth-compatible-keyboard-with-touchpad-numeric-keypad-keyboard-for-phone-tablet-pc-english-sku6102000981a.html",
+    "checkedAt": "2026-09-30T21:36:56.671Z",
+    "hardwareOptions": [
+      "Englisches Layout",
+      "Arabisches Layout"
+    ],
+    "variants": [
+      {
+        "sku": "6102000981A",
+        "hardware": "Englisches Layout",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/yesido-kb49-tri-fold-wireless-bluetooth-compatible-keyboard-with-touchpad-numeric-keypad-keyboard-for-phone-tablet-pc-english-sku6102000981a.html"
+      },
+      {
+        "sku": "6102000981B",
+        "hardware": "Arabisches Layout",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/yesido-kb49-tri-fold-wireless-bluetooth-compatible-keyboard-with-touchpad-numeric-keypad-keyboard-for-phone-tablet-pc-arabic-sku6102000981b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "142",
+    "name": "HXSJ V500, 63 Tasten, USB",
+    "source": "https://www.tvcmall.com/details/hxsj-v500-mechanical-wired-keyboard-63-keys-gaming-keyboard-with-backlight-effect-cyan-switch-sku613200077a.html",
+    "checkedAt": "2026-09-30T21:36:59.032Z",
+    "hardwareOptions": [
+      "Cyan-Schalter",
+      "Rote Schalter"
+    ],
+    "variants": [
+      {
+        "sku": "613200077A",
+        "hardware": "Cyan-Schalter",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/hxsj-v500-mechanical-wired-keyboard-63-keys-gaming-keyboard-with-backlight-effect-cyan-switch-sku613200077a.html"
+      },
+      {
+        "sku": "613200077B",
+        "hardware": "Rote Schalter",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/hxsj-v500-mechanical-wired-keyboard-63-keys-gaming-keyboard-with-backlight-effect-red-switch-sku613200077b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "150",
+    "name": "HXSJ X81, mechanisch, 3 Modi",
+    "source": "https://www.tvcmall.com/details/hxsj-x81-81-keys-tri-mode-mechanical-keyboard-hot-swappable-pbt-keycaps-rgb-silent-gaming-keyboard-for-pc-gaming-black-sku6102001054a.html",
+    "checkedAt": "2026-09-30T21:37:01.978Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6102001054A",
+        "hardware": "Standard",
+        "color": "Schwarz",
+        "source": "https://www.tvcmall.com/details/hxsj-x81-81-keys-tri-mode-mechanical-keyboard-hot-swappable-pbt-keycaps-rgb-silent-gaming-keyboard-for-pc-gaming-black-sku6102001054a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "154",
+    "name": "AJAZZ AK820pro, 81 Tasten, 3 Modi",
+    "source": "https://www.tvcmall.com/details/ajazz-ak820pro-wireless-mechanical-keyboard-bluetooth-tri-mode-with-flying-fish-switches-81-keys-rgb-backlit-keyboard-purple-white-blue-sku6102000831a.html",
+    "checkedAt": "2026-09-30T21:37:05.243Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6102000831A",
+        "hardware": "Standard",
+        "color": "Violett / Weiss / Blau",
+        "source": "https://www.tvcmall.com/details/ajazz-ak820pro-wireless-mechanical-keyboard-bluetooth-tri-mode-with-flying-fish-switches-81-keys-rgb-backlit-keyboard-purple-white-blue-sku6102000831a.html"
+      },
+      {
+        "sku": "6102000831B",
+        "hardware": "Standard",
+        "color": "Schwarz / Grau / Gelb",
+        "source": "https://www.tvcmall.com/details/ajazz-ak820pro-wireless-mechanical-keyboard-bluetooth-tri-mode-with-flying-fish-switches-81-keys-rgb-backlit-keyboard-black-grey-yellow-sku6102000831b.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "156",
+    "name": "2309 USB-C, 11 Ports, Gigabit",
+    "source": "https://www.tvcmall.com/details/2309-type-c-to-11-port-usb-hub-4k-60hz-hd-screen-mirroring-gigabit-ethernet-adapter-laptop-tablet-docking-station-sku6102000760a.html",
+    "checkedAt": "2026-09-30T21:37:32.995Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6102000760A",
+        "hardware": "Standard",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/2309-type-c-to-11-port-usb-hub-4k-60hz-hd-screen-mirroring-gigabit-ethernet-adapter-laptop-tablet-docking-station-sku6102000760a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "158",
+    "name": "LEMORELE TC19 USB-C, 8-in-1",
+    "source": "https://www.tvcmall.com/details/lemorele-tc19-8-in-1-type-c-hub-adapter-multiport-docking-station-with-hd-4k-pd-charging-ethernet-sku6114000078a.html",
+    "checkedAt": "2026-09-30T21:37:34.402Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6114000078A",
+        "hardware": "Standard",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/lemorele-tc19-8-in-1-type-c-hub-adapter-multiport-docking-station-with-hd-4k-pd-charging-ethernet-sku6114000078a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "159",
+    "name": "UGREEN 15601 USB-C, 10-in-1",
+    "source": "https://www.tvcmall.com/details/ugreen-15601-docking-station-10-in-1-usb-c-hub-with-hd-vga-sd-tf-card-reader-pd-100w-fast-charging-sku6199001179a.html",
+    "checkedAt": "2026-09-30T21:37:36.686Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6199001179A",
+        "hardware": "Standard",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/ugreen-15601-docking-station-10-in-1-usb-c-hub-with-hd-vga-sd-tf-card-reader-pd-100w-fast-charging-sku6199001179a.html"
+      }
+    ],
+    "unavailable": []
+  },
+  {
+    "productId": "168",
+    "name": "UGREEN 35999, 6-in-1, 10 Gbit/s",
+    "source": "https://www.tvcmall.com/details/ugreen-35999-6-in-1-usb-c-hub-10gbps-usb-3-2-gen-2-4k-60hz-hdmi-100w-pd-dock-for-macbook-pro-macbook-air-ipad-pro-sku6199001223a.html",
+    "checkedAt": "2026-09-30T21:37:37.929Z",
+    "hardwareOptions": [
+      "Standard"
+    ],
+    "variants": [
+      {
+        "sku": "6199001223A",
+        "hardware": "Standard",
+        "color": "",
+        "source": "https://www.tvcmall.com/details/ugreen-35999-6-in-1-usb-c-hub-10gbps-usb-3-2-gen-2-4k-60hz-hdmi-100w-pd-dock-for-macbook-pro-macbook-air-ipad-pro-sku6199001223a.html"
+      }
+    ],
+    "unavailable": []
+  }
+]
