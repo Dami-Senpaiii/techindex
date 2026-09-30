@@ -13,6 +13,7 @@ function render() {
     for (const [key, label] of [['cheapest', item.shipping.complete ? 'Günstigste Lieferung' : 'Hinterlegte Lieferung'], ['fastest', 'Schnellste Lieferung']]) {
       const option = choices[key]; info.append(element('p', 'cart-shipping', option ? `${label}: ${money(option.costMinor)} · ${option.method}, ${transit(option)} (für ${item.shipping.quantity} Stück)` : `${label}: Tarif noch offen`));
     }
+    info.append(element('p', 'cart-shipping', `Bearbeitungsdauer: ${item.shipping.processingDays ? `${item.shipping.processingDays.join('–')} Tage` : 'Wird bestätigt'}`));
     const controls = element('div', 'cart-controls'); const minus = element('button', '', '−'); minus.type = 'button'; minus.setAttribute('aria-label', `Menge für ${item.name} verringern`); minus.disabled = item.quantity <= 1;
     const input = element('input'); input.type = 'number'; input.min = '1'; input.max = '99'; input.step = '1'; input.value = String(item.quantity); input.setAttribute('aria-label', `Menge für ${item.name}`);
     const plus = element('button', '', '+'); plus.type = 'button'; plus.setAttribute('aria-label', `Menge für ${item.name} erhöhen`); plus.disabled = item.quantity >= 99;

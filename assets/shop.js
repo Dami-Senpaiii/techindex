@@ -49,26 +49,26 @@ function render() {
 }
 function updateVariant() {
   $('#cart-feedback').hidden = true; $('#view-cart').hidden = true;
-  const variant = activeProduct.variants[Number($('#detail-variant').value)]; const link = $('#supplier-link'); const url = new URL(variant.source);
-  if (url.protocol === 'https:' && url.hostname === 'www.tvcmall.com') link.href = url.href; else link.removeAttribute('href');
+  const variant = activeProduct.variants[Number($('#detail-variant').value)];
   $('#detail-price').textContent = money(variant.priceMinor);
   const shipping = variant.shipping; const choices = shippingChoices(shipping);
   const shippingRows = [];
   for (const [key, label] of [['cheapest', shipping.complete ? 'Günstigste Lieferung' : 'Hinterlegte Lieferung'], ['fastest', 'Schnellste Lieferung']]) {
     const option = choices[key]; const row = element('div', 'shipping-option');
     const heading = element('div', 'shipping-option-heading'); heading.append(element('strong', '', label), element('strong', '', option ? money(option.costMinor) : 'Noch offen'));
-    row.append(heading, element('p', '', option ? `${option.method} · ${transit(option)}` : 'Der Lieferant stellt diesen Tarif momentan nicht bereit.'));
+    row.append(heading, element('p', '', option ? `${option.method} · ${transit(option)}${shipping.quantity > 1 ? ` (für ${shipping.quantity} Stück)` : ''}` : 'Für diese Versandoption liegt aktuell kein Tarif vor.'));
     shippingRows.push(row);
   }
-  $('#detail-shipping').replaceChildren(...shippingRows);
-  $('#shipping-note').textContent = `TVCMALL-Schätzung für ${shipping.quantity} Stück · Stand ${shipping.checkedAt.split('-').reverse().join('.')}. ${shipping.processingDays ? `Zuzüglich ${shipping.processingDays.join('–')} Tage Bearbeitung. ` : ''}Versanddauer ab Übergabe an den Transportdienst. Gebühren für weitere Artikel sowie mögliche Importabgaben werden beim Checkout berechnet.`;
+  const processing = element('div', 'shipping-option shipping-option-heading');
+  processing.append(element('strong', '', 'Bearbeitungsdauer'), element('strong', '', shipping.processingDays ? `${shipping.processingDays.join('–')} Tage` : 'Wird bestätigt'));
+  $('#detail-shipping').replaceChildren(...shippingRows, processing);
   const details = variant.details || activeProduct.details; const content = $('#detail-specifications'); content.replaceChildren();
   for (const paragraph of details.paragraphs) content.append(element('p', '', paragraph));
   const facts = element('dl', 'detail-specs');
   for (const [name, value] of [...details.specifications, ['Ausführung', variant.name], ['Artikelnummer', variant.sku]]) { const row = element('div'); row.append(element('dt', '', name), element('dd', '', value)); facts.append(row); }
   content.append(facts);
   if (details.included?.length) { content.append(element('h4', '', 'Lieferumfang')); const list = element('ul'); for (const part of details.included) list.append(element('li', '', part)); content.append(list); }
-  content.append(element('p', 'detail-note', 'Technische Angaben laut Lieferant. Unterstützte Funktionen hängen vom angeschlossenen Gerät und der Software ab.'));
+  content.append(element('p', 'detail-note', 'Unterstützte Funktionen hängen vom angeschlossenen Gerät und der Software ab.'));
 
 }
 function openProduct(product, opener) {
