@@ -41,4 +41,4 @@ python3 scripts/import-catalogue.py /pfad/supplier-observations.json /pfad/detai
 
 Hosting, Veröffentlichung und Wiederherstellung: [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).
 
-Der AYN Thor ist als Hero mit drei Speicheroptionen (8/128 GB, 12/256 GB, 16 GB/1 TB) und neun Farb-/Speichervarianten integriert. Der Hero nutzt dieselben SKU-Daten wie Produktdialog und Warenkorb. Jede Katalogvariante hat ein eigenes lokales Bild; die Auswahl aktualisiert Bild, Preis, Versand und variantenspezifische Speicherdetails gemeinsam.
+Der AYN Thor steht als erstes Produkt unter Handhelds, mit drei Speicheroptionen (8/128 GB, 12/256 GB, 16 GB/1 TB) und neun Farb-/Speichervarianten im Produktdialog. Das ursprüngliche Plattform-Banner bleibt erhalten. Als `featured` markierte Produkte erscheinen vor den übrigen Modellen ihrer Kategorie. Jede Katalogvariante hat ein eigenes lokales Bild; die Auswahl aktualisiert Bild, Preis, Versand und variantenspezifische Speicherdetails gemeinsam.

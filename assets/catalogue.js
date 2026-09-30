@@ -9,6 +9,7 @@ const normalize = (value) => String(value || '').toLocaleLowerCase('de-CH').norm
 export function selectProducts(products, category, query = '', page = 1, pageSize = 6) {
   const words = normalize(query).split(/\s+/).filter(Boolean);
   const filtered = products.filter((product) => product.category === category && words.every((word) => normalize([product.name, ...product.variants.map((variant) => variant.name)].join(' ')).includes(word)));
+  filtered.sort((a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured)));
   const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize));
   const currentPage = Math.max(1, Math.min(totalPages, Number.parseInt(page, 10) || 1));
   return { products: filtered.slice((currentPage - 1) * pageSize, currentPage * pageSize), total: filtered.length, page: currentPage, totalPages };
