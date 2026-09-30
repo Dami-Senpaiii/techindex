@@ -18,3 +18,8 @@ export function productSubtitle(product) {
   const count = product.variants.length;
   return `${CATEGORY_LABELS[product.category].noun} · ${count} ${count === 1 ? 'Ausführung' : 'Ausführungen'}`;
 }
+
+export function selectVariant(product, hardware, color) {
+  const options = product.variants.filter(variant => (variant.hardware || 'Standard') === hardware);
+  return options.find(variant => variant.color === color) || options[0];
+}

@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
 import test from 'node:test';
-import { selectProducts } from '../assets/catalogue.js';
+import { selectProducts, selectVariant } from '../assets/catalogue.js';
 const { mode, products } = JSON.parse(await readFile(new URL('../data/catalogue.json', import.meta.url)));
 
 test('every purchasable variant has an exact CHF 20 markup and complete Swiss shipping quotes', async () => {
@@ -38,6 +38,23 @@ test('59 unique handheld variants are grouped into 20 models', () => {
   assert.equal(handhelds.length, 20);
   assert.equal(handhelds.flatMap(p => p.variants).length, 59);
   assert.equal(new Set(products.flatMap(p => p.variants.map(v => v.sku))).size, products.flatMap(p => p.variants).length);
+});
+test('separate hardware and colour choices resolve every handheld SKU without ambiguity', () => {
+  for (const product of products.filter(p => p.category === 'handhelds')) {
+    assert.equal(new Set(product.variants.map(v => `${v.hardware}|${v.color}`)).size, product.variants.length);
+    for (const variant of product.variants) {
+      assert.ok(variant.hardware && variant.color);
+      assert.equal(selectVariant(product, variant.hardware, variant.color).sku, variant.sku);
+    }
+  }
+});
+test('hardware changes preserve an available colour and cannot create an unavailable combination', () => {
+  const thor = products.find(p => p.name === 'AYN Thor');
+  assert.equal(selectVariant(thor, '16 GB / 1 TB', 'Transparent Violett').sku, '6819000453D');
+  assert.equal(selectVariant(thor, '8 GB / 128 GB', 'Transparent Violett').sku, '6819000454A');
+  assert.equal(selectVariant(thor, 'not offered', 'Schwarz'), undefined);
+  const accessory = products.find(p => p.category === 'kabel');
+  assert.equal(selectVariant(accessory, 'Standard', undefined).sku, accessory.variants[0].sku);
 });
 test('search combines model and variant terms without case or accent sensitivity', () => {
   const matches = selectProducts(products, 'handhelds', 'rg35xxsp GRAU');

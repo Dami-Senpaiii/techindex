@@ -54,8 +54,13 @@ for item in sorted(observations, key=lambda item: item['id']):
     if not image_source:
         raise ValueError('No matching variant image: ' + item['sku'])
     variant = {'name': item['name'], 'sku': item['sku'], 'source': item['source'], 'priceMinor': cost + 2000, 'shipping': shipping, 'image': existing_variant_images.get(item['sku']), 'imageSource': image_source}
-    for field in ['memory', 'ramGB', 'storage', 'color']:
+    for field in ['memory', 'ramGB', 'storage', 'hardware', 'color']:
         if field in item: variant[field] = item[field]
+    if item['category'] == 'handhelds':
+        axes = item['name'].removeprefix(name + ' · ').split(' · ')
+        if len(axes) != 2:
+            raise ValueError('Missing separate hardware and colour: ' + item['sku'])
+        variant['hardware'], variant['color'] = axes
     groups[key]['variants'].append(variant)
     if item.get('featured'):
         groups[key]['featured'] = True
