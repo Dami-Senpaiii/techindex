@@ -7,8 +7,8 @@ function render() {
   const items = getCart(); $('#cart-loading').hidden = true; $('#cart-empty').hidden = items.length > 0; $('#cart-content').hidden = items.length === 0;
   $('#cart-items').replaceChildren(); $('#cart-subtotal').textContent = money(subtotal(items)); const count = items.reduce((sum, item) => sum + item.quantity, 0); $('#cart-quantity').textContent = `${count} ${count === 1 ? 'Artikel' : 'Artikel'}`;
   for (const item of items) {
-    const row = element('article', 'cart-row'); const photo = element('div', 'cart-photo'); if (item.image) { const image = element('img'); image.src = item.image; image.alt = item.name; photo.append(image); }
-    const info = element('div', 'cart-info'); info.append(element('h2', '', item.name), element('p', 'muted', item.variant), element('p', 'cart-availability', 'Verfügbar'));
+    const row = element('article', 'cart-row'); const photo = element('a', 'cart-photo'); photo.href = item.url; photo.setAttribute('aria-label', `${item.name} ansehen`); if (item.image) { const image = element('img'); image.src = item.image; image.alt = item.name; photo.append(image); }
+    const info = element('div', 'cart-info'); const title = element('h2'); const productLink = element('a', '', item.name); productLink.href = item.url; title.append(productLink); info.append(title, element('p', 'muted', item.variant), element('p', 'cart-availability', 'Verfügbar'));
     const choices = shippingChoices(item.shipping);
     for (const [key, label] of [['cheapest', item.shipping.complete ? 'Günstigste Lieferung' : 'Hinterlegte Lieferung'], ['fastest', 'Schnellste Lieferung']]) {
       const option = choices[key]; info.append(element('p', 'cart-shipping', option ? `${label}: ${money(option.costMinor)} · ${option.method}, ${transit(option)} (für ${item.shipping.quantity} Stück)` : `${label}: Tarif noch offen`));

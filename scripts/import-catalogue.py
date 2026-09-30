@@ -45,6 +45,8 @@ for item in sorted(observations, key=lambda item: item['id']):
         if not image_source:
             raise ValueError('No observed product image: ' + item['id'])
         product = {'id': item['id'], 'name': name, 'category': item['category'], 'status': 'available', 'image': image, 'imageSource': image_source, 'source': item['source'], 'researchSource': item['researchSource'], 'details': details[item['id']], 'variants': []}
+        saved = next((p for p in existing['products'] if p['id'] == product['id']), None)
+        if saved and saved.get('slug'): product['slug'] = saved['slug']
         groups[key] = product
         products.append(product)
     image_source = next((url for url in item['images'] if item['sku'].lower() in url.lower() and '/800x800_' in url and '-1.webp' in url), None)

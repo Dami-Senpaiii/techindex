@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}} – TechIndex</title>
+  <meta name="description" content="{{description}}">
+  <meta name="theme-color" content="#ffffff"><meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="{{canonical}}">
+  <meta property="og:type" content="product"><meta property="og:title" content="{{title}} – TechIndex">
+  <meta property="og:description" content="{{description}}"><meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="https://techindex.ch{{image}}">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/shop.css"><link rel="stylesheet" href="/assets/account.css">
+  <script src="/assets/navigation.js" type="module"></script><script src="/assets/product.js" type="module"></script>
+</head>
+<body data-product-id="{{id}}">
+  <a class="skip-link" href="#product-title">Zum Produkt</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="TechIndex Startseite"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="5"/><path d="m11 25 9-13 9 13"/></svg><span>TechIndex</span></a>
+      <button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false">Menü <span aria-hidden="true">+</span></button>
+      <nav id="navigation" aria-label="Hauptnavigation"><a href="/#shop" class="nav-shop">Shop</a><a href="/konto" class="nav-account"><span data-account-label>Login / Registrieren</span></a><a href="/warenkorb" class="nav-cart">Warenkorb <span class="cart-count" data-cart-count>0</span></a></nav>
+    </div>
+  </header>
+  <main class="container product-page">
+    <nav class="breadcrumbs" aria-label="Brotkrumennavigation"><a href="/#shop">Shop</a><span aria-hidden="true">/</span><a href="{{categoryUrl}}">{{category}}</a><span aria-hidden="true">/</span><span aria-current="page">{{title}}</span></nav>
+    <div class="detail-grid product-layout">
+      <div class="product-visual"><div class="detail-image-stage"><img id="detail-image" src="{{image}}" alt="{{variantName}}" width="800" height="800" fetchpriority="high"><p id="detail-image-error" class="detail-note" role="status" hidden>Das Bild dieser Ausführung konnte nicht geladen werden.</p></div><p class="selected-variant" id="selected-variant">{{variantLabel}}</p></div>
+      <div class="detail-content">
+        <p class="product-status available">Verfügbar</p><h1 id="product-title">{{title}}</h1><p class="product-subtitle">{{subtitle}}</p>
+        <div class="variant-selectors" id="product-controls" hidden><div id="detail-hardware-field"><label for="detail-hardware">Hardware-Ausführung</label><select id="detail-hardware"></select></div><div id="detail-color-field"><label for="detail-color">Farbe</label><select id="detail-color"></select></div></div>
+        <dl class="product-facts"><div><dt>Verfügbarkeit</dt><dd class="available">Verfügbar</dd></div><div><dt>Preis</dt><dd id="detail-price">{{price}}</dd></div></dl>
+        <button class="button add-to-cart" id="add-to-cart" type="button" disabled>In den Warenkorb <span aria-hidden="true">+</span></button>
+        <p class="price-note">Preise in CHF, zuzüglich Liefergebühren.</p>
+        <p id="cart-feedback" role="status" class="form-message" hidden></p><a href="/warenkorb" id="view-cart" class="text-button" hidden>Zum Warenkorb →</a>
+        <div id="product-load-error" class="form-message is-error" role="alert" hidden><p>Die Auswahl konnte nicht geladen werden.</p><button id="retry-product" class="text-button" type="button">Erneut versuchen</button></div>
+        <noscript><p>Bitte aktiviere JavaScript, um eine Ausführung zu wählen und sie in den Warenkorb zu legen.</p></noscript>
+        <section class="shipping-section" aria-labelledby="shipping-title"><h2 id="shipping-title">Lieferung in die Schweiz</h2><div id="detail-shipping">{{shipping}}</div></section>
+      </div>
+    </div>
+    <details class="product-details page-specifications"><summary>Details <span aria-hidden="true">+</span></summary><div id="detail-specifications">{{details}}</div></details>
+    <a class="text-button back-to-shop" href="{{categoryUrl}}">← Zurück zu {{category}}</a>
+  </main>
+  <footer id="ueber"><div class="container footer-inner"><div><a class="brand" href="/" aria-label="TechIndex Startseite"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="5"/><path d="m11 25 9-13 9 13"/></svg><span>TechIndex</span></a><p>Die Schweizer Open-Source Gaming Plattform.</p></div><nav aria-label="Fussnavigation"><a href="/#shop">Shop</a></nav></div></footer>
+</body>
+</html>

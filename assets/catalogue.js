@@ -23,3 +23,5 @@ export function selectVariant(product, hardware, color) {
   const options = product.variants.filter(variant => (variant.hardware || 'Standard') === hardware);
   return options.find(variant => variant.color === color) || options[0];
 }
+
+export const productPath = product => `/produkt/${product.slug}/`;

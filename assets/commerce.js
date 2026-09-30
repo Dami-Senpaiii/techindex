@@ -1,3 +1,4 @@
+import { productPath } from './catalogue.js';
 export const money = minor => new Intl.NumberFormat('de-CH', { style: 'currency', currency: 'CHF' }).format(minor / 100);
 export const transit = option => `${option.days[0]}–${option.days[1]} ${option.dayType === 'business' ? 'Werktage' : 'Kalendertage'}`;
 
@@ -12,6 +13,6 @@ export function shippingChoices(shipping) {
   };
 }
 export function variantItem(product, variant) {
-  return { sku: variant.sku, name: product.name, variant: variant.name.replace(product.name + ' · ', ''), image: variant.image || product.image, status: product.status, priceMinor: variant.priceMinor, shipping: variant.shipping };
+  return { url: productPath(product) + `?sku=${encodeURIComponent(variant.sku)}`, sku: variant.sku, name: product.name, variant: variant.name.replace(product.name + ' · ', ''), image: variant.image || product.image, status: product.status, priceMinor: variant.priceMinor, shipping: variant.shipping };
 }
 export const subtotal = items => items.reduce((sum, item) => sum + item.priceMinor * item.quantity, 0);
