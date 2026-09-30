@@ -1,405 +1,59 @@
 <!doctype html>
-<html lang="de">
+<html lang="de-CH">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="alternate icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="/favicon.svg" />
-
-  <title>TechIndex – Schweizer Tech‑Blog für Hardware, Software, Fotografie & Preisvergleiche</title>
-  <meta name="description" content="TechIndex ist ein unabhängiger Schweizer Tech‑Blog. Deep Dives zu Hardware & Software, Kamera‑Guides und transparente Preisvergleiche.">
-  <meta name="theme-color" content="#0a0a0a">
-  <!-- Open Graph -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TechIndex – Die Schweizer Open-Source Gaming Plattform.</title>
+  <meta name="description" content="Handhelds, Zubehör und eine Community für alle, die Gaming offen denken. Entdecke die neue Schweizer Gaming-Plattform TechIndex.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="noindex, nofollow">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="TechIndex – Schweizer Tech‑Blog">
-  <meta property="og:description" content="Hardware, Software, Fotografie, Preisvergleiche – kompakt & fundiert.">
+  <meta property="og:title" content="TechIndex – Die Schweizer Open-Source Gaming Plattform.">
+  <meta property="og:description" content="Handhelds, Zubehör und eine Community für alle, die Gaming offen denken.">
   <meta property="og:url" content="https://techindex.ch/">
-  <style>
-    :root{
-      --bg:#0a0a0a;         
-      --panel:#121212;
-      --muted:#a1a1a1;
-      --text:#fff;
-      --border:#1f1f1f;
-      --accent:#76B900;     
-      --accent-weak:#5e9400;
-      --radius:16px;
-      --shadow:0 10px 30px rgba(0,0,0,.35);
-      --max:1120px;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,"Helvetica Neue",Arial}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-    .container{max-width:var(--max);padding:0 20px;margin:0 auto}
-    /* Nav */
-    .nav{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;gap:10px;align-items:center;font-weight:700}
-    .brand-badge{width:28px;height:28px;border:2px solid var(--accent);border-radius:8px;display:grid;place-items:center}
-    .brand-badge svg{stroke:var(--accent)}
-    .menu{display:flex;gap:18px;align-items:center}
-    .menu a{color:#eaeaea;font-size:.95rem;opacity:.85}
-    .menu a:hover{opacity:1}
-    .menu .cta{margin-left:12px;opacity:1;color:#000;background:var(--accent);border:none}
-    .menu .cta:hover{background:var(--accent);filter:brightness(1.05)}
-    .cta{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);padding:8px 12px;border-radius:12px}
-    .cta:hover{background:#101010}
-    .mobile-nav-toggle{display:none;border:1px solid var(--border);background:#0d0d0d;color:#fff;padding:8px 10px;border-radius:12px;align-items:center;gap:8px;font-weight:600;cursor:pointer}
-    .mobile-nav-toggle .icon-bars{display:block;width:18px;height:2px;background:var(--accent);position:relative;border-radius:999px}
-    .mobile-nav-toggle .icon-bars::before,.mobile-nav-toggle .icon-bars::after{content:"";position:absolute;left:0;width:100%;height:100%;background:var(--accent);border-radius:999px;transition:transform .2s ease}
-    .mobile-nav-toggle .icon-bars::before{top:-6px}
-    .mobile-nav-toggle .icon-bars::after{top:6px}
-    .mobile-nav-toggle[aria-expanded="true"] .icon-bars{background:transparent}
-    .mobile-nav-toggle[aria-expanded="true"] .icon-bars::before{transform:translateY(6px) rotate(45deg)}
-    .mobile-nav-toggle[aria-expanded="true"] .icon-bars::after{transform:translateY(-6px) rotate(-45deg)}
-    body.nav-open{overflow:hidden}
-    body.nav-open::after{content:"";position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:40}
-
-    /* Hero */
-    .hero{position:relative;isolation:isolate}
-    .hero::before{content:"";position:absolute;inset:-20% -20% auto -20%;height:420px;background:radial-gradient(900px 380px at 50% -10%, rgba(118,185,0,.28), transparent);pointer-events:none}
-    .hero-inner{padding:56px 0}
-    .h1{font-size:clamp(28px,3.4vw,48px);line-height:1.15;margin:0 0 10px;font-weight:850;letter-spacing:-.01em}
-    .lead{color:#d6ffd6;max-width:860px}
-    .hero-actions{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
-    .btn{border:none;background:var(--accent);color:#000;font-weight:700;padding:12px 16px;border-radius:12px;box-shadow:var(--shadow);cursor:pointer}
-    .btn.outline{background:transparent;color:#fff;border:1px solid var(--border);box-shadow:none}
-    .btn:hover{filter:brightness(1.05)}
-    .btn:disabled,.btn[disabled]{opacity:.55;cursor:not-allowed;box-shadow:none;filter:none}
-
-    /* Featured */
-    .grid{display:grid;gap:16px}
-    .grid-3{grid-template-columns:repeat(3,1fr)}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:block;transition:border-color .18s ease,transform .18s ease}
-    .card a{display:block;color:inherit;height:100%}
-    .card a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-    .card:hover{border-color:var(--accent);transform:translateY(-3px)}
-    .card .thumb{aspect-ratio:16/9;background:#0f0f0f;overflow:hidden}
-    .card .body{padding:16px}
-    .card-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#cfcfcf}
-    .read-more{display:inline-block;margin-top:8px;color:var(--accent);font-weight:600}
-    .tag{display:inline-block;padding:4px 8px;border:1px solid var(--border);border-radius:999px;color:#eee;font-size:12px;opacity:.85}
-    .title{margin:6px 0 6px;font-weight:750;font-size:1.15rem}
-    .muted{color:var(--muted)}
-
-    /* Sections */
-    section{padding:28px 0}
-    .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:8px}
-    h2{margin:0;font-size:clamp(20px,2.4vw,28px)}
-
-    /* Latest + filter */
-    .filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-    .pill{border:1px solid var(--border);padding:6px 10px;border-radius:999px;background:#0b0b0b;color:#eee;cursor:pointer;font-size:.92rem}
-    .pill.active, .pill:hover{border-color:var(--accent);color:#fff}
-    .tag-filter{padding:10px 36px 10px 12px;border:1px solid var(--border);border-radius:12px;background:#0b0b0b;color:#fff;font:inherit;cursor:pointer}
-    .tag-filter:focus{border-color:var(--accent);outline:2px solid var(--accent);outline-offset:2px}
-    .search{flex:1;min-width:240px}
-    .search input{width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:#0b0b0b;color:#fff}
-
-    /* Price index teaser */
-    .price-table{width:100%;border-collapse:collapse;font-size:.95rem}
-    .price-table th,.price-table td{border-bottom:1px solid var(--border);padding:10px 8px;text-align:left}
-    .price-table tr:hover{background:#101010}
-
-    /* Newsletter */
-    .newsletter{background:linear-gradient(120deg, rgba(118,185,0,.18), transparent);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
-    .newsletter form{display:flex;gap:10px;flex-wrap:wrap}
-    .newsletter input{flex:1;min-width:220px;padding:12px;border-radius:12px;border:1px solid var(--border);background:#0b0b0b;color:#fff}
-
-    /* Footer */
-    footer{border-top:1px solid var(--border)}
-    .cols{display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}
-    .small{font-size:.9rem}
-
-    /* Responsive */
-    @media (max-width: 960px){
-      .grid-3{grid-template-columns:1fr 1fr}
-      .cols{grid-template-columns:1fr 1fr}
-    }
-    @media (max-width: 640px){
-      .mobile-nav-toggle{display:inline-flex}
-      .menu{display:none;position:fixed;top:68px;right:20px;left:20px;background:#101010;border:1px solid var(--border);border-radius:var(--radius);padding:20px;flex-direction:column;gap:12px;box-shadow:var(--shadow);z-index:70}
-      .menu.open{display:flex}
-      .menu a{font-size:1rem;opacity:1;padding:4px 0}
-      .menu .cta{justify-content:center;margin-left:0}
-      .grid-3{grid-template-columns:1fr}
-      .cols{grid-template-columns:1fr}
-      .hero-inner{padding:40px 0}
-    }
-  </style>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/shop.css">
+  <link rel="preload" as="image" href="/assets/shop/handheld-hero.png">
+  <script src="/assets/shop.js" type="module"></script>
 </head>
 <body>
-  <!-- NAVIGATION -->
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="#" class="brand" aria-label="TechIndex Startseite">
-        <span class="brand-badge" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2">
-            <rect x="2" y="2" width="20" height="20" rx="4" ry="4"/>
-            <path d="M7 16l5-8 5 8" fill="none"/>
-          </svg>
-        </span>
-        <span>TechIndex</span>
-      </a>
-      <button class="mobile-nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menü öffnen">
-        <span class="icon-bars" aria-hidden="true"></span>
-        <span class="visually-hidden">Menü</span>
-      </button>
-      <div class="menu" role="navigation" aria-label="Hauptmenü" id="menu">
-        <a href="#neuste">Neuste Beiträge</a>
-        <!-- Preisindex vorübergehend ausgeblendet
-        <a href="#preisindex">Preisindex</a>
-        -->
-        <a href="#techindex-weekly">TechIndex Weekly</a>
-        <!-- Marktplatz vorübergehend ausgeblendet
-        <a href="marktplatz.html">Marktplatz</a>
-        -->
-        <a href="web-design-betreuung.html">Web Design</a>
-        <a href="about.html">Über uns</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="container hero-inner">
-      <h1 class="h1">Das Schweizer Tech‑Magazin für Builder</h1>
-      <p class="lead">Fundierte Artikel zu <strong>Hardware</strong>, <strong>Software</strong> & <strong>Fotografie</strong> – transparente <strong>Preisvergleiche</strong> für smarte Kaufentscheide.</p>
+  <a class="skip-link" href="#sortiment">Zum Sortiment</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="TechIndex Startseite"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="5"/><path d="m11 25 9-13 9 13"/></svg><span>TechIndex</span></a>
+      <button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false">Menü <span aria-hidden="true">+</span></button>
+      <nav id="navigation" aria-label="Hauptnavigation"><a href="#shop" class="nav-shop" aria-current="page">Shop</a><a href="#community">Community <span class="nav-note">Später</span></a></nav>
     </div>
   </header>
-
-  <!-- LATEST / FILTERS -->
-  <section id="neuste">
-    <div class="container">
-      <div class="section-head">
-        <h2>Neuste Beiträge</h2>
-        <div class="search"><label class="visually-hidden" for="q">Suche</label><input id="q" type="search" placeholder="Suche nach Themen oder Titeln…"></div>
+  <main>
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">Die Schweizer<br>Open-Source<br>Gaming Plattform.</h1>
+        <p class="hero-description">Handhelds, Zubehör und eine Community für alle, die Gaming offen denken.</p>
+        <a class="button" href="#shop">Handhelds entdecken <span aria-hidden="true">→</span></a>
+        <p class="preview-note">Shop im Aufbau · Noch keine Bestellungen möglich</p>
       </div>
-      <div class="filters" id="tagbar" aria-label="Themenfilter">
-        <label for="tag-filter">Thema:</label>
-        <select class="tag-filter" id="tag-filter">
-          <option value="">Alle Themen</option>
-        </select>
+      <img class="hero-image" src="/assets/shop/handheld-hero.png" alt="Illustration zweier Handhelds mit grüner Pixellandschaft" width="1536" height="1024" fetchpriority="high">
+    </section>
+    <section class="shop container" id="shop" aria-labelledby="catalogue-title">
+      <nav class="categories" aria-label="Shop-Kategorien">
+        <button type="button" data-category="handhelds" aria-pressed="true">Handhelds</button><button type="button" data-category="controller" aria-pressed="false">Controller</button><button type="button" data-category="kabel" aria-pressed="false">Kabel</button><button type="button" data-category="beamer" aria-pressed="false">Beamer</button><button type="button" data-category="peripherie" aria-pressed="false">Peripherie</button>
+      </nav>
+      <div class="catalogue-heading" id="sortiment">
+        <div><h2 id="catalogue-title">Dein nächstes Handheld.</h2><p id="catalogue-description">Unser Sortiment entsteht. Entdecke die Geräte, die wir für Techindex prüfen.</p></div>
+        <form class="search" role="search"><label class="sr-only" for="model-search">Im gewählten Sortiment suchen</label><input type="search" id="model-search" placeholder="Modell suchen" autocomplete="off" maxlength="100"></form>
       </div>
-
-      <div class="grid grid-3" id="posts" style="margin-top:16px"><!-- SERVER_RENDERED_POSTS --></div>
-      <div class="section-head" style="margin-top:10px">
-        <small class="muted" id="count">Seite 1</small>
-        <div>
-          <button class="pill" id="prev">Zurück</button>
-          <button class="pill" id="next">Weiter</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICE INDEX TEASER -->
-  <section id="preisindex" hidden aria-hidden="true">
-    <div class="container">
-      <div class="section-head">
-        <h2>Preisindex (Preview)</h2>
-        <a class="small" href="#" style="color:var(--accent)">Zu allen Vergleichen →</a>
-      </div>
-      <div class="card" style="padding:12px">
-        <table class="price-table" aria-describedby="preisindex">
-          <thead>
-            <tr><th>Produkt</th><th>Beste Preise ab</th><th>Tendenz</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>NVMe SSD 2TB (PCIe 4.0)</td><td>CHF 89.–</td><td><span style="color:var(--accent)">↘︎ fallend</span></td></tr>
-            <tr><td>Spiegellose Kamera (APS‑C)</td><td>CHF 699.–</td><td>→ stabil</td></tr>
-            <tr><td>Wi‑Fi 6E Router</td><td>CHF 149.–</td><td>→ stabil</td></tr>
-            <tr><td>32" 4K Monitor (IPS)</td><td>CHF 279.–</td><td><span style="color:var(--accent)">↘︎ fallend</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- NEWSLETTER -->
-  <section id="techindex-weekly">
-    <div class="container newsletter">
-      <div class="section-head">
-        <h2>TechIndex Weekly</h2>
-        <small class="muted">Einmal pro Woche. Keine Werbung, nur Mehrwert.</small>
-      </div>
-      <form action="/api/newsletter" method="POST">
-        <label for="email" class="visually-hidden">E‑Mail</label>
-        <input id="email" name="email" type="email" placeholder="dein@email.ch" autocomplete="email" required>
-        <button class="btn" type="submit" name="newsletter-submit">Abonnieren</button>
-      </form>
-      <p class="muted small" id="newsletter-status" role="status" aria-live="polite" style="margin-top:10px"></p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer id="about">
-    <div class="container" style="padding:20px 0 28px">
-      <div class="cols">
-        <div>
-          <div class="brand" style="margin-bottom:8px">
-            <span class="brand-badge" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2">
-                <rect x="2" y="2" width="20" height="20" rx="4" ry="4"/>
-                <path d="M7 16l5-8 5 8" fill="none"/>
-              </svg>
-            </span>
-            <strong>TechIndex</strong>
-          </div>
-        </div>
-        <div>
-          <strong>Themen</strong>
-          <ul class="small" style="list-style:none;padding:0;margin:8px 0 0">
-            <li><a href="#hardware">Hardware</a></li>
-            <li><a href="#software">Software</a></li>
-            <li><a href="#fotografie">Fotografie</a></li>
-            <!-- Preisvergleiche vorübergehend ausgeblendet
-            <li><a href="#preisindex">Preisvergleiche</a></li>
-            -->
-          </ul>
-        </div>
-        <div>
-          <strong>Rechtliches</strong>
-          <ul class="small" style="list-style:none;padding:0;margin:8px 0 0">
-            <li><a href="#">Impressum</a></li>
-            <li><a href="#">Datenschutz</a></li>
-            <li><a href="#">Kontakt</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="muted small" style="margin-top:14px">© <span id="y"></span> TechIndex.ch — Hosted on Cloudflare.</div>
-    </div>
-  </footer>
-
-  <script id="initial-articles" type="application/json"><!-- SERVER_RENDERED_ARTICLE_DATA --></script>
-  <script type="module">
-    import { normalizeFilterValue } from './assets/article-filter.js';
-
-    const initialDataEl = document.getElementById('initial-articles');
-    let initialData = null;
-    try{ initialData = JSON.parse(initialDataEl.textContent); }catch(error){ initialData = null; }
-    let POSTS = initialData && Array.isArray(initialData.articles) ? initialData.articles : [];
-    const mobileQuery = window.matchMedia('(max-width: 640px)');
-    let page=initialData && initialData.pagination ? initialData.pagination.page : 1;
-    let totalPages=initialData && initialData.pagination ? initialData.pagination.totalPages : 1;
-    let activeTag=''; let q='';
-    const postsEl = document.getElementById('posts');
-    const countEl = document.getElementById('count');
-    const prevBtn = document.getElementById('prev');
-    const nextBtn = document.getElementById('next');
-    const tagFilterEl = document.getElementById('tag-filter');
-    const navToggle = document.getElementById('nav-toggle');
-    const menuEl = document.getElementById('menu');
-    function setNav(open){
-      if(!navToggle || !menuEl) return;
-      navToggle.setAttribute('aria-expanded', open);
-      navToggle.setAttribute('aria-label', open ? 'Menü schliessen' : 'Menü öffnen');
-      menuEl.classList.toggle('open', open);
-      document.body.classList.toggle('nav-open', open);
-    }
-
-    if(navToggle && menuEl){
-      navToggle.addEventListener('click', function(){ const expanded = navToggle.getAttribute('aria-expanded') === 'true'; setNav(!expanded); });
-      menuEl.addEventListener('click', function(e){ if(e.target.closest('a')) setNav(false); });
-    }
-
-    function articleImage(article){
-      if(!article.image) return 'https://picsum.photos/seed/' + article.slug + '/800/450';
-      if(article.image.startsWith('pictures/')) return 'articles/' + article.image;
-      return article.image;
-    }
-
-    function escapeHtml(value){
-      return String(value || '').replace(/[&<>"']/g, function(character){
-        return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[character];
-      });
-    }
-
-    function render(){
-      if(!POSTS.length){
-        postsEl.innerHTML = '<p class="muted">Keine Beiträge für diese Auswahl gefunden.</p>';
-        countEl.textContent = 'Keine Artikel';
-        prevBtn.disabled = true;
-        nextBtn.disabled = true;
-        return;
-      }
-      postsEl.innerHTML = POSTS.map(function(p){
-        const date = new Date((p.date || new Date().toISOString().slice(0,10)) + 'T12:00:00');
-        return '<article class="card"><a href="/articles/' + encodeURIComponent(p.slug) + '"><div class="thumb"><img src="' + escapeHtml(articleImage(p)) + '" alt="' + escapeHtml(p.imageAlt || 'Vorschaubild') + '" loading="lazy"></div><div class="body"><div class="card-meta"><span>' + escapeHtml(p.category || p.tag) + '</span><time datetime="' + date.toISOString() + '">' + date.toLocaleDateString('de-CH',{day:'2-digit',month:'short',year:'numeric'}) + '</time></div><h3 class="title">' + escapeHtml(p.title) + '</h3><p class="muted">' + escapeHtml(p.excerpt || p.description || '') + '</p><span class="read-more">Weiterlesen →</span></div></a></article>';
-      }).join('');
-      countEl.textContent = 'Seite ' + page + ' von ' + totalPages;
-      prevBtn.disabled = page===1;
-      nextBtn.disabled = page===totalPages;
-    }
-
-    function updateTagOptions(tags){
-      const selectedTag = activeTag;
-      const allOption = new Option('Alle Themen', '');
-      const tagOptions = tags.map(function(tag){ return new Option(tag, tag); });
-      tagFilterEl.replaceChildren(allOption, ...tagOptions);
-      tagFilterEl.value = selectedTag;
-    }
-
-    async function loadPosts(requestedPage=page){
-      if(!POSTS.length) postsEl.innerHTML = '<p class="muted">Artikel werden geladen.</p>';
-      prevBtn.disabled = true;
-      nextBtn.disabled = true;
-      try{
-        const params = new URLSearchParams({ page: String(requestedPage) });
-        if(activeTag) params.set('tag', activeTag);
-        if(q) params.set('q', q);
-        let response;
-        for(let attempt=0;attempt<3;attempt+=1){
-          response = await fetch('/api/articles?' + params, { headers: { Accept: 'application/json' } });
-          if(response.ok || response.status!==503) break;
-          await new Promise(function(resolve){ setTimeout(resolve, 300 * Math.pow(2, attempt)); });
-        }
-        if(!response.ok) throw new Error('Article API unavailable');
-        const data = await response.json();
-        POSTS = Array.isArray(data.articles) ? data.articles : [];
-        page = data.pagination ? data.pagination.page : 1;
-        totalPages = data.pagination ? data.pagination.totalPages : 1;
-        updateTagOptions(Array.isArray(data.tags) ? data.tags : []);
-        render();
-      }catch(error){
-        if(!POSTS.length){ page=1; totalPages=1; updateTagOptions([]); render(); }
-        console.warn(error);
-      }
-    }
-
-    const handleMobileChange = function(event){
-      if(!event.matches) setNav(false);
-    };
-
-    if(mobileQuery.addEventListener) mobileQuery.addEventListener('change', handleMobileChange);
-    else if(mobileQuery.addListener) mobileQuery.addListener(handleMobileChange);
-
-    document.addEventListener('click', function(e){
-      if(!menuEl || !navToggle || !menuEl.classList.contains('open')) return;
-      if(e.target === navToggle || navToggle.contains(e.target) || menuEl.contains(e.target)) return;
-      setNav(false);
-    });
-    window.addEventListener('keydown', function(e){ if(e.key === 'Escape') setNav(false); });
-    tagFilterEl.addEventListener('change', function(e){ activeTag=e.target.value; page=1; loadPosts(); });
-    document.getElementById('q').addEventListener('input', function(e){ q=normalizeFilterValue(e.target.value); page=1; loadPosts(); });
-    prevBtn.addEventListener('click', function(){ loadPosts(Math.max(1,page-1)); });
-    nextBtn.addEventListener('click', function(){ loadPosts(Math.min(totalPages,page+1)); });
-    const newsletterStatus = document.getElementById('newsletter-status');
-    const newsletterResult = new URLSearchParams(window.location.search).get('newsletter');
-    if(newsletterStatus && newsletterResult){
-      newsletterStatus.textContent = {
-        ok: 'Danke, deine Anmeldung wurde gespeichert.',
-        invalid: 'Bitte gib eine gültige E-Mail-Adresse ein.',
-        unavailable: 'Newsletter-Speicherung ist noch nicht konfiguriert.'
-      }[newsletterResult] || '';
-    }
-    document.getElementById('y').textContent = new Date().getFullYear();
-    setNav(false);
-    handleMobileChange(mobileQuery);
-    loadPosts();
-  </script>
-
+      <p class="results-count" id="results-count" role="status" aria-live="polite">Sortiment wird geladen …</p>
+      <div class="product-grid" id="products" aria-busy="true"></div>
+      <div class="empty-state" id="empty-state" hidden><h3>Kein passendes Gerät gefunden.</h3><p>Versuche einen anderen Modellnamen oder eine andere Kategorie.</p><button class="text-button" id="reset-search" type="button">Suche zurücksetzen <span aria-hidden="true">↗</span></button></div>
+      <div class="empty-state" id="load-error" hidden><h3>Das Sortiment konnte nicht geladen werden.</h3><p>Bitte versuche es noch einmal.</p><button class="button" id="retry-load" type="button">Erneut versuchen</button></div>
+      <noscript><p>Bitte aktiviere JavaScript, um die Sortimentsvorschau zu durchsuchen. Der Shop nimmt noch keine Bestellungen an.</p></noscript>
+      <nav class="pagination" aria-label="Katalogseiten" hidden><button type="button" id="previous-page" aria-label="Vorherige Katalogseite">← Zurück</button><span id="page-label"></span><button type="button" id="next-page" aria-label="Nächste Katalogseite">Weiter →</button></nav>
+      <p class="catalogue-footnote">Sortimentsvorschau. Ausführungen, Lieferumfang und Kompatibilität werden noch geprüft.</p>
+    </section>
+    <section class="community" id="community" aria-labelledby="community-title"><div class="container community-inner"><div><p class="section-label">Community · Schritt 2</p><h2 id="community-title">Gute Games. Geteiltes Wissen.</h2><p>Games, Kompatibilität und Linux. Ein gemeinsamer Ort für Fragen, Erfahrungen und Entdeckungen.</p></div><div class="community-topics"><ul><li>Games &amp; Entdeckungen</li><li>Hardware &amp; Kompatibilität</li><li>Linux &amp; Open Source</li></ul><p>Das Forum folgt nach dem Shop.</p></div></div></section>
+  </main>
+  <footer id="ueber"><div class="container footer-inner"><div><a class="brand" href="/" aria-label="TechIndex Startseite"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="5"/><path d="m11 25 9-13 9 13"/></svg><span>TechIndex</span></a><p>Die Schweizer Open-Source Gaming Plattform.</p></div><nav aria-label="Fussnavigation"><a href="#shop">Shop</a><a href="#community">Community</a></nav></div></footer>
+  <dialog id="product-dialog" aria-labelledby="detail-title"><button class="close-dialog" type="button" aria-label="Geräteansicht schliessen">×</button><div class="detail-grid"><div class="detail-image-stage"><img id="detail-image" alt="" width="600" height="600"></div><div class="detail-content"><p class="product-status">Sortiment in Vorbereitung</p><h2 id="detail-title"></h2><p id="detail-description"></p><label for="detail-variant">Recherchierte Ausführung</label><select id="detail-variant"></select><p class="detail-note">Produktabbildung der Modellfamilie. Farbe und Lieferumfang können je nach Ausführung abweichen.</p><dl class="product-facts"><div><dt>Verfügbarkeit</dt><dd>Noch nicht bestellbar</dd></div><div><dt>Verkaufspreis</dt><dd>Folgt zum Shopstart</dd></div><div><dt>Kompatibilität</dt><dd>Wird geprüft</dd></div></dl><p class="detail-note">Diese Vorschau ist noch kein Verkaufsangebot. Die endgültige Ausführung und die enthaltene Software stehen noch nicht fest.</p><a id="supplier-link" class="text-button" target="_blank" rel="noopener noreferrer">Lieferantenangaben ansehen <span aria-hidden="true">↗</span></a></div></div></dialog>
 </body>
 </html>

@@ -1,64 +1,38 @@
 # TechIndex
 
-Static TechIndex site deployed on Cloudflare Pages.
+Die Schweizer Open-Source Gaming Plattform.
 
-## Cloudflare Access for `/Adm1n`
+Shop-Vorschau auf [www.techindex.ch](https://www.techindex.ch): Handhelds, Controller, Kabel, Beamer und Peripherie. Das Forum folgt als Schritt 2. Der frühere Blog wird nicht übernommen.
 
-The admin area is protected by a Cloudflare Pages Functions middleware in
-`functions/Adm1n/_middleware.js`. It rejects requests unless they include a
-valid Cloudflare Access JWT for the configured Access application.
+## Lokal öffnen
 
-Required Cloudflare Pages environment variables:
+Node.js ist erforderlich; es gibt keine Paketabhängigkeiten.
 
-- `CF_ACCESS_TEAM_DOMAIN`: your Access team domain, for example
-  `your-team.cloudflareaccess.com`
-- `CF_ACCESS_AUD`: the Application Audience (AUD) tag from the Cloudflare
-  Access application. Multiple AUD values can be comma-separated.
+```sh
+npm run dev
+```
 
-Cloudflare Zero Trust setup:
+Vorschau: http://127.0.0.1:4173
 
-1. Create a self-hosted Access application for the admin URL, for example
-   `https://example.com/Adm1n*`.
-2. Add an allow policy for the users or identity groups that may access admin
-   tools.
-3. Copy the application's AUD tag into `CF_ACCESS_AUD`.
-4. Set `CF_ACCESS_TEAM_DOMAIN` and deploy the Pages project.
+## Prüfen und bauen
 
-If either environment variable is missing, `/Adm1n` returns `503` instead of
-serving the admin placeholder.
+```sh
+npm test
+npm run build
+```
 
-## Dynamic articles
+Der Build erzeugt `dist/` und kopiert nur die öffentlichen Dateien der neuen Plattform. Cloudflare Pages veröffentlicht dieses Verzeichnis automatisch bei Änderungen auf `main`. Der Vorschaustand setzt absichtlich `noindex`.
 
-Articles are now served through Cloudflare Pages Functions:
+## Inhalt und Verkaufsstatus
 
-- Public list API: `/api/articles`
-- Dynamic article pages: `/articles/{slug}`
-- Protected admin API: `/Adm1n/api/articles`
-- Protected admin diagnostics: `/Adm1n/api/env-check`
+`data/catalogue.json`: 19 Handheld-Modellfamilien mit 50 Varianten plus 12 ausgewählte Zubehörmodelle. Alle Produkte bleiben nicht bestellbare Recherchekandidaten. Keine Verkaufspreise, Bestellungen oder Zahlungen sind angebunden. Produktbilder und Lieferantenquellen sind pro Modell dokumentiert; Produktfreigaben und Bildrechte sind vor dem Verkaufsstart zu klären.
 
-The admin API is under `/Adm1n`, so the existing Cloudflare Access middleware protects article writes. For server-side persistence, bind a Cloudflare KV namespace to the Pages project with one of these binding names:
+Die Modellsuche berücksichtigt Ausführungen und Farben. Kategorie, Suche und Seite bleiben beim Neuladen über URL-Parameter erhalten.
 
-- `TECHINDEX_ARTICLES` recommended
-- `ARTICLE_STORE`
-- `ARTICLES_KV`
+Der Import aus den Recherchedateien ist reproduzierbar:
 
-Articles are stored only in the bound KV namespace. Without a KV binding, the public article list is empty and admin writes fail instead of falling back to browser-local storage.
+```sh
+python3 scripts/import-catalogue.py /absoluter/pfad/zur/recherche
+```
 
-The public list is cached for 60 seconds to reduce KV reads. Transient KV errors
-(including the per-key write rate limit) are retried automatically; API error
-responses include a request ID for correlation with the Pages Functions logs.
-
-If persistence does not activate after adding the binding, open `/Adm1n/api/env-check` while authenticated. It reports only whether each expected article binding exists and whether it exposes KV-style `.get` and `.put` methods.
-
-## Newsletter signups
-
-The newsletter form on `/index.html` posts to `/api/newsletter`. Admin users can view stored signups in `/Adm1n` under the Newsletter panel, which calls `/Adm1n/api/newsletter` and is protected by the existing Cloudflare Access middleware.
-
-Newsletter persistence can use a dedicated KV binding named `TECHINDEX_NEWSLETTER`, `NEWSLETTER_STORE`, `NEWSLETTER_KV`, or `SIGNUPS_KV`. It also falls back to the article KV bindings above. Without one of these bindings, the signup endpoint returns an unavailable status instead of pretending the signup was stored. Existing signups previously captured by the external `submit-form.com` endpoint are not automatically imported.
-
-In Cloudflare Pages, add a KV namespace binding for the newsletter with:
-
-- Variable name: `TECHINDEX_NEWSLETTER`
-- KV namespace: `TECHINDEX_NEWSLETTER`
-
-Do not add this as a plain environment variable; the Functions code needs the bound KV namespace object.
+Hosting, Veröffentlichung und Wiederherstellung: [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).

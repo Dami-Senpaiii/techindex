@@ -1,0 +1,688 @@
+{
+  "mode": "preview",
+  "updatedAt": "2026-09-30",
+  "products": [
+    {
+      "id": "h001",
+      "name": "ANBERNIC RG35XXSP",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6819000287b.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6819000287B-1.webp",
+      "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-without-tf-card-english-version-grey-sku6819000287b.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "ANBERNIC RG35XXSP · 64G / ohne TF · Grau",
+          "sku": "6819000287B",
+          "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-without-tf-card-english-version-grey-sku6819000287b.html"
+        },
+        {
+          "name": "ANBERNIC RG35XXSP · 64G / ohne TF · Transparent Schwarz",
+          "sku": "6819000287A",
+          "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-without-tf-card-english-version-transparent-black-sku6819000287a.html"
+        },
+        {
+          "name": "ANBERNIC RG35XXSP · 64G / ohne TF · Transparent Blau",
+          "sku": "6819000287C",
+          "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-without-tf-card-english-version-transparent-blue-sku6819000287c.html"
+        },
+        {
+          "name": "ANBERNIC RG35XXSP · 64G / ohne TF · Silber",
+          "sku": "6819000287D",
+          "source": "https://www.tvcmall.com/details/anbernic-rg35xxsp-3-5-inch-screen-flip-handheld-gaming-machine-64g-wireless-game-console-without-tf-card-english-version-silver-sku6819000287d.html"
+        }
+      ]
+    },
+    {
+      "id": "h019",
+      "name": "TRIMUI Brick Pro",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6819000470a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6819000470A-1.webp",
+      "source": "https://www.tvcmall.com/details/trimui-brick-pro-handheld-game-console-without-tf-card-dual-hall-joysticks-3-95-inch-ips-screen-linux-retro-gamepad-white-sku6819000470a.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "TRIMUI Brick Pro · ohne TF · Weiss",
+          "sku": "6819000470A",
+          "source": "https://www.tvcmall.com/details/trimui-brick-pro-handheld-game-console-without-tf-card-dual-hall-joysticks-3-95-inch-ips-screen-linux-retro-gamepad-white-sku6819000470a.html"
+        },
+        {
+          "name": "TRIMUI Brick Pro · ohne TF · Grau",
+          "sku": "6819000470B",
+          "source": "https://www.tvcmall.com/details/trimui-brick-pro-handheld-game-console-without-tf-card-dual-hall-joysticks-3-95-inch-ips-screen-linux-retro-gamepad-grey-sku6819000470b.html"
+        },
+        {
+          "name": "TRIMUI Brick Pro · ohne TF · Schwarz",
+          "sku": "6819000470C",
+          "source": "https://www.tvcmall.com/details/trimui-brick-pro-handheld-game-console-without-tf-card-dual-hall-joysticks-3-95-inch-ips-screen-linux-retro-gamepad-black-sku6819000470c.html"
+        }
+      ]
+    },
+    {
+      "id": "h005",
+      "name": "ANBERNIC RG40XXH",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6811000722a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6811000722A-1.webp",
+      "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-without-tf-card-black-sku6811000722a.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "ANBERNIC RG40XXH · 64G / ohne TF · Schwarz",
+          "sku": "6811000722A",
+          "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-without-tf-card-black-sku6811000722a.html"
+        },
+        {
+          "name": "ANBERNIC RG40XXH · 64G / ohne TF · Grau",
+          "sku": "6811000722B",
+          "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-without-tf-card-grey-sku6811000722b.html"
+        },
+        {
+          "name": "ANBERNIC RG40XXH · 64G / ohne TF · Blau",
+          "sku": "6811000722C",
+          "source": "https://www.tvcmall.com/details/anbernic-rg40xxh-4-0-inch-ips-screen-64g-bluetooth-wifi-handheld-video-game-console-without-tf-card-blue-sku6811000722c.html"
+        }
+      ]
+    },
+    {
+      "id": "h022",
+      "name": "ANBERNIC RG353V",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6819000283a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6819000283A-1.webp",
+      "source": "https://www.tvcmall.com/details/anbernic-rg353v-32gb-retro-gamepad-android-11-linux-handheld-game-console-with-3-5-inch-ips-screen-without-tf-card-games-transparent-black-sku6819000283a.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "ANBERNIC RG353V · 32GB / ohne TF & Spiele · Transparent Schwarz",
+          "sku": "6819000283A",
+          "source": "https://www.tvcmall.com/details/anbernic-rg353v-32gb-retro-gamepad-android-11-linux-handheld-game-console-with-3-5-inch-ips-screen-without-tf-card-games-transparent-black-sku6819000283a.html"
+        }
+      ]
+    },
+    {
+      "id": "h008",
+      "name": "ANBERNIC RG40XXV",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6811000718a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6811000718A-1.webp",
+      "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-compatible-64gb-retro-video-game-console-without-tf-card-white-sku6811000718a.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "ANBERNIC RG40XXV · 64G / ohne TF · Weiss",
+          "sku": "6811000718A",
+          "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-compatible-64gb-retro-video-game-console-without-tf-card-white-sku6811000718a.html"
+        },
+        {
+          "name": "ANBERNIC RG40XXV · 64G / ohne TF · Transparent Schwarz",
+          "sku": "6811000718B",
+          "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-compatible-64gb-retro-video-game-console-without-tf-card-transparent-black-sku6811000718b.html"
+        },
+        {
+          "name": "ANBERNIC RG40XXV · 64G / ohne TF · Blau",
+          "sku": "6811000718C",
+          "source": "https://www.tvcmall.com/details/anbernic-rg40xxv-4-0-inch-ips-screen-wifi-bluetooth-compatible-64gb-retro-video-game-console-without-tf-card-blue-sku6811000718c.html"
+        }
+      ]
+    },
+    {
+      "id": "h011",
+      "name": "ANBERNIC RG28XX",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6811000523d.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6811000523D-1.webp",
+      "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-without-tf-card-beige-sku6811000523d.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "ANBERNIC RG28XX · 64G / ohne TF · Beige",
+          "sku": "6811000523D",
+          "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-without-tf-card-beige-sku6811000523d.html"
+        },
+        {
+          "name": "ANBERNIC RG28XX · 64G / ohne TF · Orange",
+          "sku": "6811000523A",
+          "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-without-tf-card-orange-sku6811000523a.html"
+        },
+        {
+          "name": "ANBERNIC RG28XX · 64G / ohne TF · Transparent Schwarz",
+          "sku": "6811000523B",
+          "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-without-tf-card-transparent-black-sku6811000523b.html"
+        },
+        {
+          "name": "ANBERNIC RG28XX · 64G / ohne TF · Grau",
+          "sku": "6811000523C",
+          "source": "https://www.tvcmall.com/details/anbernic-rg28xx-64g-video-game-console-portable-2-83-inch-ips-screen-game-machine-without-tf-card-grey-sku6811000523c.html"
+        }
+      ]
+    },
+    {
+      "id": "h015",
+      "name": "ANBERNIC RG SP",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6819000478a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6819000478A-1.webp",
+      "source": "https://www.tvcmall.com/details/anbernic-rg-sp-16gb-handheld-game-console-3-4-inch-ips-screen-quad-core-clamshell-retro-gaming-device-black-sku6819000478a.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "ANBERNIC RG SP · 16GB · Schwarz",
+          "sku": "6819000478A",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-sp-16gb-handheld-game-console-3-4-inch-ips-screen-quad-core-clamshell-retro-gaming-device-black-sku6819000478a.html"
+        },
+        {
+          "name": "ANBERNIC RG SP · 16GB · Silber",
+          "sku": "6819000478B",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-sp-16gb-handheld-game-console-3-4-inch-ips-screen-quad-core-clamshell-retro-gaming-device-silver-sku6819000478b.html"
+        },
+        {
+          "name": "ANBERNIC RG SP · 16GB · Rosa",
+          "sku": "6819000478C",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-sp-16gb-handheld-game-console-3-4-inch-ips-screen-quad-core-clamshell-retro-gaming-device-pink-sku6819000478c.html"
+        },
+        {
+          "name": "ANBERNIC RG SP · 16GB · Blau",
+          "sku": "6819000478D",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-sp-16gb-handheld-game-console-3-4-inch-ips-screen-quad-core-clamshell-retro-gaming-device-blue-sku6819000478d.html"
+        }
+      ]
+    },
+    {
+      "id": "h023",
+      "name": "H55 PRO",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6819000474a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6819000474A-1.webp",
+      "source": "https://www.tvcmall.com/details/h55-pro-handheld-game-console-without-tf-card-5-5-inch-ips-screen-dual-joysticks-wifi-retro-gamepad-black-sku6819000474a.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "H55 PRO · ohne TF · Schwarz",
+          "sku": "6819000474A",
+          "source": "https://www.tvcmall.com/details/h55-pro-handheld-game-console-without-tf-card-5-5-inch-ips-screen-dual-joysticks-wifi-retro-gamepad-black-sku6819000474a.html"
+        },
+        {
+          "name": "H55 PRO · ohne TF · Schillernd Violett",
+          "sku": "6819000474B",
+          "source": "https://www.tvcmall.com/details/h55-pro-handheld-game-console-without-tf-card-5-5-inch-ips-screen-dual-joysticks-wifi-retro-gamepad-iridescent-purple-sku6819000474b.html"
+        },
+        {
+          "name": "H55 PRO · ohne TF · Beige",
+          "sku": "6819000474C",
+          "source": "https://www.tvcmall.com/details/h55-pro-handheld-game-console-without-tf-card-5-5-inch-ips-screen-dual-joysticks-wifi-retro-gamepad-beige-sku6819000474c.html"
+        }
+      ]
+    },
+    {
+      "id": "h026",
+      "name": "ANBERNIC RG DS PLUS",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6819000503a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6819000503A-1.webp",
+      "source": "https://www.tvcmall.com/details/anbernic-rg-ds-plus-16gb-handheld-gaming-console-without-tf-card-dual-4-3-inch-ips-screens-flip-design-rk3568-processor-4000mah-battery-black-sku6819000503a.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "ANBERNIC RG DS PLUS · 16GB / ohne TF · Schwarz",
+          "sku": "6819000503A",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-ds-plus-16gb-handheld-gaming-console-without-tf-card-dual-4-3-inch-ips-screens-flip-design-rk3568-processor-4000mah-battery-black-sku6819000503a.html"
+        },
+        {
+          "name": "ANBERNIC RG DS PLUS · 16GB / ohne TF · Rosa",
+          "sku": "6819000503B",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-ds-plus-16gb-handheld-gaming-console-without-tf-card-dual-4-3-inch-ips-screens-flip-design-rk3568-processor-4000mah-battery-pink-sku6819000503b.html"
+        },
+        {
+          "name": "ANBERNIC RG DS PLUS · 16GB / ohne TF · Blau",
+          "sku": "6819000503C",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-ds-plus-16gb-handheld-gaming-console-without-tf-card-dual-4-3-inch-ips-screens-flip-design-rk3568-processor-4000mah-battery-blue-sku6819000503c.html"
+        }
+      ]
+    },
+    {
+      "id": "h029",
+      "name": "ANBERNIC RG Rotate",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6819000449a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6819000449A-1.webp",
+      "source": "https://www.tvcmall.com/details/anbernic-rg-rotate-handheld-game-console-3-5-inch-touchscreen-android-12-portable-retro-gaming-device-with-rotating-screen-black-sku6819000449a.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "ANBERNIC RG Rotate · 3+32GB / ohne Spiele · Schwarz",
+          "sku": "6819000449A",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-rotate-handheld-game-console-3-5-inch-touchscreen-android-12-portable-retro-gaming-device-with-rotating-screen-black-sku6819000449a.html"
+        }
+      ]
+    },
+    {
+      "id": "h030",
+      "name": "ANBERNIC RG DS",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6819000426a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6819000426A-1.webp",
+      "source": "https://www.tvcmall.com/details/anbernic-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-3-32g-without-games-red-black-sku6819000426a.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "ANBERNIC RG DS · 3+32GB / ohne Spiele · Rot/Schwarz",
+          "sku": "6819000426A",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-3-32g-without-games-red-black-sku6819000426a.html"
+        },
+        {
+          "name": "ANBERNIC RG DS · 3+32GB / ohne Spiele · Weiss",
+          "sku": "6819000426B",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-3-32g-without-games-white-sku6819000426b.html"
+        },
+        {
+          "name": "ANBERNIC RG DS · 3+32GB / ohne Spiele · Blau",
+          "sku": "6819000426C",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-ds-handheld-game-console-retro-arcade-android-open-source-console-with-dual-ips-screens-3-32g-without-games-blue-sku6819000426c.html"
+        }
+      ]
+    },
+    {
+      "id": "h033",
+      "name": "ANBERNIC RG556",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6819000268a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6819000268A-1.webp",
+      "source": "https://www.tvcmall.com/details/anbernic-rg556-8-128g-wireless-gamepad-retro-joystick-game-console-without-tf-card-and-games-english-version-black-sku6819000268a.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "ANBERNIC RG556 · 8+128GB / ohne TF & Spiele · Schwarz",
+          "sku": "6819000268A",
+          "source": "https://www.tvcmall.com/details/anbernic-rg556-8-128g-wireless-gamepad-retro-joystick-game-console-without-tf-card-and-games-english-version-black-sku6819000268a.html"
+        },
+        {
+          "name": "ANBERNIC RG556 · 8+128GB / ohne TF & Spiele · Blau",
+          "sku": "6819000268B",
+          "source": "https://www.tvcmall.com/details/anbernic-rg556-8-128g-wireless-gamepad-retro-joystick-game-console-without-tf-card-and-games-english-version-blue-sku6819000268b.html"
+        }
+      ]
+    },
+    {
+      "id": "h035",
+      "name": "ANBERNIC RG406V",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6819000299a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6819000299A-1.webp",
+      "source": "https://www.tvcmall.com/details/anbernic-rg406v-retro-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-no-tf-card-transparent-black-sku6819000299a.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "ANBERNIC RG406V · 8+128GB / ohne TF · Transparent Schwarz",
+          "sku": "6819000299A",
+          "source": "https://www.tvcmall.com/details/anbernic-rg406v-retro-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-no-tf-card-transparent-black-sku6819000299a.html"
+        },
+        {
+          "name": "ANBERNIC RG406V · 8+128GB / ohne TF · Grau",
+          "sku": "6819000299B",
+          "source": "https://www.tvcmall.com/details/anbernic-rg406v-retro-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-no-tf-card-grey-sku6819000299b.html"
+        },
+        {
+          "name": "ANBERNIC RG406V · 8+128GB / ohne TF · Weiss",
+          "sku": "6819000299C",
+          "source": "https://www.tvcmall.com/details/anbernic-rg406v-retro-handheld-game-console-4-inch-960-720p-ips-touch-screen-128g-android-13-game-console-no-tf-card-white-sku6819000299c.html"
+        }
+      ]
+    },
+    {
+      "id": "h038",
+      "name": "ANBERNIC RG Cube",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6811000526a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6811000526A-1.webp",
+      "source": "https://www.tvcmall.com/details/ampown-rg-cube-wireless-gamepad-3-95-inch-ips-screen-handheld-gaming-console-without-tf-card-black-sku6811000526a.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "ANBERNIC RG Cube · ohne TF · Schwarz",
+          "sku": "6811000526A",
+          "source": "https://www.tvcmall.com/details/ampown-rg-cube-wireless-gamepad-3-95-inch-ips-screen-handheld-gaming-console-without-tf-card-black-sku6811000526a.html"
+        },
+        {
+          "name": "ANBERNIC RG Cube · ohne TF · Beige",
+          "sku": "6811000526C",
+          "source": "https://www.tvcmall.com/details/ampown-rg-cube-wireless-gamepad-3-95-inch-ips-screen-handheld-gaming-console-without-tf-card-beige-sku6811000526c.html"
+        },
+        {
+          "name": "ANBERNIC RG Cube · ohne TF · Grau",
+          "sku": "6811000526B",
+          "source": "https://www.tvcmall.com/details/ampown-rg-cube-wireless-gamepad-3-95-inch-ips-screen-handheld-gaming-console-without-tf-card-grey-sku6811000526b.html"
+        }
+      ]
+    },
+    {
+      "id": "h041",
+      "name": "ANBERNIC RG VITA",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6819000446a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6819000446A-1.webp",
+      "source": "https://www.tvcmall.com/details/anbernic-rg-vita-5-46-inch-ips-gaming-handheld-game-console-built-in-3-64g-android-12-t618-octa-core-competitive-gaming-machine-white-sku6819000446a.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "ANBERNIC RG VITA · 3+64GB · Weiss",
+          "sku": "6819000446A",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-vita-5-46-inch-ips-gaming-handheld-game-console-built-in-3-64g-android-12-t618-octa-core-competitive-gaming-machine-white-sku6819000446a.html"
+        },
+        {
+          "name": "ANBERNIC RG VITA · 3+64GB · Schwarz",
+          "sku": "6819000446B",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-vita-5-46-inch-ips-gaming-handheld-game-console-built-in-3-64g-android-12-t618-octa-core-competitive-gaming-machine-black-sku6819000446b.html"
+        }
+      ]
+    },
+    {
+      "id": "h043",
+      "name": "ANBERNIC RG Slide",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6819000396a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6819000396A-1.webp",
+      "source": "https://www.tvcmall.com/details/anbernic-rg-slide-4-7-inch-touch-screen-handheld-gaming-console-android-13-ai-powered-retro-gamepad-white-sku6819000396a.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "ANBERNIC RG Slide · 128GB / ohne TF · Weiss",
+          "sku": "6819000396A",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-slide-4-7-inch-touch-screen-handheld-gaming-console-android-13-ai-powered-retro-gamepad-white-sku6819000396a.html"
+        },
+        {
+          "name": "ANBERNIC RG Slide · 128GB / ohne TF · Schwarz",
+          "sku": "6819000396B",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-slide-4-7-inch-touch-screen-handheld-gaming-console-android-13-ai-powered-retro-gamepad-black-sku6819000396b.html"
+        }
+      ]
+    },
+    {
+      "id": "h045",
+      "name": "ANBERNIC RG476H",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6819000415a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6819000415A-1.webp",
+      "source": "https://www.tvcmall.com/details/anbernic-rg-476h-8gb-128gb-android-13-handheld-game-console-4-7-inch-touchscreen-gaming-device-purple-sku6819000415a.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "ANBERNIC RG476H · 8+128GB · Violett",
+          "sku": "6819000415A",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-476h-8gb-128gb-android-13-handheld-game-console-4-7-inch-touchscreen-gaming-device-purple-sku6819000415a.html"
+        },
+        {
+          "name": "ANBERNIC RG476H · 8+128GB · Grau",
+          "sku": "6819000415B",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-476h-8gb-128gb-android-13-handheld-game-console-4-7-inch-touchscreen-gaming-device-grey-sku6819000415b.html"
+        },
+        {
+          "name": "ANBERNIC RG476H · 8+128GB · Schwarz",
+          "sku": "6819000415C",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-476h-8gb-128gb-android-13-handheld-game-console-4-7-inch-touchscreen-gaming-device-black-sku6819000415c.html"
+        }
+      ]
+    },
+    {
+      "id": "h048",
+      "name": "ANBERNIC RG477V",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6108000745a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6108000745A-1.webp",
+      "source": "https://www.tvcmall.com/details/anbernic-rg-477v-8gb-128gb-4-7-inch-handheld-game-console-120hz-high-refresh-display-portable-gaming-device-grey-sku6108000745a.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "ANBERNIC RG477V · 8+128GB / ohne TF · Grau",
+          "sku": "6108000745A",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-477v-8gb-128gb-4-7-inch-handheld-game-console-120hz-high-refresh-display-portable-gaming-device-grey-sku6108000745a.html"
+        },
+        {
+          "name": "ANBERNIC RG477V · 8+128GB / ohne TF · Schwarz",
+          "sku": "6108000745B",
+          "source": "https://www.tvcmall.com/details/anbernic-rg-477v-8gb-128gb-4-7-inch-handheld-game-console-120hz-high-refresh-display-portable-gaming-device-black-sku6108000745b.html"
+        }
+      ]
+    },
+    {
+      "id": "h050",
+      "name": "ANBERNIC RG477M",
+      "category": "handhelds",
+      "status": "in_preparation",
+      "image": "/assets/shop/6819000404b.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6819000404B-1.webp",
+      "source": "https://www.tvcmall.com/details/anbernic-rg477m-12g-256g-android-14-4-7-inch-ltps-incell-screen-retro-handheld-game-console-silver-sku6819000404b.html",
+      "researchSource": "07_HANDHELDS.md",
+      "variants": [
+        {
+          "name": "ANBERNIC RG477M · 12+256GB / ohne TF · Silber",
+          "sku": "6819000404B",
+          "source": "https://www.tvcmall.com/details/anbernic-rg477m-12g-256g-android-14-4-7-inch-ltps-incell-screen-retro-handheld-game-console-silver-sku6819000404b.html"
+        }
+      ]
+    },
+    {
+      "id": "001",
+      "name": "USB-A–C 0.3 m, 3 A, 5 Gbit/s",
+      "category": "kabel",
+      "status": "in_preparation",
+      "image": "/assets/shop/801201564a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_801201564A-1.webp",
+      "source": "https://www.tvcmall.com/details/type-c-to-usb-3-0-male-charge-data-sync-cable-30cm-sku801201564a.html",
+      "researchSource": "01_KABEL.md",
+      "variants": [
+        {
+          "name": "USB-A–C 0.3 m, 3 A, 5 Gbit/s",
+          "sku": "801201564A",
+          "source": "https://www.tvcmall.com/details/type-c-to-usb-3-0-male-charge-data-sync-cable-30cm-sku801201564a.html"
+        }
+      ]
+    },
+    {
+      "id": "032",
+      "name": "JOYROOM S-A65 C–C 1.2 m, magnetisch, 100 W",
+      "category": "kabel",
+      "status": "in_preparation",
+      "image": "/assets/shop/6628004382a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6628004382A-1.webp",
+      "source": "https://www.tvcmall.com/details/joyroom-s-a65-1-2m-magnetic-self-winding-cable-type-c-to-type-c-pd-100w-fast-charging-data-cable-black-sku6628004382a.html",
+      "researchSource": "01_KABEL.md",
+      "variants": [
+        {
+          "name": "JOYROOM S-A65 C–C 1.2 m, magnetisch, 100 W",
+          "sku": "6628004382A",
+          "source": "https://www.tvcmall.com/details/joyroom-s-a65-1-2m-magnetic-self-winding-cable-type-c-to-type-c-pd-100w-fast-charging-data-cable-black-sku6628004382a.html"
+        }
+      ]
+    },
+    {
+      "id": "034",
+      "name": "YESIDO CA205 C–C Spiralkabel, 60 W",
+      "category": "kabel",
+      "status": "in_preparation",
+      "image": "/assets/shop/6628004309a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6628004309A-1.webp",
+      "source": "https://www.tvcmall.com/details/yesido-ca205-pd-60w-fast-charging-spring-cable-type-c-to-type-c-data-cable-for-carplay-hicar-carlife-black-sku6628004309a.html",
+      "researchSource": "01_KABEL.md",
+      "variants": [
+        {
+          "name": "YESIDO CA205 C–C Spiralkabel, 60 W",
+          "sku": "6628004309A",
+          "source": "https://www.tvcmall.com/details/yesido-ca205-pd-60w-fast-charging-spring-cable-type-c-to-type-c-data-cable-for-carplay-hicar-carlife-black-sku6628004309a.html"
+        }
+      ]
+    },
+    {
+      "id": "051",
+      "name": "IMC360 Dual-Speaker, EU; 1920×1080",
+      "category": "beamer",
+      "status": "in_preparation",
+      "image": "/assets/shop/6806018025a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6806018025A-1.webp",
+      "source": "https://www.tvcmall.com/details/imc360-1gb-8gb-lcd-projector-autofocus-1080p-hd-wifi-6-home-cinema-projector-dual-speakers-cloth-coating-base-white-eu-plug-sku6806018025a.html",
+      "researchSource": "02_BEAMER.md",
+      "variants": [
+        {
+          "name": "IMC360 Dual-Speaker, EU; 1920×1080",
+          "sku": "6806018025A",
+          "source": "https://www.tvcmall.com/details/imc360-1gb-8gb-lcd-projector-autofocus-1080p-hd-wifi-6-home-cinema-projector-dual-speakers-cloth-coating-base-white-eu-plug-sku6806018025a.html"
+        }
+      ]
+    },
+    {
+      "id": "067",
+      "name": "P40, EU; 720p",
+      "category": "beamer",
+      "status": "in_preparation",
+      "image": "/assets/shop/6806018625a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6806018625A-1.webp",
+      "source": "https://www.tvcmall.com/details/p40-smart-projector-native-720p-hd-portable-mini-projector-5g-wifi-wireless-screen-mirroring-home-theater-white-eu-plug-sku6806018625a.html",
+      "researchSource": "02_BEAMER.md",
+      "variants": [
+        {
+          "name": "P40, EU; 720p",
+          "sku": "6806018625A",
+          "source": "https://www.tvcmall.com/details/p40-smart-projector-native-720p-hd-portable-mini-projector-5g-wifi-wireless-screen-mirroring-home-theater-white-eu-plug-sku6806018625a.html"
+        }
+      ]
+    },
+    {
+      "id": "069",
+      "name": "P30 Pro, EU; 1280×720",
+      "category": "beamer",
+      "status": "in_preparation",
+      "image": "/assets/shop/6806015339a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6806015339A-1.webp",
+      "source": "https://www.tvcmall.com/details/p30-pro-mini-projector-720p-hd-portable-home-theater-video-projector-eu-plug-sku6806015339a.html",
+      "researchSource": "02_BEAMER.md",
+      "variants": [
+        {
+          "name": "P30 Pro, EU; 1280×720",
+          "sku": "6806015339A",
+          "source": "https://www.tvcmall.com/details/p30-pro-mini-projector-720p-hd-portable-home-theater-video-projector-eu-plug-sku6806015339a.html"
+        }
+      ]
+    },
+    {
+      "id": "074",
+      "name": "GAMWING Type-C, ausziehbar",
+      "category": "controller",
+      "status": "in_preparation",
+      "image": "/assets/shop/6816000586a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6816000586A-1.webp",
+      "source": "https://www.tvcmall.com/details/gamwing-type-c-mobile-game-controller-wired-wireless-retractable-phone-controller-sku6816000586a.html",
+      "researchSource": "03_GAMING.md",
+      "variants": [
+        {
+          "name": "GAMWING Type-C, ausziehbar",
+          "sku": "6816000586A",
+          "source": "https://www.tvcmall.com/details/gamwing-type-c-mobile-game-controller-wired-wireless-retractable-phone-controller-sku6816000586a.html"
+        }
+      ]
+    },
+    {
+      "id": "086",
+      "name": "8BitDo Ultimate Bluetooth + Dock, weiss",
+      "category": "controller",
+      "status": "in_preparation",
+      "image": "/assets/shop/681600409a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_681600409A-1.webp",
+      "source": "https://www.tvcmall.com/details/8bitdo-ultimate-bluetooth-controller-with-charging-dock-wireless-gamepad-compatible-with-nintendo-switch-steam-deck-white-sku681600409a.html",
+      "researchSource": "03_GAMING.md",
+      "variants": [
+        {
+          "name": "8BitDo Ultimate Bluetooth + Dock, weiss",
+          "sku": "681600409A",
+          "source": "https://www.tvcmall.com/details/8bitdo-ultimate-bluetooth-controller-with-charging-dock-wireless-gamepad-compatible-with-nintendo-switch-steam-deck-white-sku681600409a.html"
+        }
+      ]
+    },
+    {
+      "id": "103",
+      "name": "8BitDo M30 Bluetooth",
+      "category": "controller",
+      "status": "in_preparation",
+      "image": "/assets/shop/681600419a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_681600419A-1.webp",
+      "source": "https://www.tvcmall.com/details/8bitdo-m30-bluetooth-controller-for-switch-windows-android-6-button-layout-for-sega-s-classic-games-black-sku681600419a.html",
+      "researchSource": "03_GAMING.md",
+      "variants": [
+        {
+          "name": "8BitDo M30 Bluetooth",
+          "sku": "681600419A",
+          "source": "https://www.tvcmall.com/details/8bitdo-m30-bluetooth-controller-for-switch-windows-android-6-button-layout-for-sega-s-classic-games-black-sku681600419a.html"
+        }
+      ]
+    },
+    {
+      "id": "121",
+      "name": "YESIDO KB51, USB, 7200 DPI",
+      "category": "peripherie",
+      "status": "in_preparation",
+      "image": "/assets/shop/6101000733a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6101000733A-1.webp",
+      "source": "https://www.tvcmall.com/details/yesido-kb51-rgb-gradient-wired-gaming-mouse-8-buttons-7200-dpi-optical-sensor-mouse-for-pc-gaming-purple-blue-sku6101000733a.html",
+      "researchSource": "04_PERIPHERIE.md",
+      "variants": [
+        {
+          "name": "YESIDO KB51, USB, 7200 DPI",
+          "sku": "6101000733A",
+          "source": "https://www.tvcmall.com/details/yesido-kb51-rgb-gradient-wired-gaming-mouse-8-buttons-7200-dpi-optical-sensor-mouse-for-pc-gaming-purple-blue-sku6101000733a.html"
+        }
+      ]
+    },
+    {
+      "id": "141",
+      "name": "YESIDO KB49, faltbar, Touchpad, Englisch",
+      "category": "peripherie",
+      "status": "in_preparation",
+      "image": "/assets/shop/6102000981a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6102000981A-1.webp",
+      "source": "https://www.tvcmall.com/details/yesido-kb49-tri-fold-wireless-bluetooth-compatible-keyboard-with-touchpad-numeric-keypad-keyboard-for-phone-tablet-pc-english-sku6102000981a.html",
+      "researchSource": "04_PERIPHERIE.md",
+      "variants": [
+        {
+          "name": "YESIDO KB49, faltbar, Touchpad, Englisch",
+          "sku": "6102000981A",
+          "source": "https://www.tvcmall.com/details/yesido-kb49-tri-fold-wireless-bluetooth-compatible-keyboard-with-touchpad-numeric-keypad-keyboard-for-phone-tablet-pc-english-sku6102000981a.html"
+        }
+      ]
+    },
+    {
+      "id": "156",
+      "name": "2309 USB-C, 11 Ports, Gigabit",
+      "category": "peripherie",
+      "status": "in_preparation",
+      "image": "/assets/shop/6102000760a.webp",
+      "imageSource": "https://img.tvcmall.com/dynamic/uploads/details/800x800_6102000760A-1.webp",
+      "source": "https://www.tvcmall.com/details/2309-type-c-to-11-port-usb-hub-4k-60hz-hd-screen-mirroring-gigabit-ethernet-adapter-laptop-tablet-docking-station-sku6102000760a.html",
+      "researchSource": "04_PERIPHERIE.md",
+      "variants": [
+        {
+          "name": "2309 USB-C, 11 Ports, Gigabit",
+          "sku": "6102000760A",
+          "source": "https://www.tvcmall.com/details/2309-type-c-to-11-port-usb-hub-4k-60hz-hd-screen-mirroring-gigabit-ethernet-adapter-laptop-tablet-docking-station-sku6102000760a.html"
+        }
+      ]
+    }
+  ]
+}
