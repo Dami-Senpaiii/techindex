@@ -39,3 +39,7 @@ Better Auth übernimmt Authentifizierung, Sessions, Cookie-Signaturen und CSRF-S
 Authentifizierung und Datenänderungen haben datenbankgestützte Ratenlimits. Profil, Warenkorb und Bestellungen verwenden ausschliesslich die Benutzer-ID aus der geprüften Sitzung, keine vom Client übermittelte Benutzer-ID. API-Antworten dürfen nicht zwischengespeichert werden. Eine Passwortänderung meldet andere Sitzungen ab; eine E-Mail-Änderung verlangt das aktuelle Passwort.
 
 E-Mail-Versand ist noch nicht angebunden: Es gibt derzeit keine E-Mail-Verifizierung und keine Wiederherstellung per „Passwort vergessen“. E-Mail-Adressen gelten deshalb nicht als verifiziert. Vor dem Verkaufsstart einen Maildienst für Verifizierung und Wiederherstellung anbinden, Produktfreigaben und Preise festlegen sowie Checkout, serverseitige Bestellerzeugung und Zahlungsmethoden konfigurieren. Keine Passwörter oder Karteninformationen in Frontend-Speicher oder Logs schreiben.
+
+## Veröffentlichung und Cache
+
+Builds versionieren Stylesheets, Skripte und ihre Modul-Imports gemeinsam. Statische Antworten verlangen Revalidierung; Cloudflares Browser Cache TTL steht auf «Respect Existing Headers». So bleibt beim Update keine alte Shop-Logik mit neuer Oberfläche kombiniert. Beide Deployment-Umgebungen verwenden `nodejs_compat`; die Produktionsdatenbank und das Auth-Secret sind nur an Production gebunden.
