@@ -11,7 +11,7 @@
 
 Cloudflare Pages Functions, Better Auth 1.7 und eine eigene Cloudflare-D1-Datenbank `techindex-shop` mit EU-Jurisdiktion. Produktionsbindung: `SHOP_DB`. `BETTER_AUTH_SECRET` ist als verschlüsseltes Cloudflare Secret hinterlegt. Die bestehende KV-Konfiguration bleibt erhalten.
 
-Die Produktionslaufzeit benötigt `nodejs_compat`. Einstellungen und Bindungen werden im Cloudflare-Dashboard verwaltet. `wrangler.dev.jsonc` enthält ausschliesslich die lokale Entwicklungsdefinition. Das Startskript kopiert sie in eine ignorierte `wrangler.jsonc`; diese Datei gehört nicht in Git.
+Der Build kompiliert die Functions mit der projektgebundenen Wrangler-Version zu `dist/_worker.js` (Pages Advanced Mode), weil der eingebaute Pages-Compiler veraltet sein kann. Die Produktionslaufzeit benötigt `nodejs_compat`. Einstellungen und Bindungen werden im Cloudflare-Dashboard verwaltet. `wrangler.dev.jsonc` enthält ausschliesslich die lokale Entwicklungsdefinition. Das Startskript kopiert sie in eine ignorierte `wrangler.jsonc`; diese Datei gehört nicht in Git.
 
 ## Lokal entwickeln
 

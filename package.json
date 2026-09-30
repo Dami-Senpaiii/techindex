@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Die Schweizer Open-Source Gaming Plattform \u2013 Shop-Vorschau.",
   "scripts": {
-    "build": "node scripts/build.mjs",
+    "build": "node scripts/build.mjs && wrangler pages functions build functions --outdir=dist/_worker.js --compatibility-date=2025-11-05 --compatibility-flag=nodejs_compat --minify",
     "dev": "npm run build && node scripts/dev.mjs",
     "test": "node --test test/*.test.js",
     "db:local": "wrangler d1 migrations apply techindex-shop --local --config wrangler.dev.jsonc",
