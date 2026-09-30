@@ -1,3 +1,4 @@
+import { money, transit, shippingChoices } from './commerce.js';
 import { changeCart } from './cart-store.js';
 import { CATEGORY_LABELS, productSubtitle, selectProducts } from './catalogue.js';
 const $ = (selector) => document.querySelector(selector);
@@ -28,10 +29,13 @@ function productCard(product) {
     const image = element('img'); image.src = product.image; image.alt = product.name; image.loading = 'lazy'; image.width = 800; image.height = 800;
     image.addEventListener('error', () => missingImage(product, photoButton), { once: true }); photoButton.append(image);
   } else missingImage(product, photoButton);
-  const openButton = element('button', 'text-button', 'Gerät ansehen'); openButton.type = 'button'; openButton.setAttribute('aria-label', `${product.name}: Gerät ansehen`);
+  const openButton = element('button', 'text-button', 'Details ansehen'); openButton.type = 'button'; openButton.setAttribute('aria-label', `${product.name}: Details ansehen`);
   const arrow = element('span', '', '↗'); arrow.setAttribute('aria-hidden', 'true'); openButton.append(arrow);
   for (const button of [photoButton, openButton]) button.addEventListener('click', () => openProduct(product, button));
-  card.append(photoButton, element('p', 'product-status', 'Sortiment in Vorbereitung'), element('h3', '', product.name), element('p', 'product-subtitle', productSubtitle(product)), openButton); return card;
+  const prices = product.variants.map(variant => variant.priceMinor);
+  const price = `${Math.min(...prices) !== Math.max(...prices) ? 'Ab ' : ''}${money(Math.min(...prices))}`;
+  const fees = product.variants.flatMap(variant => variant.shipping.options.map(option => option.costMinor));
+  card.append(photoButton, element('p', 'product-status available', 'Verfügbar'), element('h3', '', product.name), element('p', 'product-subtitle', productSubtitle(product)), element('p', 'product-price', price), element('p', 'product-delivery', fees.length ? `Lieferung ab ${money(Math.min(...fees))}` : 'Liefergebühren werden abgefragt'), openButton); return card;
 }
 function render() {
   const selected = selectProducts(products, category, query, page); page = selected.page;
@@ -44,14 +48,34 @@ function render() {
   $('#previous-page').disabled = page <= 1; $('#next-page').disabled = page >= selected.totalPages; writeUrl();
 }
 function updateVariant() {
+  $('#cart-feedback').hidden = true; $('#view-cart').hidden = true;
   const variant = activeProduct.variants[Number($('#detail-variant').value)]; const link = $('#supplier-link'); const url = new URL(variant.source);
   if (url.protocol === 'https:' && url.hostname === 'www.tvcmall.com') link.href = url.href; else link.removeAttribute('href');
+  $('#detail-price').textContent = money(variant.priceMinor);
+  const shipping = variant.shipping; const choices = shippingChoices(shipping);
+  const shippingRows = [];
+  for (const [key, label] of [['cheapest', shipping.complete ? 'Günstigste Lieferung' : 'Hinterlegte Lieferung'], ['fastest', 'Schnellste Lieferung']]) {
+    const option = choices[key]; const row = element('div', 'shipping-option');
+    const heading = element('div', 'shipping-option-heading'); heading.append(element('strong', '', label), element('strong', '', option ? money(option.costMinor) : 'Noch offen'));
+    row.append(heading, element('p', '', option ? `${option.method} · ${transit(option)}` : 'Der Lieferant stellt diesen Tarif momentan nicht bereit.'));
+    shippingRows.push(row);
+  }
+  $('#detail-shipping').replaceChildren(...shippingRows);
+  $('#shipping-note').textContent = `TVCMALL-Schätzung für ${shipping.quantity} Stück · Stand ${shipping.checkedAt.split('-').reverse().join('.')}. ${shipping.processingDays ? `Zuzüglich ${shipping.processingDays.join('–')} Tage Bearbeitung. ` : ''}Versanddauer ab Übergabe an den Transportdienst. Gebühren für weitere Artikel sowie mögliche Importabgaben werden beim Checkout berechnet.`;
+  const details = variant.details || activeProduct.details; const content = $('#detail-specifications'); content.replaceChildren();
+  for (const paragraph of details.paragraphs) content.append(element('p', '', paragraph));
+  const facts = element('dl', 'detail-specs');
+  for (const [name, value] of [...details.specifications, ['Ausführung', variant.name], ['Artikelnummer', variant.sku]]) { const row = element('div'); row.append(element('dt', '', name), element('dd', '', value)); facts.append(row); }
+  content.append(facts);
+  if (details.included?.length) { content.append(element('h4', '', 'Lieferumfang')); const list = element('ul'); for (const part of details.included) list.append(element('li', '', part)); content.append(list); }
+  content.append(element('p', 'detail-note', 'Technische Angaben laut Lieferant. Unterstützte Funktionen hängen vom angeschlossenen Gerät und der Software ab.'));
+
 }
 function openProduct(product, opener) {
   activeProduct = product; lastOpener = opener; $('#detail-title').textContent = product.name; $('#detail-description').textContent = productSubtitle(product);
   const image = $('#detail-image'); image.hidden = !product.image; image.alt = `Produktabbildung ${product.name}`; if (product.image) image.src = product.image; else image.removeAttribute('src');
   $('#detail-variant').replaceChildren(...product.variants.map((variant, index) => { const option = element('option', '', variant.name.replace(product.name + ' · ', '')); option.value = String(index); return option; }));
-  $('#cart-feedback').hidden = true; $('#view-cart').hidden = true; updateVariant(); dialog.showModal(); $('.close-dialog').focus();
+  $('.product-details').open = false; $('#cart-feedback').hidden = true; $('#view-cart').hidden = true; updateVariant(); dialog.showModal(); $('.close-dialog').focus();
 }
 async function load() {
   if (loading) return; loading = true; grid.setAttribute('aria-busy', 'true'); $('#load-error').hidden = true; $('#empty-state').hidden = true; $('#results-count').textContent = 'Sortiment wird geladen …';

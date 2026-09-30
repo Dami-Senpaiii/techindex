@@ -4,16 +4,34 @@ import test from 'node:test';
 import { selectProducts } from '../assets/catalogue.js';
 const { mode, products } = JSON.parse(await readFile(new URL('../data/catalogue.json', import.meta.url)));
 
-test('all research candidates remain a non-orderable preview without retail prices', () => {
-  assert.equal(mode, 'preview');
-  assert.ok(products.length > 0);
+test('every purchasable variant has an exact CHF 20 markup and complete Swiss shipping quotes', async () => {
+  assert.equal(mode, 'preview'); // payment setup is deliberately separate from catalogue availability
+  const audit = JSON.parse(await readFile(new URL('../research/supplier-pricing.json', import.meta.url)));
+  const costs = new Map(audit.map(row => [row.sku, row]));
   for (const product of products) {
-    assert.equal(product.status, 'in_preparation');
-    assert.equal(product.price, undefined);
-    assert.equal(product.checkout, undefined);
+    assert.equal(product.status, 'available');
+    assert.ok(product.details.paragraphs.join(' ').length > 80);
+    assert.ok(product.details.specifications.length >= 4);
     assert.ok(product.variants.length > 0);
-    for (const variant of product.variants) assert.equal(new URL(variant.source).hostname, 'www.tvcmall.com');
+    for (const variant of product.variants) {
+      assert.equal(new URL(variant.source).hostname, 'www.tvcmall.com');
+      assert.ok(Number.isInteger(variant.priceMinor));
+      assert.equal(variant.priceMinor, costs.get(variant.sku).purchasePriceMinor + 2000);
+      assert.equal(variant.shipping.country, 'CH');
+      assert.equal(variant.shipping.currency, 'CHF');
+      assert.equal(variant.shipping.complete, true);
+      assert.ok(variant.shipping.quantity >= 1);
+      assert.ok(variant.shipping.options.length >= 2);
+      for (const option of variant.shipping.options) {
+        assert.ok(Number.isInteger(option.costMinor) && option.costMinor >= 0);
+        assert.ok(option.days[0] > 0 && option.days[1] >= option.days[0]);
+        assert.ok(['calendar', 'business'].includes(option.dayType));
+      }
+    }
   }
+});
+test('the four accessory categories each contain 12 distinct models', () => {
+  for (const category of ['controller', 'kabel', 'beamer', 'peripherie']) assert.equal(products.filter(p => p.category === category).length, 12);
 });
 test('50 unique handheld variants are grouped into 19 models', () => {
   const handhelds = products.filter(p => p.category === 'handhelds');

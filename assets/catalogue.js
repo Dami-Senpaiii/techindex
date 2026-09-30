@@ -1,9 +1,9 @@
 export const CATEGORY_LABELS = {
-  handhelds: { title: 'Dein nächstes Handheld.', noun: 'Handheld', description: 'Unser Sortiment entsteht. Entdecke die Geräte, die wir für Techindex prüfen.' },
-  controller: { title: 'Alles unter Kontrolle.', noun: 'Controller', description: 'Gamepads und Controller für dein Setup. Unser Sortiment entsteht.' },
-  kabel: { title: 'Die richtige Verbindung.', noun: 'Kabel', description: 'Kabel für dein Gaming-Setup. Unser Sortiment entsteht.' },
-  beamer: { title: 'Gaming auf grosser Fläche.', noun: 'Beamer', description: 'Kompakte Beamer für dein Setup. Unser Sortiment entsteht.' },
-  peripherie: { title: 'Mach dein Setup komplett.', noun: 'Peripherie', description: 'Mäuse, Tastaturen und USB-Hubs. Unser Sortiment entsteht.' },
+  handhelds: { title: 'Dein nächstes Handheld.', noun: 'Handheld', description: 'Handhelds für unterwegs. Vergleiche Modelle, Ausführungen und technische Details.' },
+  controller: { title: 'Alles unter Kontrolle.', noun: 'Controller', description: 'Gamepads, Arcade-Sticks und mobile Controller für dein Setup.' },
+  kabel: { title: 'Die richtige Verbindung.', noun: 'Kabel', description: 'Kabel für dein Gaming-Setup.' },
+  beamer: { title: 'Gaming auf grosser Fläche.', noun: 'Beamer', description: 'Kompakte Beamer für dein Setup.' },
+  peripherie: { title: 'Mach dein Setup komplett.', noun: 'Peripherie', description: 'Mäuse, Tastaturen und USB-Hubs.' },
 };
 const normalize = (value) => String(value || '').toLocaleLowerCase('de-CH').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
 export function selectProducts(products, category, query = '', page = 1, pageSize = 6) {

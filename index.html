@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TechIndex – Die Schweizer Open-Source Gaming Plattform.</title>
-  <meta name="description" content="Handhelds, Zubehör und eine Community für alle, die Gaming offen denken. Entdecke die neue Schweizer Gaming-Plattform TechIndex.">
+  <meta name="description" content="Handhelds und Zubehör für alle, die Gaming offen denken. Entdecke die neue Schweizer Gaming-Plattform TechIndex.">
   <meta name="theme-color" content="#ffffff">
   <meta name="robots" content="noindex, nofollow">
   <meta property="og:type" content="website">
   <meta property="og:title" content="TechIndex – Die Schweizer Open-Source Gaming Plattform.">
-  <meta property="og:description" content="Handhelds, Zubehör und eine Community für alle, die Gaming offen denken.">
+  <meta property="og:description" content="Handhelds und Zubehör für alle, die Gaming offen denken.">
   <meta property="og:url" content="https://techindex.ch/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/shop.css">
@@ -24,16 +24,15 @@
     <div class="container header-inner">
       <a class="brand" href="/" aria-label="TechIndex Startseite"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="5"/><path d="m11 25 9-13 9 13"/></svg><span>TechIndex</span></a>
       <button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false">Menü <span aria-hidden="true">+</span></button>
-      <nav id="navigation" aria-label="Hauptnavigation"><a href="#shop" class="nav-shop" aria-current="page">Shop</a><a href="#community">Community <span class="nav-note">Später</span></a><a href="/konto" class="nav-account"><span data-account-label>Login / Registrieren</span></a><a href="/warenkorb" class="nav-cart">Warenkorb <span class="cart-count" data-cart-count>0</span></a></nav>
+      <nav id="navigation" aria-label="Hauptnavigation"><a href="#shop" class="nav-shop" aria-current="page">Shop</a><a href="/konto" class="nav-account"><span data-account-label>Login / Registrieren</span></a><a href="/warenkorb" class="nav-cart">Warenkorb <span class="cart-count" data-cart-count>0</span></a></nav>
     </div>
   </header>
   <main>
     <section class="hero container" aria-labelledby="hero-title">
       <div class="hero-copy">
         <h1 id="hero-title">Die Schweizer<br>Open-Source<br>Gaming Plattform.</h1>
-        <p class="hero-description">Handhelds, Zubehör und eine Community für alle, die Gaming offen denken.</p>
+        <p class="hero-description">Handhelds und Zubehör für alle, die Gaming offen denken.</p>
         <a class="button" href="#shop">Handhelds entdecken <span aria-hidden="true">→</span></a>
-        <p class="preview-note">Shop im Aufbau · Noch keine Bestellungen möglich</p>
       </div>
       <img class="hero-image" src="/assets/shop/handheld-hero.png" alt="Illustration zweier Handhelds mit grüner Pixellandschaft" width="1536" height="1024" fetchpriority="high">
     </section>
@@ -42,20 +41,32 @@
         <button type="button" data-category="handhelds" aria-pressed="true">Handhelds</button><button type="button" data-category="controller" aria-pressed="false">Controller</button><button type="button" data-category="kabel" aria-pressed="false">Kabel</button><button type="button" data-category="beamer" aria-pressed="false">Beamer</button><button type="button" data-category="peripherie" aria-pressed="false">Peripherie</button>
       </nav>
       <div class="catalogue-heading" id="sortiment">
-        <div><h2 id="catalogue-title">Dein nächstes Handheld.</h2><p id="catalogue-description">Unser Sortiment entsteht. Entdecke die Geräte, die wir für Techindex prüfen.</p></div>
+        <div><h2 id="catalogue-title">Dein nächstes Handheld.</h2><p id="catalogue-description">Handhelds für unterwegs. Vergleiche Modelle, Ausführungen und technische Details.</p></div>
         <form class="search" role="search"><label class="sr-only" for="model-search">Im gewählten Sortiment suchen</label><input type="search" id="model-search" placeholder="Modell suchen" autocomplete="off" maxlength="100"></form>
       </div>
       <p class="results-count" id="results-count" role="status" aria-live="polite">Sortiment wird geladen …</p>
       <div class="product-grid" id="products" aria-busy="true"></div>
       <div class="empty-state" id="empty-state" hidden><h3>Kein passendes Gerät gefunden.</h3><p>Versuche einen anderen Modellnamen oder eine andere Kategorie.</p><button class="text-button" id="reset-search" type="button">Suche zurücksetzen <span aria-hidden="true">↗</span></button></div>
       <div class="empty-state" id="load-error" hidden><h3>Das Sortiment konnte nicht geladen werden.</h3><p>Bitte versuche es noch einmal.</p><button class="button" id="retry-load" type="button">Erneut versuchen</button></div>
-      <noscript><p>Bitte aktiviere JavaScript, um die Sortimentsvorschau zu durchsuchen. Der Shop nimmt noch keine Bestellungen an.</p></noscript>
+      <noscript><p>Bitte aktiviere JavaScript, um das Sortiment zu durchsuchen.</p></noscript>
       <nav class="pagination" aria-label="Katalogseiten" hidden><button type="button" id="previous-page" aria-label="Vorherige Katalogseite">← Zurück</button><span id="page-label"></span><button type="button" id="next-page" aria-label="Nächste Katalogseite">Weiter →</button></nav>
-      <p class="catalogue-footnote">Sortimentsvorschau. Ausführungen, Lieferumfang und Kompatibilität werden noch geprüft.</p>
+      <p class="catalogue-footnote">Preise in CHF, zuzüglich Liefergebühren. Versandangaben sind Schätzungen von TVCMALL für die Schweiz; die Berechnung für deinen gesamten Warenkorb erfolgt beim Checkout.</p>
     </section>
-    <section class="community" id="community" aria-labelledby="community-title"><div class="container community-inner"><div><p class="section-label">Community · Schritt 2</p><h2 id="community-title">Gute Games. Geteiltes Wissen.</h2><p>Games, Kompatibilität und Linux. Ein gemeinsamer Ort für Fragen, Erfahrungen und Entdeckungen.</p></div><div class="community-topics"><ul><li>Games &amp; Entdeckungen</li><li>Hardware &amp; Kompatibilität</li><li>Linux &amp; Open Source</li></ul><p>Das Forum folgt nach dem Shop.</p></div></div></section>
   </main>
-  <footer id="ueber"><div class="container footer-inner"><div><a class="brand" href="/" aria-label="TechIndex Startseite"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="5"/><path d="m11 25 9-13 9 13"/></svg><span>TechIndex</span></a><p>Die Schweizer Open-Source Gaming Plattform.</p></div><nav aria-label="Fussnavigation"><a href="#shop">Shop</a><a href="#community">Community</a></nav></div></footer>
-  <dialog id="product-dialog" aria-labelledby="detail-title"><button class="close-dialog" type="button" aria-label="Geräteansicht schliessen">×</button><div class="detail-grid"><div class="detail-image-stage"><img id="detail-image" alt="" width="600" height="600"></div><div class="detail-content"><p class="product-status">Sortiment in Vorbereitung</p><h2 id="detail-title"></h2><p id="detail-description"></p><label for="detail-variant">Recherchierte Ausführung</label><select id="detail-variant"></select><p class="detail-note">Produktabbildung der Modellfamilie. Farbe und Lieferumfang können je nach Ausführung abweichen.</p><dl class="product-facts"><div><dt>Verfügbarkeit</dt><dd>Noch nicht bestellbar</dd></div><div><dt>Verkaufspreis</dt><dd>Folgt zum Shopstart</dd></div><div><dt>Kompatibilität</dt><dd>Wird geprüft</dd></div></dl><p class="detail-note">Diese Vorschau ist noch kein Verkaufsangebot. Die endgültige Ausführung und die enthaltene Software stehen noch nicht fest.</p><button class="button add-to-cart" id="add-to-cart" type="button">In den Warenkorb <span aria-hidden="true">+</span></button><p id="cart-feedback" role="status" class="form-message" hidden></p><a href="/warenkorb" id="view-cart" class="text-button" hidden>Zum Warenkorb →</a><a id="supplier-link" class="text-button" target="_blank" rel="noopener noreferrer">Lieferantenangaben ansehen <span aria-hidden="true">↗</span></a></div></div></dialog>
+  <footer id="ueber"><div class="container footer-inner"><div><a class="brand" href="/" aria-label="TechIndex Startseite"><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="5"/><path d="m11 25 9-13 9 13"/></svg><span>TechIndex</span></a><p>Die Schweizer Open-Source Gaming Plattform.</p></div><nav aria-label="Fussnavigation"><a href="#shop">Shop</a></nav></div></footer>
+  <dialog id="product-dialog" aria-labelledby="detail-title">
+    <button class="close-dialog" type="button" aria-label="Geräteansicht schliessen">×</button>
+    <div class="detail-grid"><div class="detail-image-stage"><img id="detail-image" alt="" width="600" height="600"></div>
+    <div class="detail-content"><p class="product-status available">Verfügbar</p><h2 id="detail-title"></h2><p id="detail-description"></p>
+      <label for="detail-variant">Ausführung</label><select id="detail-variant"></select>
+      <p class="detail-note">Produktabbildung der Modellfamilie. Farbe und Lieferumfang richten sich nach der gewählten Ausführung.</p>
+      <dl class="product-facts"><div><dt>Verfügbarkeit</dt><dd class="available">Verfügbar</dd></div><div><dt>Preis</dt><dd id="detail-price"></dd></div></dl>
+      <section class="shipping-section" aria-labelledby="shipping-title"><h3 id="shipping-title">Lieferung in die Schweiz</h3><div id="detail-shipping"></div><p id="shipping-note" class="detail-note"></p></section>
+      <details class="product-details"><summary>Details <span aria-hidden="true">+</span></summary><div id="detail-specifications"></div></details>
+      <button class="button add-to-cart" id="add-to-cart" type="button">In den Warenkorb <span aria-hidden="true">+</span></button>
+      <p id="cart-feedback" role="status" class="form-message" hidden></p><a href="/warenkorb" id="view-cart" class="text-button" hidden>Zum Warenkorb →</a>
+      <a id="supplier-link" class="text-button" target="_blank" rel="noopener noreferrer">Lieferantenangaben ansehen <span aria-hidden="true">↗</span></a>
+    </div></div>
+  </dialog>
 </body>
 </html>

@@ -8,6 +8,7 @@ test('cart rejects unknown variants, duplicate lines and invalid quantities', ()
   for (const lines of [[{sku:'bad',quantity:1}], [{sku,quantity:0}], [{sku,quantity:1.5}], [{sku,quantity:100}], [{sku,quantity:1},{sku,quantity:2}]]) assert.throws(() => validateLines(lines));
   assert.deepEqual(validateLines([{sku,quantity:2,userId:'other',price:0}]), [{sku,quantity:2}]);
   assert.equal(cartItems([{sku,quantity:2}])[0].name, variants.get(sku).name);
+  assert.equal(cartItems([{sku,quantity:2,priceMinor:1}])[0].priceMinor, variants.get(sku).priceMinor);
 });
 test('profile accepts only expected fields and validates the Swiss postcode', () => {
   const profile = {firstName:' Test ',lastName:' Person ',phone:'',street:'',addressExtra:'',postalCode:'8000',city:'Zürich',country:'CH',userId:'victim'};
