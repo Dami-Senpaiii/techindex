@@ -1,5 +1,6 @@
 import { renderProductPage } from './product-pages.mjs';
 import { productPath } from '../assets/catalogue.js';
+import { shippingForShop } from '../assets/commerce.js';
 import { cp, mkdir, rm, readdir, readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
@@ -11,8 +12,11 @@ await mkdir(new URL('data/', destination), { recursive: true });
 for (const path of ['index.html', 'konto.html', 'warenkorb.html', '_routes.json', '404.html', 'favicon.svg', '_headers', 'assets']) {
   await cp(new URL(path, root), new URL(path, destination), { recursive: true });
 }
-await cp(new URL('data/catalogue.json', root), new URL('data/catalogue.json', destination));
 const catalogue = JSON.parse(await readFile(new URL('data/catalogue.json', root), 'utf8'));
+for (const product of catalogue.products) {
+  for (const variant of product.variants) variant.shipping = shippingForShop(variant.shipping);
+}
+await writeFile(new URL('data/catalogue.json', destination), JSON.stringify(catalogue));
 const template = await readFile(new URL('templates/product.html', root), 'utf8');
 const htmlPages = ['index.html', 'konto.html', 'warenkorb.html'];
 await mkdir(new URL('data/products/', destination), { recursive: true });

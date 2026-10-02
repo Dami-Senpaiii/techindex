@@ -1,4 +1,4 @@
-import { money } from './commerce.js';
+import { money, availableShippingOptions } from './commerce.js';
 import { CATEGORY_LABELS, productSubtitle, selectProducts, productPath } from './catalogue.js';
 const $ = (selector) => document.querySelector(selector);
 const grid = $('#products');
@@ -29,7 +29,7 @@ function productCard(product) {
   const arrow = element('span', '', '↗'); arrow.setAttribute('aria-hidden', 'true'); openButton.append(arrow);
   const prices = product.variants.map(variant => variant.priceMinor);
   const price = `${Math.min(...prices) !== Math.max(...prices) ? 'Ab ' : ''}${money(Math.min(...prices))}`;
-  const fees = product.variants.flatMap(variant => variant.shipping.options.map(option => option.costMinor));
+  const fees = product.variants.flatMap(variant => availableShippingOptions(variant.shipping).map(option => option.costMinor));
   card.append(photoButton, element('p', 'product-status available', 'Verfügbar'), element('h3', '', product.name), element('p', 'product-subtitle', productSubtitle(product)), element('p', 'product-price', price), element('p', 'product-delivery', fees.length ? `Lieferung ab ${money(Math.min(...fees))}` : 'Liefergebühren werden abgefragt'), openButton); return card;
 }
 function render() {

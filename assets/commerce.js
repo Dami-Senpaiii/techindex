@@ -2,10 +2,15 @@ import { productPath } from './catalogue.js';
 export const money = minor => new Intl.NumberFormat('de-CH', { style: 'currency', currency: 'CHF' }).format(minor / 100);
 export const transit = option => `${option.days[0]}–${option.days[1]} ${option.dayType === 'business' ? 'Werktage' : 'Kalendertage'}`;
 
+// Keep the full supplier quotes internally, but offer only these shipping services.
+const shippingMethods = new Set(['DHL', 'UPS']);
+export const availableShippingOptions = shipping => (shipping?.options || []).filter(option => shippingMethods.has(String(option.method).trim().toUpperCase()));
+export const shippingForShop = shipping => ({ ...shipping, options: availableShippingOptions(shipping) });
+
 // Compare the upper estimate first. Business-day estimates are normalised to
 // calendar weeks for comparison; the original supplier range stays visible.
 export function shippingChoices(shipping) {
-  const options = shipping?.options || [];
+  const options = availableShippingOptions(shipping);
   const duration = (option, index) => option.days[index] * (option.dayType === 'business' ? 7 / 5 : 1);
   return {
     cheapest: [...options].sort((a, b) => a.costMinor - b.costMinor || duration(a, 1) - duration(b, 1))[0],
@@ -13,6 +18,6 @@ export function shippingChoices(shipping) {
   };
 }
 export function variantItem(product, variant) {
-  return { url: productPath(product) + `?sku=${encodeURIComponent(variant.sku)}`, sku: variant.sku, name: product.name, variant: variant.name.replace(product.name + ' · ', ''), image: variant.image || product.image, status: product.status, priceMinor: variant.priceMinor, shipping: variant.shipping };
+  return { url: productPath(product) + `?sku=${encodeURIComponent(variant.sku)}`, sku: variant.sku, name: product.name, variant: variant.name.replace(product.name + ' · ', ''), image: variant.image || product.image, status: product.status, priceMinor: variant.priceMinor, shipping: shippingForShop(variant.shipping) };
 }
 export const subtotal = items => items.reduce((sum, item) => sum + item.priceMinor * item.quantity, 0);
